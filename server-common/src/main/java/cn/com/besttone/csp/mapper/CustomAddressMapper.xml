@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.com.besttone.csp.mapper.CustomAddressMapper" >
+  <resultMap id="BaseResultMap" type="cn.com.besttone.csp.model.custom.CustomAddress" >
+    <id column="id" property="id" />
+    <result column="custom_id" property="customId" />
+    <result column="contact_name" property="contactName" />
+    <result column="contact_tel" property="contactTel" />
+    <result column="province_code" property="provinceCode" />
+    <result column="city_code" property="cityCode" />
+    <result column="district_code" property="districtCode" />
+    <result column="address_prefix" property="addressPrefix" />
+    <result column="address_desc" property="addressDesc" />
+    <result column="mark" property="mark" />
+    <result column="latitude" property="latitude" />
+    <result column="longitude" property="longitude" />
+    <result column="create_time" property="createTime" />
+    <result column="update_time" property="updateTime" />
+    <result column="default_status" property="defaultStatus" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from `t_custom_address`
+    where id = #{id}
+  </delete>
+  <insert id="insert" parameterType="cn.com.besttone.csp.model.custom.CustomAddress" useGeneratedKeys="true" keyProperty="id" >
+    insert into `t_custom_address` (custom_id, contact_name, contact_tel, province_code, city_code, 
+      district_code, address_prefix, address_desc, mark, latitude, longitude, 
+      create_time, update_time, default_status)
+    values (#{customId}, #{contactName}, #{contactTel}, #{provinceCode}, #{cityCode}, 
+      #{districtCode}, #{addressPrefix}, #{addressDesc}, #{mark}, #{latitude}, #{longitude}, 
+      #{createTime}, #{updateTime}, #{defaultStatus})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="cn.com.besttone.csp.model.custom.CustomAddress" >
+    update `t_custom_address`
+    set custom_id = #{customId},
+      contact_name = #{contactName},
+      contact_tel = #{contactTel},
+      province_code = #{provinceCode},
+      city_code = #{cityCode},
+      district_code = #{districtCode},
+      address_prefix = #{addressPrefix},
+      address_desc = #{addressDesc},
+      mark = #{mark},
+      latitude = #{latitude},
+      longitude = #{longitude},
+      create_time = #{createTime},
+      update_time = #{updateTime},
+      default_status = #{defaultStatus}
+    where id = #{id}
+  </update>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select id, custom_id, contact_name, contact_tel, province_code, city_code, district_code, 
+    address_prefix, address_desc, mark, latitude, longitude, create_time, update_time, 
+    default_status
+    from `t_custom_address`
+    where id = #{id}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select id, custom_id, contact_name, contact_tel, province_code, city_code, district_code, 
+    address_prefix, address_desc, mark, latitude, longitude, create_time, update_time, 
+    default_status
+    from `t_custom_address`
+  </select>
+</mapper>

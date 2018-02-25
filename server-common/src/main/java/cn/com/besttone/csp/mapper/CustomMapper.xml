@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.com.besttone.csp.mapper.CustomMapper" >
+  <resultMap id="BaseResultMap" type="cn.com.besttone.csp.model.custom.Custom" >
+    <id column="id" property="id" />
+    <result column="telephone" property="telephone" />
+    <result column="custome_name" property="customeName" />
+    <result column="gender" property="gender" />
+    <result column="state" property="state" />
+    <result column="picture_url" property="pictureUrl" />
+    <result column="regist_time" property="registTime" />
+    <result column="regist_channel" property="registChannel" />
+    <result column="telephone_ascription" property="telephoneAscription" />
+    <result column="tianyi_id" property="tianyiId" />
+    <result column="qq_id" property="qqId" />
+    <result column="weixin_id" property="weixinId" />
+    <result column="alipay_id" property="alipayId" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from `t_custom`
+    where id = #{id}
+  </delete>
+  <insert id="insert" parameterType="cn.com.besttone.csp.model.custom.Custom" useGeneratedKeys="true" keyProperty="id" >
+    insert into `t_custom` (telephone, custome_name, gender, state, picture_url, regist_time, 
+      regist_channel, telephone_ascription, tianyi_id, qq_id, weixin_id, alipay_id
+      )
+    values (#{telephone}, #{customeName}, #{gender}, #{state}, #{pictureUrl}, #{registTime}, 
+      #{registChannel}, #{telephoneAscription}, #{tianyiId}, #{qqId}, #{weixinId}, #{alipayId}
+      )
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="cn.com.besttone.csp.model.custom.Custom" >
+    update `t_custom`
+    set telephone = #{telephone},
+      custome_name = #{customeName},
+      gender = #{gender},
+      state = #{state},
+      picture_url = #{pictureUrl},
+      regist_time = #{registTime},
+      regist_channel = #{registChannel},
+      telephone_ascription = #{telephoneAscription},
+      tianyi_id = #{tianyiId},
+      qq_id = #{qqId},
+      weixin_id = #{weixinId},
+      alipay_id = #{alipayId}
+    where id = #{id}
+  </update>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select id, telephone, custome_name, gender, state, picture_url, regist_time, regist_channel, 
+    telephone_ascription, tianyi_id, qq_id, weixin_id, alipay_id
+    from `t_custom`
+    where id = #{id}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select id, telephone, custome_name, gender, state, picture_url, regist_time, regist_channel, 
+    telephone_ascription, tianyi_id, qq_id, weixin_id, alipay_id
+    from `t_custom`
+  </select>
+</mapper>

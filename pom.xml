@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+
+    <!-- 基本信息 -->
+    <description>SpringBoot 多模块构建示例</description>
+    <modelVersion>4.0.0</modelVersion>
+    <name>arc</name>
+    <packaging>pom</packaging>
+
+    <!-- 项目说明：这里作为聚合工程的父工程 -->
+    <groupId>com.del.arc</groupId>
+    <artifactId>arc</artifactId>
+    <version>1.0.0</version>
+
+
+    <!-- 继承说明：这里继承SpringBoot提供的父工程 -->
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>1.5.10.RELEASE</version>
+        <relativePath/>
+    </parent>
+
+    <!-- 模块说明：这里声明多个子模块 -->
+    <modules>
+        <module>api-core</module>
+        <module>api-business</module>
+        <module>client-thymeleaf</module>
+        <module>client-website</module>
+        <module>server-common</module>
+        <module>server-security</module>
+        <module>server-test</module>
+        <module>api-test</module>
+        <!--<module>server-druid</module>-->
+    </modules>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <java.version>1.8</java.version>
+        <spring-cloud.version>Edgware.SR1</spring-cloud.version>
+    </properties>
+
+
+
+    <dependencies>
+        <!--lombok-->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.16.18</version>
+            <!--<optional>true</optional>-->
+        </dependency>
+
+
+        <!-- swagger RESTful API 文档 -->
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger2</artifactId>
+            <version>2.2.2</version>
+        </dependency>
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger-ui</artifactId>
+            <version>2.2.2</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.codehaus.sonar/sonar-maven-plugin -->
+        <dependency>
+            <groupId>org.codehaus.sonar</groupId>
+            <artifactId>sonar-maven-plugin</artifactId>
+            <version>5.1</version>
+        </dependency>
+
+
+
+    </dependencies>
+
+    <dependencyManagement>
+        <dependencies>
+            <!-- fastjson -->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>1.2.44</version>
+            </dependency>
+
+          <!--  &lt;!&ndash; swagger RESTful API 文档 &ndash;&gt;
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger2</artifactId>
+                <version>2.2.2</version>
+            </dependency>
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger-ui</artifactId>
+                <version>2.2.2</version>
+            </dependency>
+-->
+            <!--阿里巴巴的druid-->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid</artifactId>
+                <version>1.0.15</version>
+            </dependency>
+
+            <!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
+            <dependency>
+                <groupId>commons-io</groupId>
+                <artifactId>commons-io</artifactId>
+                <version>2.6</version>
+            </dependency>
+
+            <!-- https://mvnrepository.com/artifact/org.codehaus.sonar/sonar-maven-plugin -->
+<!--
+            <dependency>
+                <groupId>org.codehaus.sonar</groupId>
+                <artifactId>sonar-maven-plugin</artifactId>
+                <version>5.1</version>
+            </dependency>
+-->
+
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <build>
+        <plugins>
+            <!--sonar 扫描插件-->
+            <plugin>
+                <groupId>org.sonarsource.scanner.maven</groupId>
+                <artifactId>sonar-maven-plugin</artifactId>
+                <version>3.2</version>
+            </plugin>
+
+        </plugins>
+    </build>
+</project>

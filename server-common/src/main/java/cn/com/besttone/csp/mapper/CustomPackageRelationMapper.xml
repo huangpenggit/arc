@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.com.besttone.csp.mapper.CustomPackageRelationMapper" >
+  <resultMap id="BaseResultMap" type="cn.com.besttone.csp.model.custom.CustomPackageRelation" >
+    <id column="custom_id" property="customId" />
+    <id column="package_code" property="packageCode" />
+    <result column="package_name" property="packageName" />
+    <result column="status" property="status" />
+    <result column="order_time" property="orderTime" />
+    <result column="end_time" property="endTime" />
+    <result column="cancel_time" property="cancelTime" />
+    <result column="channel" property="channel" />
+    <result column="opening_mode" property="openingMode" />
+    <result column="create_time" property="createTime" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="map" >
+    delete from `t_custom_package_relation`
+    where custom_id = #{customId}
+      and package_code = #{packageCode}
+  </delete>
+  <insert id="insert" parameterType="cn.com.besttone.csp.model.custom.CustomPackageRelation" >
+    insert into `t_custom_package_relation` (custom_id, package_code, package_name, status, order_time, end_time, 
+      cancel_time, channel, opening_mode, create_time)
+    values (#{customId}, #{packageCode}, #{packageName}, #{status}, #{orderTime}, #{endTime}, 
+      #{cancelTime}, #{channel}, #{openingMode}, #{createTime})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="cn.com.besttone.csp.model.custom.CustomPackageRelation" >
+    update `t_custom_package_relation`
+    set package_name = #{packageName},
+      status = #{status},
+      order_time = #{orderTime},
+      end_time = #{endTime},
+      cancel_time = #{cancelTime},
+      channel = #{channel},
+      opening_mode = #{openingMode},
+      create_time = #{createTime}
+    where custom_id = #{customId}
+      and package_code = #{packageCode}
+  </update>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="map" >
+    select custom_id, package_code, package_name, status, order_time, end_time, cancel_time, 
+    channel, opening_mode, create_time
+    from `t_custom_package_relation`
+    where custom_id = #{customId}
+      and package_code = #{packageCode}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select custom_id, package_code, package_name, status, order_time, end_time, cancel_time, 
+    channel, opening_mode, create_time
+    from `t_custom_package_relation`
+  </select>
+</mapper>

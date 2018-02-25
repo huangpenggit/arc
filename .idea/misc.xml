@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/server-common/pom.xml" />
+        <option value="$PROJECT_DIR$/client-thymeleaf/pom.xml" />
+        <option value="$PROJECT_DIR$/security/pom.xml" />
+        <option value="$PROJECT_DIR$/server-security/pom.xml" />
+        <option value="$PROJECT_DIR$/client-website/pom.xml" />
+        <option value="$PROJECT_DIR$/server-test/pom.xml" />
+        <option value="$PROJECT_DIR$/server-eureka/pom.xml" />
+        <option value="$PROJECT_DIR$/server-sms/pom.xml" />
+        <option value="$PROJECT_DIR$/server-druid/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>
