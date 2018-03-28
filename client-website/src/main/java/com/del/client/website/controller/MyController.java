@@ -65,4 +65,10 @@ public class MyController {
         System.out.println("   id  " + id + "   name   " + name);// id  1   name   叶
         return "id:" + id + " name:" + name;
     }
+
+    @RequestMapping(value = "/webjar", method = RequestMethod.GET)
+    public String webjar(){
+        //http://localhost:8001/pam/0001/叶
+        return "redirect:/static/view/webjar.html";
+    }
 }

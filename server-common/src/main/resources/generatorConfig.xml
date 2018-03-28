@@ -24,7 +24,7 @@
 
         <!-- 必须要有的，使用这个配置链接数据库 @TODO:是否可以扩展 -->
         <!--<jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql:///cloud" userId="root" password="admin">-->
-        <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://172.30.17.28:3306/zjhy" userId="root" password="123456">
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://rdsdhymc6hu2u0854dzny.mysql.rds.aliyuncs.com:3306/bianmin_114" userId="bianmin_user" password="abcd_123">
             <!-- 这里面可以设置property属性，每一个property属性都设置到配置的Driver上 -->
         </jdbcConnection>
 
@@ -63,7 +63,7 @@
         </javaClientGenerator>
 
         <!-- 参考 javaModelGenerator 的 constructorBased属性 -->
-        <table tableName="t_custom_address" domainObjectName="CustomAddress" delimitIdentifiers="true">
+        <table tableName="t_custom_pack_order" domainObjectName="CustomPackOrder" delimitIdentifiers="true">
             <property name="constructorBased" value="false"/>
             <generatedKey column="id" sqlStatement="JDBC"/>
         </table>

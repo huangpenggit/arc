@@ -21,7 +21,7 @@
     </parent>
 
     <dependencies>
-
+        <!--freemarker-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-freemarker</artifactId>
@@ -69,27 +69,27 @@
             <!--<version>1.0.15</version>-->
         </dependency>
 
-<!--
+        <!--
 
-        &lt;!&ndash; swagger RESTful API 文档 &ndash;&gt;
-        <dependency>
-            <groupId>io.springfox</groupId>
-            <artifactId>springfox-swagger2</artifactId>
-            &lt;!&ndash;<version>2.2.2</version>&ndash;&gt;
-        </dependency>
-        <dependency>
-            <groupId>io.springfox</groupId>
-            <artifactId>springfox-swagger-ui</artifactId>
-            &lt;!&ndash;<version>2.2.2</version>&ndash;&gt;
-        </dependency>
+                &lt;!&ndash; swagger RESTful API 文档 &ndash;&gt;
+                <dependency>
+                    <groupId>io.springfox</groupId>
+                    <artifactId>springfox-swagger2</artifactId>
+                    &lt;!&ndash;<version>2.2.2</version>&ndash;&gt;
+                </dependency>
+                <dependency>
+                    <groupId>io.springfox</groupId>
+                    <artifactId>springfox-swagger-ui</artifactId>
+                    &lt;!&ndash;<version>2.2.2</version>&ndash;&gt;
+                </dependency>
 
-        &lt;!&ndash; https://mvnrepository.com/artifact/org.codehaus.sonar/sonar-maven-plugin &ndash;&gt;
-        <dependency>
-            <groupId>org.codehaus.sonar</groupId>
-            <artifactId>sonar-maven-plugin</artifactId>
-            <version>5.1</version>
-        </dependency>
--->
+                &lt;!&ndash; https://mvnrepository.com/artifact/org.codehaus.sonar/sonar-maven-plugin &ndash;&gt;
+                <dependency>
+                    <groupId>org.codehaus.sonar</groupId>
+                    <artifactId>sonar-maven-plugin</artifactId>
+                    <version>5.1</version>
+                </dependency>
+        -->
 
 
         <!--增加eureka的依赖-->

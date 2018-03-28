@@ -14,6 +14,7 @@
       <module fileurl="file://$PROJECT_DIR$/server-security/server-security.iml" filepath="$PROJECT_DIR$/server-security/server-security.iml" />
       <module fileurl="file://$PROJECT_DIR$/server-sms/server-sms.iml" filepath="$PROJECT_DIR$/server-sms/server-sms.iml" />
       <module fileurl="file://$PROJECT_DIR$/server-test/server-test.iml" filepath="$PROJECT_DIR$/server-test/server-test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/server-zuul/server-zuul.iml" filepath="$PROJECT_DIR$/server-zuul/server-zuul.iml" />
     </modules>
   </component>
 </project>

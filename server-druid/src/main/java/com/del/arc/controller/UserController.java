@@ -25,10 +25,12 @@ public class UserController {
      * @return
      */
     @ApiOperation(value = "获取单个用户", notes = "传入id获取单个用户")
-//    @ApiImplicitParam(name = "id", value = "用户id", required = true, paramType = "path", dataType = "Long") //注意：paramType需要指定为path,不然不能正常获取
+    @ApiImplicitParam(name = "id", value = "用户id", required = true, paramType = "path", dataType = "Long")
+    //注意：paramType需要指定为path,不然不能正常获取
+    //paramType 有五个可选值 ： path, query, body, header, form
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
     public User user(@ApiParam(value = "用户Id", required = true) @PathVariable Long id) {
-        return  userService.queryByPrimaryKey(id);
+        return userService.queryByPrimaryKey(id);
     }
 
     /**
@@ -38,8 +40,8 @@ public class UserController {
      */
     @ApiOperation(value = "获取用户列表", notes = "获取用户列表")
     @RequestMapping(value = "", method = RequestMethod.GET)
-    public  List<User> list() {
-        System.out.println("#####  \n"+ " List<User>");
+    public List<User> list() {
+        System.out.println("#####  \n" + " List<User>");
         return userService.queryAll();
     }
 
@@ -94,12 +96,12 @@ public class UserController {
 
         int i = userService.save(user);
         if (i > 0) {
-            return   user.getUsername() + "  用户更新成功！";
+            return user.getUsername() + "  用户更新成功！";
         } else {
             return user.getUsername() + "  用户更新失败！";
-
         }
     }
+
 
 }
 

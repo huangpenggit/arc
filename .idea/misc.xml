@@ -13,6 +13,9 @@
         <option value="$PROJECT_DIR$/server-eureka/pom.xml" />
         <option value="$PROJECT_DIR$/server-sms/pom.xml" />
         <option value="$PROJECT_DIR$/server-druid/pom.xml" />
+        <option value="$PROJECT_DIR$/csp/pom.xml" />
+        <option value="$PROJECT_DIR$/zuul/pom.xml" />
+        <option value="$PROJECT_DIR$/server-zuul/pom.xml" />
       </list>
     </option>
   </component>

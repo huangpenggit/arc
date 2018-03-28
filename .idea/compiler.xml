@@ -19,6 +19,8 @@
         <module name="server-security" />
         <module name="server-sms" />
         <module name="server-test" />
+        <module name="server-zuul" />
+        <module name="zuul" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -28,6 +30,7 @@
       <module name="arc" target="1.8" />
       <module name="client-thymeleaf" target="1.8" />
       <module name="client-website" target="1.8" />
+      <module name="csp" target="1.8" />
       <module name="security" target="1.8" />
       <module name="server-common" target="1.8" />
       <module name="server-druid" target="1.8" />
@@ -35,7 +38,9 @@
       <module name="server-security" target="1.8" />
       <module name="server-sms" target="1.8" />
       <module name="server-test" target="1.8" />
+      <module name="server-zuul" target="1.8" />
       <module name="website" target="1.8" />
+      <module name="zuul" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

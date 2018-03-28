@@ -9,7 +9,10 @@ import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
 
 public class ServerEurekaApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(ServerEurekaApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(ServerEurekaApplication.class, args);
+    }
+//下面两行代码都可以用来启动
+// SpringApplication.run(ServerApplication.class, args);
+//new SpringApplicationBuilder(Application.class).web(true).run(args);
 }
