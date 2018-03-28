@@ -30,3 +30,4 @@ public class SecurityApplicationTests {
 //        javax.annotation.Resource;)是J2EE的注解，@Autowired(
 //        import org.springframework.beans.factory.annotation.Autowired;)是Spring的注解
 //        Spring属于第三方的，J2EE是Java自己的东西。使用@Resource可以减少代码和Spring之间的耦合。
+//
