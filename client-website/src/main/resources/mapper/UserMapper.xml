@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.del.client.website.mapper.UserMapper" >
+  <resultMap id="BaseResultMap" type="com.del.client.website.model.User" >
+    <id column="id" property="id" />
+    <result column="username" property="username" />
+    <result column="password" property="password" />
+    <result column="display_name" property="displayName" />
+    <result column="work_num" property="workNum" />
+    <result column="tel" property="tel" />
+    <result column="email" property="email" />
+    <result column="status" property="status" />
+    <result column="create_time" property="createTime" />
+    <result column="update_time" property="updateTime" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from `sys_user`
+    where id = #{id}
+  </delete>
+  <insert id="insert" parameterType="com.del.client.website.model.User" useGeneratedKeys="true" keyProperty="id" >
+    insert into `sys_user` (username, password, display_name, work_num, tel, email, status, 
+      create_time, update_time)
+    values (#{username}, #{password}, #{displayName}, #{workNum}, #{tel}, #{email}, #{status}, 
+      #{createTime}, #{updateTime})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.del.client.website.model.User" >
+    update `sys_user`
+    set username = #{username},
+      password = #{password},
+      display_name = #{displayName},
+      work_num = #{workNum},
+      tel = #{tel},
+      email = #{email},
+      status = #{status},
+      create_time = #{createTime},
+      update_time = #{updateTime}
+    where id = #{id}
+  </update>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select id, username, password, display_name, work_num, tel, email, status, create_time, 
+    update_time
+    from `sys_user`
+    where id = #{id}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select id, username, password, display_name, work_num, tel, email, status, create_time, 
+    update_time
+    from `sys_user`
+  </select>
+</mapper>
