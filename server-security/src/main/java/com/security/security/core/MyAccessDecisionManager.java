@@ -1,3 +1,4 @@
+/*
 package com.security.security.core;
 
 import org.apache.commons.logging.Log;
@@ -18,11 +19,13 @@ import java.util.Iterator;
 // 在metadata中，用path和role做为键值对。这样请求来的时候 比较path 取出role进行GrantedAuthority的比较
 // 可以少写很多代码
 
+*/
 /**
  * 授权决策器
  *
  * @author 叶超
- */
+ *//*
+
 @Service
 public class MyAccessDecisionManager implements AccessDecisionManager {
     private static final Log logger = LogFactory.getLog(MyAccessDecisionManager.class);
@@ -66,4 +69,4 @@ public class MyAccessDecisionManager implements AccessDecisionManager {
     public boolean supports(Class<?> clazz) {
         return true;
     }
-}
+}*/

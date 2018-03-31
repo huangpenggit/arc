@@ -1,7 +1,7 @@
-package com.security.controller;
+package com.del.client.website.controller;
 
-import com.security.domain.User;
-import com.security.service.UserService;
+import com.del.client.website.model.User;
+import com.del.client.website.service.UserService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
@@ -30,8 +30,30 @@ public class HelloController {
     //============================
     //                Swagger2 API 演示
     //============================
+//*注意编写的关键词：“必须”、“不能”、“需要”、“应当”,“不得”、“应该”、“不应该”,“推荐”、“可能”和“可选的”
 
-
+//    RESTful
+//    GET（SELECT）：从服务器取出资源（一项或多项）。
+//    POST（CREATE）：在服务器新建一个资源。
+//    PUT（UPDATE）：在服务器更新资源（客户端提供改变后的完整资源）。
+//    PATCH（UPDATE）：在服务器更新资源（客户端提供改变的属性【补丁】）。
+//    DELETE（DELETE）：从服务器删除资源。
+//
+//    HEAD：获得一个资源的元数据，比如一个资源的hash值或者最后修改日期；
+//    OPTIONS：获得客户针对一个资源能够实施的操作；
+//            -----------------------------------------------
+//    例子
+//    GET /zoos：列出所有动物园
+//    POST /zoos：新建一个动物园
+//    GET /zoos/ID：获取某个指定动物园的信息
+//    PUT /zoos/ID：更新某个指定动物园的信息（提供该动物园的全部信息）
+//    PATCH /zoos/ID：更新某个指定动物园的信息（提供该动物园的部分信息）
+//    DELETE /zoos/ID：删除某个动物园
+//    GET /zoos/ID/animals：列出某个指定动物园的所有动物
+//    DELETE /zoos/ID/animals/ID：删除某个指定动物园的指定动物
+//    https://www.cnblogs.com/chenweixuan/p/5737235.html
+//    http://blog.didispace.com/springbootswagger2/
+//    http://blog.didispace.com   程序猿DD
     @ApiOperation(value = "获取用户列表", notes = "")
     @RequestMapping(value = {""}, method = RequestMethod.GET)
     @ResponseBody

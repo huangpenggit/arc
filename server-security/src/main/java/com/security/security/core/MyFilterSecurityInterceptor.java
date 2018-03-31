@@ -1,3 +1,4 @@
+/*
 package com.security.security.core;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,11 +12,13 @@ import org.springframework.stereotype.Service;
 import javax.servlet.*;
 import java.io.IOException;
 
+*/
 /**
  * 权限过滤器
  *
  * @author 叶超
- */
+ *//*
+
 @Service
 public class MyFilterSecurityInterceptor extends AbstractSecurityInterceptor implements Filter {
 
@@ -69,4 +72,4 @@ public class MyFilterSecurityInterceptor extends AbstractSecurityInterceptor imp
     public SecurityMetadataSource obtainSecurityMetadataSource() {
         return this.securityMetadataSource;
     }
-}
+}*/

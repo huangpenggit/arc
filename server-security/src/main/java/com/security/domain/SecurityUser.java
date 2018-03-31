@@ -1,3 +1,4 @@
+/*
 package com.security.domain;
 
 import org.springframework.security.core.GrantedAuthority;
@@ -45,3 +46,4 @@ public class SecurityUser implements UserDetails {
         return false;
     }
 }
+*/

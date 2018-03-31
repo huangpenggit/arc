@@ -1,3 +1,4 @@
+/*
 package com.security.security;
 
 import com.security.domain.User;
@@ -7,15 +8,19 @@ import org.springframework.security.core.userdetails.UserDetails;
 import java.util.ArrayList;
 import java.util.Collection;
 
+*/
 /**
  * spring security  内部认的 用户
  * Spring Security中，用户信息保存在SecurityContextHolder中
- */
+ *//*
+
 public class SecurityUser implements UserDetails {
 
-	/**
+	*/
+/**
 	 * 
-	 */
+	 *//*
+
 	private static final long serialVersionUID = -3398892872793452L;
 	
 	private User user;//
@@ -96,3 +101,4 @@ public class SecurityUser implements UserDetails {
         this.authorities = authorities;
     }
 }
+*/

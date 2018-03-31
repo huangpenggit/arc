@@ -2,7 +2,6 @@ package com.security;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -10,7 +9,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @SpringBootApplication
 //@MapperScan("com.security.mapper")
 @Controller
-@EnableWebSecurity //启用web安全
+//@EnableWebSecurity //启用web安全
 public class ServerSecurityApplication {
 
     public static void main(String[] args) {

@@ -1,3 +1,4 @@
+/*
 package com.security.security.core;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,11 +12,13 @@ import org.springframework.stereotype.Service;
 import javax.servlet.http.HttpServletRequest;
 import java.util.*;
 
+*/
 /**
  * @author 叶超
  *
  * 攔截器
- */
+ *//*
+
 @Service
 public class MyInvocationSecurityMetadataSourceService implements FilterInvocationSecurityMetadataSource {
 
@@ -26,13 +29,16 @@ public class MyInvocationSecurityMetadataSourceService implements FilterInvocati
 
     // FIXME TO叶超 第1点：不能用map做缓存，原因：一旦资源发生变化，新的资源不在当前的map中，导致新资源无法访问
     // 建议把metadata放到redis进行缓存，每次更新资源后，刷新redis缓存
-    /**
+    */
+/**
      * 加载权限表中所有权限
-     */
+     *//*
+
     public void loadResourceDefine() {
         map = new HashMap<>();
         Collection<ConfigAttribute> array;
         ConfigAttribute cfg;
+*/
 /*
         List<Realm> permissions = realmService.listAll();
         for (Realm permission : permissions) {
@@ -43,7 +49,8 @@ public class MyInvocationSecurityMetadataSourceService implements FilterInvocati
             //用权限的getUrl() 作为map的key，用ConfigAttribute的集合作为 value，
             map.put(permission.getPath(), array);
         }
-*/
+*//*
+
 
     }
 
@@ -78,4 +85,4 @@ public class MyInvocationSecurityMetadataSourceService implements FilterInvocati
     public boolean supports(Class<?> clazz) {
         return true;
     }
-}
+}*/

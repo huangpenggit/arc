@@ -1,3 +1,4 @@
+/*
 package com.security.config;
 
 import com.security.service.impl.CustomUserDetailsService;
@@ -56,23 +57,27 @@ public class WebSpringSecurityConfig extends WebSecurityConfigurerAdapter {
 
     }
 
-    /**
+    */
+/**
      * 设置用户密码的加密方式为MD5加密
      * @return
-     */
+     *//*
+
     @Bean
     public Md5PasswordEncoder passwordEncoder() {
         return new Md5PasswordEncoder();
 
     }
 
-    /**
+    */
+/**
      * 自定义UserDetailsService，从数据库中读取用户信息
      * @return
-     */
+     *//*
+
     @Bean
     public CustomUserDetailsService customUserDetailsService(){
         return new CustomUserDetailsService();
     }
 
-}
+}*/
