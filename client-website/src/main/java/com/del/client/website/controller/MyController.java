@@ -67,8 +67,24 @@ public class MyController {
     }
 
     @RequestMapping(value = "/webjar", method = RequestMethod.GET)
-    public String webjar(){
+    public String webjar() {
         //http://localhost:8001/pam/0001/叶
         return "redirect:/static/view/webjar.html";
     }
+
+    @RequestMapping(value = "/my", method = RequestMethod.GET)
+    public String my() {
+        System.out.println("my");
+        return "redirect:my.html";
+    }
+
+    //https://www.cnblogs.com/magicalSam/p/7189476.html
+//    return"success.html",不要加前面的斜杠,会和默认视图解析器冲突
+// 如果真的想跳转到static中的success.html,return "redirect:success.html"，但不建议这么做。
+//return 的字符串是view的名称，会根据你配置的模板位置来查找，spring boot 默认时间模板存放在 /resource/templates 下，不会到 static 目录下去寻找。redirect其实就是重定向到外部资源
+
+
+
+
+    //https://blog.csdn.net/isea533/article/details/50412212
 }

@@ -11,14 +11,24 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 class WebMvcConfig extends WebMvcConfigurerAdapter {
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
-        registry.addResourceHandler("swagger-ui.html")
+//        registry.addResourceHandler("swagger-ui.html")
+        registry.addResourceHandler("sw")
                 .addResourceLocations("classpath:/META-INF/resources/");
 
         registry.addResourceHandler("/webjars/**")
                 .addResourceLocations("classpath:/META-INF/resources/webjars/");
+
+        //将所有/static/** 访问都映射到classpath:/static/ 目录下
+//        registry.addResourceHandler("/static/**").addResourceLocations("classpath:/static/");
+//            registry.addResourceHandler("/**").addResourceLocations("/");
     }
 
-
+//    解释
+//    其实官方解释没有提及一点，就是不能使用@EnableWebMvc，当然如果Spring Boot在classpath里看到有 spring webmvc 也会自动添加@EnableWebMvc (http://spring.io/guides/gs/rest-service/)
+//
+//            如果@EnableWebMvc了，那么就会自动覆盖了官方给出的/static, /public, META-INF/resources, /resources等存放静态资源的目录。而将静态资源定位于src/main/webapp。当需要重新定义好资源所在目录时，则需要主动添加上述的那个配置类，来Override addResourceHandlers方法。
+//==============================
+    //手动配置静态资源路径
 }
 //问题： No handler found for GET /swagger-ui.html
 //我们在访问http://127.0.0.1:8188/swagger-ui.html 时，这个swagger-ui.html相关的所有前端静态文件都在springfox-swagger-ui-2.6.1.jar里面。目录如下：

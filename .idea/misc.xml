@@ -4,18 +4,7 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/server-common/pom.xml" />
-        <option value="$PROJECT_DIR$/client-thymeleaf/pom.xml" />
-        <option value="$PROJECT_DIR$/security/pom.xml" />
-        <option value="$PROJECT_DIR$/server-security/pom.xml" />
-        <option value="$PROJECT_DIR$/client-website/pom.xml" />
-        <option value="$PROJECT_DIR$/server-test/pom.xml" />
-        <option value="$PROJECT_DIR$/server-eureka/pom.xml" />
-        <option value="$PROJECT_DIR$/server-sms/pom.xml" />
         <option value="$PROJECT_DIR$/server-druid/pom.xml" />
-        <option value="$PROJECT_DIR$/csp/pom.xml" />
-        <option value="$PROJECT_DIR$/zuul/pom.xml" />
-        <option value="$PROJECT_DIR$/server-zuul/pom.xml" />
       </list>
     </option>
   </component>

@@ -1,6 +1,10 @@
-/*
-package com.security.security.core;
+package cn.com.besttone.csp.web.security.core;
 
+import cn.com.besttone.csp.model.sys.Realm;
+import cn.com.besttone.csp.model.sys.Role;
+import cn.com.besttone.csp.web.service.system.RealmService;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.ConfigAttribute;
 import org.springframework.security.access.SecurityConfig;
@@ -12,65 +16,71 @@ import org.springframework.stereotype.Service;
 import javax.servlet.http.HttpServletRequest;
 import java.util.*;
 
-*/
 /**
  * @author 叶超
  *
  * 攔截器
- *//*
-
+ */
 @Service
 public class MyInvocationSecurityMetadataSourceService implements FilterInvocationSecurityMetadataSource {
-
+    private  static  final Log logger=LogFactory.getLog(MyInvocationSecurityMetadataSourceService.class);
     @Autowired
-  //  private RealmService realmService;
+    private RealmService realmService;
 
     private HashMap<String, Collection<ConfigAttribute>> map = null;
 
-    // FIXME TO叶超 第1点：不能用map做缓存，原因：一旦资源发生变化，新的资源不在当前的map中，导致新资源无法访问
     // 建议把metadata放到redis进行缓存，每次更新资源后，刷新redis缓存
-    */
-/**
+    /**
      * 加载权限表中所有权限
-     *//*
-
+     */
     public void loadResourceDefine() {
+        //调用服务去查出所有资源信息 map<url [roleName]>
         map = new HashMap<>();
-        Collection<ConfigAttribute> array;
-        ConfigAttribute cfg;
-*/
-/*
+        Collection<ConfigAttribute> array=null;
+        ConfigAttribute ca;
         List<Realm> permissions = realmService.listAll();
         for (Realm permission : permissions) {
-            array = new ArrayList<>();
-            cfg = new SecurityConfig(permission.getRealmName());
-            //此处只添加了用户的名字，其实还可以添加更多权限的信息，例如请求方法到ConfigAttribute的集合中去。此处添加的信息将会作为MyAccessDecisionManager类的decide的第三个参数。
-            array.add(cfg);
-            //用权限的getUrl() 作为map的key，用ConfigAttribute的集合作为 value，
-            map.put(permission.getPath(), array);
+            if (permission != null) {
+                if (permission.getRoles() != null) {
+
+                    for (Role role : permission.getRoles()) {
+                        array = new ArrayList<>();
+                        ca = new SecurityConfig(role.getRoleName());
+                        logger.debug("map中 value 集合中的 数据 "+ca);
+                        array.add(ca);
+                        logger.debug("map中 value 集合 "+array);
+                        map.put(permission.getPath(), array);
+                    }
+                }
+            }
+            //用权限的getUrl() 作为map的key，用ConfigAttribute的集合作为 value，//MyAccessDecisionManager类的decide方法会用到
         }
-*//*
-
-
+        logger.debug("\n");
+        logger.debug(map);
     }
 
     //此方法是为了判定用户请求的url 是否在权限表中，如果在权限表中，则返回给 decide 方法，
     // 用来判定用户是否有此权限。如果不在权限表中则放行。
     @Override
     public Collection<ConfigAttribute> getAttributes(Object object) throws IllegalArgumentException {
-        if (map == null) {
-            loadResourceDefine();
-        }
-
+        loadResourceDefine();//加载资源map
+        logger.debug(map);
         //object 中包含用户请求的request 信息
         HttpServletRequest request = ((FilterInvocation) object).getHttpRequest();
-        AntPathRequestMatcher matcher;
-        String resUrl;
+        logger.debug(map);
+        logger.debug("用户请求的request url 信息  "+request);
+        logger.debug("用户请求的request url 信息  "+request);
+        logger.debug("用户请求的request url 信息  "+request);
+        AntPathRequestMatcher matcher;//匹配
+        String mapUrl;
         for (Iterator<String> iter = map.keySet().iterator(); iter.hasNext(); ) {
-            resUrl = iter.next();
-            matcher = new AntPathRequestMatcher(resUrl);
+            mapUrl = iter.next();
+            logger.debug(map);
+            logger.debug("map的key   url "+mapUrl);
+            matcher = new AntPathRequestMatcher(mapUrl);
             if (matcher.matches(request)) {
-                return map.get(resUrl);
+                logger.debug("map的key   url "+mapUrl);
+                return map.get(mapUrl);
             }
         }
         return null;
@@ -85,4 +95,4 @@ public class MyInvocationSecurityMetadataSourceService implements FilterInvocati
     public boolean supports(Class<?> clazz) {
         return true;
     }
-}*/
+}

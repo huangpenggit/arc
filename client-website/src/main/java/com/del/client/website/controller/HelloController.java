@@ -111,8 +111,9 @@ public class HelloController {
     //=============END================
     @RequestMapping("/hello")
     public String hello() {
-
-        return "hello";
+        System.out.println("hello");
+        System.out.println("hello");
+        return "/hello";
 
     }
 
