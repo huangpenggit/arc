@@ -11,6 +11,9 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.List;
 
+/**
+ * druid 监控配置
+ */
 @Controller
 public class IndexController {
 

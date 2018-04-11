@@ -1,20 +1,17 @@
-package cn.com.besttone.csp.web.security.core;
+package com.security.security.core;
 
-import cn.com.besttone.csp.model.sys.Realm;
-import cn.com.besttone.csp.model.sys.Role;
-import cn.com.besttone.csp.web.service.system.RealmService;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.ConfigAttribute;
-import org.springframework.security.access.SecurityConfig;
 import org.springframework.security.web.FilterInvocation;
 import org.springframework.security.web.access.intercept.FilterInvocationSecurityMetadataSource;
 import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 import org.springframework.stereotype.Service;
 
 import javax.servlet.http.HttpServletRequest;
-import java.util.*;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.Iterator;
 
 /**
  * @author 叶超
@@ -24,8 +21,8 @@ import java.util.*;
 @Service
 public class MyInvocationSecurityMetadataSourceService implements FilterInvocationSecurityMetadataSource {
     private  static  final Log logger=LogFactory.getLog(MyInvocationSecurityMetadataSourceService.class);
-    @Autowired
-    private RealmService realmService;
+//    @Autowired
+//    private ResourceService resource;
 
     private HashMap<String, Collection<ConfigAttribute>> map = null;
 
@@ -38,23 +35,23 @@ public class MyInvocationSecurityMetadataSourceService implements FilterInvocati
         map = new HashMap<>();
         Collection<ConfigAttribute> array=null;
         ConfigAttribute ca;
-        List<Realm> permissions = realmService.listAll();
-        for (Realm permission : permissions) {
-            if (permission != null) {
-                if (permission.getRoles() != null) {
-
-                    for (Role role : permission.getRoles()) {
-                        array = new ArrayList<>();
-                        ca = new SecurityConfig(role.getRoleName());
-                        logger.debug("map中 value 集合中的 数据 "+ca);
-                        array.add(ca);
-                        logger.debug("map中 value 集合 "+array);
-                        map.put(permission.getPath(), array);
-                    }
-                }
-            }
-            //用权限的getUrl() 作为map的key，用ConfigAttribute的集合作为 value，//MyAccessDecisionManager类的decide方法会用到
-        }
+//        List<Resource> permissions = resource.listAll();
+//        for (Resource permission : permissions) {
+//            if (permission != null) {
+//                if (permission.getRoles() != null) {
+//
+//                    for (Role role : permission.getRoles()) {
+//                        array = new ArrayList<>();
+//                        ca = new SecurityConfig(role.getRoleName());
+//                        logger.debug("map中 value 集合中的 数据 "+ca);
+//                        array.add(ca);
+//                        logger.debug("map中 value 集合 "+array);
+//                        map.put(permission.getPath(), array);
+//                    }
+//                }
+//            }
+//            //用权限的getUrl() 作为map的key，用ConfigAttribute的集合作为 value，//MyAccessDecisionManager类的decide方法会用到
+//        }
         logger.debug("\n");
         logger.debug(map);
     }
@@ -68,8 +65,6 @@ public class MyInvocationSecurityMetadataSourceService implements FilterInvocati
         //object 中包含用户请求的request 信息
         HttpServletRequest request = ((FilterInvocation) object).getHttpRequest();
         logger.debug(map);
-        logger.debug("用户请求的request url 信息  "+request);
-        logger.debug("用户请求的request url 信息  "+request);
         logger.debug("用户请求的request url 信息  "+request);
         AntPathRequestMatcher matcher;//匹配
         String mapUrl;
