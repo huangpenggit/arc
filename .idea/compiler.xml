@@ -14,9 +14,11 @@
         <module name="client-website" />
         <module name="server-common" />
         <module name="server-druid" />
+        <module name="server-eureka" />
         <module name="server-security" />
         <module name="server-sms" />
         <module name="server-test" />
+        <module name="server-zuul" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -28,9 +30,11 @@
       <module name="client-website" target="1.8" />
       <module name="server-common" target="1.8" />
       <module name="server-druid" target="1.8" />
+      <module name="server-eureka" target="1.8" />
       <module name="server-security" target="1.8" />
       <module name="server-sms" target="1.8" />
       <module name="server-test" target="1.8" />
+      <module name="server-zuul" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

@@ -1,32 +1,51 @@
 package com.del.client.website.controller;
 
 import com.del.client.website.mapper.TreeMapper;
+import com.del.client.website.service.impl.TreeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 @Controller
-public class MyController {
+public class TestController {
     @Autowired
     private TreeMapper treeMapper;
 
-    //跳转tree
-    @RequestMapping("/a")
-    public String menu() {
-        return "view/tree";
-    }
 
-    @RequestMapping("/b")
+    @RequestMapping("/a")
     @ResponseBody
     public String a() {
-        return "1";
+        return "Link the server success !";
     }
 
-    @RequestMapping(value = "/m", method = RequestMethod.GET)
-    public String m() {
-        return "view/menu";
+
+
+
+
+    //================================================
+    //                                 测试多线程问题
+    //=================================================
+    @RequestMapping("/z")
+    @ResponseBody
+    public String testMultiThread() {
+        for (int j = 0; j < 10; j++) {
+            System.out.println("运行保存" + j);
+            TreeService mu = new TreeService();
+            Thread t = new Thread(mu);
+            t.start();
+        }
+        return "程序运行结束";
     }
 
+
+
+
+
+
+
+    //================================================
+    //                                 测试 url 取值问题
+    //=================================================
     @RequestMapping(value = "/m/{name}", method = RequestMethod.GET)
     @ResponseBody
     public String b(@PathVariable("name") String name) {
@@ -72,11 +91,6 @@ public class MyController {
         return "redirect:/static/view/webjar.html";
     }
 
-    @RequestMapping(value = "/my", method = RequestMethod.GET)
-    public String my() {
-        System.out.println("my");
-        return "redirect:my.html";
-    }
 
     //https://www.cnblogs.com/magicalSam/p/7189476.html
 //    return"success.html",不要加前面的斜杠,会和默认视图解析器冲突
@@ -84,7 +98,15 @@ public class MyController {
 //return 的字符串是view的名称，会根据你配置的模板位置来查找，spring boot 默认时间模板存放在 /resource/templates 下，不会到 static 目录下去寻找。redirect其实就是重定向到外部资源
 
 
+//https://blog.csdn.net/isea533/article/details/50412212
 
 
-    //https://blog.csdn.net/isea533/article/details/50412212
+
+
+
+
+
+
+
+
 }

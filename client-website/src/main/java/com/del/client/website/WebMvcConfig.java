@@ -1,3 +1,4 @@
+/*
 package com.del.client.website;
 
 import org.springframework.context.annotation.Configuration;
@@ -5,22 +6,19 @@ import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
 
-
-
 @Configuration
 class WebMvcConfig extends WebMvcConfigurerAdapter {
+
+    //https://www.2cto.com/kf/201601/485530.html
+    //优先级
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
-//        registry.addResourceHandler("swagger-ui.html")
-        registry.addResourceHandler("sw")
-                .addResourceLocations("classpath:/META-INF/resources/");
-
-        registry.addResourceHandler("/webjars/**")
-                .addResourceLocations("classpath:/META-INF/resources/webjars/");
+        registry.addResourceHandler("swagger-ui.html").addResourceLocations("classpath:/META-INF/resources/");
+        registry.addResourceHandler("/webjars/**").addResourceLocations("classpath:/META-INF/resources/webjars/");
 
         //将所有/static/** 访问都映射到classpath:/static/ 目录下
-//        registry.addResourceHandler("/static/**").addResourceLocations("classpath:/static/");
-//            registry.addResourceHandler("/**").addResourceLocations("/");
+        registry.addResourceHandler("/static/**").addResourceLocations("classpath:/static/");
+        registry.addResourceHandler("/**").addResourceLocations("classpath:/templates");
     }
 
 //    解释
@@ -40,7 +38,6 @@ class WebMvcConfig extends WebMvcConfigurerAdapter {
 //在启动类上添加注解@EnableWebMvc
 
 
-
 //方法2
 //2.1在应用主类中增加@EnableSwagger2Doc注解
 //2.2加上配置
@@ -58,7 +55,6 @@ class WebMvcConfig extends WebMvcConfigurerAdapter {
 //        swagger.exclude-path=/error, /ops/**
 
 
-
 //配置说明
 //
 //        swagger.title=标题
@@ -74,3 +70,4 @@ class WebMvcConfig extends WebMvcConfigurerAdapter {
 //        swagger.base-path=需要处理的基础URL规则，默认：/**
 //        swagger.exclude-path=需要排除的URL规则，默认：空
 
+*/

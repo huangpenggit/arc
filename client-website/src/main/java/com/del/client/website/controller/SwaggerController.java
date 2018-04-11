@@ -12,10 +12,16 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@Api
+/**
+ * 测试swagger2 的
+ * 不过因为基础freemarker 后跪了
+ * 这个controller就没有什么用了
+ *
+ */
+@Api(value = "用户相关接口的测试")
 @Controller
 @RequestMapping("/users")
-public class HelloController {
+public class SwaggerController {
 
     @Autowired
     private UserService userService;
