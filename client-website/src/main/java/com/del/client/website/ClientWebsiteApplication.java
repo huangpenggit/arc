@@ -58,7 +58,9 @@ public class ClientWebsiteApplication {
 
 
 
-
+//============================================
+//      HTTPS
+//============================================
     @Bean
     public EmbeddedServletContainerFactory servletContainer() {
         TomcatEmbeddedServletContainerFactory tomcat = new TomcatEmbeddedServletContainerFactory() {
