@@ -3,7 +3,52 @@
   <component name="issues">
     <option name="index">
       <map>
+        <entry key="/Dummy.txt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../HikariCP-dev/.editorconfig">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../HikariCP-dev/pom.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/client-simple/pom.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/client-simple/src/main/java/com/client/simple/SimpleApplication.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/client-simple/src/main/java/com/client/simple/controller/HelloController.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/client-simple/src/main/resources/application.properties">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/client-simple/src/main/resources/application.yml">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/client-thymeleaf/src/main/resources/application.properties">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/client-website/pom.xml">
           <value>
             <set />
           </value>
@@ -14,6 +59,26 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/client-website/src/main/resources/application.properties">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/pom.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/server-security/src/main/java/com/security/config/WebSpringSecurityConfig.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/server-security/src/main/java/com/security/service/CustomUserDetailsService.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../lb/JavaEETest-master/Test20-Thymeleaf1/pom.xml">
           <value>
             <set />
           </value>
@@ -59,6 +124,241 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/../../../csp/csp7/csp-web/csp-web-manage/src/main/resources/application.yml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../csp/csp8/csp-web/csp-web-agent/src/main/java/cn/com/besttone/csp/web/checker/LocalLoginChecker.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../csp/csp8/csp-web/csp-web-agent/src/main/java/cn/com/besttone/csp/web/checker/LoginChecker.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../csp/csp8/csp-web/csp-web-agent/src/main/java/cn/com/besttone/csp/web/checker/SignLoginChecker.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../csp/csp8/csp-web/csp-web-agent/src/main/java/cn/com/besttone/csp/web/config/WebSecurityConfig.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../csp/csp8/csp-web/csp-web-agent/src/main/java/cn/com/besttone/csp/web/filter/DaoOptAuthenticationProvider.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../csp/csp8/csp-web/csp-web-agent/src/main/java/cn/com/besttone/csp/web/filter/OptAuthenticationFilter.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../csp/csp8/csp-web/csp-web-agent/src/main/java/cn/com/besttone/csp/web/security/SecurityUser.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../csp/csp8/csp-web/csp-web-agent/src/main/java/cn/com/besttone/csp/web/security/core/AuthenticationProviderLogin.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../csp/csp8/csp-web/csp-web-manage/pom.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../csp/csp8/csp-web/csp-web-manage/src/main/java/cn/com/besttone/csp/web/WebManageApplication.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../csp/csp8/csp-web/csp-web-manage/src/main/java/cn/com/besttone/csp/web/config/WebSecurityConfig.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../csp/csp8/csp-web/csp-web-manage/src/main/java/cn/com/besttone/csp/web/security/core/MyAccessDecisionManager.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../csp/csp8/csp-web/csp-web-manage/src/main/java/cn/com/besttone/csp/web/security/core/MyFilterSecurityInterceptor.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../csp/csp8/csp-web/csp-web-manage/src/main/java/cn/com/besttone/csp/web/security/core/MyInvocationSecurityMetadataSourceService.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../csp/csp8/csp-web/csp-web-manage/src/main/java/cn/com/besttone/csp/web/security/core/SecurityUserService.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../csp/csp8/csp-web/csp-web-manage/src/main/resources/application.properties">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../csp/csp8/csp-web/csp-web-manage/src/main/resources/application.yml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../csp/csp8/csp-web/csp-web-manage/src/main/resources/templates/login.html">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../csp/eas-web/pom.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../csp/eas-web/src/main/java/cn/com/besttone/eas/web/ao/sys/ApplianceBrandAO.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../csp/eas-web/src/main/java/cn/com/besttone/eas/web/ao/sys/AreaAO.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../csp/eas-web/src/main/java/cn/com/besttone/eas/web/ao/sys/ResAO.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../csp/eas-web/src/main/java/cn/com/besttone/eas/web/ao/sys/RoleAO.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../csp/eas-web/src/main/java/cn/com/besttone/eas/web/ao/sys/UserAO.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../csp/eas-web/src/main/java/cn/com/besttone/eas/web/config/WebMvcConfig.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../csp/eas-web/src/main/java/cn/com/besttone/eas/web/config/WebSecurityConfig.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../csp/eas-web/src/main/java/cn/com/besttone/eas/web/controller/sys/UserController.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../csp/eas-web/src/main/java/cn/com/besttone/eas/web/security/SecurityUser.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../csp/eas-web/src/main/java/cn/com/besttone/eas/web/security/SecurityUserHolder.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../csp/eas-web/src/main/java/cn/com/besttone/eas/web/security/core/SecurityUserDetailsService.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../csp/eas-web/src/main/java/cn/com/besttone/eas/web/security/opt/authentication/DaoOptAuthenticationProvider.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../csp/eas-web/src/main/java/cn/com/besttone/eas/web/security/opt/authentication/LoginAuthenticationProvider.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../csp/eas-web/src/main/java/cn/com/besttone/eas/web/security/opt/authentication/OptAuthenticationProvider.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../csp/eas-web/src/main/java/cn/com/besttone/eas/web/security/opt/authentication/OptAuthenticationToken.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../csp/eas-web/src/main/java/cn/com/besttone/eas/web/security/opt/filter/OptAuthenticationFilter.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../csp/eas-web/src/main/java/cn/com/besttone/eas/web/security/opt/saveuserdetails/PersistOptService.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../csp/eas-web/src/main/java/cn/com/besttone/eas/web/security/opt/saveuserdetails/PersistOptServiceImpl.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../csp/eas-web/src/main/java/cn/com/besttone/eas/web/security/opt/sso/SignLoginChecker.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../csp/eas-web/src/main/java/cn/com/besttone/eas/web/security/opt/sso/StringUtils.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../csp/eas-web/src/main/java/cn/com/besttone/eas/web/security/opt/userdetails/PersistOptServiceImpl.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../csp/eas-web/src/main/java/cn/com/besttone/eas/web/utils/PagingResult.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../csp/fms-mybatis-generator/src/main/resources/application.properties">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../csp/zhi2/csp-sp-zhuomuniao/trunk/src/main/java/cn/com/besttone/csp/sp/controller/TestController.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../csp/zhihui/csp-common/branches/0.1.1-SNAPSHOT/src/main/java/cn/com/besttone/csp/model/product/ProductPack.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../csp/zhihui/csp-ms/branches/0.1.1-SNAPSHOT/csp-ms-business/src/main/java/cn/com/besttone/csp/ms/mapper/product/ProductPackMapper.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../csp/zhihui/csp-web/branches/0.1.1-SNAPSHOT/csp-web-manage/src/main/java/cn/com/besttone/csp/web/controller/IndexController.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../csp/zhihui/csp-web/branches/0.1.1-SNAPSHOT/csp-web-manage/src/main/java/cn/com/besttone/csp/web/controller/LoginLogoutController.java">
           <value>
             <set />
           </value>

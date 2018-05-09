@@ -1,7 +1,6 @@
-package com.security.service.impl;
+package com.security.service;
 
 import com.security.domain.User;
-import com.security.service.UserService;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

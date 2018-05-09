@@ -10,6 +10,7 @@
         <module name="api-business" />
         <module name="api-core" />
         <module name="api-test" />
+        <module name="client-simple" />
         <module name="client-thymeleaf" />
         <module name="client-website" />
         <module name="server-common" />
@@ -26,6 +27,7 @@
       <module name="api-core" target="1.8" />
       <module name="api-test" target="1.8" />
       <module name="arc" target="1.8" />
+      <module name="client-simple" target="1.8" />
       <module name="client-thymeleaf" target="1.8" />
       <module name="client-website" target="1.8" />
       <module name="server-common" target="1.8" />

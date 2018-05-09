@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/api-core/api-core.iml" filepath="$PROJECT_DIR$/api-core/api-core.iml" />
       <module fileurl="file://$PROJECT_DIR$/api-test/api-test.iml" filepath="$PROJECT_DIR$/api-test/api-test.iml" />
       <module fileurl="file://$PROJECT_DIR$/arc.iml" filepath="$PROJECT_DIR$/arc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/client-simple/client-simple.iml" filepath="$PROJECT_DIR$/client-simple/client-simple.iml" />
       <module fileurl="file://$PROJECT_DIR$/client-thymeleaf/client-thymeleaf.iml" filepath="$PROJECT_DIR$/client-thymeleaf/client-thymeleaf.iml" />
       <module fileurl="file://$PROJECT_DIR$/client-website/client-website.iml" filepath="$PROJECT_DIR$/client-website/client-website.iml" />
       <module fileurl="file://$PROJECT_DIR$/server-common/server-common.iml" filepath="$PROJECT_DIR$/server-common/server-common.iml" />
