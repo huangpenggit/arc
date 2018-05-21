@@ -1,15 +1,9 @@
 /*
 package com.security.security.core;
 
-import cn.com.besttone.csp.model.sys.Realm;
-import cn.com.besttone.csp.model.sys.Role;
-import cn.com.besttone.csp.model.sys.User;
-import cn.com.besttone.csp.web.security.SecurityUser;
-import cn.com.besttone.csp.web.service.system.RealmService;
-import cn.com.besttone.csp.web.service.system.UserService;
+import com.security.domain.User;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -23,12 +17,10 @@ import java.util.List;
 import java.util.Set;
 
 @Service("securityUserService")
-*/
-/**
- * 从数据库中获取用户信息
- * 实现一个方法：loadUserByUsername
- * 作用 即从数据库中取出用户名、密码以及权限相关的信息。最后返回一个UserDetails 实现类
- *//*
+//从数据库中获取用户信息
+//实现一个方法：loadUserByUsername
+//作用 即从数据库中取出用户名、密码以及权限相关的信息。最后返回一个UserDetails 实现类
+
 
 public class SecurityUserService implements UserDetailsService {
     private static final Log logger = LogFactory.getLog(SecurityUserService.class);

@@ -37,4 +37,7 @@ public class Swagger2ConfigApi {
                 .version("1.0")
                 .build();
     }
+
+    //https://zhuanlan.zhihu.com/p/28450192
+    //定制一个starter
 }

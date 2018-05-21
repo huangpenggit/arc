@@ -1,3 +1,4 @@
+/*
 package com.security.controller;
 
 import com.security.domain.User;
@@ -120,8 +121,8 @@ public class HelloController {
 
     @RequestMapping(value = "/user", method = RequestMethod.GET)
     public String get() {
-        User user = new User();
-        user.setUsername("AAAA");
+//        User user = new User();
+//        user.setUsername("AAAA");
 
         return "403";
     }
@@ -135,3 +136,4 @@ public class HelloController {
 //    }
 
 }
+*/

@@ -22,15 +22,15 @@ public class Swagger2 extends WebMvcConfigurerAdapter {
     @Bean
     //可以注入多个doket，也就是多个版本的api，可以在看到有三个版本groupName不能是重复的，v1和v2是ant风格匹配，配置文件
     public Docket createRestApi() {
-        ApiInfo apiInfo = new ApiInfoBuilder()
+/*        ApiInfo apiInfo = new ApiInfoBuilder()
                 .title("Sam 项目接口文档")
                 .description("Magical Sam 项目的接口文档，符合RESTful API。")
                 .version("1.0")
-                .build();
+                .build();*/
         return new Docket(DocumentationType.SWAGGER_2)
-                .apiInfo(apiInfo)
-                .select()
-                .apis(RequestHandlerSelectors.basePackage("com.del.arc.controller")) //以扫描包的方式
+                .apiInfo(apiInfo())
+                .select()//select()函数返回一个ApiSelectorBuilder实例用来控制哪些接口暴露给Swagger来展现，本例采用指定扫描的包路径来定义，Swagger会扫描该包下所有Controller定义的API，并产生文档内容（除了被@ApiIgnore指定的请求）。
+                .apis(RequestHandlerSelectors.basePackage("com.del.arc.controller"))//扫描这个包中的api
                 .paths(PathSelectors.any())
                 .build();
     }
@@ -38,10 +38,10 @@ public class Swagger2 extends WebMvcConfigurerAdapter {
 
     /**
      * 这个地方要重新注入一下资源文件，不然不会注入资源的，也没有注入requestHandlerMappping,相当于xml配置的
-     * <!--swagger资源配置-->
+     * swagger资源配置
      * <mvc:resources location="classpath:/META-INF/resources/" mapping="swagger-ui.html"/>
      * <mvc:resources location="classpath:/META-INF/resources/webjars/" mapping="/webjars/**"/>
-     * 不知道为什么，这也是spring boot的一个缺点（菜鸟觉得的）
+     *
      *
      * @param registry
      */
@@ -53,13 +53,19 @@ public class Swagger2 extends WebMvcConfigurerAdapter {
                 .addResourceLocations("classpath:/META-INF/resources/webjars/");
     }
 
-    private ApiInfo apiInfo1() {
+    /**
+     * 说明：
+     * 方法apiInfo() 用来创建该Api的基本信息（这些基本信息会展现在文档页面中）
+     *
+     * @return
+     */
+    private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
-                .title("NightOwl RESTful APIs")
-                .description("这个是描述吧？ description --> http://hwangfantasy.github.io/")
+                .title("智慧家庭项目")
+                .description("这个是项目主页描述链接？ http://hwangfantasy.github.io/")
                 .termsOfServiceUrl("http://hwangfantasy.github.io/")
-                .contact("颜艺学长")
-                .version("1.0")
+                .contact("项目负责人是CONTACT")
+                .version("1.0.0")
                 .build();
     }
 }
