@@ -20,6 +20,8 @@
         <module name="server-sms" />
         <module name="server-test" />
         <module name="server-zuul" />
+        <module name="simple" />
+        <module name="test" />
         <module name="wechat" />
       </profile>
     </annotationProcessing>
