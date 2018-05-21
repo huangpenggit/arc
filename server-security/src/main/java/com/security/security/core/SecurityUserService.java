@@ -1,4 +1,3 @@
-/*
 package com.security.security.core;
 
 import com.security.domain.User;
@@ -67,4 +66,3 @@ public class SecurityUserService implements UserDetailsService {
         return securityUser;
     }
 }
-*/

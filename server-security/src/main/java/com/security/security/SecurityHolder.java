@@ -1,4 +1,3 @@
-/*
 package com.security.security;
 
 import org.springframework.security.core.Authentication;
@@ -39,4 +38,3 @@ public final class SecurityHolder {
     }
 
 }
-*/

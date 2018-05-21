@@ -30,6 +30,7 @@
         <module>api-business</module>
         <module>client-thymeleaf</module>
         <module>client-website</module>
+        <module>client-simple</module>
         <module>server-common</module>
         <module>server-security</module>
         <module>server-test</module>
