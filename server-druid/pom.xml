@@ -24,11 +24,19 @@
     <name>server-druid</name>
     <description>server-druid for Spring Boot</description>
     <!--parent 继承本项目的父工程-->
-    <parent>
+  <!--  <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>1.5.10.RELEASE</version>
-        <relativePath/> <!-- lookup parent from repository -->
+        <relativePath/> &lt;!&ndash; lookup parent from repository &ndash;&gt;
+    </parent>-->
+    <!-- 继承本项目的父工程 -->
+    <parent>
+        <groupId>com.del.arc</groupId>
+        <artifactId>arc</artifactId>
+        <version>1.0.0</version>
+        <relativePath>../pom.xml</relativePath>
+        <!--<relativePath/> &lt;!&ndash; lookup parent from repository &ndash;&gt;-->
     </parent>
 
     <properties>

@@ -10,7 +10,7 @@
         <module name="api-business" />
         <module name="api-core" />
         <module name="api-test" />
-        <module name="client-test" />
+        <module name="client-simple" />
         <module name="client-thymeleaf" />
         <module name="client-website" />
         <module name="server-common" />
@@ -20,13 +20,7 @@
         <module name="server-sms" />
         <module name="server-test" />
         <module name="server-zuul" />
-        <module name="simple" />
-        <module name="test" />
-        <module name="wechat" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="client-test" target="1.8" />
-    </bytecodeTargetLevel>
   </component>
 </project>
