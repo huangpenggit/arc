@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<input type="text" id="clock" size="35"/>
+
+<script language=javascript>
+    var int = self.setInterval("clock()", 60);
+//    每三秒（3000 毫秒）弹出 "Hello" :
+//    setInterval(function(){ alert("Hello"); }, 3000);
+
+    function clock() {
+        document.getElementById("clock").value = new Date();
+    }
+</script>
+
+
+<button onclick="int=window.clearInterval(int)"> Stop interval</button>
+<a href="http://www.runoob.com/jsref/met-win-setinterval.html">LINK</a>
+</body>
+</html>
