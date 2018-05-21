@@ -23,5 +23,8 @@
         <module name="wechat" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="client-test" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>
