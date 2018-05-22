@@ -1,19 +1,11 @@
 package com.security.security.core;
 
-import com.security.domain.User;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
-
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
 
 @Service("securityUserService")
 //从数据库中获取用户信息
@@ -30,8 +22,10 @@ public class SecurityUserService implements UserDetailsService {
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+
+
         logger.debug(" username : " + username);
-        User user = userService.getByUsername(username);//查数据库获得user
+  /*      User user = userService.getByUsername(username);//查数据库获得user
         logger.debug(" user : " + user);
         if (user == null) {
             throw new UsernameNotFoundException("User [ " + username + " ] not found. ");
@@ -62,7 +56,7 @@ public class SecurityUserService implements UserDetailsService {
         SecurityUser securityUser = new SecurityUser();
         securityUser.setUser(user);
         securityUser.setAuthorities(authsList);
-        logger.debug("SecurityUser "+securityUser.toString());
-        return securityUser;
+        logger.debug("SecurityUser "+securityUser.toString());*/
+        return null;
     }
 }

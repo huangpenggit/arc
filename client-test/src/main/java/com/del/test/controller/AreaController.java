@@ -13,6 +13,7 @@ import java.util.List;
 
 @Controller
 public class AreaController {
+
     @Autowired
     private AreaService areaService;
 
@@ -23,7 +24,7 @@ public class AreaController {
         return areaService.listChildren(code);
     } */
 
-@RequestMapping(value = "/areas",method ={ RequestMethod.GET,RequestMethod.POST})
+    @RequestMapping(value = "/areas", method = {RequestMethod.GET, RequestMethod.POST})
     @ResponseBody
     public List<Area> areas() {
         return areaService.list();

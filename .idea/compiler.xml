@@ -11,6 +11,7 @@
         <module name="api-core" />
         <module name="api-test" />
         <module name="client-simple" />
+        <module name="client-test" />
         <module name="client-thymeleaf" />
         <module name="client-website" />
         <module name="server-common" />

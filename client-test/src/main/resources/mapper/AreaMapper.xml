@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>  
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.client.simple.mapper.AreaMapper">
-	<resultMap id="area" type="com.client.simple.model.Area">
+<mapper namespace="com.del.test.mapper.AreaMapper">
+	<resultMap id="area" type="com.del.test.model.Area">
 		<id property="areaCode" column="area_area_code" javaType="string" jdbcType="VARCHAR" />
 		<result property="areaName" column="area_area_name" javaType="string" jdbcType="VARCHAR" />
 		<result property="areaLevel" column="area_area_level" javaType="int" jdbcType="INTEGER" />
@@ -10,7 +10,7 @@
 		<result property="parentName" column="area_parent_name" javaType="string" jdbcType="VARCHAR" />
 	</resultMap>
 	
-	<resultMap id="areaWithChildren" extends="area" type="com.client.simple.model.Area">
+	<resultMap id="areaWithChildren" extends="area" type="com.del.test.model.Area">
 		<collection property="children" select="treeChildren" column="area_area_code" />
 	</resultMap>
 	
