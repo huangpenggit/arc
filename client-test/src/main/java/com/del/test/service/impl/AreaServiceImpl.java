@@ -1,7 +1,8 @@
 package com.del.test.service.impl;
 
+
+import com.del.doamin.Area;
 import com.del.test.mapper.AreaMapper;
-import com.del.test.model.Area;
 import com.del.test.service.AreaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

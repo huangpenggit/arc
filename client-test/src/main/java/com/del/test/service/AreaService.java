@@ -1,7 +1,7 @@
 package com.del.test.service;
 
 
-import com.del.test.model.Area;
+import com.del.doamin.Area;
 
 import java.util.List;
 

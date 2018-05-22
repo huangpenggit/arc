@@ -1,4 +1,4 @@
-package com.del.test.model;
+package com.del.doamin;
 
 import java.io.Serializable;
 

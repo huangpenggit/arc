@@ -1,7 +1,7 @@
 package com.del.test.mapper;
 
 
-import com.del.test.model.Area;
+import com.del.doamin.Area;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;

@@ -1,7 +1,7 @@
 package com.del.test.controller;
 
 
-import com.del.test.model.Area;
+import com.del.doamin.Area;
 import com.del.test.service.AreaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

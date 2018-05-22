@@ -1,10 +1,12 @@
 package com.del.test.controller;
 
-import com.del.test.model.Person;
+import com.del.doamin.Person;
 import com.del.test.repository.PersonRepository;
-import com.del.test.service.AreaService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping(value = "person")

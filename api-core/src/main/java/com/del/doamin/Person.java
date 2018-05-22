@@ -1,4 +1,4 @@
-package com.del.test.model;
+package com.del.doamin;
 
 import lombok.Getter;
 import lombok.Setter;

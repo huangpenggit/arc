@@ -30,11 +30,11 @@ public class UserController {
         userRepository.save(user);
     }
 
-    @RequestMapping(path = "/id/user",method = {RequestMethod.GET,RequestMethod.POST})
-    public void deletePerson(Long id) {
-        userRepository.delete(id);
-    }
-
+//    @RequestMapping(path = "/id/user",method = {RequestMethod.GET,RequestMethod.POST})
+//    public void deletePerson(Long id) {
+//        userRepository.delete(id);
+//    }
+//
 
 
     //test

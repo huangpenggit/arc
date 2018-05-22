@@ -23,5 +23,8 @@
         <module name="server-zuul" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="client-simple" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>
