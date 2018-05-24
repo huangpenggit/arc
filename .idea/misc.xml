@@ -6,11 +6,11 @@
       <list>
         <option value="$PROJECT_DIR$/wechat/pom.xml" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/client-test/pom.xml" />
         <option value="$PROJECT_DIR$/server-zuul/pom.xml" />
         <option value="$PROJECT_DIR$/server-druid/pom.xml" />
         <option value="$PROJECT_DIR$/server-eureka/pom.xml" />
         <option value="$PROJECT_DIR$/server-security/pom.xml" />
+        <option value="$PROJECT_DIR$/server-mongo/pom.xml" />
       </list>
     </option>
   </component>

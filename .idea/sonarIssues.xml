@@ -13,6 +13,131 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/api-core/src/main/java/com/del/doamin/Person.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/client-test/pom.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/client-test/src/main/java/com/del/test/ClientTestApplication.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/client-test/src/main/java/com/del/test/controller/MongoController.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/client-test/src/main/java/com/del/test/repository/PersonRepository.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/server-mongo/pom.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/server-mongo/src/main/java/com/del/servermongo/ServerMongoApplication.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/server-mongo/src/main/java/com/del/servermongo/controller/AreaController.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/server-mongo/src/main/java/com/del/servermongo/controller/HelloController.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/server-mongo/src/main/java/com/del/servermongo/controller/MongoController.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/server-mongo/src/main/java/com/del/servermongo/controller/PerconController.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/server-mongo/src/main/java/com/del/servermongo/controller/UserController.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/server-mongo/src/main/java/com/del/servermongo/mapper/AreaMapper.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/server-mongo/src/main/java/com/del/servermongo/repository/PersonRepository.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/server-mongo/src/main/java/com/del/servermongo/repository/UserRepository.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/server-mongo/src/main/java/com/del/servermongo/service/AreaService.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/server-mongo/src/main/java/com/del/servermongo/service/PersonService.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/server-mongo/src/main/java/com/del/servermongo/service/UserService.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/server-mongo/src/main/java/com/del/servermongo/service/impl/AreaServiceImpl.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/server-mongo/src/main/java/com/del/servermongo/service/impl/PersonServiceImpl.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/server-mongo/src/main/java/com/del/servermongo/service/impl/UserServiceImpl.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/server-mongo/src/main/java/com/del/servermongo/temp/TestComand.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/server-mongo/src/main/resources/application.yml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/server-mongo/src/main/resources/mapper/AreaMapper.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/server-security/src/main/java/com/security/config/ErrorPageConfig.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/server-zuul/pom.xml">
           <value>
             <set />
@@ -73,6 +198,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/../../../csp/zhihuimaster/csp-web/csp-web-manage/src/main/java/cn/com/besttone/csp/web/controller/custom/CustomController.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/../../../csp/zhihuimaster/csp-web/csp-web-manage/src/main/java/cn/com/besttone/csp/web/controller/custom/CustomPage.java">
           <value>
             <set />
@@ -89,6 +219,11 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/../../../csp/zhihuimaster/csp-web/csp-web-manage/src/main/java/cn/com/besttone/csp/web/controller/sms/WhiteAndBlackPage.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../csp/zhihuimaster/csp-web/csp-web-manage/src/main/resources/static/resource/js/custom/query.js">
           <value>
             <set />
           </value>

@@ -1,3 +1,4 @@
+/*
 package com.security.config;
 
 import org.springframework.boot.context.embedded.ConfigurableEmbeddedServletContainer;
@@ -24,4 +25,4 @@ public class ErrorPageConfig {
 
     }
 
-}
+}*/
