@@ -3,23 +3,24 @@ package com.del.doamin;
 import lombok.Getter;
 import lombok.Setter;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-
-@Entity
+//@Entity
 @Getter
 @Setter
 public class Person {
 
-    @Id
-    @GeneratedValue
+    //    @Id
+//    @GeneratedValue
     private Long id;
-
-    @Column(name = "name", nullable = true, length = 20)
-    private String name;
-
-    @Column(name = "age", nullable = true, length = 4)
     private int age;
+    private String nickname;
+    private String username;
+    private String password;
+    private String phone;
+    private String email;
+    private String realname;
+    private String id_number;
+
+
+    //    @Column(name = "username", nullable = true, length = 20)
+//    @Column(name = "age", nullable = true, length = 4)
 }

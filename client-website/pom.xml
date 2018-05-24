@@ -11,23 +11,21 @@
     <name>client-website</name>
     <description>client-website Spring Boot</description>
 
-    <!--
-        <parent>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-parent</artifactId>
-            <version>1.5.10.RELEASE</version>
-            <relativePath/> &lt;!&ndash; lookup parent from repository &ndash;&gt;
-        </parent>
-    -->
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>1.5.10.RELEASE</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
 
     <!-- 继承说明：这里继承SpringBoot提供的父工程 -->
-    <parent>
-        <groupId>com.del.arc</groupId>
-        <artifactId>arc</artifactId>
-        <version>1.0.0</version>
-        <relativePath>../pom.xml</relativePath>
-        <!--<relativePath/> &lt;!&ndash; lookup parent from repository &ndash;&gt;-->
-    </parent>
+    <!--    <parent>
+            <groupId>com.del.arc</groupId>
+            <artifactId>arc</artifactId>
+            <version>1.0.0</version>
+            <relativePath>../pom.xml</relativePath>
+            &lt;!&ndash;<relativePath/> &lt;!&ndash; lookup parent from repository &ndash;&gt;&ndash;&gt;
+        </parent>-->
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -40,7 +38,13 @@
                     <groupId>org.springframework.boot</groupId>
                     <artifactId>spring-boot-starter-jdbc</artifactId>
                 </dependency>-->
-
+        <!--lombok-->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.16.18</version>
+            <!--<optional>true</optional>-->
+        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-freemarker</artifactId>
@@ -58,8 +62,8 @@
 
         <!--druid-->
         <!--<dependency>-->
-            <!--<groupId>com.alibaba</groupId>-->
-            <!--<artifactId>druid</artifactId>-->
+        <!--<groupId>com.alibaba</groupId>-->
+        <!--<artifactId>druid</artifactId>-->
         <!--</dependency>-->
         <!--mysql-->
         <dependency>
@@ -69,13 +73,13 @@
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
-<!--
-        <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-            <version>6.0.6</version>
-        </dependency>
--->
+        <!--
+                <dependency>
+                    <groupId>mysql</groupId>
+                    <artifactId>mysql-connector-java</artifactId>
+                    <version>6.0.6</version>
+                </dependency>
+        -->
 
         <!--mybatis-spring-boot-starter-->
         <dependency>
@@ -93,13 +97,13 @@
             <version>2.7.6</version>
         </dependency>
         <!--Java 8 maven artifact-->
-<!--
-        <dependency>
-            <groupId>com.vladmihalcea.flexy-pool</groupId>
-            <artifactId>flexy-test-hikaricp-java8</artifactId>
-            <version>1.2.4</version>
-        </dependency>
--->
+        <!--
+                <dependency>
+                    <groupId>com.vladmihalcea.flexy-pool</groupId>
+                    <artifactId>flexy-test-hikaricp-java8</artifactId>
+                    <version>1.2.4</version>
+                </dependency>
+        -->
         <!--Java 7 and Java 8 maven artifact:-->
 
         <dependency>
@@ -111,12 +115,12 @@
 
         <!--Java 6 maven artifact:-->
 
-<!--        <dependency>
-            <groupId>com.zaxxer</groupId>
-            <artifactId>HikariCP-java6</artifactId>
-            <version>2.3.13</version>
-            <scope>compile</scope>
-        </dependency>-->
+        <!--        <dependency>
+                    <groupId>com.zaxxer</groupId>
+                    <artifactId>HikariCP-java6</artifactId>
+                    <version>2.3.13</version>
+                    <scope>compile</scope>
+                </dependency>-->
 
         <!-- exclude tomcat jdbc connection pool, use HikariCP -->
         <dependency>
@@ -130,12 +134,6 @@
             </exclusions>
         </dependency>
 
-        <!-- fastjson -->
-        <dependency>
-            <groupId>com.alibaba</groupId>
-            <artifactId>fastjson</artifactId>
-            <!--<version>1.2.44</version>-->
-        </dependency>
         <dependency>
             <groupId>antlr</groupId>
             <artifactId>antlr</artifactId>
@@ -144,17 +142,16 @@
 
 
 
-
-            <dependency>
-                <groupId>org.webjars</groupId>
-                <artifactId>jquery</artifactId>
-                <version>2.2.4</version>
-            </dependency>
-            <dependency>
-                <groupId>org.webjars</groupId>
-                <artifactId>bootstrap</artifactId>
-                <version>3.3.6</version>
-            </dependency>
+        <dependency>
+            <groupId>org.webjars</groupId>
+            <artifactId>jquery</artifactId>
+            <version>2.2.4</version>
+        </dependency>
+        <dependency>
+            <groupId>org.webjars</groupId>
+            <artifactId>bootstrap</artifactId>
+            <version>3.3.6</version>
+        </dependency>
 
 
         <!--JSON parse error: Can not construct instance of java.time.LocalDate: no suitable constructor found, can not deserialize from Object value，熟悉Spring MVC的童鞋应该马上就能定位错误与LocalDate的反序列化有关。-->
@@ -162,6 +159,21 @@
             <groupId>com.fasterxml.jackson.datatype</groupId>
             <artifactId>jackson-datatype-jsr310</artifactId>
         </dependency>
+
+
+        <!-- swagger RESTful API 文档 -->
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger2</artifactId>
+            <version>2.2.2</version>
+        </dependency>
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger-ui</artifactId>
+            <version>2.2.2</version>
+        </dependency>
+
+
 
     </dependencies>
 

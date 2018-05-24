@@ -27,8 +27,12 @@ spring:
 #MVC
   resources:
       static-locations: classpath:/static,classpath:/templates/index/
-#   application:
-#     name: simple-client
+  application:
+    name: simple-client
+  security:
+    user:
+      name: user
+      password: admin
 
 
 #  datasource:
@@ -48,9 +52,14 @@ mybatis:
   type-aliases-package: com.client.simple.model
 
 
-#log
+#配置日志
 logging:
-  level: debug
+  #配置日志文件路径
+  path: classpath:log
+  level:
+    com.del.test: debug #不同目录下的日志可配置不同级别
+    org.springfromework.web: debg
+#    org.hibernate: error
 
 # 开发环境配置
 ---

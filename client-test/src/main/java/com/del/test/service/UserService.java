@@ -10,7 +10,7 @@ public interface UserService {
     //条件查询。
     User save(User user);
 
-    User get(String areaCode);
+//    User get(Long id );
 
     List<User> list( );
 

@@ -7,9 +7,12 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 //@SpringBootApplication(exclude= {DataSourceAutoConfiguration.class})
 @SpringBootApplication
 @MapperScan("com.del.test.mapper")
-public class TestApplication {
+public class ClientTestApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(TestApplication.class, args);
+        SpringApplication.run(ClientTestApplication.class, args);
     }
+
+
+
 }

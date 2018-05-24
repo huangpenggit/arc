@@ -1,6 +1,5 @@
 package com.del.client.website.controller;
 
-import com.alibaba.fastjson.JSON;
 import com.del.client.website.model.Person;
 import com.del.client.website.model.Tree;
 import com.del.client.website.service.ITreeService;
@@ -42,17 +41,14 @@ public class ZTreeController {
 
     @GetMapping("/tree/json")
     @ResponseBody
-    public String treeData() {
-//        JsonResult result = new JsonResult();
-            List<Tree> trees = treeService.queryAll();
-        String string = JSON.toJSONString(trees);
-        System.out.println(string);
-        return string;
+    public List<Tree> treeData() {
+        List<Tree> trees = treeService.queryAll();
+        return trees;
     }
 
 
     @RequestMapping(value = "/hello")
-    public String hello( ) {
+    public String hello() {
         System.out.println("HELLO");
         return "/hello";
     }

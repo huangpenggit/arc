@@ -8,172 +8,152 @@
             <set />
           </value>
         </entry>
-        <entry key="/a.dummy">
+        <entry key="$MAVEN_REPOSITORY$/org/springframework/data/spring-data-mongodb/1.10.11.RELEASE/spring-data-mongodb-1.10.11.RELEASE.jar!/org/springframework/data/mongodb/core/query/Query.class">
           <value>
             <set />
           </value>
         </entry>
-        <entry key="$PROJECT_DIR$/api-core/src/main/java/com/del/doamin/Area.java">
+        <entry key="$PROJECT_DIR$/server-zuul/pom.xml">
           <value>
             <set />
           </value>
         </entry>
-        <entry key="$PROJECT_DIR$/api-core/src/main/java/com/del/doamin/BaseModel.java">
+        <entry key="$PROJECT_DIR$/../../../csp/zhihuimaster/csp-common/src/main/java/cn/com/besttone/csp/model/custom/Custom.java">
           <value>
             <set />
           </value>
         </entry>
-        <entry key="$PROJECT_DIR$/api-core/src/main/java/com/del/doamin/User.java">
+        <entry key="$PROJECT_DIR$/../../../csp/zhihuimaster/csp-common/src/main/java/cn/com/besttone/csp/model/custom/CustomAddress.java">
           <value>
             <set />
           </value>
         </entry>
-        <entry key="$PROJECT_DIR$/api-core/src/main/java/com/del/test/TestBeans.java">
+        <entry key="$PROJECT_DIR$/../../../csp/zhihuimaster/csp-ms/csp-ms-custom/src/main/java/cn/com/besttone/csp/ms/api/CustomApi.java">
           <value>
             <set />
           </value>
         </entry>
-        <entry key="$PROJECT_DIR$/client-simple/client-simple.iml">
+        <entry key="$PROJECT_DIR$/../../../csp/zhihuimaster/csp-ms/csp-ms-custom/src/main/java/cn/com/besttone/csp/ms/repository/CustomRepository.java">
           <value>
             <set />
           </value>
         </entry>
-        <entry key="$PROJECT_DIR$/client-simple/pom.xml">
+        <entry key="$PROJECT_DIR$/../../../csp/zhihuimaster/csp-ms/csp-ms-custom/src/main/java/cn/com/besttone/csp/ms/repository/impl/CustomRepositoryImpl.java">
           <value>
             <set />
           </value>
         </entry>
-        <entry key="$PROJECT_DIR$/client-simple/src/main/java/com/client/simple/controller/AreaController.java">
+        <entry key="$PROJECT_DIR$/../../../csp/zhihuimaster/csp-ms/csp-ms-custom/src/main/java/cn/com/besttone/csp/ms/service/CustomService.java">
           <value>
             <set />
           </value>
         </entry>
-        <entry key="$PROJECT_DIR$/client-simple/src/main/java/com/client/simple/model/Area.java">
+        <entry key="$PROJECT_DIR$/../../../csp/zhihuimaster/csp-ms/csp-ms-custom/src/main/java/cn/com/besttone/csp/ms/service/impl/CustomServiceImpl.java">
           <value>
             <set />
           </value>
         </entry>
-        <entry key="$PROJECT_DIR$/client-simple/src/main/java/com/client/simple/model/User.java">
+        <entry key="$PROJECT_DIR$/../../../csp/zhihuimaster/csp-ms/csp-ms-subscription/src/test/java/cn/com/besttone/csp/ms/mapper/SubscriptionMapperTest.java">
           <value>
             <set />
           </value>
         </entry>
-        <entry key="$PROJECT_DIR$/client-simple/src/main/java/com/client/simple/service/AreaService.java">
+        <entry key="$PROJECT_DIR$/../../../csp/zhihuimaster/csp-web/csp-web-manage/src/main/java/cn/com/besttone/csp/web/config/WebSecurityConfig.java">
           <value>
             <set />
           </value>
         </entry>
-        <entry key="$PROJECT_DIR$/client-simple/src/main/java/com/client/simple/service/impl/AreaServiceImpl.java">
+        <entry key="$PROJECT_DIR$/../../../csp/zhihuimaster/csp-web/csp-web-manage/src/main/java/cn/com/besttone/csp/web/controller/IndexController.java">
           <value>
             <set />
           </value>
         </entry>
-        <entry key="$PROJECT_DIR$/client-simple/src/main/resources/mapper/AreaMapper.xml">
+        <entry key="$PROJECT_DIR$/../../../csp/zhihuimaster/csp-web/csp-web-manage/src/main/java/cn/com/besttone/csp/web/controller/LoginLogoutController.java">
           <value>
             <set />
           </value>
         </entry>
-        <entry key="$PROJECT_DIR$/client-test/pom.xml">
+        <entry key="$PROJECT_DIR$/../../../csp/zhihuimaster/csp-web/csp-web-manage/src/main/java/cn/com/besttone/csp/web/controller/custom/CustomPage.java">
           <value>
             <set />
           </value>
         </entry>
-        <entry key="$PROJECT_DIR$/client-test/src/main/java/com/del/test/TestApplication.java">
+        <entry key="$PROJECT_DIR$/../../../csp/zhihuimaster/csp-web/csp-web-manage/src/main/java/cn/com/besttone/csp/web/controller/order/OrderPage.java">
           <value>
             <set />
           </value>
         </entry>
-        <entry key="$PROJECT_DIR$/client-test/src/main/java/com/del/test/controller/AreaController.java">
+        <entry key="$PROJECT_DIR$/../../../csp/zhihuimaster/csp-web/csp-web-manage/src/main/java/cn/com/besttone/csp/web/controller/sms/MessageTemplatePage.java">
           <value>
             <set />
           </value>
         </entry>
-        <entry key="$PROJECT_DIR$/client-test/src/main/java/com/del/test/controller/PerconController.java">
+        <entry key="$PROJECT_DIR$/../../../csp/zhihuimaster/csp-web/csp-web-manage/src/main/java/cn/com/besttone/csp/web/controller/sms/WhiteAndBlackPage.java">
           <value>
             <set />
           </value>
         </entry>
-        <entry key="$PROJECT_DIR$/client-test/src/main/java/com/del/test/controller/UserController.java">
+        <entry key="$PROJECT_DIR$/../../../csp/zhihuimaster/csp-web/csp-web-manage/src/main/resources/static/resource/js/member/add.js">
           <value>
             <set />
           </value>
         </entry>
-        <entry key="$PROJECT_DIR$/client-test/src/main/java/com/del/test/mapper/AreaMapper.java">
+        <entry key="$PROJECT_DIR$/../../../csp/zhihuimaster/csp-web/csp-web-manage/src/main/resources/static/resource/js/member/edit.js">
           <value>
             <set />
           </value>
         </entry>
-        <entry key="$PROJECT_DIR$/client-test/src/main/java/com/del/test/model/Person.java">
+        <entry key="$PROJECT_DIR$/../../../csp/zhihuimaster/csp-web/csp-web-manage/src/main/resources/static/resource/js/member/query.js">
           <value>
             <set />
           </value>
         </entry>
-        <entry key="$PROJECT_DIR$/client-test/src/main/java/com/del/test/model/User.java">
+        <entry key="$PROJECT_DIR$/../../../csp/zhihuimaster/csp-web/csp-web-manage/src/main/resources/static/resource/js/sms/messageTemplate/add.js">
           <value>
             <set />
           </value>
         </entry>
-        <entry key="$PROJECT_DIR$/client-test/src/main/java/com/del/test/repository/PersonRepository.java">
+        <entry key="$PROJECT_DIR$/../../../csp/zhihuimaster/csp-web/csp-web-manage/src/main/resources/static/resource/js/sms/messageTemplate/edit.js">
           <value>
             <set />
           </value>
         </entry>
-        <entry key="$PROJECT_DIR$/client-test/src/main/java/com/del/test/repository/UserRepository.java">
+        <entry key="$PROJECT_DIR$/../../../csp/zhihuimaster/csp-web/csp-web-manage/src/main/resources/static/resource/js/sms/messageTemplate/query.js">
           <value>
             <set />
           </value>
         </entry>
-        <entry key="$PROJECT_DIR$/client-test/src/main/java/com/del/test/service/AreaService.java">
+        <entry key="$PROJECT_DIR$/../../../csp/zhihuimaster/csp-web/csp-web-manage/src/main/resources/templates/index/index.html">
           <value>
             <set />
           </value>
         </entry>
-        <entry key="$PROJECT_DIR$/client-test/src/main/java/com/del/test/service/UserService.java">
+        <entry key="$PROJECT_DIR$/../../../csp/zhihuimaster/csp-web/csp-web-manage/src/main/resources/templates/index/tree.json">
           <value>
             <set />
           </value>
         </entry>
-        <entry key="$PROJECT_DIR$/client-test/src/main/java/com/del/test/service/impl/AreaServiceImpl.java">
+        <entry key="$PROJECT_DIR$/../../../csp/zhihuimaster/csp-web/csp-web-manage/src/main/resources/templates/sms/messageTemplate/add.html">
           <value>
             <set />
           </value>
         </entry>
-        <entry key="$PROJECT_DIR$/client-test/src/main/java/com/del/test/service/impl/UserServiceImpl.java">
+        <entry key="$PROJECT_DIR$/../../../csp/zhihuimaster/csp-web/csp-web-manage/src/main/resources/templates/sms/messageTemplate/edit.html">
           <value>
             <set />
           </value>
         </entry>
-        <entry key="$PROJECT_DIR$/client-test/src/main/resources/application.yml">
+        <entry key="$PROJECT_DIR$/../../../csp/zhihuimaster/csp-web/csp-web-manage/src/main/resources/templates/sms/messageTemplate/query.html">
           <value>
             <set />
           </value>
         </entry>
-        <entry key="$PROJECT_DIR$/client-test/src/main/resources/mapper/AreaMapper.xml">
+        <entry key="$PROJECT_DIR$/../../../csp/zhihuimaster/csp-web/csp-web-manage/src/main/resources/templates/sms/messageTemplate/queryArea.html">
           <value>
             <set />
           </value>
         </entry>
-        <entry key="$PROJECT_DIR$/pom.xml">
-          <value>
-            <set />
-          </value>
-        </entry>
-        <entry key="$PROJECT_DIR$/server-security/pom.xml">
-          <value>
-            <set />
-          </value>
-        </entry>
-        <entry key="$PROJECT_DIR$/server-security/src/main/java/com/security/config/WebSpringSecurityConfig.java">
-          <value>
-            <set />
-          </value>
-        </entry>
-        <entry key="$PROJECT_DIR$/server-security/src/main/java/com/security/domain/User.java">
-          <value>
-            <set />
-          </value>
-        </entry>
-        <entry key="$PROJECT_DIR$/server-security/src/main/java/com/security/security/core/SecurityUserService.java">
+        <entry key="$PROJECT_DIR$/../../../csp/zhihuimaster/csp-web/csp-web-manage/src/main/resources/templates/sms/whiteAndBlackManage/query.html">
           <value>
             <set />
           </value>

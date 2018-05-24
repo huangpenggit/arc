@@ -1,3 +1,4 @@
+/*
 package com.del.server.zuul.filter;
 
 import com.netflix.zuul.ZuulFilter;
@@ -45,3 +46,4 @@ public class AccessFilter extends ZuulFilter  {
     }
 
 }
+*/

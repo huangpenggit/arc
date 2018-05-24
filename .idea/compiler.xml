@@ -21,10 +21,8 @@
         <module name="server-sms" />
         <module name="server-test" />
         <module name="server-zuul" />
+        <module name="wechat" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="client-simple" target="1.8" />
-    </bytecodeTargetLevel>
   </component>
 </project>

@@ -1,11 +1,11 @@
 package com.del.test.repository;
 
 import com.del.doamin.Person;
-import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.mongodb.repository.MongoRepository;
 
 /**
  * JPA 操作数据库
  */
-public interface PersonRepository extends JpaRepository<Person, Long> {
-    void delete(Long id);
+public interface PersonRepository extends MongoRepository<Person, Long> {
+//    void delete(Long id);
 }

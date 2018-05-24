@@ -19,13 +19,13 @@ public class UserServiceImpl implements UserService {
         return userRepository.save(user);
     }
 
-    @Override
-    public User get(String areaCode) {
-        return null;
-    }
+//    @Override
+//    public User get(Long id) {
+//        return userRepository.findById(id);
+//    }
 
     @Override
     public List<User> list() {
-        return null;
+        return userRepository.findAll();
     }
 }

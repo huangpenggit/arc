@@ -1,11 +1,9 @@
 package com.security.domain;
 
-import lombok.Data;
 import org.springframework.security.core.GrantedAuthority;
 
 import java.util.Collection;
 
-@Data
 public class User  extends org.springframework.security.core.userdetails.User  {
 
 
