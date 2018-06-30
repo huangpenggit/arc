@@ -21,8 +21,12 @@
     <version>1.0.0</version>
 
 
-
     <!-- 模块说明：这里声明多个子模块 -->
+    <modules>
+        <module>client-thymeleaf</module>
+        <module>client-website</module>
+    </modules>
+
 
 
 <!--

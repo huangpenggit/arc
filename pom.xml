@@ -28,17 +28,11 @@
 
     <!-- 模块说明：这里声明多个子模块 -->
     <modules>
-        <module>client-thymeleaf</module>
-        <module>client-website</module>
-        <module>server-test</module>
-        <module>server-sms</module>
-
         <module>core</module>
         <module>security</module>
         <module>server</module>
         <module>server-db</module>
         <module>web</module>
-        <!--<module>server-druid</module>-->
     </modules>
 
     <properties>
@@ -99,6 +93,7 @@
                 <artifactId>fastjson</artifactId>
                 <version>1.2.44</version>
             </dependency>
+
             <!-- https://mvnrepository.com/artifact/org.json/json -->
             <dependency>
                 <groupId>org.json</groupId>
@@ -120,11 +115,11 @@
               </dependency>
 
             <!-- https://mvnrepository.com/artifact/org.springframework.security.oauth/spring-security-oauth2 -->
-            <dependency>
-                <groupId>org.springframework.security.oauth</groupId>
-                <artifactId>spring-security-oauth2</artifactId>
-                <version>2.3.3.RELEASE</version>
-            </dependency>
+            <!--<dependency>-->
+                <!--<groupId>org.springframework.security.oauth</groupId>-->
+                <!--<artifactId>spring-security-oauth2</artifactId>-->
+                <!--<version>2.3.3.RELEASE</version>-->
+            <!--</dependency>-->
 
             <!--阿里巴巴的druid-->
             <dependency>
@@ -158,6 +153,8 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
+
+
 
     <build>
         <plugins>

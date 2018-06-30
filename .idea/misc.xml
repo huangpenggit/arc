@@ -16,6 +16,8 @@
         <option value="$PROJECT_DIR$/api-business/pom.xml" />
         <option value="$PROJECT_DIR$/api-test/pom.xml" />
         <option value="$PROJECT_DIR$/client-simple/pom.xml" />
+        <option value="$PROJECT_DIR$/server-db/server-sms/pom.xml" />
+        <option value="$PROJECT_DIR$/server-test/pom.xml" />
       </set>
     </option>
   </component>

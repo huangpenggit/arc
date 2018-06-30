@@ -10,7 +10,6 @@
         <relativePath>../pom.xml</relativePath>
     </parent>
 
-
     <!-- 基本信息 -->
     <name>server-common</name>
     <description>server-common for Spring Boot</description>
