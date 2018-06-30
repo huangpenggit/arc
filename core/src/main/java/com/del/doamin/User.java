@@ -3,7 +3,7 @@ package com.del.doamin;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.util.List;
+import java.util.Date;
 
 /**
  * 地区表
@@ -18,18 +18,36 @@ public class User extends BaseModel {
      */
     private static final long serialVersionUID = 1L;
 
-    private String areaCode; // 地区6位码
+    private Long id;
 
-    private String areaName; // 地区名称
+    private String username;
 
-    private Integer areaLevel; // 地区级别
+    private String password;
 
-    private String shortCode; // 地区简码
+    private String nickname;
 
-    private String parentCode; // 上级地区码
+    private String openId;
 
-    private String parentName; // 上级地区名
+    private String accessToken;
 
-    private List<User> children;
+    private Byte subscribe;
+
+    private String remark;
+
+    private Byte sex;
+
+    private String headimgurl;
+
+    private Date subscribeTime;
+
+    private Date unsubscribeTime;
+
+    private Date becomevipTime;
+
+    private Long totalpoint;
+
+    private Long cardnumber;
+
+    private Byte viplevel;
 
 }

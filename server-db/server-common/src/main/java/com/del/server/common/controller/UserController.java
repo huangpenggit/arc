@@ -1,6 +1,6 @@
 package com.del.server.common.controller;
 
-import com.del.server.common.domain.User;
+import com.del.doamin.User;
 import com.del.server.common.mapper.UserMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -14,6 +14,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/user")
 public class UserController {
+
     @Autowired
     private UserMapper userMapper;
     @RequestMapping("")

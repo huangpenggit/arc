@@ -30,21 +30,10 @@
 
 
 
-<!--
     <dependencies>
-        &lt;!&ndash;lombok&ndash;&gt;
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <version>1.16.18</version>
-            &lt;!&ndash;<optional>true</optional>&ndash;&gt;
-        </dependency>
 
-        <dependency>
-            <groupId>org.springframework.security.oauth</groupId>
-            <artifactId>spring-security-oauth2</artifactId>
-        </dependency>
 
+<!--
         &lt;!&ndash; swagger RESTful API 文档 &ndash;&gt;
         <dependency>
             <groupId>io.springfox</groupId>
@@ -56,17 +45,10 @@
             <artifactId>springfox-swagger-ui</artifactId>
             <version>2.2.2</version>
         </dependency>
-
-        &lt;!&ndash; https://mvnrepository.com/artifact/org.codehaus.sonar/sonar-maven-plugin &ndash;&gt;
-        <dependency>
-            <groupId>org.codehaus.sonar</groupId>
-            <artifactId>sonar-maven-plugin</artifactId>
-            <version>5.1</version>
-        </dependency>
+-->
 
 
     </dependencies>
 
--->
 
 </project>

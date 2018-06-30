@@ -1,6 +1,7 @@
 package com.del.server.common.mapper;
 
-import com.del.server.common.domain.User;
+import com.del.doamin.User;
+
 import java.util.List;
 
 public interface UserMapper {
