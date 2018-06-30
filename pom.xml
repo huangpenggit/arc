@@ -2,41 +2,42 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <!-- 继承说明：这里继承SpringBoot提供的父工程 -->
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.0.2.RELEASE</version>
+        <!--<version>1.5.10.RELEASE</version>-->
+        <relativePath/>
+    </parent>
 
 
-    <!-- 基本信息   zhe是个父级项目 arc-->
+    <!-- 项目说明：这里作为聚合工程的父工程 ,父级项目 arc-->
     <description>SpringBoot 多模块构建示例</description>
     <modelVersion>4.0.0</modelVersion>
     <name>arc</name>
     <packaging>pom</packaging>
 
-    <!-- 项目说明：这里作为聚合工程的父工程 -->
     <groupId>com.del.arc</groupId>
     <artifactId>arc</artifactId>
     <version>1.0.0</version>
 
 
-    <!-- 继承说明：这里继承SpringBoot提供的父工程 -->
-    <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <!--<version>1.5.10.RELEASE</version>-->
-        <version>2.0.2.RELEASE</version>
-        <relativePath/>
-    </parent>
+
 
     <!-- 模块说明：这里声明多个子模块 -->
     <modules>
-        <module>api-core</module>
-        <module>api-business</module>
         <module>client-thymeleaf</module>
         <module>client-website</module>
-        <module>client-simple</module>
-        <!--<module>client-test</module>-->
         <module>server-common</module>
         <module>server-test</module>
         <module>server-sms</module>
-        <module>api-test</module>
+
+        <module>core</module>
+        <module>security</module>
+        <module>server</module>
+        <module>server-db</module>
+        <module>web</module>
         <!--<module>server-druid</module>-->
     </modules>
 

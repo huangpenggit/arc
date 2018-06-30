@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.del.servermongo.mapper.AreaMapper">
+	<resultMap id="area" type="com.del.doamin.Area">
+		<id property="areaCode" column="area_area_code" javaType="string" jdbcType="VARCHAR" />
+		<result property="areaName" column="area_area_name" javaType="string" jdbcType="VARCHAR" />
+		<result property="areaLevel" column="area_area_level" javaType="int" jdbcType="INTEGER" />
+		<result property="shortCode" column="area_short_code" javaType="string" jdbcType="VARCHAR" />
+		<result property="parentCode" column="area_parent_code" javaType="string" jdbcType="VARCHAR" />
+		<result property="parentName" column="area_parent_name" javaType="string" jdbcType="VARCHAR" />
+	</resultMap>
+	
+	<resultMap id="areaWithChildren" extends="area" type="com.del.doamin.Area">
+		<collection property="children" select="treeChildren" column="area_area_code" />
+	</resultMap>
+	
+	<sql id="sqlAreaColumns">
+		area_.area_code AS area_area_code,
+		area_.area_name AS area_area_name,
+		area_.area_level AS area_area_level,
+		area_.short_code AS area_short_code,
+		area_.parent_code AS area_parent_code,
+		area_.parent_name AS area_parent_name
+	</sql>
+	
+	<select id="get" parameterType="string" resultMap="area">
+		SELECT <include refid="sqlAreaColumns" /> FROM sys_area area_ WHERE area_.area_code = #{code}
+	</select>
+	
+	<select id="tree" parameterType="string" resultMap="areaWithChildren">
+		SELECT <include refid="sqlAreaColumns" /> FROM sys_area area_ WHERE area_.area_code = #{root}
+	</select>
+	
+	<select id="treeChildren" parameterType="string" resultMap="areaWithChildren">
+		SELECT <include refid="sqlAreaColumns" /> FROM sys_area area_ WHERE area_.parent_code = #{root}
+	</select>
+	
+	<select id="listChildren" parameterType="string" resultMap="area">
+		SELECT <include refid="sqlAreaColumns" />
+        FROM sys_area area_
+        WHERE area_.parent_code = #{root}
+	</select>
+
+    	<select id="list" resultMap="area">
+		SELECT <include refid="sqlAreaColumns" />
+        FROM sys_area area_
+	</select>
+
+
+	<select id="getByShortCodeAndLevel" resultMap="area">
+		SELECT <include refid="sqlAreaColumns" /> FROM sys_area area_ 
+		WHERE area_.short_code = #{shortCode}
+		AND area_.area_level = #{areaLevel}
+	</select>
+</mapper>
