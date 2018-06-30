@@ -1,4 +1,4 @@
-package com.del.server.common.util;
+package com.del.arc.util;
 
 /**
  * adj. 不断的，持续的;永恒的，始终如一的;坚定;忠实的

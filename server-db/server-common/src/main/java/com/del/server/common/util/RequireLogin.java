@@ -1,4 +1,4 @@
-package com.del.server.common.util;
+package com.del.arc.util;
 
 
 import java.lang.annotation.ElementType;

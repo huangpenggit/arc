@@ -1,4 +1,3 @@
-/*
 package com.del.arc.config;
 
 
@@ -35,13 +34,11 @@ public class DruidConfiguration {
         return servletRegistrationBean;
     }
 
-    */
-/**
+    /**
      * 注册一个：filterRegistrationBean
      *
      * @return
-     *//*
-
+     */
 
     @Bean
     public FilterRegistrationBean druidStatFilter2() {
@@ -127,4 +124,4 @@ public class DruidConfiguration {
 
 }
 
-//服务项目配价目*/
+//服务项目配价目

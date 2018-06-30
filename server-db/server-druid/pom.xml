@@ -24,31 +24,14 @@
 
     <dependencies>
 
-        <!--<dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-activemq</artifactId>
-        </dependency>
+<!--
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-redis</artifactId>
         </dependency>
+-->
 
-           <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-jdbc</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-mail</artifactId>
-        </dependency>
-       -->
-
-        <!--lombok-->
- <!--       <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <version>1.16.18</version>
-        </dependency>-->
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -102,6 +85,7 @@
             <artifactId>commons-io</artifactId>
         </dependency>
 
+
         <!-- swagger RESTful API 文档 -->
         <dependency>
             <groupId>io.springfox</groupId>
@@ -113,50 +97,56 @@
         </dependency>
 
 
+
+        <!--log-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-logging</artifactId>
+        </dependency>
+
     </dependencies>
 
 
+    <!--
+        <build>
+            <plugins>
+                &lt;!&ndash;多模块打包：只需在启动类所在模块的POM文件：指定打包插件 &ndash;&gt;
+                &lt;!&ndash;该插件主要用途：构建可执行的JAR &ndash;&gt;
+                <plugin>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-maven-plugin</artifactId>
+                </plugin>
 
+                &lt;!&ndash;sonar 扫描插件&ndash;&gt;
+                &lt;!&ndash;
+                            <plugin>
+                                <groupId>org.sonarsource.scanner.maven</groupId>
+                                <artifactId>sonar-maven-plugin</artifactId>
+                                <version>3.2</version>
+                            </plugin>
 
-    <build>
-        <plugins>
-            <!--多模块打包：只需在启动类所在模块的POM文件：指定打包插件 -->
-            <!--该插件主要用途：构建可执行的JAR -->
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
+                &ndash;&gt;
 
-            <!--sonar 扫描插件-->
-            <!--
-                        <plugin>
-                            <groupId>org.sonarsource.scanner.maven</groupId>
-                            <artifactId>sonar-maven-plugin</artifactId>
-                            <version>3.2</version>
-                        </plugin>
+                &lt;!&ndash;逆向工程自动生成mapper插件&ndash;&gt;
+                <plugin>
+                    <groupId>org.mybatis.generator</groupId>
+                    <artifactId>mybatis-generator-maven-plugin</artifactId>
+                    <version>1.3.2</version>
+                    <configuration>
+                        <verbose>true</verbose>
+                        <overwrite>false</overwrite>
+                    </configuration>
+                    <dependencies>
+                        <dependency>
+                            <groupId>mysql</groupId>
+                            <artifactId>mysql-connector-java</artifactId>
+                            <version>5.1.21</version>
+                        </dependency>
+                    </dependencies>
+                </plugin>
 
-            -->
-
-            <!--逆向工程自动生成mapper插件-->
-            <plugin>
-                <groupId>org.mybatis.generator</groupId>
-                <artifactId>mybatis-generator-maven-plugin</artifactId>
-                <version>1.3.2</version>
-                <configuration>
-                    <verbose>true</verbose>
-                    <overwrite>false</overwrite>
-                </configuration>
-                <dependencies>
-                    <dependency>
-                        <groupId>mysql</groupId>
-                        <artifactId>mysql-connector-java</artifactId>
-                        <version>5.1.21</version>
-                    </dependency>
-                </dependencies>
-            </plugin>
-
-        </plugins>
-    </build>
+            </plugins>
+        </build>-->
 
 
 </project>
