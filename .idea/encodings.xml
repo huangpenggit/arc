@@ -6,19 +6,11 @@
     <file url="file://$PROJECT_DIR$/api-core" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/api-test" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/client-simple" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/client-test" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/client-test" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/client-thymeleaf" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/client-website" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/server-common" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/server-druid" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/server-eureka" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/server-mongo" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/server-security" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/server-sms" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/server-test" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/server-zuul" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/wechat" charset="UTF-8" />
     <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>
