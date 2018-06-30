@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>驻村干部村庄关系管理</title>
+<#include "../../tpl/res_css.tpl" />
+<style>
+.ui-dialog-content{overflow:auto;}
+.roll-wrap{
+    overflow-x: auto;
+    overflow-y:hidden;
+    position: relative;
+}
+tr:hover{
+	cursor:default;
+}
+.search_table input.qryInput{
+	width:138px;
+	height:23px;
+	line-height:23px;
+	padding: 0 3px;
+}
+</style>
+</head>
+<body>
+    <div class="breadcrumb"></div>
+    <div class="listTopBtn">
+    	<table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td><h1>驻村干部村庄关系管理</h1></td>
+          </tr>
+        </table>
+    </div>
+
+    
+    <div class="cmxform">
+       <form class="record-search-form record-search-min record-search-form-border" id="J_formSearch" name="J_formSearch" >
+          <input type="hidden" name="sptpsnTypeCd" value="1008"/>
+          <div class="record-search-cate">
+				<table class="search_table" cellpadding="0" cellspacing="0" border="0" width="100%">
+					<tr>
+						<td><label class="description">驻村干部</label></td>
+						<td>
+							<input  name="scrtyName" id="scrtyName" type="text" value=""/>
+						</td>
+                        <td><label class="description">角色标签</label></td>
+                        <td>
+                            <select name="roleLable" id="roleLable"></select>
+                        </td>
+                  </tr>
+                  <tr>
+                  	<td><label class="description">所属区域</label></td>
+						<td colspan="3">
+							<input name="hideDataRoute" id="hideDataRoute" type="hidden" value=""/>
+                            <select name="provCode" id="provCode" onchange="getCityOptions(this.value);getRoleLabel();"></select>
+			                <select name="cityCode" id="cityCode" onchange="getCntyOptions(this.value);getRoleLabel();"></select>
+			                <select name="cntyCode" id="cntyCode" onchange="getTownOptions(this.value);"></select>
+	 			            <select name="townCode" id="townCode" onchange="getAdminVllgOptions(this.value);"></select>
+			                <select name="adminVllgCode" id="adminVllgCode"></select>
+						</td>
+                  </tr>
+                  <tr>
+                       <td colspan="6" class="td-last-child">
+                            <a class="searchBtn" href="javascript:;" id="J_searchInfo"><i></i>查询</a>
+                       </td>
+                  </tr>
+				</table>
+            </div>
+        </form>
+    </div>
+    
+    
+    <!-- 功能按钮开始 -->
+ <div class="listTopBtn">
+                	<table width="100%" border="0" cellspacing="0" cellpadding="0">
+                     <tr>
+                        <td>
+	                        <div class="normalBtnArea ta_l">
+	                         	<h2>驻村干部与村关系信息</h2>
+	                        </div>
+                        </td>
+                        <td>
+                        	<div class="normalBtnArea ft-right">
+                        		<a class="smallBtn BGblue" href="javascript:void(0);" id="addHelperXLS">批量新增</a> 
+                        	    <a class="smallBtn BGblue" href="javascript:void(0);" id="addHelper">新增</a> 
+                        	    <a class="smallBtn BGblue" href="javascript:void(0);"  id="editHelperInfo">编辑</a>
+                                <a class="smallBtn BGblue" href="javascript:void(0);"  id="batchAudit">删除</a>
+                            </div>
+                        </td>
+                      </tr>
+                    </table>
+     </div>
+   <!-- 功能按钮结束 -->  
+     <!-- 数据展示开始 -->
+    <div class="tablewidth roll-wrap mg_t_10 fixed_table_top" id="list1" style="z-index:200;/* height:280px; */zoom:1;">
+		<table class="ui-record-table table_radius table-bordered table-striped text-hidden-break position-title" style="table-layout: auto;" id="W_table" width="100%">
+			<thead>
+				<tr>
+					<th width="25">
+		                <input type="checkbox" id="selectAll">
+		            </th>
+		            <th width="100">关系ID</th>
+					<th width="210">村庄地址</th>
+					<th width="150">驻村干部ID</th>
+					<th width="100">驻村干部名称</th>
+					<th width="120">创建时间</th>
+					<th width="120">角色标签</th>
+					<th width="150">备注</th>
+					<th class="fn-hide">村Code</th>
+				</tr>
+             </thead>
+        </table>
+        <table class="ui-record-table table_radius table-bordered table-striped text-hidden-break mg_t_42" style="table-layout: auto;" width="100%">
+             <tbody id="J_tabletpl"></tbody>
+		</table>
+    </div>
+<!-- 数据展示结束 -->
+    <!--翻页及功能按钮区域开始-->
+    <DIV class="amount-bottom">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="gridBottom">
+          <tr>
+			<td class="ta_l">
+                 <!-- <div class="normalBtnArea">
+                     <a class="normalBtn BGgray" onclick="getSelectVal()">导出<span id="J_selectNum"></span></a>
+                 </div> -->
+             </td>
+            <td width="50%">
+                <DIV class="fn-clear action-other  action-other-show ">
+                        <DIV id="Pagination" class="page pagination fn-right"></DIV>
+                        <DIV class="fn-right fn-pt5 fn-pr10"></DIV>
+                </DIV></td>
+          </tr>
+        </table>
+    </DIV>
+
+<!-- 第一书记与村庄关系信息 -->
+<script id="T_helper" type="text/x-handlebars-template">
+{{#if beans}}
+    {{#each beans}}
+        <tr>
+            <td width="25" align="center">
+				<div class="">
+					<input type="checkbox"/>
+					<input type="hidden" name = "bgnValidTime" value = "{{BGN_VALID_TIME}}"/>
+					<input type="hidden" name = "endValidTime" value = "{{END_VALID_TIME}}"/>
+				</div>
+			</td>
+            <td width="100">{{rlId}}</td>
+            <td width="210">{{concatAddress}}</td>
+			<td width="150">{{scrtyId}}</td>
+            <td width="100">{{scrtyName}}</td>
+            <td width="120">{{crtTime}}</td>
+            <td width="120">{{roleLableCdNm roleLableNm}}</td>
+            <td width="150">{{remark}}</td>
+			<td class="fn-hide">{{adminVllgCode}}</td>
+        </tr>
+    {{/each}}
+{{else}}
+	<tr>
+        	<!--
+            #############################
+            colspan的值应该与上面TD的数量对应
+            ##################-->
+		<td colspan="11">
+			<div class="ui-tips-box tipsBox">
+				<div class="ui-icon-noData"></div>
+				<div class="ui-tips-text">暂无数据记录！</div>
+			</div>
+		</td>
+	</tr>
+{{/if}}
+</script>
+
+
+<!-- 省 -->
+<script type="text/x-handlebars-template" id="T_provCode">
+	<option value="">--请选择--</option>
+    {{#each beans}}
+      <option value="{{regnCode}}">{{regnNm}}</option>
+	{{/each}}
+</script>
+
+<!-- 市-->
+<script type="text/x-handlebars-template" id="T_cityCode">
+	<option value="">--请选择--</option>
+    {{#each beans}}
+      <option value="{{regnCode}}">{{regnNm}}</option>
+	{{/each}}
+</script>
+
+<!-- 县 -->
+<script type="text/x-handlebars-template" id="T_cntyCode">
+	<option value="">--请选择--</option>
+    {{#each beans}}
+      <option value="{{regnCode}}">{{regnNm}}</option>
+	{{/each}}
+</script>
+
+<!-- 乡镇 -->
+<script type="text/x-handlebars-template" id="T_townCode">
+	<option value="">--请选择--</option>
+  {{#each beans}}
+      <option value="{{regnCode}}">{{regnNm}}</option>
+	{{/each}}
+</script>
+
+<!-- 村 -->
+<script type="text/x-handlebars-template" id="T_adminVllgCode">
+	<option value="">--请选择--</option>
+  {{#each beans}}
+      <option value="{{regnCode}}">{{regnNm}}</option>
+  {{/each}}
+</script>
+<!-- 角色标签 -->
+<script type="text/x-handlebars-template" id="T_roleLable">
+    <option value="">--请选择--</option>
+    {{#each this}}
+      <option value="{{cdVal}}">{{cmnCdValNm}}</option>
+    {{/each}}
+</script>
+<!--
+************************************
+ 请依据项目情况引用公用JS文件，如#include "../../tpl/res_js.tpl" 
+ ************************************ 
+ -->
+<#include "../../tpl/res_js.tpl" />
+<script type="text/javascript">
+srvMap.add('queryScrtyVillageList','','front/sh/scrtyVillage!scrtyVllgExecute?uid=u001');//查询第一书记与村庄关系列表
+srvMap.add('saveScrtyVillage','','front/sh/scrtyVillage!scrtyVllgExecute?uid=u002');//新增第一书记与村庄关系列表
+srvMap.add('updateScrtyVillage','','front/sh/scrtyVillage!scrtyVllgExecute?uid=u003');//修改第一书记与村庄关系列表
+srvMap.add('deleteScrtyVillageList','','front/sh/scrtyVillage!scrtyVllgExecute?uid=u004');//删除第一书记与村庄关系列表
+srvMap.add('qryOpAndRaVal','query.json','front/sh/tPtSptpsn!execute?uid=p028');//查询下拉框和radio,checobox数据
+srvMap.add('getFtpAddr','query.json','front/sh/poorHouse!queryPicIpPath?uid=p001');//获取ftp地址
+srvMap.add('queryRegnOptions','','front/sh/poorHouse!execute?uid=p022');//获取省市县等区域下拉框列表 
+
+srvMap.add('queryRoleRegn','','front/sh/precisionNotice!noticeExecute?uid=n007');//查询用户区域权限
+
+var G_params = {
+    url : srvMap.get('queryScrtyVillageList'),
+    items_per_page : 10 ,   // 每页数     @param : limit   请注意后台接收后按此值处理分页，否则页面会全部展现
+    page_index : 0 , //当前页  @param : start
+    pagination : "Pagination" , //分页id
+    searchformId : "J_formSearch", //搜索表单的id
+    tabletpl : "T_helper", //表格模板
+    tablewrap : "J_tabletpl" //表格容器
+};
+
+Handlebars.registerHelper("roleLableCdNm",function(value){
+    if(!isDataNull(value)){
+        return value;
+    }else {
+        return "驻村干部";
+    }
+});
+
+// 帮扶对象选择弹框列表
+var G_paramsP = {
+	    url : srvMap.get('initPoorHouseList'),
+	    items_per_page : 10 ,   // 每页数     @param : limit   请注意后台接收后按此值处理分页，否则页面会全部展现
+	    page_index : 0 , //当前页  @param : start
+	    pagination : "PaginationT" , //分页id
+	    searchformId : "J_poorTargetForm", //搜索表单的id
+	    tabletpl : "T_poorTarget", //表格模板
+	    tablewrap : "J_poorTarget" //表格容器
+	};
+
+function isEmpty(str){
+    if(str==undefined || str==null || str=="" || !str){
+        return true;
+    }
+    return false;
+ }	
+//页面加载完开始执行
+$(function () {
+	
+    var params1={
+            scrollwrap:$("#list1"),
+            title:$("#W_table"),
+            showColumns:true,
+            setwrap:$('#setwrap')
+            /* ,height:"270px" */
+            
+        }
+        Util.create.tablescroll(params1);
+    
+    //初始化区域
+    getRegnOptions();
+  //初始化下拉框和radio，checkbox按钮组(除地区外)
+    //qryOpAndRaVal();
+    getRoleLabel();
+	//页面初始化加载数据集  jzp 全国权限禁止默认不查询
+    var provCode = $('#provCode').val();
+    if(!isEmpty(provCode)){
+    	$("#hideDataRoute").val(provCode);
+        listInit();
+    }
+	//listInit();
+	
+/* 	//扶贫对象列表初始化
+	poorPeopleTableInit(); */
+	
+	//全选
+	$("#selectAll").bind('click',function(){
+	    //alert($("#selectAll").attr("checked"));
+		if( $("#selectAll").attr("checked") == "checked"){
+			$("input[type='checkbox']",$("#J_tabletpl")).attr("checked",true);
+		}else{
+			$("input[type='checkbox']",$("#J_tabletpl")).attr("checked",false);
+		}
+	});
+	
+	$("#batchAudit").bind("click",batchAudit);
+	//查询过滤
+    $('#J_searchInfo').bind('click',function(){
+/*     	var param = "sptpsnId="+123;
+    	console.log(">>>>>>>>>>>>>>>>"+param); */
+    	var provCode = $('#provCode').val();
+        if(isEmpty(provCode)){
+            Util.dialog.tips("请至少选择到省级查询");
+            return;
+        }
+    	$("#hideDataRoute").val(provCode);
+    	G_params.page_index = 0;
+        var str = decodeURI($("#"+G_params.searchformId).serialize()); //把form序列化
+        str = str + "&hideDataRoute=" + $("#hideDataRoute").val();
+        Util.pagination(G_params.page_index, true , G_params , str );
+    })
+    
+	
+	//新增
+	$("#addHelper").bind("click",addHelper);
+	
+	//批量新增
+	$("#addHelperXLS").bind("click",addHelperXLS);
+	
+	//编辑帮扶责任人的信息
+	$("#editHelperInfo").bind("click",editHelperInfo);
+	
+	
+	//初始化省一级
+    //getProvOptions("-1");
+	
+});
+
+//数据集渲染函数
+var listInit = function(){
+	var str = $("#"+G_params.searchformId).serialize(); //把form序列化
+	str = str + "&hideDataRoute=" + $("#hideDataRoute").val();
+	Util.pagination(0, true , G_params , str );
+}
+
+//查询下拉列表和radio，checkbox等数据
+function  qryOpAndRaVal(){
+    var str = "2002";
+    var param={queryType:str};
+    Util.ajax.postJsonSync(srvMap.get("qryOpAndRaVal"), param, function(json,status){
+           if(status){               
+               Util.ajax.loadTemp("#roleLable",$("#T_roleLable"),json.object['2002']);//角色信息
+           }else{
+               Util.dialog.tips("请求出错,请重试");
+           }
+       });
+}
+
+//全选   (获取#J_tabletpl中checkbox的选择项的ID)
+var getSelectVal = function(){
+	var valContainer= new Array();
+	var $el = $("#J_tabletpl");
+	var _obj = $("input[type='checkbox']:checked",$el);
+	var _objLength = $("input[type='checkbox']:checked",$el).length;	
+	if($("input[type='checkbox']:checked",$el).length){
+		for(var a=0;a<_objLength;a++){
+			valContainer.push(_obj[a].value);
+		}
+		_selectData = valContainer.join(",");
+		alert(_selectData);
+	}
+};
+	
+	
+    //弹框tab页样式设置
+    function selTab(num){
+		$(".tab").hide();
+		$(".tab"+num).show();
+		$("#tabLi"+num).addClass("ui-tab-item-current");
+		$("#tabLi"+num).siblings().removeClass("ui-tab-item-current");
+	}
+    
+
+    //编辑第一书记村庄关系信息
+    function  editHelperInfo(){
+    	var checkedObj = $("#J_tabletpl tr td:nth-child(1)").find("input:checked").parents("tr");
+        var rlId = $("#J_tabletpl tr td:nth-child(1)").find("input:checked").parents("tr:eq(0)").children("td:eq(1)").text();
+        var concatAddress = $("#J_tabletpl tr td:nth-child(1)").find("input:checked").parents("tr:eq(0)").children("td:eq(2)").text();
+        var scrtyId = $("#J_tabletpl tr td:nth-child(1)").find("input:checked").parents("tr:eq(0)").children("td:eq(3)").text();
+        var scrtyName = $("#J_tabletpl tr td:nth-child(1)").find("input:checked").parents("tr:eq(0)").children("td:eq(4)").text();
+        var remark = $("#J_tabletpl tr td:nth-child(1)").find("input:checked").parents("tr:eq(0)").children("td:eq(7)").text();
+        var adminVllgCode = $("#J_tabletpl tr td:nth-child(1)").find("input:checked").parents("tr:eq(0)").children("td:eq(8)").text();
+    	var bgnValidTime = $(checkedObj).find("input[name='bgnValidTime']").val();
+    	var endValidTime = $(checkedObj).find("input[name='endValidTime']").val();
+    	var hideDataRoute = $("#hideDataRoute").val();
+        if(checkedObj.length > 0){
+	    	if(checkedObj.length > 1){
+	        Util.dialog.tips("只能选择一条记录进行编辑");
+	    	}else{
+	    		window.location.href=encodeURI("editScrtyVillage.html?rlId="+rlId+"&concatAddress="+concatAddress+"&scrtyId="+scrtyId+"&scrtyName="
+	    				+scrtyName+"&remark="+remark+"&adminVllgCode="+adminVllgCode+"&bgnValidTime="+bgnValidTime+"&endValidTime="+endValidTime+"&hideDataRoute="+hideDataRoute);
+	    	}
+    	}else{
+    		Util.dialog.tips("请选择一条记录进行编辑");
+    	}
+    }
+    
+  //批量删除
+    function  batchAudit(){
+    	var checkedObj = $("#J_tabletpl tr td:nth-child(1)").find("input:checked").parents("tr");
+    	var rlId='';
+    	var fkfs=""; 
+    	var rlIds='';
+    	if(checkedObj.length > 0){
+    		for(var i=0;i<checkedObj.length;i++){
+    			rlId = $("#J_tabletpl tr td:nth-child(1)").find("input:checked").parents("tr:eq("+i+")").children("td:eq(1)").text();
+    			if(rlIds==""){
+    				rlIds=rlId;
+    			}else{
+    				rlIds += ","+rlId;
+    			}
+    		}
+
+    		var hideDataRoute = $("#hideDataRoute").val();
+    		var param = {rlIds:rlIds,hideDataRoute:hideDataRoute};
+    		var msgDel = {
+	                  id: 'publishConfirm', //弹出对话框的id
+	                  title: '提示信息', //左上角提示标题
+	                  content: '您确认删除已选信息？', //具体提示内容
+	                  okVal: '确定', //确认按钮文本
+	                  okCallback: function() { //确认按钮点击过之后执行的函数
+	                  	Util.ajax.postJsonSync(srvMap.get("deleteScrtyVillageList"), param, function(json,status){
+	                  		if(status){
+	                  			Util.dialog.tips("删除成功");
+	                  			listInit();//异步刷新页面数据
+	                  		}else{
+	                  			Util.dialog.tips("批量删除数据异常,请重试");
+	                  		}
+	                  	});
+	                  },
+	                  cancelVal: '取消', //取消按钮文本
+	                  cancelCallback: function() {} //取消按钮点击后执行的函数
+	              };
+	              Util.dialog.confirm(msgDel);
+	              return;
+    	}else{
+    		Util.dialog.tips("请选择一条记录进行删除");
+    	}
+    }
+    
+    
+  //获取省下拉列表
+    function getProvOptions(val){
+    		var param = {regnCode:val};
+    		Util.ajax.postJsonSync(srvMap.get("queryRegnOptions"), param, function(json,status){
+    			if(status){
+    				Util.ajax.loadTemp("#provCode",$("#T_provCode"),json);//加载模板
+    			}else{
+    				Util.dialog.tips("请求出错,请重试");
+    			}
+    		});
+    }
+    	
+  //获取市下拉列表
+    function getCityOptions(val){
+    	if(val == ''){
+    	    $("#cityCode").find("option").remove();
+    	    $("#cntyCode").find("option").remove();
+    	    $("#townCode").find("option").remove();
+    	    $("#adminVllgCode").find("option").remove();
+    	}else{
+    		$("#cntyCode").find("option").remove();
+    	    $("#townCode").find("option").remove();
+    	    $("#adminVllgCode").find("option").remove();
+    		var param = {regnCode:val};
+    		Util.ajax.postJsonSync(srvMap.get("queryRegnOptions"), param, function(json,status){
+    			if(status){
+    				Util.ajax.loadTemp("#cityCode",$("#T_cityCode"),json);//加载模板
+    			}else{
+    				Util.dialog.tips("请求出错,请重试");
+    			}
+    		});
+    	}
+    }
+
+    //获取县下拉列表
+    function getCntyOptions(val){
+    	if(val == ''){
+    		$("#cntyCode").find("option").remove();
+	    	$("#townCode").find("option").remove();
+		    $("#adminVllgCode").find("option").remove();
+    	}else{
+    		$("#townCode").find("option").remove();
+		    $("#adminVllgCode").find("option").remove();
+    		var param = {regnCode:val};
+    		Util.ajax.postJsonSync(srvMap.get("queryRegnOptions"), param, function(json,status){
+    			if(status){
+    				Util.ajax.loadTemp("#cntyCode",$("#T_cntyCode"),json);//加载模板
+    			}else{
+    				Util.dialog.tips("请求出错,请重试");
+    			}
+    		});
+    	}
+    }
+
+    //获取乡镇下拉列表
+    function getTownOptions(val){
+    	if(val == ''){
+    		$("#townCode").find("option").remove();
+    	    $("#adminVllgCode").find("option").remove();
+    	 }else{
+    		$("#adminVllgCode").find("option").remove();
+    		var param = {regnCode:val};
+        	Util.ajax.postJsonSync(srvMap.get("queryRegnOptions"), param, function(json,status){
+        		if(status){
+        			Util.ajax.loadTemp("#townCode",$("#T_townCode"),json);//加载模板
+        		}else{
+        			Util.dialog.tips("请求出错,请重试");
+        		}
+        	});
+    	}
+    }
+
+    //获取村下拉列表
+    function getAdminVllgOptions(val){
+    	if(val == ''){
+    		$("#adminVllgCode").find("option").remove();
+    	}else{
+    	var param = {regnCode:val};
+    	Util.ajax.postJsonSync(srvMap.get("queryRegnOptions"), param, function(json,status){
+    		if(status){
+    			Util.ajax.loadTemp("#adminVllgCode",$("#T_adminVllgCode"),json);//加载模板
+    		}else{
+    			Util.dialog.tips("请求出错,请重试");
+    		}
+    	});
+      }
+    }
+    
+    //新增第一书记与村庄关系
+    function addHelper(){
+    	window.location.href = "addScrtyVillage.html";
+    }
+    
+    //批量新增第一书记与村庄关系
+    function addHelperXLS(){
+    	window.location.href = "addHelperByXLS.html";
+    }
+ // 初始化区域下拉
+    function getRegnOptions(){
+  	  var param = {isLimitCnty:'N',isAutoCheck:'Y'};
+  		Util.ajax.postJsonSync(srvMap.get("queryRoleRegn"), param, function(json,status){
+  			if(status){
+  				var role = parseInt(json.bean.role);
+  				if(role>0){
+  					var obj = null;
+  					var checkRegnCode = "";
+  					var checkRegnNm = "";
+  					for(var i=role;i>0;i--){
+  						if(i==5){//固定村
+  							checkRegnCode = json.bean.checkAdminVllgCode;
+  							checkRegnNm = json.bean.checkAdminVllgNm;
+  							obj = $("#adminVllgCode");
+  						}else if(i==4){
+  							checkRegnCode = json.bean.checkCountyCode;
+  							checkRegnNm = json.bean.checkCountyNm;
+  							obj = $("#townCode");
+  						}else if(i==3){
+  							checkRegnCode = json.bean.checkCntyCode;
+  							checkRegnNm = json.bean.checkCntyNm;
+  							obj = $("#cntyCode");
+  						}else if(i==2){
+  							checkRegnCode = json.bean.checkCityCode;
+  							checkRegnNm = json.bean.checkCityNm;
+  							obj = $("#cityCode");
+  						}else if(i==1){
+  							checkRegnCode = json.bean.checkProvCode;
+  							checkRegnNm = json.bean.checkProvNm;
+  							obj = $("#provCode");
+  							$("#hideDataRoute").val(checkRegnCode);
+  						}
+  						var html = '<option value="'+checkRegnCode+'">'+checkRegnNm+'</option>';
+  						obj.html(html);
+  						obj.find("option[value="+checkRegnCode+"]").attr("selected","true");
+  					}
+  					
+  					//初始化下拉
+  					if(role==4){
+  				    	// 获取村下拉列表
+  				    	getAdminVllgOptions(json.bean.authCode);
+  					}else if(role==3){
+  						// 获取乡下拉列表
+  				    	getTownOptions(json.bean.authCode);
+  					}else if(role==2){
+  						// 获取县下拉列表
+  				    	getCntyOptions(json.bean.authCode);
+  					}else if(role==1){
+  						// 获取市下拉列表
+  				    	getCityOptions(json.bean.authCode);
+  					}
+  					
+  				}else{//全国区域或无区域
+  					getProvOptions("-1");
+  				}
+  			}else{
+  				Util.dialog.tips("请求出错,请重试");
+  			}
+  		});
+    }
+ 	
+    function isDataNull(str) {
+	    if (str == null || str == "" || str == undefined) {
+	        return true;
+	    }
+	    return false;
+	}
+    
+    function getRoleLabel(){
+		 var provCode = $("#provCode").val();
+		 var cityCode = $("#cityCode").val();
+		 if(!isDataNull(provCode)){
+			 var param = {};
+			 param.provCode = provCode;
+			 if(!isDataNull(cityCode)){
+				 param.cityCode = cityCode;
+			 }
+			 Util.ajax.loadTemp("#roleLable",$("#T_roleLable"),roleLable.getConfigs.getAllocation(param));//角色信息
+		 }else{
+			 $("#roleLable").empty();
+			 $("#roleLable").append('<option value="">--请选择--</option>');
+		 }
+	 }
+</script>
+</body>
+</html>
