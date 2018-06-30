@@ -7,7 +7,7 @@
         <groupId>com.del.arc</groupId>
         <artifactId>arc</artifactId>
         <version>1.0.0</version>
-        <relativePath>../</relativePath>
+        <relativePath>../pom.xml</relativePath>
     </parent>
 
     <!-- 项目说明：这里作为聚合工程的父工程 -->

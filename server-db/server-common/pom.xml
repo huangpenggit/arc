@@ -2,23 +2,25 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
+    <!-- 继承本项目的父工程 -->
+    <parent>
+        <groupId>com.del.arc</groupId>
+        <artifactId>server-db</artifactId>
+        <version>1.0.0</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+
+
     <!-- 基本信息 -->
+    <name>server-common</name>
+    <description>server-common for Spring Boot</description>
     <groupId>com.del</groupId>
     <artifactId>server-common</artifactId>
     <version>0.0.1</version>
     <packaging>jar</packaging>
 
-    <name>server-common</name>
-    <description>server-common for Spring Boot</description>
 
-    <!-- 继承本项目的父工程 -->
-    <parent>
-        <groupId>com.del.arc</groupId>
-        <artifactId>arc</artifactId>
-        <version>1.0.0</version>
-        <!--<relativePath>/pom.xml</relativePath>-->
-        <!--<relativePath/> &lt;!&ndash; lookup parent from repository &ndash;&gt;-->
-    </parent>
+
 
     <dependencies>
         <!--freemarker-->
@@ -141,6 +143,9 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
+
+
+
 
     <build>
         <plugins>

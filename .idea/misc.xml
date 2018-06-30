@@ -6,6 +6,9 @@
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/web/pom.xml" />
+        <option value="$PROJECT_DIR$/server-db/server-druid/pom.xml" />
+        <option value="$PROJECT_DIR$/server-db/server-mongo/pom.xml" />
+        <option value="$PROJECT_DIR$/server-db/server-common/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
