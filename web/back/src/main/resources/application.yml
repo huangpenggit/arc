@@ -1,0 +1,49 @@
+server:
+  port: 8089
+spring:
+  profiles:
+    active: local      #这里指定激活那个配置的空间
+  resources:
+    add-mappings: false
+  mvc:
+    throw-exception-if-no-handler-found: true
+
+########################################################
+#          Environment for Development
+########################################################
+---
+spring:
+  profiles: dev
+
+########################################################
+#          Environment for Localhost
+########################################################
+---
+spring:
+  profiles: local
+  thymeleaf:
+    prefix: classpath:/templates/
+    check-template: true
+    suffix: .html
+    mode: HTML5
+    encoding: UTF-8
+    #开发时关闭缓存,不然没法看到实时页面
+    cache: false
+
+########################################################
+#          Environment for Testing
+########################################################
+---
+spring:
+  profiles: test
+
+########################################################
+#          Environment for Production
+########################################################
+---
+spring:
+  profiles: prod
+csp:
+  api: 
+    zuul:
+      uris: http://192.168.61.25:5000/,http://192.168.61.26:5000/
