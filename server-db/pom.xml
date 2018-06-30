@@ -21,7 +21,6 @@
     <version>1.0.0</version>
 
 
-
     <!-- 模块说明：这里声明多个子模块 -->
     <modules>
         <module>server-common</module>
@@ -29,7 +28,13 @@
         <module>server-mongo</module>
     </modules>
 
+    <dependencies>
+        <dependency>
+            <groupId>com.del.arc</groupId>
+            <artifactId>core</artifactId>
+        </dependency>
 
+    </dependencies>
     <!--
         <dependencies>
             &lt;!&ndash;lombok&ndash;&gt;

@@ -5,27 +5,15 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/web/pom.xml" />
-        <option value="$PROJECT_DIR$/server-db/server-druid/pom.xml" />
-        <option value="$PROJECT_DIR$/server-db/server-mongo/pom.xml" />
-        <option value="$PROJECT_DIR$/server-db/server-common/pom.xml" />
-        <option value="$PROJECT_DIR$/web/wechat/pom.xml" />
-        <option value="$PROJECT_DIR$/web/client-web/pom.xml" />
-        <option value="$PROJECT_DIR$/web/website-https/pom.xml" />
-        <option value="$PROJECT_DIR$/web/web/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
       <set>
-        <option value="$PROJECT_DIR$/api-business/pom.xml" />
-        <option value="$PROJECT_DIR$/api-test/pom.xml" />
-        <option value="$PROJECT_DIR$/client-simple/pom.xml" />
-        <option value="$PROJECT_DIR$/server-db/server-sms/pom.xml" />
-        <option value="$PROJECT_DIR$/server-test/pom.xml" />
+        <option value="$PROJECT_DIR$/web/client-website/pom.xml" />
       </set>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="false" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
 </project>

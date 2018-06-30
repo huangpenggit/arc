@@ -12,7 +12,7 @@ public interface UserService {
 
 //    User get(Long id );
 
-    List<User> list( );
+    List<User> list();
 
 //    List<User> list();
 }

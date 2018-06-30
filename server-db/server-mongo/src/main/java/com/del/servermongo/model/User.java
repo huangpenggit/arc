@@ -1,4 +1,4 @@
-/*
+package com.del.servermongo.model;/*
 package com.del.test.model;
 
 import org.apache.commons.logging.Log;
