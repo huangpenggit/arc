@@ -1,4 +1,4 @@
-package com.client.thymeleaf;
+package com.client.back;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

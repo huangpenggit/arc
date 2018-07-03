@@ -1,6 +1,6 @@
-package com.client.thymeleaf.controller;
+package com.client.back.controller;
 
-import com.client.thymeleaf.domain.Person;
+import com.client.back.domain.Person;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;

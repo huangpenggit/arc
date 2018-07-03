@@ -1,5 +1,6 @@
 server:
   port: 8089
+
 spring:
   profiles:
     active: local      #这里指定激活那个配置的空间
@@ -7,6 +8,12 @@ spring:
     add-mappings: false
   mvc:
     throw-exception-if-no-handler-found: true
+  thymeleaf:
+    cache: false
+    prefix: classpath:/templates/
+    suffix: .html
+    mode: HTML5
+    encoding: UTF-8
 
 ########################################################
 #          Environment for Development
@@ -43,7 +50,3 @@ spring:
 ---
 spring:
   profiles: prod
-csp:
-  api: 
-    zuul:
-      uris: http://192.168.61.25:5000/,http://192.168.61.26:5000/

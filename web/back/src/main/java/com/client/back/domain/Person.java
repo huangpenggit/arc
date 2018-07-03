@@ -1,4 +1,4 @@
-package com.client.thymeleaf.domain;
+package com.client.back.domain;
 
 public class Person {
     private String name;
