@@ -7,12 +7,15 @@
     <!--<link href="/js.plugins/bootstrap/dist/css/bootstrap.css" rel="stylesheet"></link>-->
     <!--<link href="/js.plugins/bootstrap/dist/css/bootstrap-theme.css" rel="stylesheet"></link>-->
 
-    <link th:href="@{/js.plugins/bootstrap/dist/css/bootstrap.css}" rel="stylesheet"/>
-    <link th:href="@{/js.plugins/bootstrap/dist/css/bootstrap-theme.css}" rel="stylesheet"/>
-    <script type="text/javascript" src="/js.plugins/jquery/jQuery.js"></script>
-    <script type="text/javascript" src="/js.plugins/bootstrap/dist/js/bootstrap.js"></script>
+    <link th:href="@{/plugins/bootstrap/dist/css/bootstrap.css}" rel="stylesheet"/>
+    <link th:href="@{/plugins/bootstrap/dist/css/bootstrap-theme.css}" rel="stylesheet"/>
+    <script type="text/javascript" src="@{/plugins/jquery/jQuery.js}" ></script>
+    <script type="text/javascript" src="/plugins/bootstrap/dist/js/bootstrap.js"></script>
 
 </head>
+<script type="text/javascript">
+    alert($ == jQuery);
+</script>
 <body>
 <div class="panel panel-primary">
     <div class="panel-heading">
