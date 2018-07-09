@@ -16,5 +16,18 @@
         <module name="wechat" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="api-business" target="1.8" />
+      <module name="api-core" target="1.8" />
+      <module name="api-test" target="1.8" />
+      <module name="client-simple" target="1.8" />
+      <module name="client-thymeleaf" target="1.8" />
+      <module name="client-website" target="1.8" />
+      <module name="server-eureka" target="1.8" />
+      <module name="server-security" target="1.8" />
+      <module name="server-sms" target="1.8" />
+      <module name="server-test" target="1.8" />
+      <module name="server-zuul" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>
