@@ -1,6 +1,8 @@
-package com.client.back.thymeleaf.test.java8;
+package com.client.back;
 
-import org.junit.jupiter.api.Test;
+
+import com.client.back.thymeleaf.test.java8.ForkJoinCalculate;
+import org.junit.Test;
 
 import java.util.concurrent.ForkJoinPool;
 import java.util.concurrent.ForkJoinTask;
@@ -13,7 +15,7 @@ public class TestForkJoin {
 		long start = System.currentTimeMillis();
 		
 		ForkJoinPool pool = new ForkJoinPool();
-		ForkJoinTask<Long> task = new com.atguigu.java8.ForkJoinCalculate(0L, 10000000000L);
+		ForkJoinTask<Long> task = new ForkJoinCalculate(0L, 10000000000L);
 		
 		long sum = pool.invoke(task);
 		System.out.println(sum);

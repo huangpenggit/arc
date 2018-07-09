@@ -1,7 +1,9 @@
-package com.client.back.thymeleaf.exer;
+package com.client.back;
 
-import com.atguigu.java8.Employee;
-import org.junit.jupiter.api.Test;
+
+import com.client.back.thymeleaf.exer.MyFunction2;
+import com.client.back.thymeleaf.java8.Employee;
+import org.junit.Test;
 
 import java.util.Arrays;
 import java.util.Collections;
@@ -31,24 +33,23 @@ public class TestLambda {
 			System.out.println(emp);
 		}
 	}
-	
-	@Test
-	public void test2(){
-		String trimStr = strHandler("\t\t\t 我大尚硅谷威武   ", (str) -> str.trim());
-		System.out.println(trimStr);
-		
-		String upper = strHandler("abcdef", (str) -> str.toUpperCase());
-		System.out.println(upper);
-		
-		String newStr = strHandler("我大尚硅谷威武", (str) -> str.substring(2, 5));
-		System.out.println(newStr);
-	}
-	
-	//需求：用于处理字符串
-	public String strHandler(String str, com.atguigu.exer.MyFunction mf){
-		return mf.getValue(str);
-	}
-	
+
+//	@Test
+//	public void test2(){
+//		String trimStr = strHandler("\t\t\t 我大尚硅谷威武   ", (str) -> str.trim());
+//		System.out.println(trimStr);
+//
+//		String upper = strHandler("abcdef", (str) -> str.toUpperCase());
+//		System.out.println(upper);
+//
+//		String newStr = strHandler("我大尚硅谷威武", (str) -> str.substring(2, 5));
+//		System.out.println(newStr);
+//	}
+//	//需求：用于处理字符串
+//	public String strHandler(String str, com.atguigu.exer.MyFunction mf){
+//		return mf.getValue(str);
+//	}
+//
 	@Test
 	public void test3(){
 		op(100L, 200L, (x, y) -> x + y);
