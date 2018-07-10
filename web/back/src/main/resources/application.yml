@@ -3,13 +3,15 @@ server:
   servlet:
     cont-path: /web
 
+
 spring:
   profiles:
-    active: local      #这里指定激活那个配置的空间
+    active: local
+    #这里指定激活那个配置的空间
   resources:
     add-mappings: false
-#    static-locations: classpath:/static/,classpath:/templates/index/
-   static-locations: classpath:/META-INF/resources/,classpath:/resources/,classpath:/static/,classpath:/public/
+    static-locations: classpath:/static/,classpath:/templates/index/
+#   static-locations: classpath:/META-INF/resources/,classpath:/resources/,classpath:/static/,classpath:/public/
   #,file:${web.upload-path},file:${web.vue-path}
   mvc:
     throw-exception-if-no-handler-found: true
