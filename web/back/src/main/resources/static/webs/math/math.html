@@ -1,0 +1,1260 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>  MathWorks 帐户 - 更改密码
+        - MathWorks 中国</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="canonical" href="https://ww2.mathworks.cn/mwaccount/profiles/password/reset/64524x9?uri=https%3A%2F%2Fww2.mathworks.cn%2Fcampaigns%2Fproducts%2Ftrials%2Ftargeted%2Fdpl.html" />
+    <!-- BEGIN Adobe DTM -->
+    <script src="//assets.adobedtm.com/d0cc0600946eb3957f703b9fe43c3590597a8c2c/satelliteLib-e8d23c2e444abadc572df06537e2def59c01db09.js"></script>
+    <!-- END Adobe DTM -->
+    <link href="/includes_content/responsive/css/bootstrap/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="/includes_content/responsive/css/site6.css?201507" rel="stylesheet" type="text/css">
+    <link href="/includes_content/responsive/css/site6_lg.css" rel="stylesheet" media="screen and (min-width: 1200px)">
+    <link href="/includes_content/responsive/css/site6_md.css" rel="stylesheet" media="screen and (min-width: 992px) and (max-width: 1199px)">
+    <link href="/includes_content/responsive/css/site6_sm+xs.css" rel="stylesheet" media="screen and (max-width: 991px)">
+    <link href="/includes_content/responsive/css/site6_sm.css" rel="stylesheet" media="screen and (min-width: 768px) and (max-width: 991px)">
+    <link href="/includes_content/responsive/css/site6_xs.css" rel="stylesheet" media="screen and (max-width: 767px)">
+    <!--[if IE 8]>
+    <link href="/includes_content/responsive/css/site6_ie8.css" rel="stylesheet" type="text/css">
+    <script src="/includes_content/responsive/scripts/bootstrap/html5shiv-printshiv.js"></script>
+    <script src="/includes_content/responsive/scripts/bootstrap/respond.min.js"></script>
+    <![endif]-->
+    <!--[if IE 9]>
+    <link href="/includes_content/responsive/css/site6_ie9.css" rel="stylesheet" type="text/css">
+    <![endif]-->
+    <link href="/includes_content/responsive/css/site6_print.css" rel="stylesheet" type="text/css" media="print">
+    <link href="/includes_content/responsive/css/localized/site6_zh_CN.css" rel="stylesheet" type="text/css">
+    <script src="/includes_content/responsive/scripts/jquery/jquery-latest.js"></script>
+    <script src="/includes_content/responsive/scripts/jquery/jquery.mobile.custom.min.js"></script>
+    <script src="/includes_content/responsive/scripts/bootstrap/bootstrap.min.js"></script>
+    <script src="/includes_content/responsive/scripts/global.js"></script>
+    <script src="/includes_content/responsive/scripts/anchor.js"></script>
+    <script src="https://fonts.mathworks.com/xvy5baa.js"></script>
+    <script>try{Typekit.load();}catch(e){}</script>
+    <link href="/includes_content/responsive/css/bootstrap/ladda/ladda-themeless.min.css" rel="stylesheet" type="text/css">
+    <script src="/includes_content/responsive/scripts/bootstrap/ladda/spin.min.js"></script>
+    <script src="/includes_content/responsive/scripts/bootstrap/ladda/ladda.min.js"></script>
+    <link href="/includes_content/responsive/css/apps/mwaccount/mwaccount.css" rel="stylesheet" type="text/css">
+    <!--[if IE 8]>
+    <link href="/includes_content/responsive/css/apps/mwaccount/mwaccount_ie8.css" rel="stylesheet" type="text/css">
+    <![endif]-->
+    <!--[if IE 9]>
+    <link href="/includes_content/responsive/css/apps/mwaccount/mwaccount_ie9.css" rel="stylesheet" type="text/css">
+    <![endif]-->
+    <meta content="authenticity_token" name="csrf-param" />
+    <meta content="xYHUpI4eK1c7rT5N1cM71TMCZWJEMDH6jEJVDT+tYUk=" name="csrf-token" />
+    <script src="/mwaccount/assets/application-a7d5c1c72f223744e3c1870da23e4eaa.js" type="text/javascript"></script>
+
+    <script src="/mwaccount/assets/form-validator/jquery.form-validator-b31b50055fa27ec79d9e2fff2ea8bcc3.js" type="text/javascript"></script>
+    <script src="/mwaccount/assets/password_strength_calculator-6151d57029a1a3fa483407cfa4261ef4.js" type="text/javascript"></script>
+    <script src="/mwaccount/assets/password_strength_ui-a2849076c3aac816dead653638f6431c.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+        //<![CDATA[
+
+
+        $(document).ready(function() {
+
+            (function($, window) {
+
+                $.formUtils.loadModules('required');
+                $.formUtils.loadModules('confirmation');
+                $.formUtils.loadModules('radio_button_group');
+                $.formUtils.loadModules('latin_character');
+                $.formUtils.loadModules('server_side');
+                $.formUtils.loadModules('unsecure_character');
+                $.formUtils.loadModules('phone_number');
+
+                window.removeValidation = function($element){
+                    $element.removeAttr("data-validation");
+                    $element.removeAttr("data-validation-optional");
+                };
+
+                window.resetFieldValidationChildDivIdentifier = function(){
+                    return '.col-sm-8';
+                }
+
+                window.resetFieldValidation = function($element){
+                    var $div = $element.closest('div.form-group');
+                    if($div.length == 1){
+                        $div.removeClass("has-feedback has-error has-success");
+                        $div.find(window.resetFieldValidationChildDivIdentifier()).removeClass("has-error has-success");
+                        $element.removeClass("has_error");
+                        $div.find('.inline_form_error').remove();
+                        $div.find('.inline_form_error_arrow').remove();
+                    }
+                };
+
+                window.addInfoSpan = function($element, el_text, popover_text) {
+                    var $div = $element.closest('div.form-group');
+                    if($div.length == 1 && $div.find(".glyphicon-info-sign").length == 0){
+                        var $help_block = $("<p></p>").addClass("help-block");
+                        var $anchor = $("<a></a>")
+                            .addClass("add_cursor_pointer")
+                            .attr("data-placement","top")
+                            .attr("data-toggle","popover")
+                            .attr("data-html","true")
+                            .attr("data-content",popover_text)
+                            .html(el_text);
+                        var $span = $div.find('span.glyphicon').addClass('glyphicon-info-sign');
+                        $anchor.prependTo($help_block);
+                        $anchor.prepend('&nbsp;').prepend($span.show());
+                        $help_block.insertAfter($element);
+                    }
+                };
+
+                var translations = {
+                    requiredFields: '缺少必要的信息',
+                    notConfirmed: '密码不匹配',
+                    latinCharacterFields: '只能使用拉丁字符',
+                    badEmail : '您输入的电子邮件地址无效。请重新输入您的电子邮件地址',
+                    lengthBadEnd : ' 个字符）',
+                    lengthTooLongStart : '您输入的值超出了最大允许长度（',
+                    unsecureCharacter : '字段包含一个或多个无效字符。',
+                    badPhoneNumber: '电话号码不能少于8位数字。只可使用数字字符和短划线 (-)。',
+                    connectionError: '由于出现临时性问题，MathWorks 帐户暂不可用。请稍后重试。',
+                    passwordTooShort: 'translation missing: zh.forms.javascript.errors.password.min_length',
+                    passwordTooLong: 'translation missing: zh.forms.javascript.errors.password.max_length',
+                    passwordMissingDigit: 'translation missing: zh.forms.javascript.errors.password.missing_digit',
+                    passwordMissingUpperCase: 'translation missing: zh.forms.javascript.errors.password.missing_uppercase',
+                    passwordInvalidSpace: 'translation missing: zh.forms.javascript.errors.password.invalid_space',
+                    passwordCommonWord: 'translation missing: zh.forms.javascript.errors.password.common_word',
+                    passwordHeader: '密码要求',
+                    passwordRequirements: {"passwordLength":"8-50 \u4e2a\u003Ca style='cursor:pointer' tabindex='0' id='special_character_modal_link1'\u003E\u5b57\u7b26\u003C/a\u003E","passwordMissingMixedCase":"\u81f3\u5c11\u4e00\u4e2a\u5927\u5199\u548c\u5c0f\u5199\u7684\u5b57\u6bcd","passwordMissingDigit":"\u81f3\u5c11\u4e00\u4e2a\u6570\u5b57"},
+                    passwordDynamicRequirements: {"passwordContainsInvalidCharacter":"\u003Ca style='cursor:pointer' tabindex='0' id='special_character_modal_link2'\u003E\u53ea\u5305\u542b\u6709\u6548\u5b57\u7b26\u003Ca/\u003E"},
+                    passwordStrengthInvalid: '无效',
+                    passwordStrengthFair: '一般',
+                    passwordStrengthStrong: '强'
+                };
+
+                window.backendLoginUrl = function(){
+                    return "/login/relogin";
+                };
+
+                window.shared_profile_functions.applyValidation = function() {
+                    $.validate({
+                        modules: 'required, confirmation, radio_button_group, latin_character, server_side, unsecure_character, phone_number, password_strength',
+                        language : translations,
+                        serverURL: true,
+                        backendUrl: '/mwaccount/profiles/validate',
+                        errorElementClass: "has_error",
+                        borderColorOnError: "",
+                        showHelpOnFocus : false,
+                        addSuggestions : false,
+                        scrollToTopOnError: false,
+                        validateHiddenInputs: false,
+                        backendLoginUrl: window.backendLoginUrl(),
+                        onConnectionSuccessful: function(){
+                            if( window.onConnectionSuccessful != undefined ){
+                                window.onConnectionSuccessful();
+                            }
+                        },
+                        onConnectionError : function() {
+                            if( window.onConnectionError != undefined ){
+                                window.onConnectionError();
+                            }
+                        },
+                        onError : function(form) {
+                            if( window.onValidationError != undefined ){
+                                window.onValidationError(form);
+                            }
+                        },
+                        onValidate : function(form) {
+                            if( window.onValidate != undefined ){
+                                window.onValidate(form);
+                            }
+                        },
+                        onModulesLoaded : function() {
+                            if( window.initPasswordStrength != undefined ){
+                                window.initPasswordStrength();
+                            }
+                        }
+                    });
+                };
+
+                window.initPasswordStrength = function(){
+                    var conf = $.extend({context: window.UIContext}, translations);
+                    $('input[name*="password"][data-validation*="strength"]').displayPasswordStrength(conf);
+                };
+
+                window.containsAllLatinCharacters = function(str){
+                    for(i in str){
+                        if( str.charCodeAt(i) > 255){
+                            return false;
+                        }
+                    }
+                    return true;
+                }
+
+                window.shared_profile_functions.applyValidation();
+
+            })($,window);
+
+        });
+
+
+        //]]>
+    </script>
+
+
+    <script type="text/javascript" src="/includes_content/nextgen/scripts/jquery/jquery.cookie.js"></script>
+    <script type="text/javascript" src="/includes_content/domainSelect/akamai-country-code.js"></script>
+    <script type="text/javascript">
+        var domainCountryCodeMap = new Map();
+        var countryCodeToDomainMap = new Map();
+        domainCountryCodeMap.set('www.mathworks.com', 'www');
+        countryCodeToDomainMap.set('www','www.mathworks.com')
+        domainCountryCodeMap.set('www.mathworks.com', 'www');
+        countryCodeToDomainMap.set('www','www.mathworks.com')
+        domainCountryCodeMap.set('la.mathworks.com', 'la');
+        countryCodeToDomainMap.set('la','la.mathworks.com')
+        domainCountryCodeMap.set('au.mathworks.com', 'au');
+        countryCodeToDomainMap.set('au','au.mathworks.com')
+        domainCountryCodeMap.set('de.mathworks.com', 'de');
+        countryCodeToDomainMap.set('de','de.mathworks.com')
+        domainCountryCodeMap.set('nl.mathworks.com', 'nl');
+        countryCodeToDomainMap.set('nl','nl.mathworks.com')
+        domainCountryCodeMap.set('ww2.mathworks.cn', 'ww2');
+        countryCodeToDomainMap.set('ww2','ww2.mathworks.cn')
+        domainCountryCodeMap.set('se.mathworks.com', 'se');
+        countryCodeToDomainMap.set('se','se.mathworks.com')
+        domainCountryCodeMap.set('se.mathworks.com', 'se');
+        countryCodeToDomainMap.set('se','se.mathworks.com')
+        domainCountryCodeMap.set('fr.mathworks.com', 'fr');
+        countryCodeToDomainMap.set('fr','fr.mathworks.com')
+        domainCountryCodeMap.set('de.mathworks.com', 'de');
+        countryCodeToDomainMap.set('de','de.mathworks.com')
+        domainCountryCodeMap.set('in.mathworks.com', 'in');
+        countryCodeToDomainMap.set('in','in.mathworks.com')
+        domainCountryCodeMap.set('uk.mathworks.com', 'uk');
+        countryCodeToDomainMap.set('uk','uk.mathworks.com')
+        domainCountryCodeMap.set('it.mathworks.com', 'it');
+        countryCodeToDomainMap.set('it','it.mathworks.com')
+        domainCountryCodeMap.set('jp.mathworks.com', 'jp');
+        countryCodeToDomainMap.set('jp','jp.mathworks.com')
+        domainCountryCodeMap.set('kr.mathworks.com', 'kr');
+        countryCodeToDomainMap.set('kr','kr.mathworks.com')
+        domainCountryCodeMap.set('nl.mathworks.com', 'nl');
+        countryCodeToDomainMap.set('nl','nl.mathworks.com')
+        domainCountryCodeMap.set('nl.mathworks.com', 'nl');
+        countryCodeToDomainMap.set('nl','nl.mathworks.com')
+        domainCountryCodeMap.set('au.mathworks.com', 'au');
+        countryCodeToDomainMap.set('au','au.mathworks.com')
+        domainCountryCodeMap.set('se.mathworks.com', 'se');
+        countryCodeToDomainMap.set('se','se.mathworks.com')
+        domainCountryCodeMap.set('www.mathworks.com', 'www');
+        countryCodeToDomainMap.set('www','www.mathworks.com')
+        domainCountryCodeMap.set('es.mathworks.com', 'es');
+        countryCodeToDomainMap.set('es','es.mathworks.com')
+        domainCountryCodeMap.set('se.mathworks.com', 'se');
+        countryCodeToDomainMap.set('se','se.mathworks.com')
+        domainCountryCodeMap.set('ch.mathworks.com', 'ch');
+        countryCodeToDomainMap.set('ch','ch.mathworks.com')
+        domainCountryCodeMap.set('uk.mathworks.com', 'uk');
+        countryCodeToDomainMap.set('uk','uk.mathworks.com')
+        var countrySubdomains = {
+            US: {name: 'United States', subdomain: 'www'},
+            AD: {name: 'Andorra', subdomain: 'es'},
+            AR: {name: 'Argentina', subdomain: 'la'},
+            AU: {name: 'Australia', subdomain: 'au'},
+            AT: {name: 'Austria', subdomain: 'de'},
+            BE: {name: 'Belgium', subdomain: 'nl'},
+            BO: {name: 'Bolivia', subdomain: 'la'},
+            BV: {name: 'Bouvet Islands', subdomain: 'se'},
+            CA: {name: 'Canada', subdomain: 'www'},
+            CL: {name: 'Chile', subdomain: 'la'},
+            CN: {name: 'China', subdomain: 'cn'},
+            CX: {name: 'Christmas Island', subdomain: 'au'},
+            CC: {name: 'Cocos-Keeling Islands', subdomain: 'au'},
+            CO: {name: 'Colombia', subdomain: 'la'},
+            CR: {name: 'Costa Rica', subdomain: 'la'},
+            DK: {name: 'Denmark', subdomain: 'se'},
+            DO: {name: 'Dominican Republic', subdomain: 'la'},
+            EC: {name: 'Ecuador', subdomain: 'la'},
+            SV: {name: 'El Salvador', subdomain: 'la'},
+            EE: {name: 'Estonia', subdomain: 'se'},
+            FO: {name: 'Faroe Islands', subdomain: 'se'},
+            FJ: {name: 'Fiji', subdomain: 'au'},
+            FI: {name: 'Finland', subdomain: 'se'},
+            FR: {name: 'France', subdomain: 'fr'},
+            GF: {name: 'French Guiana', subdomain: 'fr'},
+            PF: {name: 'French Polynesia', subdomain: 'fr'},
+            DE: {name: 'Germany', subdomain: 'de'},
+            GL: {name: 'Greenland', subdomain: 'se'},
+            GP: {name: 'Guadalupe', subdomain: 'fr'},
+            GT: {name: 'Guatemala', subdomain: 'la'},
+            HN: {name: 'Honduras', subdomain: 'la'},
+            IS: {name: 'Iceland', subdomain: 'se'},
+            IN: {name: 'India', subdomain: 'in'},
+            IE: {name: 'Ireland', subdomain: 'uk'},
+            IT: {name: 'Italy', subdomain: 'it'},
+            JP: {name: 'Japan', subdomain: 'jp'},
+            KR: {name: 'Korea', subdomain: 'kr'},
+            LV: {name: 'Latvia', subdomain: 'se'},
+            LI: {name: 'Liechtenstein', subdomain: 'ch'},
+            LT: {name: 'Lithuania', subdomain: 'se'},
+            LU: {name: 'Luxembourg', subdomain: 'nl'},
+            MQ: {name: 'Martinique', subdomain: 'fr'},
+            YT: {name: 'Mayotte Island', subdomain: 'fr'},
+            MX: {name: 'Mexico', subdomain: 'la'},
+            MC: {name: 'Monaco', subdomain: 'fr'},
+            NL: {name: 'Netherlands', subdomain: 'nl'},
+            NC: {name: 'New Caledonia', subdomain: 'fr'},
+            NZ: {name: 'New Zealand', subdomain: 'au'},
+            NI: {name: 'Nicaragua', subdomain: 'la'},
+            NO: {name: 'Norway', subdomain: 'se'},
+            PA: {name: 'Panama', subdomain: 'la'},
+            PG: {name: 'Papua New Guinea', subdomain: 'au'},
+            PY: {name: 'Paraguay', subdomain: 'la'},
+            PE: {name: 'Peru', subdomain: 'la'},
+            PT: {name: 'Portugal', subdomain: 'www'},
+            PR: {name: 'Puerto Rico', subdomain: 'la'},
+            RE: {name: 'Reunion Island', subdomain: 'fr'},
+            ES: {name: 'Spain', subdomain: 'es'},
+            LK: {name: 'Sri Lanka', subdomain: 'in'},
+            SE: {name: 'Sweden', subdomain: 'se'},
+            CH: {name: 'Switzerland', subdomain: 'ch'},
+            GB: {name: 'United Kingdom', subdomain: 'uk'},
+            UY: {name: 'Uruguay', subdomain: 'la'},
+            VA: {name: 'Vatican City', subdomain: 'it'},
+            VE: {name: 'Venezuela', subdomain: 'la'},
+        };
+        var domainUtils = {
+            isExemptUrl: function (url) {
+                if(window.overrideDomainSelector){
+                    return true;
+                }
+                var exemptions = [
+                    '/api/parts/',
+                    'nocookie=true',
+                    'client=addons',
+                    'requestedDomain'
+                ];
+                return exemptions.some(function (exemption) {
+                    return url.indexOf(exemption) != -1;
+                });
+            },
+            endsWith: function( str, suffix ) {
+                return str.substring( str.length - suffix.length, str.length ) === suffix;
+            },
+            getDomain: function (url) {
+                var segments = url.split('/');
+                return segments[2];
+            },
+            getSubdomain: function (domain) {
+                return domainCountryCodeMap.get(domain);
+            },
+            setCookies: function (domain, lang) {
+                var domainCookie = 'mathworks.com';
+                if (this.endsWith(location.host, 'mathworks.cn')) {
+                    domainCookie = 'mathworks.cn';
+                }
+                var selectedSubdomain = this.getSubdomain(domain);
+                if (this.endsWith(domain, 'mathworks.cn')) {
+                    selectedSubdomain = 'cn';
+                }
+                if (selectedSubdomain === 'www') {
+// This is what ePS did in EQUUS and Ruby, so...
+// we're just following suit.
+                    selectedSubdomain = 'us';
+                }
+                if (selectedSubdomain !== 'cn' && selectedSubdomain !== 'ch') {
+                    lang = '';
+                }
+                var cookieNames = this.getCookieNames(domain);
+                var expires = new Date();
+                expires.setFullYear(expires.getFullYear() + 68);
+                var myJSON = JSON.stringify({
+                    domain: selectedSubdomain,
+                    lang: lang,
+                    v: 2
+                });
+                $.cookie(cookieNames.mwaPrefsCookieName, myJSON, {path: '/', expires: 20*365, domain: domainCookie});
+            },
+            logoutMWA: function (domain) {
+                var domainCookie = 'mathworks.com';
+                if (this.endsWith(location.host, 'mathworks.cn')) {
+                    domainCookie = 'mathworks.cn';
+                }
+                var cookieNames = this.getCookieNames(domain);
+                document.cookie = cookieNames.mwaLoginCookieName + "=;expires=Thu, 01 Jan 1970 00:00:01 GMT;path=/;domain=" + domainCookie + ";";
+            },
+            getCookieNames: function (domain) {
+                var mwaLoginCookieName = 'mwa';
+                var mwaPrefsCookieName = 'mwa_prefs';
+                var subdomainSuffix = '';
+                if (subdomainSuffix != "") {
+                    mwaLoginCookieName = mwaLoginCookieName + subdomainSuffix;
+                    mwaPrefsCookieName = mwaPrefsCookieName + subdomainSuffix;
+                }
+                return {
+                    mwaLoginCookieName: mwaLoginCookieName,
+                    mwaPrefsCookieName: mwaPrefsCookieName,
+                };
+            },
+            switchDomain: function (targetDomain, targetLang) {
+                var targetUri = location.pathname;
+                targetLang = this.getValidLang(this.getSubdomain(targetDomain), targetLang);
+                var url = '//' + targetDomain;
+                url += targetUri + location.search;
+                url = url.replace(/requestedDomain=[a-z]?[a-z]?&?/, '');
+                url = url.replace(/\&$/, '');
+                url = url.replace(/\?$/, '');
+                var currentDomain = this.getDomain(window.location.href);
+                if ((this.endsWith(currentDomain, 'mathworks.com') && this.endsWith(targetDomain, 'mathworks.cn')) ||
+                    (this.endsWith(currentDomain, 'mathworks.cn') && this.endsWith(targetDomain, 'mathworks.com'))
+                ) {
+                    this.logoutMWA(window.location.href);
+                }
+                var requestedDomainParam = 'requestedDomain=' + targetLang;
+                if (url.indexOf('?') > -1) {
+                    url = url + '&' + requestedDomainParam;
+                } else {
+                    url = url + '?' + requestedDomainParam;
+                }
+                window.location = url;
+            },
+            getPrefCookie: function(currentDomain) {
+                var cookieNames = this.getCookieNames(currentDomain);
+// regex from: https://developer.mozilla.org/en-US/docs/Web/API/Document/cookie
+                var cookieRegex = new RegExp("(?:(?:^|.*;\\s*)"+cookieNames.mwaPrefsCookieName+"\\s*\\=\\s*([^;]*).*$)|^.*$");
+                if (document.cookie) {
+                    var cookieValue = document.cookie.replace(cookieRegex, "$1");
+                    if (cookieValue) {
+                        return JSON.parse(decodeURIComponent(cookieValue));
+                    }
+                }
+                return "";
+            },
+            getPrefDomain: function (currentDomain) {
+                var mwaPrefsCookieJsonObject = this.getPrefCookie(currentDomain);
+                var visitorPrefDomain;
+                if (!!mwaPrefsCookieJsonObject) {
+                    visitorPrefDomain = mwaPrefsCookieJsonObject.domain;
+                    if (visitorPrefDomain === 'us') {
+                        visitorPrefDomain = 'www';
+                    }else if (visitorPrefDomain === 'cn') {
+                        visitorPrefDomain = 'ww2';
+                    }
+                }
+                return countryCodeToDomainMap.get(visitorPrefDomain);
+            },
+            getPrefLang: function (currentDomain) {
+                var mwaPrefsCookieJsonObject = this.getPrefCookie(currentDomain);
+                var multilingualDomainLanguageSupport = {};
+                multilingualDomainLanguageSupport['ch'] = ['en','de','fr'];
+                multilingualDomainLanguageSupport['cn'] = ['zh','en'];
+                var currentDomainLangOptions = multilingualDomainLanguageSupport[mwaPrefsCookieJsonObject.domain];
+                if (currentDomainLangOptions) {
+                    var cookiePrefLang = mwaPrefsCookieJsonObject.lang;
+                    if (currentDomainLangOptions.indexOf(cookiePrefLang) >= 0) {
+                        return cookiePrefLang;
+                    } else {
+                        return currentDomainLangOptions[0];
+                    }
+                }
+                return '';
+            },
+            getCookieVersion: function (currentDomain) {
+                var mwaPrefsCookieJsonObject = this.getPrefCookie(currentDomain);
+                return mwaPrefsCookieJsonObject.v;
+            },
+            getTargetDomainForCookies: function() {
+                var targetDomain = "";
+                if (this.endsWith(location.host, 'mathworks.cn')) {
+                    targetDomain = window.location.protocol + "//" + countryCodeToDomainMap.get('www');
+                }else{
+                    targetDomain = window.location.protocol + "//" + countryCodeToDomainMap.get('ww2');
+                }
+                return targetDomain;
+            },
+            getValidLang: function (subdomain, lang) {
+                var multilingualDomainLanguageSupport = {};
+                multilingualDomainLanguageSupport['ch'] = ['en','de','fr'];
+                multilingualDomainLanguageSupport['cn'] = ['zh','en'];
+                multilingualDomainLanguageSupport['ww2'] = ['zh','en'];
+                var currentDomainLangOptions = multilingualDomainLanguageSupport[subdomain];
+                if (currentDomainLangOptions) {
+                    if (currentDomainLangOptions.indexOf(lang) >= 0) {
+                        return lang;
+                    } else {
+                        return currentDomainLangOptions[0];
+                    }
+                }
+                return '';
+            },
+            isDefaultLang: function (subdomain, lang) {
+                var multilingualDomainLanguageDefault = {};
+                multilingualDomainLanguageDefault['ch'] = 'en';
+                multilingualDomainLanguageDefault['cn'] = 'zh';
+                multilingualDomainLanguageDefault['ww2'] = 'zh';
+                var currentDomainLang = multilingualDomainLanguageDefault[subdomain];
+                if (currentDomainLang) {
+                    if (currentDomainLang === lang) {
+                        return true;
+                    } else {
+                        return false;
+                    }
+                } else if (lang) {
+                    return false;
+                }
+                return true;
+            }
+        };
+        $(window).on('load', function() {
+            var currentUrl = window.location.href;
+            var currentDomain = domainUtils.getDomain(currentUrl);
+            var currentSubdomain = domainUtils.getSubdomain(currentDomain);
+            var requestedDomainLangRegEx = RegExp('[?&]requestedDomain=([^&]*)').exec(window.location.search);
+            if (requestedDomainLangRegEx) {
+                var setLang = domainUtils.getValidLang(currentSubdomain, requestedDomainLangRegEx[1])
+                domainUtils.setCookies(currentDomain, setLang);
+                var URLWithoutRequestedDomain = window.location.href.replace(/requestedDomain=[a-z]?[a-z]?&?/, '');
+                URLWithoutRequestedDomain = URLWithoutRequestedDomain.replace(/\&$/, '');
+                URLWithoutRequestedDomain = URLWithoutRequestedDomain.replace(/\?$/, '');
+                history.replaceState({}, document.title, URLWithoutRequestedDomain);
+                window.location = URLWithoutRequestedDomain;
+            }
+            $('body').on('click', '.domain_selector_link', function (e) {
+                e.preventDefault();
+                var selectedDomain = domainUtils.getDomain(this.href);
+                var selectedLang = $(this).data('lang');
+                domainUtils.setCookies(selectedDomain, selectedLang);
+                domainUtils.switchDomain(selectedDomain, selectedLang);
+            });
+            var currentCountryText =
+                $('a[data-subdomain=\'' + currentSubdomain + '\'][data-default-lang=\'true\'][data-selected-text]')
+                    .data('selected-text');
+            $('#countrySelectorButtonText').text(currentCountryText);
+            var visitorPrefDomain = domainUtils.getPrefDomain(currentDomain);
+            var visitorPrefLang = domainUtils.getPrefLang(currentDomain);
+            var akamaiCountryCode;
+            var akamaiprofile = CQ_Analytics.ClientContextMgr.getRegisteredStore('akamaiprofile');
+            if (akamaiprofile) {
+                akamaiCountryCode = akamaiprofile.getProperty('countryCode');
+            }
+            var recommendedSubdomain;
+            var recommendedLink;
+            if (akamaiCountryCode) {
+                if (countrySubdomains[akamaiCountryCode] !== undefined) {
+                    recommendedSubdomain = countrySubdomains[akamaiCountryCode].subdomain;
+                } else {
+                    recommendedSubdomain = 'www';
+                }
+                if (recommendedSubdomain === 'us') {
+                    recommendedSubdomain = 'www';
+                }else if (recommendedSubdomain === 'cn') {
+                    recommendedSubdomain = 'ww2';
+                }
+                recommendedLink = $('a[data-subdomain=\'' + recommendedSubdomain + '\'][data-recommended-text]');
+            } else if (visitorPrefDomain) {
+                recommendedSubdomain = domainUtils.getSubdomain(visitorPrefDomain);
+                if (visitorPrefLang) {
+                    recommendedLink = $('a[data-subdomain=\'' + recommendedSubdomain + '\'][data-lang=\'' + visitorPrefLang + '\']');
+                } else {
+                    recommendedLink = $('a[data-subdomain=\'' + recommendedSubdomain + '\'][data-default-lang=\'true\']');
+                }
+            }
+            if (!recommendedLink) {
+                recommendedSubdomain = 'www';
+                recommendedLink = $('a[data-subdomain=\'' + recommendedSubdomain + '\'][data-recommended-text]');
+            }
+            $('.recommended-country').text(recommendedLink.data('recommended-text'));
+            $('#recommended_domain_button').attr('href', recommendedLink.attr('href'));
+            $('#recommended_domain_button').attr('data-lang', recommendedLink.attr('data-lang'));
+            $('body').on('click', '#recommended_domain_button', function (e) {
+                e.preventDefault();
+                var selectedDomain = domainUtils.getDomain(this.href);
+                var selectedLang = $(this).data('lang');
+                domainUtils.setCookies(selectedDomain, selectedLang);
+                domainUtils.switchDomain(selectedDomain, selectedLang);
+            });
+            $('a.worldwide_link').attr('href', recommendedLink.attr('href'));
+            $('a.worldwide_link').data('lang', recommendedLink.data('lang'));
+            $('body').on('click', 'a.worldwide_link', function (e) {
+                e.preventDefault();
+                var selectedDomain = domainUtils.getDomain(this.href);
+                var selectedLang = $(this).data('lang');
+                domainUtils.setCookies(selectedDomain, selectedLang);
+                var href = e.target.getAttribute('href');
+                var worldwideLink = '/company/worldwide.html?s_tid=dmselect_cta&requestedDomain=';
+                if(href) {
+                    location.href = href + worldwideLink;
+                }
+            });
+            if (akamaiCountryCode === 'CN') {
+                $('#china_performance_alert').show();
+            }
+            var crossDomain = "";
+            if(domainUtils.endsWith(currentDomain, '.mathworks.cn')){
+                crossDomain = countryCodeToDomainMap.get('www');
+            }else{
+                crossDomain = countryCodeToDomainMap.get('ww2');
+            }
+            if ((!domainUtils.endsWith(currentDomain, '.mathworks.com') && !domainUtils.endsWith(currentDomain, '.mathworks.cn')) || domainUtils.isExemptUrl(currentUrl)) {
+                return;
+            }
+            if (!visitorPrefDomain) {
+                if (akamaiCountryCode) {
+                    var akamaiDeterminedSubdomain = $('a[data-country-code=\'' + akamaiCountryCode + '\']').data('subdomain');
+                    if ((akamaiCountryCode.toLowerCase() === currentSubdomain) || (akamaiDeterminedSubdomain === currentSubdomain)) {
+                        domainUtils.setCookies(currentDomain, "");
+                    } else {
+                        $('#country-unselected').modal('show');
+                    }
+                    return;
+                }
+                if (currentSubdomain === 'www') {
+                    domainUtils.setCookies(currentDomain, '');
+                } else {
+                    $('#country-unselected').modal('show');
+                }
+            } else if (akamaiCountryCode === 'CN' && !(visitorPrefDomain === 'CN') && !domainUtils.getCookieVersion(currentDomain)) {
+                $('#country-unselected').modal('show');
+            }
+        });
+    </script> </head>
+
+<body id="responsive_b">
+
+<!-- Mobile TopNav: Start -->
+<div class="header visible-xs visible-sm" id="header_mobile" translate="no">
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle topnav_toggle" data-toggle="collapse" data-target="#topnav_collapse">
+                            <span class="sr-only">Toggle Main Navigation</span>
+                            <span class="icon-menu"></span>
+                        </button>
+                        <a href="https://ww2.mathworks.cn?s_tid=gn_logo" class="svg_link navbar-brand">
+                            <img src="/images/responsive/global/pic-header-mathworks-logo.svg" class="mw_logo" alt="MathWorks">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="row visible-xs visible-sm">
+                <div class="col-xs-12">
+                    <div class="navbar-collapse collapse" id="topnav_collapse">
+                        <ul class="nav navbar-nav" id="topnav">
+                            <li class="headernav_login ">
+                                <a href="https://ww2.mathworks.cn/login">登录</a>
+                            </li>
+                            <li class="topnav_products "><a href="https://ww2.mathworks.cn/products.html?s_tid=gn_ps" >产品</a></li>
+                            <li class="topnav_solutions "><a href="https://ww2.mathworks.cn/solutions.html?s_tid=gn_sol">解决方案</a></li>
+                            <li class="topnav_academia "><a href="https://ww2.mathworks.cn/academia.html?s_tid=gn_acad">教育</a></li>
+                            <li class="topnav_support "><a href="https://ww2.mathworks.cn/support.html?s_tid=gn_supp">支持</a></li>
+                            <li class="topnav_community "><a href="https://ww2.mathworks.cn/matlabcentral/?s_tid=gn_mlc">社区</a></li>
+                            <li class="topnav_events "><a href="https://ww2.mathworks.cn/company/events.html?s_tid=gn_ev">活动</a></li>
+                            <li class="headernav_contact"><a href="https://ww2.mathworks.cn/company/aboutus/contact_us.html?s_tid=gn_cntus">联系我们</a></li>
+                            <li class="headernav_store"><a href="https://ww2.mathworks.cn/store?s_cid=store_top_nav&s_tid=gn_store">如何购买</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+</div>
+<!-- Mobile TopNav: End -->
+<!-- Desktop TopNav: Start -->
+<div class="header hidden-xs hidden-sm" id="header_desktop" translate="no">
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="collapse navbar-collapse" id="headernav_collapse">
+                        <ul class="nav navbar-nav navbar-right" id="headernav">
+                            <li class="headernav_contact"><a href="https://ww2.mathworks.cn/company/aboutus/contact_us.html?s_tid=gn_cntus">联系我们</a></li>
+                            <li class="headernav_store"><a href="https://ww2.mathworks.cn/store?s_cid=store_top_nav&s_tid=gn_store">如何购买</a></li>
+                            <li class="headernav_login ">
+                                <a href="https://ww2.mathworks.cn/login">登录</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="navbar-header">
+                        <div class="logo_container hidden-xs hidden-sm">
+                            <a href="https://ww2.mathworks.cn?s_tid=gn_logo" class="svg_link pull-left">
+                                <img src="/images/responsive/global/pic-header-mathworks-logo.svg" class="mw_logo" alt="MathWorks">
+                            </a>
+                        </div>
+                        <div class="navbar-collapse collapse hidden-xs hidden-sm">
+                            <ul class="nav navbar-nav" id="topnav">
+                                <li class="topnav_products "><a href="https://ww2.mathworks.cn/products.html?s_tid=gn_ps" >产品</a></li>
+                                <li class="topnav_solutions "><a href="https://ww2.mathworks.cn/solutions.html?s_tid=gn_sol">解决方案</a></li>
+                                <li class="topnav_academia "><a href="https://ww2.mathworks.cn/academia.html?s_tid=gn_acad">教育</a></li>
+                                <li class="topnav_support "><a href="https://ww2.mathworks.cn/support.html?s_tid=gn_supp">支持</a></li>
+                                <li class="topnav_community "><a href="https://ww2.mathworks.cn/matlabcentral/?s_tid=gn_mlc">社区</a></li>
+                                <li class="topnav_events "><a href="https://ww2.mathworks.cn/company/events.html?s_tid=gn_ev">活动</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+</div>
+<!-- Desktop TopNav: End -->
+<!-- Conjoined Header: Start -->
+<div class="sticky_header_container includes_subnav">
+    <!-- Section Header: Start -->
+    <div class="section_header level_3">
+        <div class="container">
+            <div class="row" id="mobile_search_row">
+                <div class="col-xs-12 col-sm-6 col-sm-push-6 col-md-5 col-md-push-7" id="mobile_search">
+                    <div class="search_nested_content_container">
+                        <form name="search" id="site_search" class="site_search" action="/search/site_search.html" method="get">
+                            <div class="input-group">
+                                <label class="sr-only">搜索 MathWorks</label>
+                                <input type="hidden" name="c[]" value="entire_site">
+                                <input type="text" name="q" id="query" class="form-control conjoined_search" placeholder="搜索 MathWorks" autocomplete="off">
+                                <div class="input-group-btn">
+                                    <button type="submit" id="searchbutton" class="btn icon-search btn_search_adjacent btn_search icon_16" tabindex="-1"></button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <button class="btn icon-remove btn_search pull-right icon_32 visible-xs" data-toggle="collapse" href="#mobile_search" aria-expanded="false" aria-controls="mobile_search"></button>
+                </div>
+                <div class="col-sm-6 col-sm-pull-6 col-md-7 col-md-pull-5 has_horizontal_local_nav" id="section_header_title">
+                    <div class="section_header_content">
+                        <div class="section_header_title add_cursor_pointer">
+                            <h1>MathWorks 帐户</h1>
+                        </div>
+                        <button type="button" class="navbar-toggle collapsed subnav visible-xs visible-sm" data-toggle="collapse" data-target=".mobile_subnav_content"> <span class="icon-arrow-down icon_24"></span> </button>
+                    </div>
+                </div>
+                <div class="visible-xs" id="search_actuator">
+                    <button class="btn icon-search btn_search pull-right icon_16" data-toggle="collapse" href="#mobile_search" aria-expanded="false" aria-controls="mobile_search"></button>
+                </div>
+            </div>
+            <script>
+                $(".section_header_title").click(function(){
+                    $(window.location).attr('href', '/mwaccount/');
+                });
+            </script>
+            <!-- Section Header: End -->
+            <!-- Mobile Local Nav: Start -->
+            <div class="row visible-xs visible-sm" id="mobile_subnav">
+                <div class="col-xs-12">
+                    <div class="navbar-collapse collapse mobile_subnav_content">
+                        <ul class="nav navbar-nav subnav">
+
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Mobile Local Nav: End -->
+        </div>
+    </div>
+    <!-- Horo Nav: Start -->
+    <div class="horizontal_nav hidden-xs hidden-sm">
+        <div class="horizontal_nav_container">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 hidden-xs hidden-sm">
+                        <nav class="navbar navbar-default" role="navigation" id="subnav">
+                            <div class="collapse navbar-collapse">
+                                <ul class="nav navbar-nav">
+
+
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Horo Nav: End -->
+</div>
+<!-- Conjoined Header: End -->
+
+
+
+
+<div class="content_container">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+
+
+
+
+
+
+
+
+
+                <noscript>
+                    <div class="alert alert-warning">
+                        <span class="alert_icon icon-alert-warning icon_32"></span>
+                        <h3>需要 JavaScript</h3>
+                        <ul>
+                            <li>MathWorks 帐户的部分功能需要使用 JavaScript。在 Web 浏览器中启用 JavaScript。</li>
+                        </ul>
+                    </div>
+                </noscript>
+
+                <div class="row"><div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3">
+                    <h2>创建新密码</h2>
+                </div></div>
+                <div class="row"><div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3">
+
+                </div></div>
+                <form accept-charset="UTF-8" action="/mwaccount/profiles/password/reset/64524x9" class="form-horizontal" id="new_reset_password" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="xYHUpI4eK1c7rT5N1cM71TMCZWJEMDH6jEJVDT+tYUk=" /></div>
+                    <div class="row"><div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3">
+                        <div class="form-group">
+                            <label class="col-sm-4 control-label text-right" for="newPassword">
+                                新密码
+                            </label>
+                            <div class="col-sm-8 has-feedback"><input class="form-control" data-validation="password_strength" id="reset_password_password" name="reset_password[password]" tabindex="1" type="password" /><span class="glyphicon form-control-feedback glyphicon-remove"></span><span class="glyphicon form-control-feedback glyphicon-ok"></span></div>
+                        </div></div></div>
+                    <div class="row"><div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3">
+                        <div class="form-group">
+                            <label class="col-sm-4 control-label text-right" for="retypePassword">
+                                重新输入新密码
+                            </label>
+                            <div class="col-sm-8 has-feedback"><input class="form-control" data-validation="required confirmation" id="reset_password_password_confirmation" name="reset_password[password_confirmation]" tabindex="2" type="password" /><span class="glyphicon form-control-feedback glyphicon-remove"></span><span class="glyphicon form-control-feedback glyphicon-ok"></span></div>
+                        </div></div></div>
+                    <input id="reset_password_redirect_uri" name="reset_password[redirect_uri]" type="hidden" value="https://ww2.mathworks.cn/campaigns/products/trials/targeted/dpl.html" />
+
+                    <div class="row"><div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3">
+
+
+                        <button class="pull-right btn btn_secondary add_indent_10 active ladda-button" data-style="zoom-in" disabled="disabled" id="update_button" type="submit"><span class="ladda-label">更新</span></button>
+
+
+                        <button class="pull-right btn btn_primary" disabled="disabled" id="cancel_btn" name="button" onclick="window.location=&#x27;/mwaccount/&#x27;" type="reset">取消</button>
+
+
+                        <div class="clearfix"></div>
+
+                        <script defer="defer" type="text/javascript">
+                            //<![CDATA[
+
+
+                            $(document).ready(function() {
+                                $("#update_button, #cancel_btn").removeAttr("disabled");
+
+                                $("#cancel_btn").on("click", function(e){
+                                    e.preventDefault();
+                                });
+                            });
+
+
+                            //]]>
+                        </script>
+                    </div></div>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="special_character_modal" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+
+
+
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" tabindex='0'>
+                                        <span aria-hidden="true">&times;</span>
+                                        <span class="sr-only">Close</span>
+                                    </button>
+                                    <h2 class="add_font_color_emphasize add_margin_0">有效的字符</h2>
+                                </div>
+
+                                <div class="modal-body">
+
+                                    您的密码应包含以下字符：<br><br>
+
+                                    A-Z,a-z,0-9<br><br>
+                                    ! &quot; # $ % &amp; &#x27; ( ) * + - . / : ; &lt; = &gt; ? @ [  ] ^ _ ` { | } ~<br><br>
+                                    提示：您的密码不应包括空格<br><br>
+
+
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <script type="text/javascript">
+                        //<![CDATA[
+
+                        $(document).ready(function(){
+
+                            window.hideCountrySelector();
+
+                            $.each(window.shared_profile_functions, function(key,value) {
+                                value.call();
+                            });
+
+                        });
+
+                        //]]>
+                    </script>
+                </form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <div id="location_content" style="display:none;"></div>
+
+
+                <div class="modal fade" id="country-unselected" translate="no">
+                    <div id="country-select-container">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                    <object type="image/svg+xml" width="167px" class="mw_logo" alt="MathWorks" data="/images/responsive/global/pic-header-mathworks-logo2.svg">
+                                        <img alt="MathWorks" width="167px" src="/images/responsive/global/pic-header-mathworks-logo.png">
+                                    </object>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="row add_margin_40">
+                                        <div class="col-xs-12">
+                                            <h1 class="icon-globe icon_color_secondary">Select a Web Site</h1>
+                                            <p>Choose a web site to get translated content where available and see local events and offers. Based on your location, we recommend that you select: <strong class="recommended-country"></strong>.</p>
+                                            <a href="#" id="recommended_domain_button"
+                                               class="btn btn_color_blue containsResourceName resourceClass-button">Select <span
+                                                    class="recommended-country"></span> web site</a>
+                                        </div>
+                                    </div>
+                                    <p>You can also select a web site from the following list:</p>
+                                    <div class="alert alert-warning" id="china_performance_alert" style="display:none;"> <span class="alert_icon icon-alert-warning"></span>
+                                        <h3>How to Get Best Site Performance</h3>
+                                        <p>Select the China site (in Chinese or English) for best site performance. Other MathWorks country sites are not optimized for visits from your location.</p>
+                                    </div>
+                                    <div class="row add_margin_30">
+                                        <div class="col-sm-4 col-md-3">
+                                            <h3 class="add_bottom_rule">Americas</h3>
+                                            <ul class="list-unstyled">
+                                                <li><a href="https://la.mathworks.com" class="domain_selector_link" data-country-code="LA" data-subdomain="la" data-lang="es" data-default-lang="true" data-selected-text="América Latina" data-recommended-text="América Latina" data-do-not-rewrite="true">Am&eacute;rica Latina</a> (Español)</li>
+                                                <li><a href="https://www.mathworks.com" class="domain_selector_link" data-country-code="CA" data-subdomain="www" data-lang="en" data-do-not-rewrite="true">Canada</a> (English)</li>
+                                                <li><a href="https://www.mathworks.com" class="domain_selector_link" data-country-code="US" data-subdomain="www" data-lang="en" data-default-lang="true" data-selected-text="United States" data-recommended-text="United States" data-do-not-rewrite="true">United States</a> (English)</li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-sm-4 col-md-6">
+                                            <h3 class="add_bottom_rule">Europe</h3>
+                                            <div class="row">
+                                                <div class="col-xs-6 col-sm-12 col-md-6">
+                                                    <ul class="list-unstyled add_margin_0_sm">
+                                                        <li><a href="https://nl.mathworks.com" class="domain_selector_link" data-country-code="BE" data-subdomain="nl" data-lang="en" data-do-not-rewrite="true">Belgium</a> (English)</li>
+                                                        <li><a href="https://se.mathworks.com" class="domain_selector_link" data-country-code="DK" data-subdomain="se" data-lang="en" data-do-not-rewrite="true">Denmark</a> (English)</li>
+                                                        <li><a href="https://de.mathworks.com" class="domain_selector_link" data-country-code="DE" data-subdomain="de" data-lang="de" data-default-lang="true" data-selected-text="Deutschland" data-recommended-text="Deutschland" data-do-not-rewrite="true">Deutschland</a> (Deutsch)</li>
+                                                        <li><a href="https://es.mathworks.com" class="domain_selector_link" data-country-code="ES" data-subdomain="es" data-lang="es" data-default-lang="true" data-selected-text="España" data-recommended-text="España" data-do-not-rewrite="true">España</a> (Español)</li>
+                                                        <li><a href="https://se.mathworks.com"  class="domain_selector_link" data-country-code="FI" data-subdomain="se" data-lang="en" data-do-not-rewrite="true">Finland</a> (English)</li>
+                                                        <li><a href="https://fr.mathworks.com" class="domain_selector_link" data-country-code="FR" data-subdomain="fr" data-lang="fr" data-default-lang="true" data-selected-text="France" data-recommended-text="France" data-do-not-rewrite="true">France</a> (Français)</li>
+                                                        <li><a href="https://uk.mathworks.com" class="domain_selector_link" data-country-code="IE" data-subdomain="uk" data-lang="en" data-do-not-rewrite="true">Ireland</a> (English)</li>
+                                                        <li><a href="https://it.mathworks.com" class="domain_selector_link" data-country-code="IT" data-subdomain="it" data-lang="it" data-default-lang="true" data-selected-text="Italia" data-recommended-text="Italia" data-do-not-rewrite="true">Italia</a> (Italiano)</li>
+                                                        <li><a href="https://nl.mathworks.com" class="domain_selector_link" data-country-code="LU" data-subdomain="nl" data-lang="en" data-do-not-rewrite="true">Luxembourg</a> (English)</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-xs-6 col-sm-12 col-md-6">
+                                                    <ul class="list-unstyled">
+                                                        <li><a href="https://nl.mathworks.com" class="domain_selector_link" data-country-code="NL" data-subdomain="nl" data-lang="en" data-default-lang="true" data-selected-text="Benelux" data-recommended-text="Netherlands" data-do-not-rewrite="true">Netherlands</a> (English)</li>
+                                                        <li><a href="https://se.mathworks.com" class="domain_selector_link" data-country-code="NO" data-subdomain="se" data-lang="en" data-do-not-rewrite="true">Norway</a> (English)</li>
+                                                        <li><a href="https://de.mathworks.com" class="domain_selector_link" data-country-code="AT" data-subdomain="de" data-lang="de" data-do-not-rewrite="true">Österreich</a> (Deutsch)</li>
+                                                        <li><a href="https://www.mathworks.com" class="domain_selector_link" data-country-code="PT" data-subdomain="www" data-lang="en" data-do-not-rewrite="true">Portugal</a> (English)</li>
+                                                        <li><a href="https://se.mathworks.com" class="domain_selector_link" data-country-code="Sweden" data-subdomain="se" data-lang="en" data-default-lang="true" data-selected-text="Nordic" data-recommended-text="Sweden" data-do-not-rewrite="true">Sweden</a> (English)</li>
+                                                        <li>Switzerland
+                                                            <ul class="list-unstyled add_indent_20">
+                                                                <li><a href="https://ch.mathworks.com" class="domain_selector_link" data-country-code="CH" data-subdomain="ch" data-lang="de" data-selected-text="Schweiz" data-recommended-text="Schweiz" data-do-not-rewrite="true">Deutsch</a></li>
+                                                                <li><a href="https://ch.mathworks.com" id="swiss_english" class="domain_selector_link" data-country-code="CH" data-subdomain="ch" data-lang="en" data-default-lang="true" data-selected-text="Switzerland" data-recommended-text="Switzerland" data-do-not-rewrite="true">English</a></li>
+                                                                <li><a href="https://ch.mathworks.com" class="domain_selector_link" data-country-code="CH" data-subdomain="ch" data-lang="fr" data-selected-text="Suisse" data-recommended-text="Suisse" data-do-not-rewrite="true">Français</a></li>
+                                                            </ul>
+                                                        </li>
+                                                        <li><a href="https://uk.mathworks.com" class="domain_selector_link" data-country-code="GB" data-subdomain="uk" data-lang="en" data-default-lang="true" data-selected-text="United Kingdom" data-recommended-text="United Kingdom" data-do-not-rewrite="true">United Kingdom</a> (English)</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4 col-md-3">
+                                            <h3 class="add_bottom_rule">Asia Pacific</h3>
+                                            <ul class="list-unstyled">
+                                                <li><a href="https://au.mathworks.com" class="domain_selector_link" data-country-code="AU" data-subdomain="au" data-lang="en" data-default-lang="true" data-selected-text="Australia" data-recommended-text="Australia" data-do-not-rewrite="true">Australia</a> (English)</li>
+                                                <li><a href="https://in.mathworks.com" class="domain_selector_link" data-country-code="IN" data-subdomain="in" data-lang="en" data-default-lang="true" data-selected-text="India" data-recommended-text="India" data-do-not-rewrite="true">India</a> (English)</li>
+                                                <li><a href="https://au.mathworks.com" class="domain_selector_link" data-country-code="NZ" data-subdomain="au" data-lang="en" data-do-not-rewrite="true">New Zealand</a> (English)</li>
+                                                <li>中国
+                                                    <ul class="list-unstyled add_indent_20">
+                                                        <li><a href="https://ww2.mathworks.cn" class="domain_selector_link" data-country-code="CN" data-subdomain="ww2" data-lang="zh" data-default-lang="true" data-selected-text="中国" data-recommended-text="中国" data-do-not-rewrite="true">简体中文</a></li>
+                                                        <li><a href="https://ww2.mathworks.cn" class="domain_selector_link" data-country-code="CN" data-subdomain="ww2" data-lang="en" data-default-lang="true" data-selected-text="China" data-recommended-text="China" data-do-not-rewrite="true">English</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li><a href="https://jp.mathworks.com" class="domain_selector_link" data-country-code="JP" data-subdomain="jp" data-lang="ja" data-default-lang="true" data-selected-text="日本" data-recommended-text="日本" data-do-not-rewrite="true">日本</a> (日本語)</li>
+                                                <li><a href="https://kr.mathworks.com" class="domain_selector_link" data-country-code="KR" data-subdomain="kr" data-lang="ko" data-default-lang="true" data-selected-text="한국" data-recommended-text="한국" data-do-not-rewrite="true">한국</a> (한국어)</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <p class="text-center"><a href="#" class="worldwide_link">Contact your local office</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<footer id="footer" class="bs-footer">
+    <!-- FAT FOOTER - Begin -->
+    <div class="fat_footer_container">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="grid_192">
+                        <div class="fat_footer">
+                            <div class="execmatlabweb"> <!--Requried for Doc Test -->
+                                <div class="row">
+                                    <div class="col-xs-12 col-md-12 col-lg-9 col-lg-push-3 add_margin_20">
+                                        <div class="row">
+                                            <div class="col-xs-12 col-sm-2">
+                                                <h5>了解产品</h5>
+                                                <ul class="list-unstyled">
+                                                    <li><a href="/products/matlab.html?s_tid=hp_ff_p_matlab">MATLAB</a></li>
+                                                    <li><a href="/products/simulink.html?s_tid=hp_ff_p_simulink">Simulink</a></li>
+                                                    <li><a href="/academia/student_version.html?s_tid=hp_ff_p_student">学生版软件</a></li>
+                                                    <li><a href="/hardware-support/home.html?s_tid=hp_ff_p_hwsupport">硬件支持</a></li>
+                                                    <li><a href="/matlabcentral/fileexchange/?s_tid=hp_ff_p_fx">文件交换</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-2">
+                                                <h5>试用或购买</h5>
+                                                <ul class="list-unstyled">
+                                                    <li><a href="/downloads/web_downloads/?s_iid=hp_ff_t_downloads">下载</a></li>
+                                                    <li><a href="/campaigns/products/trials.html?s_iid=hp_ff_p_trial">试用软件</a></li>
+                                                    <li><a href="/company/aboutus/contact_us/contact_sales.html?s_iid=hp_ff_t_sales">联系销售</a></li>
+                                                    <li><a href="/pricing-licensing.html?s_iid=hp_ff_t_pricing">定价和许可</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-2">
+                                                <h5>如何使用</h5>
+                                                <ul class="list-unstyled">
+                                                    <li><a href="/help/?s_tid=hp_ff_l_doc">文档</a></li>
+                                                    <li><a href="/support/learn-with-matlab-tutorials.html?s_tid=hp_ff_l_tutorials">教程</a></li>
+                                                    <li><a href="/examples/?s_tid=hp_ff_l_examples">MATLAB Examples</a></li>
+                                                    <li><a href="/videos.html?s_tid=hp_ff_l_videos">视频与网上研讨会</a></li>
+                                                    <li><a href="/services/training.html?s_tid=hp_ff_l_training">培训</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="clearfix" id="offcanvas_clearfix" style="display:none"></div>
+                                            <div class="col-xs-12 col-sm-2">
+                                                <h5>获取支持</h5>
+                                                <ul class="list-unstyled">
+                                                    <li><a href="/support/install-matlab.html?s_tid=hp_ff_s_install">安装协助</a></li>
+                                                    <li><a href="/matlabcentral/answers/?s_tid=hp_ff_s_answers">MATLAB Answers</a></li>
+                                                    <li><a href="/services/consulting.html?s_tid=hp_ff_s_consulting">咨询</a></li>
+                                                    <li><a href="http://status.mathworks.com/?s_tid=hp_ff_s_application">应用状态</a></li>
+                                                    <li><a href="/licensecenter/?s_tid=hp_ff_s_license">许可中心</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-2">
+                                                <h5>关于 MathWorks</h5>
+                                                <ul class="list-unstyled">
+                                                    <li><a href="/company/jobs/opportunities/?s_tid=hp_ff_a_careers">招聘</a></li>
+                                                    <li><a href="/company/newsroom.html?s_tid=hp_ff_a_newsroom">新闻室</a></li>
+                                                    <li><a href="/company/aboutus/soc_mission.html?s_tid=hp_ff_a_socialmission">社会愿景</a></li>
+                                                    <li><a href="/company.html?s_tid=hp_ff_a_company">关于 MathWorks</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12 col-md-12 col-lg-3 col-lg-pull-9">
+                                        <h4 class="add_font_futura_medium add_margin_0"><span translate="no">MathWorks<span translate="no"></h4>
+                                        <p><em>Accelerating the pace of engineering and science</em></p>
+                                        <p>MathWorks 公司是世界领先的为工程师和科学家提供数学计算软件的开发商。</p>
+                                        <p><a href="/discovery.html?s_tid=all_disc_mw_ff">发现...</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- FAT FOOTER - End -->
+    <!-- BASIC FOOTER CONTENT - Begin -->
+    <div class="container">
+        <div class="footer" translate="no">
+            <div class="row">
+                <div class="col-xs-12 col-md-9">
+                    <ul class="countrynav" id="countrynav">
+                        <li class="footernav_country">
+                            <a onclick="$('#country-unselected').modal('show');">
+                                <span class="icon-globe icon_color_quinary icon_16"></span>中国
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                    <ul class="footernav">
+                        <li class="footernav_patents"><a href="https://ww2.mathworks.cn/company/aboutus/policies_statements/patents.html?s_tid=gf_pat">专利</a></li>
+                        <li class="footernav_trademarks"><a href="https://ww2.mathworks.cn/company/aboutus/policies_statements/trademarks.html?s_tid=gf_trd">商标</a></li>
+                        <li class="footernav_privacy"><a href="https://ww2.mathworks.cn/company/aboutus/policies_statements.html?s_tid=gf_priv">隐私权政策</a></li>
+                        <li class="footernav_piracy"><a href="https://ww2.mathworks.cn/company/aboutus/policies_statements/piracy.html?s_tid=gf_pir">防止盗版</a></li>
+                    </ul>
+                    <div class="clearfix"></div>
+                    <div class="clearfix"></div>
+                    <p class="copyright" translate="no">&copy; 1994-2018 The MathWorks, Inc.</p>
+                </div>
+                <div class="clearfix visible-sm add_margin_10"></div>
+                <div class="col-xs-12 col-md-3">
+                    <div class="social_media">
+                        <ul class="social_media_icons">
+                            <li>
+                                <a href="http://www.facebook.com/MATLAB" target="_blank" class="svg_link">
+                                    <img src="/images/responsive/global/ico-facebook.svg" alt="Facebook" class="ico_facebook">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://www.twitter.com/MATLAB" target="_blank" class="svg_link">
+                                    <img src="/images/responsive/global/ico-twitter.svg" alt="Twitter" class="ico_twitter">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://www.weibo.com/mathworks" target="_blank" class="svg_link">
+                                    <img src="/images/responsive/global/ico-weibo.svg" alt="Weibo" class="ico_weibo">
+                                </a>
+                            </li>
+                            <li>
+                                <a data-toggle="modal" data-target="#wechatqr" href="#" class="svg_link">
+                                    <img src="/images/responsive/global/ico-wechat.svg" alt="WeChat" class="ico_wechat">
+                                </a>
+                                <div class="modal fade" id="wechatqr">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                                                <h4 class="add_margin_0 text-left">WeChat</h4>
+                                            </div>
+                                            <div class="modal-body">
+                                                <img src="/images/responsive/global/wechat-qr.jpg" class="fluid_image">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="https://plus.google.com/117177960465154322866?prsrc=3" target="_blank" class="svg_link">
+                                    <img src="/images/responsive/global/ico-google-plus.svg" alt="Google+" class="ico_google">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://www.linkedin.com/company/the-mathworks_2" target="_blank" class="svg_link">
+                                    <img src="/images/responsive/global/ico-linkedin.svg" alt="LinkedIn" class="ico_linkedin">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://ww2.mathworks.cn/company/rss.html" class="svg_link">
+                                    <img src="/images/responsive/global/ico-rss.svg" alt="RSS" class="ico_rss">
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="clearfix"></div>
+                        <p><em>关注我们</em></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- BEGIN Adobe DTM -->
+        <script type="text/javascript">
+            try {
+                _satellite.pageBottom();
+            } catch (e) {
+//something went wrong
+            }
+        </script>
+        <!-- END Adobe DTM -->
+    </div>
+    <!-- BASIC FAT FOOTER CONTENT - End -->
+</footer>
+
+<script src="/includes_content/responsive/scripts/lightbox-min.js"></script>
+<script>
+    $(document).ready(function ($) {
+
+        // delegate calls to data-toggle="lightbox"
+        $(document).delegate('*[data-toggle="lightbox"]', 'click', function(event) {
+            event.preventDefault();
+            return $(this).ekkoLightbox({
+                onShown: function() {
+                    if ($('.ekko-lightbox-container iframe').length) {
+                        $(".ekko-lightbox-container iframe").attr("scrolling","no");
+                        $(".ekko-lightbox-container iframe").load(lightboxIframeHeight);
+                    }
+                },
+                onNavigate: function(direction, itemIndex) {
+                    if (window.console) {
+                        return console.log('Navigating '+direction+'. Current item: '+itemIndex);
+                    }
+                }
+            });
+        });
+
+        // resize
+        $(window).resize(lightboxIframeHeight)
+
+        // lightbox height function
+        function lightboxIframeHeight() {
+            if ($('.ekko-lightbox-container iframe').length) {
+                whichIframeHeight = $('.ekko-lightbox-container iframe').contents().find('body').height() + 20;
+                $(".ekko-lightbox-container iframe").css("height",whichIframeHeight);
+            }
+        }
+
+        //Programatically call
+        $('#open-image').click(function (e) {
+            e.preventDefault();
+            $(this).ekkoLightbox();
+        });
+        $('#open-youtube').click(function (e) {
+            e.preventDefault();
+            $(this).ekkoLightbox();
+        });
+    });
+</script>
+
+</body>
+</html>
