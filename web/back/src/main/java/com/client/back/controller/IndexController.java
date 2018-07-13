@@ -24,6 +24,7 @@ public class IndexController {
         people.add(p3);
         model.addAttribute("singlePerson",single);
         model.addAttribute("people",people);
+
         return "index";
     }
 }
