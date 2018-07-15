@@ -10,8 +10,8 @@ target/
 .springBeans
 
 ### IntelliJ IDEA ###
-#.idea
-.idea/
+#.idea 文件夹
+.idea
 *.iws
 *.iml
 *.ipr
