@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" native2AsciiForPropertiesFiles="true" defaultCharsetForPropertiesFiles="UTF-8">
+    <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/core" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/security" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/server" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/server-db" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/server-db/server-common" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/server-db/server-druid" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/server-db/server-mongo" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/web" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/web/back" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/web/express" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/web/website-https" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/web/wechat" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
+  </component>
+</project>
