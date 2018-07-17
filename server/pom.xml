@@ -11,10 +11,18 @@
         <relativePath>../pom.xml</relativePath>
     </parent>
 
+
+    <!--    <parent>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-parent</artifactId>
+            <version>1.5.10.RELEASE</version>
+            <relativePath/>
+        </parent>-->
+
     <!-- 项目说明：这里作为聚合工程的父工程 -->
-    <name>server</name>
-    <description>SpringBoot  server 块构建示例</description>
     <modelVersion>4.0.0</modelVersion>
+    <name>server</name>
+    <description>SpringBoot server 块构建示例</description>
     <packaging>pom</packaging>
 
     <groupId>com.del.arc</groupId>
@@ -22,48 +30,57 @@
     <version>1.0.0</version>
 
 
-
-
     <!-- 模块说明：这里声明多个子模块 -->
+    <modules>
+        <module>server-eureka</module>
+        <module>server-zuul</module>
+    </modules>
+
+    <!--
+        <dependencies>
+            &lt;!&ndash;lombok&ndash;&gt;
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>1.16.18</version>
+                &lt;!&ndash;<optional>true</optional>&ndash;&gt;
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.security.oauth</groupId>
+                <artifactId>spring-security-oauth2</artifactId>
+            </dependency>
+
+            &lt;!&ndash; swagger RESTful API 文档 &ndash;&gt;
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger2</artifactId>
+                <version>2.2.2</version>
+            </dependency>
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger-ui</artifactId>
+                <version>2.2.2</version>
+            </dependency>
+
+            &lt;!&ndash; https://mvnrepository.com/artifact/org.codehaus.sonar/sonar-maven-plugin &ndash;&gt;
+            <dependency>
+                <groupId>org.codehaus.sonar</groupId>
+                <artifactId>sonar-maven-plugin</artifactId>
+                <version>5.1</version>
+            </dependency>
 
 
-<!--
-    <dependencies>
-        &lt;!&ndash;lombok&ndash;&gt;
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <version>1.16.18</version>
-            &lt;!&ndash;<optional>true</optional>&ndash;&gt;
-        </dependency>
+        </dependencies>
 
-        <dependency>
-            <groupId>org.springframework.security.oauth</groupId>
-            <artifactId>spring-security-oauth2</artifactId>
-        </dependency>
+    -->
 
-        &lt;!&ndash; swagger RESTful API 文档 &ndash;&gt;
-        <dependency>
-            <groupId>io.springfox</groupId>
-            <artifactId>springfox-swagger2</artifactId>
-            <version>2.2.2</version>
-        </dependency>
-        <dependency>
-            <groupId>io.springfox</groupId>
-            <artifactId>springfox-swagger-ui</artifactId>
-            <version>2.2.2</version>
-        </dependency>
-
-        &lt;!&ndash; https://mvnrepository.com/artifact/org.codehaus.sonar/sonar-maven-plugin &ndash;&gt;
-        <dependency>
-            <groupId>org.codehaus.sonar</groupId>
-            <artifactId>sonar-maven-plugin</artifactId>
-            <version>5.1</version>
-        </dependency>
-
-
-    </dependencies>
-
--->
-
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
 </project>

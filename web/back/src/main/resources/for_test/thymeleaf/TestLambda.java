@@ -1,4 +1,4 @@
-package com.client.back;
+package for_test.thymeleaf;
 
 
 import com.client.back.thymeleaf.exer.MyFunction2;
