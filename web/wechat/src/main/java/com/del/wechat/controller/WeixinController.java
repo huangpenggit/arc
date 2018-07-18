@@ -1,6 +1,6 @@
 package com.del.wechat.controller;
 
-import com.del.wechat.utils.SecurityUtil;
+import com.del.wechat.utils.ValidationUtil;
 import com.del.wechat.utils.WeixinUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.Arrays;
+import java.util.Date;
 
 //import org.slf4j.Logger;
 //import org.slf4j.LoggerFactory;
@@ -26,23 +27,32 @@ public class WeixinController {
 //    @Autowired
 //    private IAnswerService answerService;
 
-
+    /**
+     * 微信服务器对我验签
+     *
+     * @param timestamp 时间
+     * @param signature 签名
+     * @param nonce     现时
+     * @param echostr   回波
+     * @return 返回处理过的串
+     */
     @RequestMapping(value = "wx", method = RequestMethod.GET)
     @ResponseBody
-    public String login(
+    public String Signature(
             String timestamp,
-            String signature,
             String nonce,
+            String signature,
             String echostr) {
-        //验证的时候是个体请求，消息的时候就post请求
+        //验证的时候是GET请求，消息的时候就post请求
         //一旦那初次验证成功后，就不会再次校验了
         // 1）将token、timestamp、nonce三个参数进行字典序排序
         // private static final String TOKEN = "mayher";
 
-        log.info("timestamp : {}", timestamp);
-        log.info("signature : {}", signature);
-        log.info("nonce : {}", nonce);
-        log.info("echostr : {}", echostr);
+        log.info("timestamp:{}", timestamp);
+        log.info("signature:{}", signature);
+        log.info("nonce:{}", nonce);
+        log.info("echostr:{}", echostr);
+
         String[] arr = {WeixinUtil.TOKEN, timestamp, nonce};
         Arrays.sort(arr);//排序
         // 2）将三个参数字符串拼接成一个字符串进行sha1加密
@@ -51,15 +61,15 @@ public class WeixinController {
             sb.append(tem);
         }
         //加密
-        String sha1 = SecurityUtil.SHA1(sb.toString());
+        String sha1 = ValidationUtil.SHA1(sb.toString());
         // 3）开发者获得加密后的字符串可与signature对比，标识该请求来源于微信
         if (sha1.equals(signature)) {
             return echostr;
         } else {
-            System.out.println("------------>ERROR");
-            System.out.println(sha1);
-            System.out.println(signature);
-            return null;
+            log.error("------------>ERROR");
+            log.error("sha1 by local:{}", sha1);
+            log.error("signature:{}", signature);
+            return new Date().toString();
         }
     }
 

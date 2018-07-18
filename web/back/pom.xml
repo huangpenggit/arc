@@ -21,8 +21,6 @@
     <description>back for Spring Boot</description>
 
 
-
-
     <dependencies>
         <!--back-->
         <dependency>
@@ -30,36 +28,23 @@
             <artifactId>spring-boot-starter-thymeleaf</artifactId>
         </dependency>
 
-<!--
-        &lt;!&ndash;web&ndash;&gt;
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-
-        &lt;!&ndash;test&ndash;&gt;
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
-        </dependency>
-
--->
 
     </dependencies>
 
 
+<!--
     <build>
         <plugins>
-            <!--多模块打包：只需在启动类所在模块的POM文件：指定打包插件 -->
-            <!--该插件主要用途：构建可执行的JAR -->
-    <!--        <plugin>
+            &lt;!&ndash;多模块打包：只需在启动类所在模块的POM文件：指定打包插件 &ndash;&gt;
+            &lt;!&ndash;该插件主要用途：构建可执行的JAR &ndash;&gt;
+
+            <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
-     -->
         </plugins>
     </build>
 
+-->
 
 </project>

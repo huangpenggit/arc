@@ -5,18 +5,18 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
+//import org.springframework.data.annotation.Id;
+//import org.springframework.data.mongodb.core.mapping.Document;
 
 //@Entity
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@Document(collection = "mongo_person")
+//@Document(collection = "mongo_person")
 public class Person extends BaseModel {
 
-        @Id
+//        @Id
 //    @GeneratedValue
     private Long id;
 
