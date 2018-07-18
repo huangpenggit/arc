@@ -15,7 +15,6 @@ import java.io.PrintWriter;
  */
 public class Auth extends HttpServlet {
     @Override
-
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         //1.获得微信签名的加密字符串
         String signature = request.getParameter("signature");

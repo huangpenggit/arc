@@ -1,6 +1,6 @@
 package com.del.server.common.mapper;
 
-import com.del.model.User;
+import com.del.model.common.User;
 
 import java.util.List;
 

@@ -9,15 +9,20 @@
 
     <link rel="stylesheet" th:href="@{/plugins/bootstrap/dist/css/bootstrap.css}"/>
     <link rel="stylesheet" th:href="@{/plugins/bootstrap/dist/css/bootstrap-theme.css}"/>
-    <script type="text/javascript" src="/plugins/jquery/jQuery.js"></script>
-    <script type="text/javascript" src="/plugins/bootstrap/dist/js/bootstrap.js"></script>
-    <!--<script type="text/javascript" src="/plugins/bootstrap/dist/js/bootstrap.js"></script>-->
+    <script type="text/javascript" th:src="@{/plugins/jquery/jQuery.js}"></script>
+    <script type="text/javascript" th:src="@{/plugins/bootstrap/dist/js/bootstrap.js}"></script>
+
+    <!--<script type="text/javascript" src="@{/plugins/jquery/jQuery.js}"></script>-->
+    <!--<script type="text/javascript" src="@{/plugins/bootstrap/dist/js/bootstrap.js}"></script>-->
 
 </head>
 <script type="text/javascript">
-    alert($ == jQuery);
+    console.log("jQuery引入成功：" + ($ == jQuery));
 </script>
 <body>
+
+<!--
+
 <div class="panel panel-primary">
     <div class="panel-heading">
         <h3 class="panel-title">访问model</h3>
@@ -26,21 +31,23 @@
         <span th:text="${singlePerson.username}"></span>
     </div>
 </div>
+
+-->
+
+
 <div th:if="${not #lists.isEmpty(people)}">
     <div class="panel panel-primary">
         <div class="panel-heading">
             <h3 class="panel-title">列表渲染时间
                 <span th:text="${date}"></span>
-
             </h3>
-
         </div>
         <div class="panel-body">
             <ul class="list-group">
                 <li class="list-group-item" th:each="person : ${people}">
                     <span th:text="${person.username}"></span>
                     <span th:text="${person.age}"></span>
-                    <button class="btn" th:onlick="'getName(\''+${person.username}+'\');'">获得名字</button>
+                    <button class="btn" th:onclick="'javascript:getName(\''+${person.username}+'\')'">点我</button>
                 </li>
             </ul>
         </div>
@@ -53,12 +60,15 @@
     通过@{}引入web静态资源（括号里面是资源路径）访问model中的数据通过${}访问，案例
 </div>
 <script th:inline="javascript">
-    var single = [[${singlePerson}]];
-    console.log(single.name + "/" + single.age);
 
-    function getName(name) {
-        console.log(name);
+    var single = [[${singlePerson}]];
+    console.log(single.username + "----" + single.age);
+
+    function getName(username) {
+        alert(username);
+        console.log(typeof  username);
     }
+
 </script>
 </body>
 </html>

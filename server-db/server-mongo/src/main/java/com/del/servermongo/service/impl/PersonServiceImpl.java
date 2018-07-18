@@ -1,6 +1,6 @@
 package com.del.servermongo.service.impl;
 
-import com.del.model.Person;
+import com.del.model.common.Person;
 import com.del.servermongo.repository.PersonRepository;
 import com.del.servermongo.service.PersonService;
 import org.springframework.beans.factory.annotation.Autowired;

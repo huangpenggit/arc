@@ -1,6 +1,6 @@
 package com.del.wechat.controller;
 
-import com.del.model.Person;
+import com.del.model.common.Person;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PostMapping;

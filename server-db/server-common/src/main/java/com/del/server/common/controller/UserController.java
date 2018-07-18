@@ -1,6 +1,6 @@
 package com.del.server.common.controller;
 
-import com.del.model.User;
+import com.del.model.common.User;
 import com.del.server.common.mapper.UserMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
