@@ -1,6 +1,6 @@
 package com.del.servermongo.service.impl;
 
-import com.del.doamin.Area;
+import com.del.model.Area;
 import com.del.servermongo.mapper.AreaMapper;
 import com.del.servermongo.service.AreaService;
 import org.springframework.beans.factory.annotation.Autowired;

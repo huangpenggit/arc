@@ -1,6 +1,6 @@
 package com.del.servermongo.service;
 
-import com.del.doamin.Person;
+import com.del.model.Person;
 
 import java.util.List;
 

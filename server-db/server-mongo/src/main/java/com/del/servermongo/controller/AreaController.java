@@ -1,7 +1,7 @@
 package com.del.servermongo.controller;
 
 
-import com.del.doamin.Area;
+import com.del.model.Area;
 import com.del.servermongo.service.AreaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

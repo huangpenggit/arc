@@ -1,4 +1,4 @@
-package com.del.doamin;
+package com.del.model;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;

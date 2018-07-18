@@ -1,6 +1,6 @@
 package com.del.servermongo.repository;
 
-import com.del.doamin.Person;
+import com.del.model.Person;
 import org.springframework.data.mongodb.repository.MongoRepository;
 
 /**

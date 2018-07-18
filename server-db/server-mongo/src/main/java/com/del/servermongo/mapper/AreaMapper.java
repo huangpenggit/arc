@@ -1,6 +1,6 @@
 package com.del.servermongo.mapper;
 
-import com.del.doamin.Area;
+import com.del.model.Area;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;

@@ -1,6 +1,6 @@
 package com.del.servermongo.service;
 
-import com.del.doamin.Area;
+import com.del.model.Area;
 
 import java.util.List;
 

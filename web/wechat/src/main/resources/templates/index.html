@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" >
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta content="text/html;charset=UTF-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
@@ -7,10 +7,11 @@
     <!--<link href="/js.plugins/bootstrap/dist/css/bootstrap.css" rel="stylesheet"></link>-->
     <!--<link href="/js.plugins/bootstrap/dist/css/bootstrap-theme.css" rel="stylesheet"></link>-->
 
-    <link th:href="@{/plugins/bootstrap/dist/css/bootstrap.css}" rel="stylesheet"/>
-    <link th:href="@{/plugins/bootstrap/dist/css/bootstrap-theme.css}" rel="stylesheet"/>
-    <script type="text/javascript" src="@{/plugins/jquery/jQuery.js}" ></script>
+    <link rel="stylesheet" th:href="@{/plugins/bootstrap/dist/css/bootstrap.css}"/>
+    <link rel="stylesheet" th:href="@{/plugins/bootstrap/dist/css/bootstrap-theme.css}"/>
+    <script type="text/javascript" src="/plugins/jquery/jQuery.js"></script>
     <script type="text/javascript" src="/plugins/bootstrap/dist/js/bootstrap.js"></script>
+    <!--<script type="text/javascript" src="/plugins/bootstrap/dist/js/bootstrap.js"></script>-->
 
 </head>
 <script type="text/javascript">
@@ -22,20 +23,24 @@
         <h3 class="panel-title">访问model</h3>
     </div>
     <div class="panel-body">
-        <span th:text="${singlePerson.name}"></span>
+        <span th:text="${singlePerson.username}"></span>
     </div>
 </div>
 <div th:if="${not #lists.isEmpty(people)}">
     <div class="panel panel-primary">
         <div class="panel-heading">
-            <h3 class="panel-title">列表</h3>
+            <h3 class="panel-title">列表渲染时间
+                <span th:text="${date}"></span>
+
+            </h3>
+
         </div>
         <div class="panel-body">
             <ul class="list-group">
                 <li class="list-group-item" th:each="person : ${people}">
-                    <span th:text="${person.name}"></span>
+                    <span th:text="${person.username}"></span>
                     <span th:text="${person.age}"></span>
-                    <button class="btn" th:onlick="'getName(\''+${person.name}+'\');'">获得名字</button>
+                    <button class="btn" th:onlick="'getName(\''+${person.username}+'\');'">获得名字</button>
                 </li>
             </ul>
         </div>
@@ -49,7 +54,8 @@
 </div>
 <script th:inline="javascript">
     var single = [[${singlePerson}]];
-    console.log(single.name+"/"+single.age);
+    console.log(single.name + "/" + single.age);
+
     function getName(name) {
         console.log(name);
     }

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.del.server.common.mapper.UserMapper" >
-  <resultMap id="BaseResultMap" type="com.del.doamin.User" >
+  <resultMap id="BaseResultMap" type="com.del.model.User" >
     <id column="id" property="id" />
     <result column="username" property="username" />
     <result column="password" property="password" />
@@ -23,7 +23,7 @@
     delete from `user`
     where id = #{id}
   </delete>
-  <insert id="insert" parameterType="com.del.doamin.User" useGeneratedKeys="true" keyProperty="id" >
+  <insert id="insert" parameterType="com.del.model.User" useGeneratedKeys="true" keyProperty="id" >
     insert into `user` (username, password, nickname, open_id, access_token, subscribe, 
       remark, sex, headimgurl, subscribe_time, unsubscribe_time, becomeVip_time, 
       totalPoint, cardNumber, vipLevel)
@@ -31,7 +31,7 @@
       #{remark}, #{sex}, #{headimgurl}, #{subscribeTime}, #{unsubscribeTime}, #{becomevipTime}, 
       #{totalpoint}, #{cardnumber}, #{viplevel})
   </insert>
-  <update id="updateByPrimaryKey" parameterType="com.del.doamin.User" >
+  <update id="updateByPrimaryKey" parameterType="com.del.model.User" >
     update `user`
     set username = #{username},
       password = #{password},

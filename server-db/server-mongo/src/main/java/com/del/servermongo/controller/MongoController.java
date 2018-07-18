@@ -1,6 +1,6 @@
 package com.del.servermongo.controller;
 
-import com.del.doamin.Person;
+import com.del.model.Person;
 import com.del.servermongo.service.PersonService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
