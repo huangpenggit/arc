@@ -1,5 +1,6 @@
-package com.del.arc.util;
+package com.del.server.common.util;
 
+import com.del.util.Constant;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.FilenameUtils;
 import org.springframework.web.multipart.MultipartFile;
