@@ -5,13 +5,15 @@ import com.del.model.common.User;
 import java.util.List;
 
 public interface UserMapper {
-    int deleteByPrimaryKey(Long id);
 
     int insert(User record);
 
-    User selectByPrimaryKey(Long id);
+    int delete(Long id);
+
+    int update(User record);
+
+    User get(Long id);
 
     List<User> selectAll();
 
-    int updateByPrimaryKey(User record);
 }

@@ -13,7 +13,8 @@ public class ValidationUtil {
     //wx13c5d7f72dc057fd
 
     private static String token = "mayher";
-    private static final char[] HEX_DIGITS =  {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F'};
+//    private static final char[] HEX_DIGITS =  {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F'};
+    private static final char[] HEX_DIGITS =  {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f'};
 
     public static boolean checkSignature(String signature, String timestamp, String nonce) {
         //1）将token, timestamp, nonce三个参数进行字典序排序
@@ -68,7 +69,7 @@ public class ValidationUtil {
      *   
      */
     private static String byteToHexString(byte mByte) {
-        char[] digit = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F'};
+        char[] digit =  {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f'};
         char[] temp = new char[2];
 
         temp[0] = digit[(mByte >>> 4) & 0X0F];
