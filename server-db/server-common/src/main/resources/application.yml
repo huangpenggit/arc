@@ -5,7 +5,7 @@ spring:
   profiles:
     active: local
   application:
-    name: ms-server-common
+    name: common
 #  freemarker:
 #    template-loader-path: classpath:/templates
 #    suffix: .ftl #freemarker模板后缀
@@ -55,6 +55,7 @@ spring:
     hikari:
       max-lifetime: 1765000
       maximum-pool-size: 15
+
 eureka:
   client:
     service-url:

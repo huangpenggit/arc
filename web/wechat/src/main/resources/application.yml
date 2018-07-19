@@ -62,6 +62,7 @@ spring:
 ---
 spring:
   profiles: local
+
 eureka:
   client:
     service-url:

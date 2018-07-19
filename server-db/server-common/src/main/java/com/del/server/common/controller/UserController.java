@@ -49,7 +49,7 @@ public class UserController {
 //        return userService.update(user);
 //    }
 
-    @GetMapping("/id")
+    @RequestMapping(value = "/id",method = RequestMethod.GET)
     @ResponseBody
     public User get(@RequestParam(name = "id", required = true) Long id) {
         log.debug("##################################");
