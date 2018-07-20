@@ -10,6 +10,7 @@
         <module name="back" />
         <module name="core" />
         <module name="express" />
+        <module name="mybatis-tool" />
         <module name="server-common" />
         <module name="server-druid" />
         <module name="server-eureka" />

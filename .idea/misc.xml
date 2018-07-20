@@ -8,6 +8,7 @@
         <option value="$PROJECT_DIR$/server/server-eureka/pom.xml" />
         <option value="$PROJECT_DIR$/server/server-zuul/pom.xml" />
         <option value="$PROJECT_DIR$/server/pom.xml" />
+        <option value="$PROJECT_DIR$/server-db/mybatis-tool/mybatis-tool/pom.xml" />
       </list>
     </option>
   </component>
