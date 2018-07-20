@@ -8,8 +8,13 @@ import org.springframework.web.multipart.MultipartFile;
 
 import java.util.List;
 
-//@Component
-@FeignClient(value = FeignPath.SERVER_COMMON)
+/**
+ * 代理远程调用实际控制数据层的一个服务性质接口
+ *
+ * @author yechao
+ * @date 2018/07/20
+ */
+@FeignClient(value = FeignPath.SERVER_COMMON, fallback = UserAgentHystric.class)
 public interface UserAgent {
 
     @RequestMapping(value = "/users/id", method = RequestMethod.GET)

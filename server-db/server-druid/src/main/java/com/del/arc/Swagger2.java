@@ -87,7 +87,7 @@ public class Swagger2  implements WebMvcConfigurer {
                 value：参数的意思
                 defaultValue：参数的默认值
 @ApiResponses：用于表示一组响应
-@ApiResponse：用在@ApiResponses中，一般用于表达一个错误的响应信息
+@ResponseResult：用在@ApiResponses中，一般用于表达一个错误的响应信息
         code：数字，例如400
         message：信息，例如"请求参数没填好"
         response：抛出异常的类

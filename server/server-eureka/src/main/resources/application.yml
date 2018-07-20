@@ -33,10 +33,6 @@ spring:
 ---
 spring:
   profiles: local
-#  security:
-#    user:
-#      name: a
-#      password: a
 #通过eureka.client.registerWithEureka：false和fetchRegistry：false来表明自己是一个eureka server.
 eureka:
   instance:
@@ -48,7 +44,8 @@ eureka:
     register-with-eureka: false
     fetch-registry: false
     service-url:
-      defaultZone: http://127.0.0.1:8761/eureka/
+#      defaultZone: http://127.0.0.1:8761/eureka/
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
 #      defaultZone: http://a:a@127.0.0.1:8761/eureka/
 #      defaultZone:  http://a:a@${eureka.instance.hostname}:${server.port}/eureka/
 
