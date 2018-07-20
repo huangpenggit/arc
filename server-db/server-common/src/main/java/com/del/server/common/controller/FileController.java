@@ -1,69 +1,38 @@
 package com.del.server.common.controller;
 
-import com.del.model.common.User;
 import com.del.server.common.service.UserService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.multipart.MultipartFile;
 
-import java.util.List;
+import java.io.IOException;
 
 @Slf4j
 @Controller
 @RestController
-@RequestMapping("/users")
-public class UserController {
+@RequestMapping("/file")
+public class FileController {
 
     @Autowired
     private UserService userService;
 
-    @RequestMapping(value = "", method = RequestMethod.POST)
-    @ResponseBody
-    public Long save(@RequestBody User user) {
+
+
+    @RequestMapping(value = "/upload",method = RequestMethod.POST)
+    public String upload(MultipartFile file) {
         log.debug("##################################");
-        log.debug("user{}", user);
+        try {
+            log.debug("MultipartFile   received parameter file'{}", file.getBytes().toString());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         log.debug("##################################");
-        return userService.save(user);
+        return "ok";
     }
-
-//    @RequestMapping(value = "/id",method = RequestMethod.DELETE)
-    @DeleteMapping( "/id")
-    @ResponseBody
-    public Integer delete(@RequestParam(name = "id") Long id) {
-        log.debug("##################################");
-        log.debug("id{}", id);
-        log.debug("##################################");
-        return userService.delete(id);
-    }
-
-    @PutMapping("")
-    @ResponseBody
-    public User update(@RequestBody User user) {
-        log.debug("##################################");
-        log.debug("UserController is get method received object 'user'{}", user);
-        log.debug("##################################");
-        return userService.update(user) == 1 ? user : null;
-    }
-
-
-
-    @RequestMapping(value = "/id", method = RequestMethod.GET)
-    @ResponseBody
-    public User get(@RequestParam(name = "id", required = true) Long id) {
-        log.debug("##################################");
-        log.debug("UserController is get method received parm 'id'{}", id);
-        log.debug("##################################");
-        return userService.get(id);
-    }
-
-    @GetMapping("")
-    @ResponseBody
-    public List<User> list() {
-        return userService.list();
-    }
-
-
 }
 
 //RESTful

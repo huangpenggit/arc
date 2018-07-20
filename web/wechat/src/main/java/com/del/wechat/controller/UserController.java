@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.text.DateFormat;
 import java.util.ArrayList;
@@ -33,51 +34,41 @@ public class UserController {
     @GetMapping(value = "/users/id")
     @ResponseBody
     public Object get(@RequestParam(name = "id", required = true) Long id) {
-        log.debug("访问时间{}{}", id, new Date());
+        log.debug("访问时间{},id{}", new Date(), id);
         User user = userAgent.get(id);
         return user;
     }
 
+
+    @PostMapping("/users")
+    @ResponseBody
+    public Long save(@RequestBody User user) {
+        log.debug("访问时间{},接收对象{}", new Date(), user);
+        user.setSubscribeTime(new Date());
+        user.setUnsubscribeTime(new Date());
+        return userAgent.save(user);
+    }
+
+    @RequestMapping(value = "/users/id", method = RequestMethod.DELETE)
+    @ResponseBody
+    public Integer delete(@RequestParam(name = "id", required = true) Long id) {
+        log.debug("删除元素的id为{}", id);
+        return userAgent.delete(id);
+    }
+
+    @RequestMapping(value = "/users",method = RequestMethod.PUT)
+    @ResponseBody
+    public Integer update(@RequestBody User user) {
+        log.debug("访问时间{},接收对象{}", new Date(), user);
+        return userAgent.update(user);
+    }
+
 //
-//    @PostMapping("/users")
-//    @ResponseBody
-//    public Long save(@RequestBody User user) {
-//        log.debug("访问时间{},接收对象{}", new Date(), user);
-//        return userAgent.save(user);
-//    }
-//
-//    @DeleteMapping("users/id")
-//    @ResponseBody
-//    public Integer delete(Long id) {
-//        log.debug("删除元素的id为{}", id);
-//        return userAgent.delete(id);
-//    }
-//    @PutMapping("/users")
-//    @ResponseBody
-//    public Integer update(@RequestBody User user) {
-//        log.debug("访问时间{},接收对象{}", new Date(), user);
-//        return userAgent.update(user);
-//    }
-//
-////
-//    @GetMapping("/users")
-//    @ResponseBody
-//    public List<User> list() {
-//        return userAgent.list();
-//    }
-
-
-
-
-
-
-
-
-
-
-
-
-
+    @RequestMapping(value = "/users",method = RequestMethod.GET)
+    @ResponseBody
+    public List<User> list() {
+        return userAgent.list();
+    }
 
 
     @RequestMapping(value = "/index")
@@ -97,8 +88,9 @@ public class UserController {
     }
 
 
-    @PostMapping(value = "/upload/file")
-    public String upload(Model model) {
+    @RequestMapping(value = "/file/upload",method = RequestMethod.POST)
+    public String upload(MultipartFile file,Model model) {
+        userAgent.upload(file);
         model.addAttribute("mark", "传递参数MARK 时间： " + new Date());
         return "index";
     }
