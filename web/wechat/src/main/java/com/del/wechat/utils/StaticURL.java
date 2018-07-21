@@ -15,7 +15,7 @@ public class StaticURL {
     public static final String GET_ACCESSTOKEN_URL = "https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=APPID&secret=APPSECRET";
 
     //获取用户信息的url--(关注之后才可以)
-    public static final String GET_USERINFO_URL = "https://api.weixin.qq.com/cgi-bin/user/info?access_token=ACCESS_TOKEN&openid=OPENID&lang=zh_CN";
+    public static final String GET_USERINFO_URL = "https://api.weixin.qq.com/cgi-bin/User/info?access_token=ACCESS_TOKEN&openid=OPENID&lang=zh_CN";
 
     //创建菜单的url
     public static final String CREATE_MENU_URL = "https://api.weixin.qq.com/cgi-bin/menu/create?access_token=ACCESS_TOKEN";

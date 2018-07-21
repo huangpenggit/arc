@@ -4,11 +4,10 @@
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
+        <option value="$PROJECT_DIR$/web/express/src/main/resources/static/lightsword/pom.xml" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/server/server-eureka/pom.xml" />
-        <option value="$PROJECT_DIR$/server/server-zuul/pom.xml" />
-        <option value="$PROJECT_DIR$/server/pom.xml" />
-        <option value="$PROJECT_DIR$/server-db/mybatis-tool/mybatis-tool/pom.xml" />
+        <option value="$PROJECT_DIR$/security/server-security/pom.xml" />
+        <option value="$PROJECT_DIR$/server-db/mybatis-tool/pom.xml" />
       </list>
     </option>
   </component>

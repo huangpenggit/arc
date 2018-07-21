@@ -171,9 +171,9 @@ public class WeixinController {
         return "redirect:/test/index.html";
     }
 
-    @RequestMapping("/wx/user")
-    public String user() {
-        return "user";
+    @RequestMapping("/wx/User")
+    public String User() {
+        return "User";
     }
 
     //回复页面跳转

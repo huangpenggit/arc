@@ -247,7 +247,7 @@ public class WeixinUtil extends StaticURL {
         CommonButton btn31 = new CommonButton();
         btn31.setName("用户管理");
         btn31.setType("view");
-        btn31.setUrl("http://lamymay.s1.natapp.cc/user");       //31 user
+        btn31.setUrl("http://lamymay.s1.natapp.cc/User");       //31 User
 
         CommonButton btn32 = new CommonButton();
         btn32.setName("支付成功页面");

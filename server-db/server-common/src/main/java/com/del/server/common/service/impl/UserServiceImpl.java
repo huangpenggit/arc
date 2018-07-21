@@ -1,8 +1,9 @@
+/*
 package com.del.server.common.service.impl;
 
 import com.del.model.common.User;
 import com.del.server.common.mapper.UserMapper;
-import com.del.server.common.service.UserService;
+import com.del.service.common.UserService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -44,3 +45,4 @@ public class UserServiceImpl implements UserService {
         return userMapper.selectAll();
     }
 }
+*/

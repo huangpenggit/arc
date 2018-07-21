@@ -27,12 +27,12 @@ public class UserController {
         userRepository.findAll();
     }
     @RequestMapping(value = "/",method = RequestMethod.POST)
-    public void save(User user ) {
-        System.out.println(user);
-        userRepository.save(user);
+    public void save(User User ) {
+        System.out.println(User);
+        userRepository.save(User);
     }
 
-//    @RequestMapping(path = "/id/user",method = {RequestMethod.GET,RequestMethod.POST})
+//    @RequestMapping(path = "/id/User",method = {RequestMethod.GET,RequestMethod.POST})
 //    public void deletePerson(Long id) {
 //        userRepository.delete(id);
 //    }
@@ -42,8 +42,8 @@ public class UserController {
     //test
     @RequestMapping(value = "/test",method = RequestMethod.GET)
     public Object test( ) {
-//        User user = new User("荷兰","1111",Collections.emptyList());
-        User user = new User("美国","2222",Collections.emptyList());
-        return     userService.save(user);
+//        User User = new User("荷兰","1111",Collections.emptyList());
+        User User = new User("美国","2222",Collections.emptyList());
+        return     userService.save(User);
     }
 }*/

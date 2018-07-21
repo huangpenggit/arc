@@ -238,7 +238,7 @@ INSERT INTO `tree` VALUES ('4', '1', '十堰市', '\0', null, null, null, null, 
 INSERT INTO `tree` VALUES ('5', '2', '长沙市', '\0', null, null, null, null, null, null);
 
 -- ----------------------------
--- Table structure for user
+-- Table structure for User
 -- ----------------------------
 DROP TABLE IF EXISTS `user`;
 CREATE TABLE `user` (
@@ -262,7 +262,7 @@ CREATE TABLE `user` (
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
--- Records of user
+-- Records of User
 -- ----------------------------
 INSERT INTO `user` VALUES ('1', '5757', '5757', '劳德正', 'o-Pqtw5U7vNcoXZ1KH0mcH3y2ywM', 'q7X3i95gHNR8nppW5TxquoE-pSk1eJo2sZSctyNdrpMsi3etwb4EKKq9h52-T4d04xkXmFbD1xymQIwyglHpHu80EVmtCnIwDcExtHr5V-D76laSQPMT_yqM2Vtobf5qEFBjAAAIJF', '0', null, '1', 'http://wx.qlogo.cn/mmopen/VGmccWQ3w93BasrcMQbMq7X5V5bweibGjIOjLlpJQHKHuytPrAyegiaxaRGGP7Jw4JTCibNrorkwrDWGOV3DHS1zwfluCNcQDvE/0', '2017-11-21 17:28:21', '2017-11-21 16:26:06', '2017-11-21 17:28:21', '44', '1511256501185', '0');
 INSERT INTO `user` VALUES ('2', 'admin', '1111', '尹大昌', 'o-Pqtw9CUaFkOTGeCZnB7DE7TC7c', 'q7X3i95gHNR8nppW5TxquoE-pSk1eJo2sZSctyNdrpMsi3etwb4EKKq9h52-T4d04xkXmFbD1xymQIwyglHpHu80EVmtCnIwDcExtHr5V-D76laSQPMT_yqM2Vtobf5qEFBjAAAIJF', '1', null, null, 'http://wx.qlogo.cn/mmopen/PiajxSqBRaEKibEjvrbvquZw2wF4fxb5wAibKuwIvbAThSKF4Tg5B3ALWKDGfdjBwLxN3fOkelr9icKCd2w6NPU4Lg/0', '2017-11-21 17:29:46', '2017-11-21 17:30:27', '2017-11-21 17:29:46', '0', '1511256586272', '0');

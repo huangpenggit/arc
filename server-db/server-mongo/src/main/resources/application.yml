@@ -31,7 +31,7 @@ spring:
     name: simple-client
   security:
     user:
-      name: user
+      name: User
       password: admin
 
 

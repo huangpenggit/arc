@@ -1,6 +1,5 @@
 package del;
 
-import com.del.model.common.User;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -24,7 +23,7 @@ public class UserAgent {
     }
 
     public Long save(User user) {
-        log.debug("UserAgent is get method received object parameter 'user'{}", user);
+        log.debug("UserAgent is get method received object parameter 'User'{}", user);
         Long aLong = restTemplate.postForObject("http://MS-SERVER-COMMON/users", user, Long.class);
         log.debug("UserAgent received result{}", aLong);
         return aLong;

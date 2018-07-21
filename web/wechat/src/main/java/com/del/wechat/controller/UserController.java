@@ -44,8 +44,8 @@ public class UserController {
     @ResponseBody
     public Long save(@RequestBody User user) {
         log.debug("访问时间{},接收对象{}", new Date(), user);
-        user.setSubscribeTime(new Date());
-        user.setUnsubscribeTime(new Date());
+//        user.setSubscribeTime(new Date());
+//        user.setUnsubscribeTime(new Date());
         return userAgent.save(user);
     }
 

@@ -54,12 +54,12 @@ public class UserController {
     @ApiOperation(value = "新建用户", notes = "新建一个用户")
     @ApiImplicitParams(
             {//    注意：paramType需要指定为body
-                    @ApiImplicitParam(name = "user", value = "用户数据", required = true, paramType = "body", dataType = "User")
+                    @ApiImplicitParam(name = "User", value = "用户数据", required = true, paramType = "body", dataType = "User")
             }
     )
     @RequestMapping(value = "", method = RequestMethod.POST)
     public String create(@ApiParam(value = "用户数据", required = true) @RequestBody User user) {
-        System.out.println("user : " + user.getUsername() + " " + user.getPassword());
+        System.out.println("User : " + user.getUsername() + " " + user.getPassword());
         return "success 新建user : " + user.getUsername() + " " + user.getPassword();
     }
 
@@ -89,7 +89,7 @@ public class UserController {
      * @return
      */
     @ApiOperation(value = "更新用户", notes = "更新已存在用户")
-    @ApiImplicitParam(name = "user", value = "用户数据", required = true, paramType = "body", dataType = "User")
+    @ApiImplicitParam(name = "User", value = "用户数据", required = true, paramType = "body", dataType = "User")
     @RequestMapping(value = "", method = RequestMethod.PUT)
     public String update(@RequestBody User user) {
         System.out.println("更新用户：" + user.getId() + " " + user.getUsername() + " " + user.getPassword());

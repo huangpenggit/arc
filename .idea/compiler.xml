@@ -15,13 +15,11 @@
         <module name="server-druid" />
         <module name="server-eureka" />
         <module name="server-mongo" />
+        <module name="server-security" />
         <module name="server-zuul" />
         <module name="website-https" />
         <module name="wechat" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="server-security" target="1.8" />
-    </bytecodeTargetLevel>
   </component>
 </project>

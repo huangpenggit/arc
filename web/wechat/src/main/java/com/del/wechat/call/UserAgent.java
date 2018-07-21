@@ -2,6 +2,7 @@ package com.del.wechat.call;
 
 import com.del.enums.FeignPath;
 import com.del.model.common.User;
+import com.del.service.common.UserService;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
@@ -15,7 +16,7 @@ import java.util.List;
  * @date 2018/07/20
  */
 @FeignClient(value = FeignPath.SERVER_COMMON, fallback = UserAgentHystric.class)
-public interface UserAgent {
+public interface UserAgent extends UserService {
 
     @RequestMapping(value = "/users/id", method = RequestMethod.GET)
     User get(@RequestParam(value = "id") Long id);
