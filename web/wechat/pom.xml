@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<modelVersion>4.0.0</modelVersion>
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.del</groupId>
-	<artifactId>wechat</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	<packaging>jar</packaging>
+    <groupId>com.del</groupId>
+    <artifactId>wechat</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>jar</packaging>
 
-	<name>wechat</name>
-	<description>wechat By Spring Boot</description>
+    <name>wechat</name>
+    <description>wechat By Spring Boot</description>
 
     <!-- 继承本项目的父工程 -->
     <parent>
@@ -19,7 +19,7 @@
         <relativePath>../pom.xml</relativePath>
     </parent>
 
-	<dependencies>
+    <dependencies>
         <!--web-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -37,22 +37,75 @@
             <version>1.2.44</version>
         </dependency>
 
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
-        </dependency>
 
+        <!--直接调用-->
         <!--<dependency>-->
-            <!--<groupId>org.springframework.cloud</groupId>-->
-            <!--<artifactId>spring-cloud-starter-netflix-ribbon</artifactId>-->
+        <!--<groupId>org.springframework.cloud</groupId>-->
+        <!--<artifactId>spring-cloud-starter-netflix-ribbon</artifactId>-->
         <!--</dependency>-->
 
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-openfeign</artifactId>
-        </dependency>
-    </dependencies>
 
+        <!--用网关调用-->
+        <!--
+
+                <dependency>
+                    <groupId>org.springframework.cloud</groupId>
+                    <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+                </dependency>
+
+
+                <dependency>
+                    <groupId>org.springframework.cloud</groupId>
+                    <artifactId>spring-cloud-starter-openfeign</artifactId>
+                </dependency>
+        -->
+
+
+
+
+
+        <!--mybatis-spring-boot-starter-->
+        <dependency>
+            <groupId>org.mybatis.spring.boot</groupId>
+            <artifactId>mybatis-spring-boot-starter</artifactId>
+            <version>1.3.1</version>
+        </dependency>
+
+        <!--mysql-->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <scope>runtime</scope>
+        </dependency>
+
+
+        <!-- 连接池HikariCP -->
+        <dependency>
+            <groupId>com.zaxxer</groupId>
+            <artifactId>HikariCP</artifactId>
+            <version>2.7.6</version>
+        </dependency>
+        <!--Java 8 maven artifact-->
+        <dependency>
+            <groupId>com.vladmihalcea.flexy-pool</groupId>
+            <artifactId>flexy-test-hikaricp-java8</artifactId>
+            <version>1.2.4</version>
+        </dependency>
+        <!-- JDBC连接数据库，因为要用HikariCP，所以需要将SpringBoot中的tomcat-jdbc排除 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-jdbc</artifactId>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.apache.tomcat</groupId>
+                    <artifactId>tomcat-jdbc</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+
+
+    </dependencies>
 
 
 </project>

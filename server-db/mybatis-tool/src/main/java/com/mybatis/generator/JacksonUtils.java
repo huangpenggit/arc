@@ -11,6 +11,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 
+@SuppressWarnings("all")
 public class JacksonUtils {
 	/**
 	 * Logger for this class
@@ -112,5 +113,7 @@ public class JacksonUtils {
 	private static JavaType getJavaType(Class<?> collectionClass, Class<?> parametersFor, Class<?>... elementClasses) {
 		return mapper.getTypeFactory().constructParametrizedType(collectionClass, parametersFor, elementClasses);
 	}
+
+
 
 }

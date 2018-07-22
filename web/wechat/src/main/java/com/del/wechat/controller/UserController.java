@@ -2,13 +2,12 @@ package com.del.wechat.controller;
 
 import com.del.model.common.Person;
 import com.del.model.common.User;
-import com.del.wechat.call.UserAgent;
+import com.del.service.common.UserService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.multipart.MultipartFile;
 
 import java.text.DateFormat;
 import java.util.ArrayList;
@@ -27,7 +26,7 @@ import java.util.List;
 public class UserController {
 
     @Autowired
-    private UserAgent userAgent;
+    private UserService userAgent;
 
 
     //-----------------------------------------------------------------------------------
@@ -88,10 +87,10 @@ public class UserController {
     }
 
 
-    @RequestMapping(value = "/file/upload",method = RequestMethod.POST)
-    public String upload(MultipartFile file,Model model) {
-        userAgent.upload(file);
-        model.addAttribute("mark", "传递参数MARK 时间： " + new Date());
-        return "index";
-    }
+//    @RequestMapping(value = "/file/upload",method = RequestMethod.POST)
+//    public String upload(MultipartFile file,Model model) {
+//        userAgent.upload(file);
+//        model.addAttribute("mark", "传递参数MARK 时间： " + new Date());
+//        return "index";
+//    }
 }

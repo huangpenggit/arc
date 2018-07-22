@@ -34,7 +34,7 @@ spring:
 
 mybatis:
 #为实体对象所在的包，跟数据库表一一对应
-  type-aliases-package: com.del.model
+#  type-aliases-package: com.del.model.common
 #mapper文件的位置
   mapper-locations: classpath:mapper/*.xml
 
@@ -43,7 +43,7 @@ logging:
   pattern:
     console: "%d - %msg%n"
   #配置日志文件路径
-  file: C:\Users\X\Desktop\Zan\arc\web\wechat\src\main\resources\static\logs
+  file: classpath:/logs
   level:
    com.del: debug #不同目录下的日志可配置不同级别
 #   com.del.server.common.mapper: debug
@@ -63,19 +63,19 @@ spring:
 spring:
   profiles: local
 
-eureka:
-  client:
-    service-url:
-      default-zone: http://1270.0.1:8761/eureka/
+#eureka:
+#  client:
+#    service-url:
+#      default-zone: http://1270.0.1:8761/eureka/
 
-#  datasource:
-#    url: jdbc:mysql://localhost:3306/cloud?useUnicode=true&characterEncoding=UTF-8&useAffectedRows=true&useSSL=false
-#    driver-class-name: com.mysql.jdbc.Driver
-#    username: root
-#    password: admin
-#    hikari:
-#      max-lifetime: 1765000
-#      maximum-pool-size: 15
+  datasource:
+    url: jdbc:mysql://localhost:3306/cloud?useUnicode=true&characterEncoding=UTF-8&useAffectedRows=true&useSSL=false
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: admin
+    hikari:
+      max-lifetime: 1765000
+      maximum-pool-size: 15
 
 
 
