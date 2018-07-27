@@ -10,6 +10,7 @@
         <module name="back" />
         <module name="core" />
         <module name="express" />
+        <module name="multi_datasource" />
         <module name="mybatis-tool" />
         <module name="server-common" />
         <module name="server-druid" />
@@ -17,6 +18,7 @@
         <module name="server-mongo" />
         <module name="server-security" />
         <module name="server-zuul" />
+        <module name="validating" />
         <module name="website-https" />
         <module name="wechat" />
       </profile>

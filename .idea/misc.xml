@@ -8,6 +8,8 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/security/server-security/pom.xml" />
         <option value="$PROJECT_DIR$/server-db/mybatis-tool/pom.xml" />
+        <option value="$PROJECT_DIR$/web/validating/pom.xml" />
+        <option value="$PROJECT_DIR$/server-db/multi_datasource/pom.xml" />
       </list>
     </option>
   </component>
