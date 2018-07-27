@@ -2,9 +2,8 @@ package ${javaPackage};
 
 <#if meta.dateTypeExists>
 import java.util.Date;
-
 </#if>
-import cn.com.besttone.fms.model.BaseModel;
+
 import lombok.Getter;
 import lombok.Setter;
 
@@ -21,6 +20,5 @@ public class ${meta.className} extends BaseModel {
 	
 <#list meta.columns as col>
 	private ${col.modelFieldType} ${col.fieldName}; // ${col.columnComment}
-	
 </#list>
 }

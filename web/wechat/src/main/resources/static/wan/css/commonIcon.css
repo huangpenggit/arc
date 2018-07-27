@@ -1,0 +1,390 @@
+@charset "utf-8";
+.ic{
+    display: inline-block;
+    vertical-align: middle;
+}
+/*向右返回*/
+.ic_back{
+    background: url(../img/ic_back.png) left center no-repeat;
+}
+/*听*/
+.ic_listen{
+    background: url(../img/ic_listen.png) left center no-repeat;
+}
+.ic_wlisten{
+    background: url(../img/ic_wlisten.png) left center no-repeat;
+}
+/*券*/
+.ic_quan{
+    background: url(../img/ic_quan@2x.png) left center no-repeat;
+}
+/*设置*/
+.ic_set{
+    background: url(../img/ic_set.png) left center no-repeat;
+}
+/*关闭*/
+.ic_delete{
+    background: url(../img/ic_delete.png) left center no-repeat;
+}
+/*用户*/
+.ic_yonghu{
+    background: url(../img/ic_yonghu.png) left center no-repeat;
+}
+/*密码*/
+.ic_mima{
+    background: url(../img/ic_mima.png) left center no-repeat;
+}
+/*关闭眼睛*/
+.ic_closeEye{
+    background: url(../img/ic_closeEye.png) left center no-repeat;
+}
+/*睁开眼睛*/
+.ic_openEye{
+    background: url(../img/ic_openEye.png) left center no-repeat;
+}
+/*向右*/
+.ic_right{
+    background: url(../img/ic_right.png) left center no-repeat;
+}
+/*兑换记录*/
+.ic_reward{
+    background: url(../img/ic_reward.png) left center no-repeat;
+}
+/*回款记录*/
+.ic_receivable{
+    background: url(../img/ic_receivable.png) left center no-repeat;
+}
+/*充值记录*/
+.ic_recharge{
+    background: url(../img/ic_recharge.png) left center no-repeat;
+}
+/*投资记录*/
+.ic_investment{
+    background: url(../img/ic_investment.png) left center no-repeat;
+}
+/*提现记录*/
+.ic_withdrawal{
+    background: url(../img/ic_withdrawal.png) left center no-repeat;
+}
+/*奖励记录*/
+.ic_reward_record{
+    background: url(../img/ic_reward_record.png) left center no-repeat;
+}
+/*资金记录*/
+.ic_capital{
+    background: url(../img/ic_capital.png) left center no-repeat;
+}
+/*资金记录三角向下*/
+.icon_cash_record_down{
+    background: url(../img/icon_cash_record_down.png) left center no-repeat;
+}
+/*资金记录三角向上*/
+.icon_cash_record_up{
+    background: url(../img/icon_cash_record_up.png) left center no-repeat;
+}
+/*账户认证*/
+.ic_certification{
+    background: url(../img/ic_certification.png) left center no-repeat;
+}
+/*收货地址*/
+.ic_address{
+    background: url(../img/ic_address.png) left center no-repeat;
+}
+/*登录密码*/
+.ic_cipher{
+    background: url(../img/ic_cipher.png) left center no-repeat;
+}
+/*实名认证*/
+.ic_real_name{
+    background: url(../img/ic_real_name.png) left center no-repeat;
+}
+
+.ic_back,
+.ic_yonghu,
+.ic_mima,
+.ic_closeEye,
+.ic_openEye,
+.ic_listen,
+.ic_wlisten,
+.ic_right,
+.ic_reward,
+.ic_receivable,
+.ic_recharge,
+.ic_reward_record,
+.ic_investment,
+.ic_withdrawal,
+.ic_capital,
+.ic_certification,
+.ic_address,
+.ic_cipher,
+.ic_real_name,
+.ic_set{
+    background-size: .40rem .40rem;
+    padding-left:.40rem;
+    height:.40rem;
+}
+.icon_cash_record_down,
+.icon_cash_record_up{
+    background-position:center center;
+    background-size: .30rem .15rem;
+    padding-left:.40rem;
+    height:.40rem;
+}
+.ic_quan,
+.ic_delete{
+    background-size: .60rem .60rem;
+    padding-left:.60rem;
+    height:.60rem;
+}
+
+/*分享*/
+.ic_share{
+    background: url(../img/ic_sharing@2x.png) left center no-repeat;
+    background-size: .44rem .44rem;
+    padding-left: .44rem;
+    height: .44rem;
+}
+/*方格-头部tip*/
+.ic_title{
+    background: url(../img/ic_title.png) left center no-repeat;
+    background-size: .34rem .34rem;
+    padding-left: .34rem;
+    height: .34rem;
+}
+/*横线*/
+.ic_tline{
+    width:1.24rem;
+    border-top:0.5px solid #a88f70;
+    vertical-align: middle;
+}
+/*成功*/
+.ic_successful{
+    background: url(../img/ic_successful.png) left center no-repeat;
+    background-size: 1.80rem 1.80rem;
+    padding-left: 1.80rem;
+    height: 1.80rem;
+}
+/*成功-黄*/
+.ic_successful1{
+    background: url(../img/ic_successful1.png) left center no-repeat;
+    background-size: 1.80rem 1.80rem;
+    padding-left: 1.80rem;
+    height: 1.80rem;
+}
+
+/*计算器*/
+.ic_calculator{
+    background: url(../img/ic_calculator.png) left center no-repeat;
+    background-size: .46rem .46rem;
+    padding-left: .46rem;
+    height: .46rem;
+}
+
+/*竖线*/
+.ic_line{
+    background: url(../img/ic_line.png) left center no-repeat;
+    background-size: .06rem .36rem;
+    padding-left: .06rem;
+    height: .36rem;
+}
+/*向上*/
+.ic_up{
+    background: url(../img/ic_up.png) left center no-repeat;
+    background-size: .28rem .16rem;
+    padding-left: .28rem;
+    height: .16rem;
+}
+/*向下*/
+.ic_down{
+    background: url(../img/ic_down.png) left center no-repeat;
+    background-size: .24rem .16rem;
+    padding-left: .24rem;
+    height: .16rem;
+}
+/*链接*/
+.ic_link{
+    background: url(../img/ic_link.png) left center no-repeat;
+    background-size: .26rem .26rem;
+    padding-left: .26rem;
+    height: .26rem;
+}
+
+/*问题*/
+.ic_matter{
+    background: url(../img/ic_matter.png) left center no-repeat;
+    background-size: .34rem .34rem;
+    padding-left: .34rem;
+    height: .34rem;
+}
+
+/*加*/
+.ic_plus{
+    background: url(../img/ic_plus.png) left center no-repeat;
+    background-size: .56rem .56rem;
+    padding-left: .56rem;
+    height: .56rem;
+}
+
+/*减*/
+.ic_reduce{
+    background: url(../img/ic_reduce.png) left center no-repeat;
+    background-size: .56rem .56rem;
+    padding-left: .56rem;
+    height: .56rem;
+}
+
+/*关闭-X*/
+.ic_close{
+    background: url(../img/ic_close.png) left center no-repeat;
+    background-size: .44rem .44rem;
+    padding-left: .44rem;
+    height: .44rem;
+}
+
+/*关闭-X*/
+.ic_code{
+    background: url(../img/ic_code.png) left center no-repeat;
+    background-size: .44rem .44rem;
+    padding-left: .44rem;
+    height: .44rem;
+}
+
+/*白色关闭*/
+.ic_sign_shut{
+    background: url(../img/ic_sign_shut.png) left center no-repeat;
+    background-size: .62rem .62rem;
+    padding-left: .62rem;
+    height: .62rem;
+}
+
+/*footer-icon*/
+.ic_nav1{
+    background: url(../img/footer/ic_page1.png) left center no-repeat;
+}
+.ic_nav2{
+    background: url(../img/footer/ic_page2.png) left center no-repeat;
+}
+.ic_nav3{
+    background: url(../img/footer/ic_page3.png) left center no-repeat;
+}
+.ic_nav4{
+    background: url(../img/footer/ic_page4.png) left center no-repeat;
+}
+.ic_nav5{
+    background: url(../img/footer/ic_page5.png) left center no-repeat;
+}
+.ic_nav11{
+    background: url(../img/footer/ic_page11.png) left center no-repeat;
+}
+.ic_nav22{
+    background: url(../img/footer/ic_page22.png) left center no-repeat;
+}
+.ic_nav33{
+    background: url(../img/footer/ic_page33.png) left center no-repeat;
+}
+.ic_nav44{
+    background: url(../img/footer/ic_page44.png) left center no-repeat;
+}
+.ic_nav55{
+    background: url(../img/footer/ic_page55.png) left center no-repeat;
+}
+.ic_nav1,
+.ic_nav2,
+.ic_nav3,
+.ic_nav4,
+.ic_nav5,
+.ic_nav11,
+.ic_nav22,
+.ic_nav33,
+.ic_nav44,
+.ic_nav55{
+    background-size:.46rem .46rem;
+    padding-left:.46rem;
+    height:.46rem;
+}
+/*注册-头部图片*/
+.ic_raboutlt{
+    background: url(../img/ic_raboutLt.png) left center no-repeat;
+}
+.ic_raboutrt{
+    background: url(../img/ic_raboutRt.png) left center no-repeat;
+}
+.ic_raboutlt,
+.ic_raboutrt{
+    background-size:1.93rem .08rem;
+    padding-left:1.93rem;
+    height:.08rem;
+}
+.ic_stepTop1{
+    background: url(../img/ic_stepTop1.png) left center no-repeat;
+    background-size:2.59rem .87rem;
+    padding-left:2.59rem;
+    height:.87rem;
+}
+.ic_stepTop2{
+    background: url(../img/ic_stepTop2.png) left center no-repeat;
+    background-size:.45rem .30rem;
+    padding-left:.45rem;
+    height:.30rem;
+}
+
+.ic_cancel{
+    background: url(../img/ic_cancel.png) left center no-repeat;
+    background-size:.90rem .90rem;
+    padding-left:.90rem;
+    height:.90rem;
+}
+/*皇冠*/
+.ic_bigCrow{
+    background: url(../img/ic_bigCrow.png) left center no-repeat;
+    background-size:1.34rem .72rem;
+    padding-left:1.34rem;
+    height:.72rem;
+}
+.ic_smallCrow{
+    background: url(../img/ic_smallCrow.png) left center no-repeat;
+    background-size:.46rem .24rem;
+    padding-left:.46rem;
+    height:.24rem;
+}
+/*手机*/
+.ic_tel{
+    background: url(../img/ic_tel.png) left center no-repeat;
+    background-size:.42rem .42rem;
+    padding-left:.42rem;
+    height:.42rem;
+}
+
+/*消息*/
+.ic_news{
+    background: url(../img/ic_customer@2x.png) left center no-repeat;
+}
+.ic_customer_service_phone{
+    background: url(../img/ic_phone@2x.png) left center no-repeat;
+}
+.ic_customer_service_follow{
+    background: url(../img/ic_focus@2x.png) left center no-repeat;
+}
+.ic_customer_service_problem{
+    background: url(../img/ic_problem@2x.png) left center no-repeat;
+}
+.ic_news,
+.ic_customer_service_phone,
+.ic_customer_service_follow,
+.ic_customer_service_problem{
+    background-size:.36rem .36rem;
+    padding-left:.36rem;
+    height:.36rem;
+}
+/*加息*/
+.ic_jiaxi{
+    box-sizing: border-box;
+    width: 1.08rem;
+    height: 0.35rem;
+    background: url(../img/ic_jiaxi.png) center center no-repeat;
+    background-size: cover;
+    line-height: 0.32rem;
+    font-size: 0.16rem;
+    text-align: center;
+    color: #FFFFFF;
+}

@@ -3,6 +3,7 @@ package com.del.model.common;
 import com.del.model.BaseModel;
 import lombok.Getter;
 import lombok.Setter;
+import org.springframework.validation.annotation.Validated;
 
 import java.util.Date;
 
@@ -13,6 +14,7 @@ import java.util.Date;
  */
 @Getter
 @Setter
+@Validated
 public class User extends BaseModel {
 
 	private static final long serialVersionUID = 1L;

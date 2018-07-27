@@ -48,10 +48,11 @@ public class WeixinController {
         // 1）将token、timestamp、nonce三个参数进行字典序排序
         // private static final String TOKEN = "mayher";
 
-        log.info("timestamp:{}", timestamp);
-        log.info("signature:{}", signature);
-        log.info("nonce:{}", nonce);
-        log.info("echostr:{}", echostr);
+        log.info("获得时间戳信息timestamp:{}", timestamp);
+        log.info("获得微信签名的加密字符串signature:{}", signature);
+        log.info("获得随机数nonce:{}", nonce);
+        log.info("获得随机字符串echostr:{}", echostr);
+
 
         String[] arr = {WeixinUtil.TOKEN, timestamp, nonce};
         Arrays.sort(arr);//排序

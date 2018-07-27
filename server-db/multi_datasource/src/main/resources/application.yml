@@ -1,0 +1,28 @@
+server:
+  port: 9281
+
+#spring:
+#  profiles:
+#    active: dev
+
+
+
+
+#########################################
+#  注意两个表的sql在本项目根目录
+#########################################
+
+
+
+datasource1:
+  url: jdbc:mysql://localhost:3306/cloud?useSSL=false&useUnicode=true
+  username: root
+  password: admin
+  driver-class-name: com.mysql.jdbc.Driver
+
+datasource2:
+  url: jdbc:mysql://localhost:3306/sso?useSSL=false&useUnicode=true
+  username: root
+  password: admin
+  driver-class-name: com.mysql.jdbc.Driver
+

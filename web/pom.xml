@@ -27,6 +27,7 @@
         <module>website-https</module>
         <module>wechat</module>
         <module>express</module>
+        <module>validating</module>
     </modules>
 
 

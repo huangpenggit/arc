@@ -209,7 +209,7 @@ module.exports = function (grunt) {
         csslintrc: 'less/.csslintrc'
       },
       dist: [
-        'dist/css/bootstrap.css',
+        'dist/css/cssReset.css',
         'dist/css/bootstrap-theme.css'
       ],
       examples: [

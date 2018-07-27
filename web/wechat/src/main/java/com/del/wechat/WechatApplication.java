@@ -3,6 +3,7 @@ package com.del.wechat;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.web.servlet.ServletComponentScan;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -13,8 +14,9 @@ import org.springframework.web.bind.annotation.RestController;
 //@EnableFeignClients
 
 
+//@EnableSwagger2Doc // 开启 Swagger
 
-
+@ServletComponentScan
 @MapperScan("com.del.wechat.mapper")
 @RestController
 @SpringBootApplication
