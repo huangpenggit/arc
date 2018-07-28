@@ -7,21 +7,23 @@
     <name>mybatis-tool</name>
 
     <!-- 继承本项目的父工程 -->
+<!--
     <parent>
         <groupId>com.del.arc</groupId>
         <artifactId>server-db</artifactId>
         <version>1.0.0</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
+-->
 
-    <!--
-        <parent>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-parent</artifactId>
-            <version>1.5.10.RELEASE</version>
-        </parent>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.0.3.RELEASE</version>
+        <!--<version>1.5.10.RELEASE</version>-->
+        <relativePath/>
+    </parent>
 
-    -->
 
 
     <dependencies>

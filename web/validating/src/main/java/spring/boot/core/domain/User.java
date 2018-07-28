@@ -1,7 +1,5 @@
 package spring.boot.core.domain;
 
-import org.hibernate.validator.constraints.NotEmpty;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -29,7 +27,7 @@ public class User implements Serializable {
     /**
      * 名称
      */
-    @NotEmpty(message = "姓名不能为空")
+//    @NotEmpty(message = "姓名不能为空")
     @Size(min = 2, max = 8, message = "姓名长度必须大于 2 且小于 20 字")
     private String name;
 
@@ -44,7 +42,7 @@ public class User implements Serializable {
     /**
      * 出生时间
      */
-    @NotEmpty(message = "出生时间不能为空")
+//    @NotEmpty(message = "出生时间不能为空")
     private String birthday;
 
     public Long getId() {

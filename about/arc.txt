@@ -1,0 +1,47 @@
+https://github.com/lamymay/arc.git
+
+JAVA_HOME=/usr/java/jdk1.8.0_181
+CLASSPATH=%JAVA_HOME%/lib:%JAVA_HOME%/jre/lib
+PATH=$PATH:$JAVA_HOME/bin:$JAVA_HOME/jre/bin
+export PATH CLASSPATH JAVA_HOME
+
+centos7.2使用rpm安装jdk8
+①下载jdk
+去jdk下载页面找到要下载的jdk，用wget下载
+
+wget --no-check-certificate --no-cookies --header "Cookie: oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otnpub/java/jdk/8u131b11/d54c1d3a095b4ff2b6607d096fa80163/jdk-8u131-linux-x64.rpm
+②安装jdk
+rpm -ivh jdk-8u131-linux-x64.rpm
+③配置环境变量(告诉电脑jdk在哪里)
+vim /etc/profile //打开环境变量文件
+进入insert模式(按字母i) 在最后面加上下面这段，然后按esc 然后保存退出(按 :wq回车)
+JAVA_HOME=/usr/java/jdk1.8.0_181
+CLASSPATH=%JAVA_HOME%/lib:%JAVA_HOME%/jre/lib
+PATH=$PATH:$JAVA_HOME/bin:$JAVA_HOME/jre/bin
+export PATH CLASSPATH JAVA_HOME
+source /etc/profile //重新载入
+④检查是否完成安装
+java -version
+rmp卸载jdk
+rpm -qa|grep jdk   //查看版本
+rpm -e  jdk版本 //卸载
+
+
+rpm安装jdk8
+/usr/java/jdk1.8.0_181
+解压源码安装maven3.5.4
+/opt/apache/maven-3.5.4
+
+export M2_HOME=/opt/apache/maven-3.5.4
+export PATH=$PATH:$JAVA_HOME/bin:$M2_HOME/bin
+
+
+
+
+
+
+192.30.255.112 github.com
+192.30.255.113 www.github.com
+192.30.255.120 nodeload.github.com
+192.30.253.118 gist.github.com 
+192.30.253.119 gist.github.com
