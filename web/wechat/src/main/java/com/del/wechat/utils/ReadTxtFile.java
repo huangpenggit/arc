@@ -10,8 +10,10 @@ import java.util.regex.Pattern;
 public class ReadTxtFile {
     private static final Logger log = LoggerFactory.getLogger(ReadTxtFile.class);
     private static String PARM = "\\s*|\t|\r|\n";
-    private static String PATH = "C:\\say.txt";
-    private static String PATH1 = "C:\\say1.txt";
+//    private static String PATH = "H:\\say.txt";
+//    private static String PATH1 = "H:\\say1.txt";
+    private static String PATH = "c:\\say.txt";
+    private static String PATH1 = "c:\\say1.txt";
 
     public static String readTxt(String filePath) {
         StringBuffer resultBuffer = new StringBuffer();
@@ -51,18 +53,18 @@ public class ReadTxtFile {
         fileWriter.write(source);
 
     }
-
-    //测试
-    public static void main(String[] args) throws IOException {
+//
+//    //测试
+//    public static void main(String[] args) throws IOException {
 //        String s = readTxt(PATH);
 //        System.out.println(s);
-//        cover(s);
-
-
-        String readTxt = read(PATH1);
-        System.out.println(readTxt);
-
-    }
+////        cover(s);
+//        outToFile(s);
+//
+////        String readTxt = read(PATH1);
+////        System.out.println(readTxt);
+//
+//    }
 
 
     public static String read(String path) throws IOException {
@@ -84,6 +86,63 @@ public class ReadTxtFile {
     }
 
 
+    /**
+     * 输出到文件
+     */
+    public static void outToFile(String s) {
+        File file = new File("C:/call.txt");
+        try (FileOutputStream fop = new FileOutputStream(file)) {
+            // if file doesn't exists, then create it
+            if (!file.exists()) {
+                file.createNewFile();
+            }
+            // get the content in bytes
+            byte[] contentInBytes = s.getBytes();
+
+            fop.write(contentInBytes);
+            fop.flush();
+            fop.close();
+            System.out.println("Done");
+        } catch (IOException e) {
+            e.printStackTrace();
+
+
+        }
+    }
+
+    public static void main(String[] args) {
+        try {
+            //目标文件
+            String path = "C:\\say2.txt";
+            File file = new File(path);
+            if (!file.exists()) {
+                File parentFile = file.getParentFile();
+                boolean mkdirs = parentFile.mkdirs();
+                System.out.println(mkdirs);
+            }
+            file.createNewFile();
+
+            // write
+            FileWriter writer = new FileWriter(PATH, false);
+            BufferedWriter bw = new BufferedWriter(writer,1024);
+            String s = readTxt(PATH1);
+
+
+            bw.write(s);
+            bw.flush();
+            bw.close();
+            writer.close();
+
+            // read
+            FileReader reader = new FileReader(PATH);
+            BufferedReader br = new BufferedReader(reader,1024);
+            String str = br.readLine();
+            System.out.println(str);
+            System.out.println(str);
+        } catch (IOException e) {
+            log.error(e.getMessage());
+        }
+    }
 }
 
 
