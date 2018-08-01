@@ -93,4 +93,34 @@ public class UserController {
 //        model.addAttribute("mark", "传递参数MARK 时间： " + new Date());
 //        return "index";
 //    }
+
+
+
+
+
+
+
+
+    public static void main(String[] args) {
+        String h5Resource = "http://www.15?34.com";
+        StringBuffer buffer = new StringBuffer();
+        if (h5Resource != null) {
+            buffer.append(h5Resource);
+            String otherParam = "tom";
+
+            if (h5Resource.contains("?")&&h5Resource.contains("=")) {
+                buffer.append("&otherParam=").append(otherParam);
+                log.info("GET方式url传参，直接拼接参数{}", otherParam);
+            } else  {
+                buffer.append("?otherParam=").append(otherParam);
+                log.info("url append the new param {}", otherParam);
+            }
+        }
+        System.out.println(buffer.toString());
+        System.out.println(buffer.toString());
+        System.out.println(buffer.toString());
+    }
+
+
+
 }
