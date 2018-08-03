@@ -4,9 +4,9 @@
     <modelVersion>4.0.0</modelVersion>
     <!-- 继承本项目的父工程 -->
     <parent>
-        <groupId>com.del.arc</groupId>
+        <groupId>com.arc</groupId>
         <artifactId>server-db</artifactId>
-        <version>1.0.0</version>
+        <version>0.0.1-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 

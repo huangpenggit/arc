@@ -1,0 +1,8 @@
+com\security\service\UserService.class
+com\security\domain\Role.class
+com\security\domain\User.class
+com\security\domain\Resource.class
+com\security\mapper\UserMapper.class
+com\security\security\core\MyInvocationSecurityMetadataSourceService.class
+com\security\ServerSecurityApplication.class
+com\security\Swagger2ConfigApi.class

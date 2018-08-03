@@ -1,0 +1,83 @@
+server: 
+  port: 8762
+
+spring:
+  profiles:
+    active: local
+  application:
+    name: ms-server-common
+#  freemarker:
+#    template-loader-path: classpath:/templates
+#    suffix: .ftl #freemarker模板后缀
+#    charset: utf-8 #配置freemarker的内容编码
+#    content-type: text/html;charset=UTF-8 #配置视图的输出HTML的contentType
+#    expose-session-attributes: true
+#  mvc:
+#    static-path-pattern: /static/**
+#    throw-exception-if-no-handler-found: true
+#
+
+mybatis:
+#为实体对象所在的包，跟数据库表一一对应
+  type-aliases-package: com.del.doamin
+#mapper文件的位置
+  mapper-locations: classpath:mapper/*.xml
+
+#配置日志
+logging:
+  pattern:
+    console: "%d - %msg%n"
+  #配置日志文件路径
+  file: C:\Users\X\Desktop\Zan\git\arc\server-db\server-common\src\main\resources\logs\
+  level:
+   com.del.server.common.controller: debug #不同目录下的日志可配置不同级别
+   com.del.server.common.mapper: debug
+
+
+########################################################
+#          Environment for Development
+########################################################
+---
+spring:
+  profiles: dev
+
+########################################################
+#          Environment for Localhost
+########################################################
+---
+spring:
+  profiles: local
+  datasource:
+    url: jdbc:mysql://localhost:3306/cloud?useUnicode=true&characterEncoding=UTF-8&useAffectedRows=true&useSSL=false
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: admin
+    hikari:
+      max-lifetime: 1765000
+      maximum-pool-size: 15
+
+eureka:
+  client:
+    service-url:
+      default-zone: http://127.0.0.1:8761/eureka/
+
+#max-lifetime: 1765000一个连接的生命时长（毫秒），超时而且没被使用则被释放（retired），缺省:30分钟，建议设置比数据库超时时长少30秒以上
+#maximumPoolSize: 15 连接池中允许的最大连接数。缺省值：10；推荐的公式：((core_count * 2) + effective_spindle_count)
+#    type: com.alibaba.druid.pool.DruidDataSource
+
+########################################################
+#          Environment for Testing
+########################################################
+---
+spring:
+  profiles: test
+
+########################################################
+#          Environment for Production
+########################################################
+---
+spring:
+  profiles: prod
+
+
+

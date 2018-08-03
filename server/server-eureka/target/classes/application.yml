@@ -1,0 +1,53 @@
+server:
+  port: 8761
+
+spring:
+  profiles:
+    active: local
+#  security:
+#    user:
+#      name: user
+#      password: admin
+  application:
+    name: arc-eureka
+#  profiles:
+#    active: local
+
+#eureka:
+#  instance:
+#    prefer-ip-address: true
+#    hostname: localhost
+#  client:
+#    register-with-eureka: false
+#    fetch-registry: false
+#    service-url:
+#      defaultZone:  http://${eureka.instance.hostname}:${server.port}/eureka/
+#  server:
+#    enable-self-preservation: false
+
+
+
+########################################################
+#          Environment for localhost
+########################################################
+---
+spring:
+  profiles: local
+#通过eureka.client.registerWithEureka：false和fetchRegistry：false来表明自己是一个eureka server.
+eureka:
+  instance:
+    hostname: 127.0.0.1
+  server:
+    enable-self-preservation: false
+    eviction-interval-timer-in-ms: 5000
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+#      defaultZone: http://127.0.0.1:8761/eureka/
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+#      defaultZone: http://a:a@127.0.0.1:8761/eureka/
+#      defaultZone:  http://a:a@${eureka.instance.hostname}:${server.port}/eureka/
+
+
+

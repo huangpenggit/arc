@@ -5,9 +5,9 @@
     <!--maven模块-->
     <!-- 继承说明：这里继承SpringBoot提供的父工程 -->
     <parent>
-        <groupId>com.del.arc</groupId>
+        <groupId>com.arc</groupId>
         <artifactId>arc</artifactId>
-        <version>1.0.0</version>
+        <version>0.0.1-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
@@ -17,7 +17,7 @@
     <modelVersion>4.0.0</modelVersion>
     <packaging>jar</packaging>
 
-    <groupId>com.del.arc</groupId>
+    <groupId>com.arc</groupId>
     <artifactId>core</artifactId>
     <version>1.0.0</version>
 

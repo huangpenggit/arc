@@ -4,9 +4,9 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <!-- 继承说明：这里继承SpringBoot提供的父工程 -->
     <parent>
-        <groupId>com.del.arc</groupId>
+        <groupId>com.arc</groupId>
         <artifactId>arc</artifactId>
-        <version>1.0.0</version>
+        <version>0.0.1-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
@@ -16,9 +16,9 @@
     <modelVersion>4.0.0</modelVersion>
     <packaging>pom</packaging>
 
-    <groupId>com.del.arc</groupId>
+    <groupId>com.arc</groupId>
     <artifactId>server-db</artifactId>
-    <version>1.0.0</version>
+    <version>0.0.1-SNAPSHOT</version>
 
 
     <!-- 模块说明：这里声明多个子模块 -->
@@ -32,7 +32,7 @@
     <dependencies>
         <!--core-->
         <dependency>
-            <groupId>com.del.arc</groupId>
+            <groupId>com.arc</groupId>
             <artifactId>core</artifactId>
         </dependency>
 

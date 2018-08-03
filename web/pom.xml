@@ -3,67 +3,43 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
+    <!-- 继承说明：这里继承SpringBoot提供的父工程 -->
+    <parent>
+        <groupId>com.arc</groupId>
+        <artifactId>arc</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+
     <groupId>com.arc</groupId>
     <artifactId>web</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <packaging>jar</packaging>
+    <packaging>pom</packaging>
 
     <name>web</name>
     <description>Demo project for Spring Boot</description>
 
-    <!-- 继承说明：这里继承SpringBoot提供的父工程 -->
-    <parent>
-        <groupId>com.del.arc</groupId>
-        <artifactId>arc</artifactId>
-        <version>1.0.0</version>
-        <relativePath>../pom.xml</relativePath>
-    </parent>
 
-    <!--<parent>-->
-        <!--<groupId>org.springframework.boot</groupId>-->
-        <!--<artifactId>spring-boot-starter-parent</artifactId>-->
-        <!--<version>2.0.4.RELEASE</version>-->
-        <!--<relativePath/> &lt;!&ndash; lookup parent from repository &ndash;&gt;-->
-    <!--</parent>-->
-
-    <!--<properties>-->
-        <!--<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>-->
-        <!--<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>-->
-        <!--<java.version>1.8</java.version>-->
-    <!--</properties>-->
-
-    <dependencies>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
-        </dependency>
-
-        <!--core-->
-        <dependency>
-            <groupId>com.del.arc</groupId>
-            <artifactId>core</artifactId>
-            <!--<version>1.0.0</version>-->
-        </dependency>
+    <!-- 模块说明：这里声明多个子模块 -->
+    <modules>
+        <module>web-back</module>
+        <module>web-express</module>
+        <module>web-fast-start</module>
+        <module>website-https</module>
+        <module>web-validating</module>
+        <module>web-wechat</module>
+    </modules>
 
 
+<dependencies>
+    <!--core-->
+    <dependency>
+        <groupId>com.arc</groupId>
+        <artifactId>core</artifactId>
+    </dependency>
 
+</dependencies>
 
-    </dependencies>
-
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-        </plugins>
-    </build>
 
 
 </project>

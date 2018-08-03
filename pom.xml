@@ -11,16 +11,16 @@
         <relativePath/>
     </parent>
 
-
     <!-- 项目说明：这里作为聚合工程的父工程 ,父级项目 arc-->
-    <description>SpringBoot 多模块构建示例</description>
     <modelVersion>4.0.0</modelVersion>
     <name>arc</name>
+    <description>SpringBoot 多模块构建示例</description>
     <packaging>pom</packaging>
 
-    <groupId>com.del.arc</groupId>
+    <groupId>com.arc</groupId>
     <artifactId>arc</artifactId>
-    <version>1.0.0</version>
+    <version>0.0.1-SNAPSHOT</version>
+
 
 
     <!-- 模块说明：这里声明多个子模块 -->
@@ -71,7 +71,7 @@
 
             <!--core-->
             <dependency>
-                <groupId>com.del.arc</groupId>
+                <groupId>com.arc</groupId>
                 <artifactId>core</artifactId>
                 <version>1.0.0</version>
             </dependency>
@@ -85,11 +85,6 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
-
-
-
-
-
 
 
 
@@ -154,6 +149,7 @@
                 <artifactId>springfox-swagger2</artifactId>
                 <version>2.2.2</version>
             </dependency>
+
             <dependency>
                 <groupId>io.springfox</groupId>
                 <artifactId>springfox-swagger-ui</artifactId>
