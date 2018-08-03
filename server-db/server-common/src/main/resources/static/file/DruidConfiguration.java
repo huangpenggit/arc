@@ -1,4 +1,4 @@
-package com.del.arc.config;
+package com.arc.arc.config;
 
 
 import com.alibaba.druid.pool.DruidDataSource;

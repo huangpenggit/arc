@@ -19,7 +19,6 @@
     <description>website-https Spring Boot</description>
 
 
-
     <dependencies>
         <dependency>
             <groupId>org.projectlombok</groupId>
@@ -115,7 +114,6 @@
         </dependency>
 
 
-
         <dependency>
             <groupId>org.webjars</groupId>
             <artifactId>jquery</artifactId>
@@ -153,8 +151,8 @@
     <build>
         <plugins>
             <!--<plugin>-->
-                <!--<groupId>org.springframework.boot</groupId>-->
-                <!--<artifactId>spring-boot-maven-plugin</artifactId>-->
+            <!--<groupId>org.springframework.boot</groupId>-->
+            <!--<artifactId>spring-boot-maven-plugin</artifactId>-->
             <!--</plugin>-->
 
             <!--mybatis 逆向工程生成mapper 接口 xml 实体-->

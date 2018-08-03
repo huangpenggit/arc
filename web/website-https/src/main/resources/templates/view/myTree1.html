@@ -42,14 +42,14 @@
     $(function () {
 //        alert($ == jQuery);
 
-        var zTree1=$("#tree1");
+        var zTree1 = $("#tree1");
 // zTree 的参数配置，深入使用请参考 API 文档（setting 配置详解）
         var setting1 = {
-            edit:{
+            edit: {
                 enable: true,
-                drag:{
-                    isMove:true,
-                    prev:true,
+                drag: {
+                    isMove: true,
+                    prev: true,
                     autoOpenTime: 0
                 },
                 editNameSelectAll: true,
@@ -68,17 +68,17 @@
             }
         };
 
-      //  然后在通过ajax获取菜单以后，进行初始化
-        $(document).ready(function(){
+        //  然后在通过ajax获取菜单以后，进行初始化
+        $(document).ready(function () {
             $.ajax({
-                url:'tree.json',
+                url: 'tree.json',
                 type: "get",
                 dataType: "json",
-                success:function(data){
+                success: function (data) {
                     //树形菜单初始化
-                    zTreeObj = $.fn.zTree.init($("#treeDemo"), setting,data);
+                    zTreeObj = $.fn.zTree.init($("#treeDemo"), setting, data);
                 },
-                error:function(xhr){
+                error: function (xhr) {
                     alert(xhr.status);
                 }
             });
@@ -151,9 +151,9 @@
     function loadReady() {
         alert(101);
         var bodyH = demoIframe.contents().find("body").get(0).scrollHeight,
-                htmlH = demoIframe.contents().find("html").get(0).scrollHeight,
-                maxH = Math.max(bodyH, htmlH), minH = Math.min(bodyH, htmlH),
-                h = demoIframe.height() >= maxH ? minH : maxH;
+            htmlH = demoIframe.contents().find("html").get(0).scrollHeight,
+            maxH = Math.max(bodyH, htmlH), minH = Math.min(bodyH, htmlH),
+            h = demoIframe.height() >= maxH ? minH : maxH;
         if (h < 530) h = 530;
         demoIframe.height(h);
     }
@@ -161,27 +161,27 @@
 
 <script type="application/ecmascript">
     //-------第二个tree
-    $(document).ready(function(){
+    $(document).ready(function () {
         $.ajax({
-            url:'/tree/json',
+            url: '/tree/json',
             type: "get",
             dataType: "json",
-            success:function(data){
-            //树形菜单初始化
-                zTree1 = $.fn.zTree.init($("#tree1"), setting,data);
+            success: function (data) {
+                //树形菜单初始化
+                zTree1 = $.fn.zTree.init($("#tree1"), setting, data);
             },
-            error:function(xhr){
+            error: function (xhr) {
                 alert(xhr.status);
             }
         });
     });
 
 
-/*    function onClick(e, treeId, treeNode) {
-        if (treeNode.isParent) //如果不是叶子结点，结束
-            return;
-        alert(treeNode.name); //获取当前结点上的相关属性数据，执行相关逻辑
-    };*/
+    /*    function onClick(e, treeId, treeNode) {
+            if (treeNode.isParent) //如果不是叶子结点，结束
+                return;
+            alert(treeNode.name); //获取当前结点上的相关属性数据，执行相关逻辑
+        };*/
 </script>
 </body>
 </html>

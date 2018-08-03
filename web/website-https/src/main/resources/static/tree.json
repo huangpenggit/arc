@@ -1,27 +1,151 @@
 [
-	{	"id": 1,	"name": "用户管理",	"parentId": 48,	"url": "userManage/pagehow"},
-	{	"id": 2,	"name": "角色管理",	"parentId": 48,	"url": "system/roleManage/queryRole"},
-	{	"id": 3,	"name": "功能管理",	"parentId": 48,	"url": "system/functionManage/queryModule"},
-	{	"id": 40,	"name": "服务管理",	"parentId": 97,	"url": "serviceManage/queryService"},
-	{	"id": 48,	"name": "系统管理",	"parentId": 0,	"url": ""},
-	{	"id": 64,	"name": "合作方管理",	"parentId": 0,	"url": ""},
-	{	"id": 65,	"name": "合作方管理",	"parentId": 64,	"url": "partner/partnerManage/queryPartner"},
-	{	"id": 69,	"name": "服务内容管理",	"parentId": 64,	"url": "partner/serviceContent/queryServiceContent"},
-	{	"id": 78,	"name": "合作方账号管理",	"parentId": 64,	"url": "partner/partnerUser/queryPartnerAccount"},
-	{	"id": 84,	"name": "会员管理",	"parentId": 0,	"url": ""},
-	{	"id": 85,	"name": "会员管理",	"parentId": 84,	"url": "member/queryMember"},
-	{	"id": 86,	"name": "套餐管理",	"parentId": 0,	"url": ""},
-	{	"id": 88,	"name": "套餐管理",	"parentId": 86,	"url": "product/queryPackageMge"},
-	{	"id": 90,	"name": "订单管理",	"parentId": 0,	"url": ""},
-	{	"id": 91,	"name": "订单管理",	"parentId": 90,	"url": "orderManage/queryOrderManage"},
-	{	"id": 94,	"name": "坐席页面",	"parentId": 0,	"url": ""},
-	{	"id": 95,	"name": "坐席页面",	"parentId": 94,	"url": "seatsseatsPage"},
-	{	"id": 97,	"name": "服务管理",	"parentId": 0},
-	{	"id": 98,	"name": "短信管理",	"parentId": 0,	"url": ""},
-	{	"id": 100,	"name": "订购类短信",	"parentId": 98,	"url": "smsManage/orderMessage/queryOrderMessage"},
-	{	"id": 101,	"name": "服务类短信",	"parentId": 98,	"url": "smsManage/serviceMessage/queryServiceMessage"},
-	{	"id": 104,	"name": "通知类短信",	"parentId": 98,	"url": "smsManage/noticeMessage/queryNotice"},
-	{	"id": 105,	"name": "权益通知",	"parentId": 98,	"url": "smsManage/rightMessage/queryRightMessage"},
-	{	"id": 107,	"name": "黑白名单管理",	"parentId": 98,	"url": "smsManage/whiteAndBlackManage/queryWhiteAndBlack"},
-	{	"id": 110,	"name": "合作方类短信",	"parentId": 98,	"url": "smsManage/partnerMessage/queryPartnerMessage"}
+  {
+    "id": 1,
+    "name": "用户管理",
+    "parentId": 48,
+    "url": "userManage/pagehow"
+  },
+  {
+    "id": 2,
+    "name": "角色管理",
+    "parentId": 48,
+    "url": "system/roleManage/queryRole"
+  },
+  {
+    "id": 3,
+    "name": "功能管理",
+    "parentId": 48,
+    "url": "system/functionManage/queryModule"
+  },
+  {
+    "id": 40,
+    "name": "服务管理",
+    "parentId": 97,
+    "url": "serviceManage/queryService"
+  },
+  {
+    "id": 48,
+    "name": "系统管理",
+    "parentId": 0,
+    "url": ""
+  },
+  {
+    "id": 64,
+    "name": "合作方管理",
+    "parentId": 0,
+    "url": ""
+  },
+  {
+    "id": 65,
+    "name": "合作方管理",
+    "parentId": 64,
+    "url": "partner/partnerManage/queryPartner"
+  },
+  {
+    "id": 69,
+    "name": "服务内容管理",
+    "parentId": 64,
+    "url": "partner/serviceContent/queryServiceContent"
+  },
+  {
+    "id": 78,
+    "name": "合作方账号管理",
+    "parentId": 64,
+    "url": "partner/partnerUser/queryPartnerAccount"
+  },
+  {
+    "id": 84,
+    "name": "会员管理",
+    "parentId": 0,
+    "url": ""
+  },
+  {
+    "id": 85,
+    "name": "会员管理",
+    "parentId": 84,
+    "url": "member/queryMember"
+  },
+  {
+    "id": 86,
+    "name": "套餐管理",
+    "parentId": 0,
+    "url": ""
+  },
+  {
+    "id": 88,
+    "name": "套餐管理",
+    "parentId": 86,
+    "url": "product/queryPackageMge"
+  },
+  {
+    "id": 90,
+    "name": "订单管理",
+    "parentId": 0,
+    "url": ""
+  },
+  {
+    "id": 91,
+    "name": "订单管理",
+    "parentId": 90,
+    "url": "orderManage/queryOrderManage"
+  },
+  {
+    "id": 94,
+    "name": "坐席页面",
+    "parentId": 0,
+    "url": ""
+  },
+  {
+    "id": 95,
+    "name": "坐席页面",
+    "parentId": 94,
+    "url": "seatsseatsPage"
+  },
+  {
+    "id": 97,
+    "name": "服务管理",
+    "parentId": 0
+  },
+  {
+    "id": 98,
+    "name": "短信管理",
+    "parentId": 0,
+    "url": ""
+  },
+  {
+    "id": 100,
+    "name": "订购类短信",
+    "parentId": 98,
+    "url": "smsManage/orderMessage/queryOrderMessage"
+  },
+  {
+    "id": 101,
+    "name": "服务类短信",
+    "parentId": 98,
+    "url": "smsManage/serviceMessage/queryServiceMessage"
+  },
+  {
+    "id": 104,
+    "name": "通知类短信",
+    "parentId": 98,
+    "url": "smsManage/noticeMessage/queryNotice"
+  },
+  {
+    "id": 105,
+    "name": "权益通知",
+    "parentId": 98,
+    "url": "smsManage/rightMessage/queryRightMessage"
+  },
+  {
+    "id": 107,
+    "name": "黑白名单管理",
+    "parentId": 98,
+    "url": "smsManage/whiteAndBlackManage/queryWhiteAndBlack"
+  },
+  {
+    "id": 110,
+    "name": "合作方类短信",
+    "parentId": 98,
+    "url": "smsManage/partnerMessage/queryPartnerMessage"
+  }
 ]

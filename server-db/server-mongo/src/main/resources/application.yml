@@ -58,7 +58,7 @@ logging:
   path: classpath:log
   level:
     com.del.test: debug #不同目录下的日志可配置不同级别
-    org.springfromework.web: debg
+    org.springfromework.web: debug
 #    org.hibernate: error
 
 # 开发环境配置

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.del.client.website.mapper.TreeMapper">
-    <resultMap id="BaseResultMap" type="com.del.client.website.model.Tree">
+<mapper namespace="com.arc.client.website.mapper.TreeMapper">
+    <resultMap id="BaseResultMap" type="com.arc.client.website.model.Tree">
         <result column="id" property="id"/>
         <result column="p_id" property="pId"/>
         <result column="name" property="name"/>
@@ -15,43 +15,44 @@
     </resultMap>
 
     <insert id="insert">
-    insert into `tree` (id,p_id, `name`, `open`, checked, icon, icon_open, icon_close, url, file  )
-    values (#{id},#{pId}, #{name}, #{open}, #{checked}, #{icon}, #{iconOpen}, #{iconClose}, #{url}, #{file}  )
-  </insert>
+        insert into `tree` (id,p_id, `name`, `open`, checked, icon, icon_open, icon_close, url, file )
+        values (#{id},#{pId}, #{name}, #{open}, #{checked}, #{icon}, #{iconOpen}, #{iconClose}, #{url}, #{file} )
+    </insert>
 
     <insert id="batchSave">
         insert into `tree` (id,p_id, `name`, `open`, checked, icon, icon_open, icon_close, url, file )
         values
         <foreach collection="list" item="item" index="index" separator=",">
-            (#{item.id},#{item.pId},#{item.name},#{item.open} ,#{item.checked} ,#{item.icon} ,#{item.iconOpen},#{item.iconClose},#{item.url},#{item.file} )
+            (#{item.id},#{item.pId},#{item.name},#{item.open} ,#{item.checked} ,#{item.icon}
+            ,#{item.iconOpen},#{item.iconClose},#{item.url},#{item.file} )
         </foreach>
     </insert>
 
     <select id="selectAll" resultMap="BaseResultMap">
-    select id, p_id, `name`, `open`, checked, icon, icon_open, icon_close, url, file
-    from tree
-  </select>
+        select id, p_id, `name`, `open`, checked, icon, icon_open, icon_close, url, file
+        from tree
+    </select>
 
     <delete id="deleteById">
-    DELETE FROM tree WHERE  id=#{id}
-  </delete>
+        DELETE FROM tree WHERE id=#{id}
+    </delete>
     <delete id="deleteAll">
-    DELETE FROM tree
-  </delete>
+        DELETE FROM tree
+    </delete>
 
     <update id="update">
-    UPDATE tree    SET
-    id=#{id},
-    p_id=#{pId},
-    `name`=#{name},
-    `open`=#{open},
-    `checked`=#{checked},
-    `icon`=#{icon},
-    `icon_open`=#{iconOpen},
-    `icon_close`=#{iconClose},
-    `url`=#{url},
-    `file`=#{file}
-    where  id=#{id}
-  </update>
+        UPDATE tree SET
+        id=#{id},
+        p_id=#{pId},
+        `name`=#{name},
+        `open`=#{open},
+        `checked`=#{checked},
+        `icon`=#{icon},
+        `icon_open`=#{iconOpen},
+        `icon_close`=#{iconClose},
+        `url`=#{url},
+        `file`=#{file}
+        where id=#{id}
+    </update>
 
 </mapper>

@@ -1,0 +1,462 @@
+<!DOCTYPE html >
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head th:include="/common/head :: head (${'新增用户信息'}) ">
+</head>
+
+
+<link rel="stylesheet" href="reset.css"/>
+<link rel="stylesheet" href="default.css"/>
+<link rel="stylesheet" href="styles.css"/>
+<script type="text/javascript" src="jQuery.js"></script>
+<!--<link rel="stylesheet" th:href="@{/resource/css/steap/default.css}" />-->
+<!--<link rel="stylesheet" th:href="@{/resource/css/steap/styles.css}" />-->
+<!--<script type="text/javascript" src="@{/resource/js/plugins/steap/ .easing.min.js}"></script>-->
+
+<body>
+<header class="htmleaf-header">
+    <h1>分步式用户注册表单UI界面设计 <span>A Step By Step User Register Form </span></h1>
+</header>
+
+
+<article class="htmleaf-content">
+    <!-- multistep form -->
+    <form id="msform">
+        <!-- progressbar -->
+        <ul id="progressbar">
+            <li class="active">账号设置</li>
+            <li>社交账号</li>
+            <li>个人详细信息</li>
+        </ul>
+        <!-- fieldsets -->
+        <fieldset>
+            <h2 class="fs-title">创建新的用户</h2>
+            <h3 class="fs-subtitle">这是第一步</h3>
+            <input type="text" name="email" placeholder="Email地址"/>
+            <input type="password" name="pass" placeholder="密码"/>
+            <input type="password" name="cpass" placeholder="重复密码"/>
+            <input type="button" name="next" class="next action-button" value="Next"/>
+        </fieldset>
+
+        <fieldset>
+            <h2 class="fs-title">填写社交账号</h2>
+            <h3 class="fs-subtitle">填写你的常用社交网络账号</h3>
+            <input type="text" name="x-weibo" placeholder="新浪微博"/>
+            <input type="text" name="t-weibo" placeholder="腾讯微博"/>
+            <input type="text" name="qq" placeholder="腾讯QQ"/>
+            <input type="button" name="previous" class="previous action-button" value="Previous"/>
+            <input type="button" name="next" class="next action-button" value="Next"/>
+        </fieldset>
+
+        <fieldset>
+            <h2 class="fs-title">个人详细信息</h2>
+            <h3 class="fs-subtitle">个人详细信息是保密的，不会被泄露</h3>
+            <input type="text" name="fname" placeholder="昵称"/>
+            <input type="text" name="lname" placeholder="姓名"/>
+            <input type="text" name="phone" placeholder="电话号码"/>
+            <textarea name="address" placeholder="家庭住址"></textarea>
+            <input type="button" name="previous" class="previous action-button" value="Previous"/>
+            <input type="submit" name="submit" class="submit action-button" value="Submit"/>
+        </fieldset>
+
+    </form>
+</article>
+
+
+<script type="text/javascript">
+    $(function () {
+        alert($ == jQuery);
+        console.log("http://www.bootcss.com/p/git-guide/");
+        console.log("http://www.bootcss.com/p/git-guide/");
+    });
+</script>
+
+
+<script>
+    var current_fs, next_fs, previous_fs;
+    var left, opacity, scale;
+    var animating;
+    $('.next').click(function () {
+        if (animating)
+            return false;
+        animating = true;
+        current_fs = $(this).parent();
+        next_fs = $(this).parent().next();
+        $('#progressbar li').eq($('fieldset').index(next_fs)).addClass('active');
+        next_fs.show();
+        current_fs.animate({opacity: 0}, {
+            step: function (now, mx) {
+                scale = 1 - (1 - now) * 0.2;
+                left = now * 50 + '%';
+                opacity = 1 - now;
+                current_fs.css({'transform': 'scale(' + scale + ')'});
+                next_fs.css({
+                    'left': left,
+                    'opacity': opacity
+                });
+            },
+            duration: 800,
+            complete: function () {
+                current_fs.hide();
+                animating = false;
+            },
+            easing: 'easeInOutBack'
+        });
+    });
+    $('.previous').click(function () {
+        if (animating)
+            return false;
+        animating = true;
+        current_fs = $(this).parent();
+        previous_fs = $(this).parent().prev();
+        $('#progressbar li').eq($('fieldset').index(current_fs)).removeClass('active');
+        previous_fs.show();
+        current_fs.animate({opacity: 0}, {
+            step: function (now, mx) {
+                scale = 0.8 + (1 - now) * 0.2;
+                left = (1 - now) * 50 + '%';
+                opacity = 1 - now;
+                current_fs.css({'left': left});
+                previous_fs.css({
+                    'transform': 'scale(' + scale + ')',
+                    'opacity': opacity
+                });
+            },
+            duration: 800,
+            complete: function () {
+                current_fs.hide();
+                animating = false;
+            },
+            easing: 'easeInOutBack'
+        });
+    });
+    $('.submit').click(function () {
+        return false;
+    });
+</script>
+</body>
+<!--
+
+<body>
+
+<div class="container" id="container">
+    <p class="page-skip">
+    <hr/>
+    <span style="cursor: pointer;" onclick="history.back()">用户管理</span> >
+    <span style="color:#666666">新增用户信息</span>
+    <hr/>
+    </p>
+    &lt;!&ndash;===============编辑用户信息====================================  &ndash;&gt;
+    <div class="container-format">
+        <div class="container-format-form">
+
+            <form id="memberBaseMessage">
+                &lt;!&ndash;隐藏id&ndash;&gt;
+                &lt;!&ndash;<input id="customId" type="hidden" name="id" value="0" th:value="${qo.id}"/>&ndash;&gt;
+
+                <div class="container-format-info edit-User-info">
+                    <h3>基本信息</h3>
+                    <center>
+                        <table>
+
+                            <tr>
+                                <td><span class="format-title">姓名：</span></td>
+                                <td><input id="customName" type="text" name="customName" class="easyui-textbox"/></td>
+
+                                <td><span class="format-title">电话归属地：</span></td>
+                                <td><input id="callerloc" type="text" name="callerloc" class="easyui-textbox"
+                                           style="width:150px"/></td>
+                            </tr>
+
+                            <tr>
+                                <td><span class="format-title">手机：</span></td>
+                                <td><input id="cellphone" type="text" name="cellphone" class="easyui-textbox"/></td>
+                                <td><span class="format-title">固话：</span></td>
+                                <td><input id="telephone" type="text" name="telephone" class="easyui-textbox"/></td>
+                            </tr>
+
+                            <tr>
+                                <td><span class="format-title">天翼ID：</span></td>
+                                <td><input id="tianyiId" type="text" name="tianyiId" class="easyui-textbox"/></td>
+                                <td><span class="format-title">电子邮箱：</span></td>
+                                <td><input id="email" type="text" name="email" class="easyui-textbox"/></td>
+                            </tr>
+
+                            <tr>
+                                <td><span class="format-title">微信ID：</span></td>
+                                <td><input id="weixinId" type="text" name="weixinId" class="easyui-textbox"/></td>
+                                <td><span class="format-title">支付宝ID：</span></td>
+                                <td><input id="alipayId" type="text" name="alipayId" class="easyui-textbox"/></td>
+                            </tr>
+
+                            <tr>
+                                <td><span class="format-title">腾讯ID：</span></td>
+                                <td><input id="qqId" type="text" name="qqId" class="easyui-textbox"/></td>
+                                <td><span class="format-title">注册渠道：</span></td>
+                                <td><select id="registChannel" name="registChannel" class="easyui-combobox"
+                                            style="width:150px;"
+                                            data-options="required:true,editable:false">
+                                    <option value="电话注册">电话注册</option>
+                                    <option value="网页注册">网页注册</option>
+                                    <option value="安卓注册">安卓注册</option>
+                                </select></td>
+                            </tr>
+
+                            <tr>
+                                <td><span class="format-title">用户状态：</span></td>
+                                <td><select id="packState" class="easyui-combobox" name="packState" style="width:150px;"
+                                            data-options="required:true,editable:false">
+                                    <option value="IN_PACK">套餐用户</option>
+                                    <option value="OUT_PACK">非套餐用户</option>
+                                </select></td>
+                                <td><span class="format-title">性别：</span></td>
+                                <td><select id="gender" name="gender" class="easyui-combobox" style="width: 150px"
+                                            data-options="editable:false">
+                                    <option value="MALE">男</option>
+                                    <option value="FEMALE">女</option>
+                                    <option value="SECRET">保密</option>
+                                </select></td>
+                            </tr>
+                            <tr>
+                                <td><span id="" class="format-title">关联套餐地址：</span></td>
+                                <td><input id="linkAddressPack" type="text" name="content" class="easyui-textbox"/></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+
+                        </table>
+                    </center>
+                </div>
+            </form>
+
+            &lt;!&ndash;          <form id="familyForm" class="container-format-form">
+                          <div class="container-format-info edit-User-info">
+                              <h3>家庭档案</h3>
+                              <ul id="familyRecord">
+                                  <li>
+                                      <span id="type1" class="format-title" name="type">空调品牌：</span>
+                                      <input id="content1" type="text" name="content" class="easyui-textbox"/>
+                                  </li>
+                                  <li>
+                                      <span id="type2" class="format-title">油烟机品牌：</span>
+                                      <input id="content2" type="text" name="content" class="easyui-textbox"/>
+                                  </li>
+                                  <li>
+                                      <span id="type3" class="format-title">洗衣机品牌：</span>
+                                      <input id="content3" type="text" name="content" class="easyui-textbox"/>
+                                  </li>
+                                  <li>
+                                      <span id="type4" class="format-title">汽车品牌：</span>
+                                      <input id="content4" type="text" name="content" class="easyui-textbox"/>
+                                  </li>
+                              </ul>
+                          </div>
+                      </form>&ndash;&gt;
+            &lt;!&ndash;按钮&ndash;&gt;
+            <span class="btn-icons">
+				<input type="button" value="保存" id="saveButton" onclick="saveCustomFun()"></input>
+                <input type="button" value="取消" onclick="javascript:history.go(-1);"/>
+			</span>
+
+
+        </div>
+    </div>
+
+
+    &lt;!&ndash;地址列表&ndash;&gt;
+    <div class="container-format-info">
+        <h3>新用户可以绑定的地址列表（如没有合适的请添加一个）</h3>
+        <div style="margin-bottom: 50px">
+
+            <table id="tt"></table>
+        </div>
+    </div>
+
+
+    &lt;!&ndash;新增地址 添加 弹出层&ndash;&gt;
+    <div id="addDialog" title="新增地址"
+         style="display:none;width: 500px;height:350px;padding:10px 60px 20px 60px;">
+        <table>
+            &lt;!&ndash;属性显示名称&ndash;&gt;
+            <tr>
+                <td><span class="format-title">联系人姓名：</span></td>
+                <td>
+                    <input id="addOrderAttributeName" name="name" type="text"
+                           class="easyui-textbox"
+                           data-options="panelHeight:'auto'"
+                           style="width:200px"
+                    />
+                    <i class="asterisk">*</i>
+                </td>
+            </tr>
+            &lt;!&ndash;联系人电话&ndash;&gt;
+            <tr>
+                <td><span class="format-title">联系人手机：</span></td>
+                <td>
+                    <input id="addCellphone" name="cellphone" type="text"
+                           class="easyui-textbox"
+                           data-options="panelHeight:'auto'"
+                           style="width:200px"/>
+                    <i class="asterisk">*</i>
+                </td>
+            </tr>
+            <tr>
+                <td><span class="format-title">联系人固话：</span></td>
+                <td>
+                    <input id="addTelephone" name="telephone" type="text"
+                           class="easyui-textbox"
+                           data-options="panelHeight:'auto'"
+                           style="width:200px"/>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td><span class="format-title">详细地址：</span></td>
+                <td>
+                    <input id="addAddressDesc" name="addressDesc" type="text"
+                           class="easyui-textbox"
+                           data-options="panelHeight:'auto'"
+                           style="width:200px"
+                    />
+                    <i class="asterisk">*</i>
+                </td>
+            </tr>
+
+            &lt;!&ndash;省市区&ndash;&gt;
+            &lt;!&ndash;省市区&ndash;&gt;
+            &lt;!&ndash;省市区&ndash;&gt;
+            &lt;!&ndash;联系人电话&ndash;&gt;
+            <tr>
+                <td><span class="format-title">省份：</span></td>
+                <td>
+                    <select id="province"
+                            name="provinceCode"
+                            class="easyui-combobox"
+                            style="width:200px;">
+                    </select>
+                    <i class="asterisk">*</i>
+                </td>
+            </tr>
+            <tr>
+                <td><span class="format-title">城市：</span></td>
+                <td>
+                    <select id="city"
+                            name="cityCode"
+                            class="easyui-combobox"
+                            style="width:200px;">
+                    </select>
+                    <i class="asterisk">*</i>
+                </td>
+            </tr>
+
+            <tr>
+                <td><span class="format-title">区域：</span></td>
+                <td>
+                    <select id="area"
+                            name="districtCode"
+                            class="easyui-combobox"
+                            style="width:200px;">
+                    </select>
+                    <i class="asterisk">*</i>
+                </td>
+            </tr>
+
+            <tr>
+                <td><span class="format-title">套餐（权益）：</span></td>
+                <td>
+                    <input id="addPackCode"
+                           name="packCode"
+                           class="easyui-combobox"
+                           style="width:200px"
+                    />
+                    <i class="asterisk">*</i>
+                </td>
+            </tr>
+
+
+            &lt;!&ndash;地址标签&ndash;&gt;
+            <tr>
+                <td><span class="format-title">地址标注：</span></td>
+                <td>
+                    <input id="addMark" name="mark" type="text"
+                           class="easyui-textbox"
+                           data-options="panelHeight:'auto'"
+                           style="width:200px"
+                    />
+                </td>
+            </tr>
+
+        </table>
+    </div>
+
+
+    &lt;!&ndash;编辑地址&ndash;&gt;
+    &lt;!&ndash;  <div id="edit_dlg_addr" title="编辑地址"
+           style="width:550px;height:360px;padding:5px 8px 0 8px;display: none;"
+           data-options="iconCls:'icon-edit',resizable:true,modal:true,onBeforeClose:clearData">
+          <div class="add-dialog-format">
+              <h3>编辑地址</h3>
+              <div class="hr"></div>
+              <div class="content-detail">
+                  <ul style="overflow:auto;">
+                      <form action="" id="editMemberAddress" method="post">
+                          <li>
+                              <span class="format-title">姓名：</span>
+                              <input id="edit_name" type="text" style="width:100px;height: 25px;" name="name"
+                                     class="easyui-textbox"/>
+                              <input name="id " type="hidden"/>
+                          </li>
+                          <li>
+                              <span class="format-title">联系电话：</span>
+                              <input type="text" style="width:150px;height: 25px;" name="tel" id="edit_mobile"
+                                     class="easyui-textbox"/>
+                          </li>
+                          <li>
+                              <span class="format-title">省份：</span>
+                              <select style="width:150px;height: 25px;" name="provinceCode" id="edit_provinceCode"
+                                      class="easyui-combobox">
+
+                              </select>
+                          </li>
+                          <li></li>
+                          <li>
+                              <span class="format-title">城市：</span>
+                              <select style="width:150px;height: 25px;" name="cityCode" id="edit_cityCode"
+                                      class="easyui-combobox"></select>
+                          </li>
+                          <li>
+                              <span class="format-title">城区：</span>
+                              <select style="width:150px;height: 25px;" name="areaCode" id="edit_areaCode"
+                                      class="easyui-combobox"></select>
+                          </li>
+                          <li class="detail-address">
+                              <span class="format-title">详细地址：</span>
+                              <input type="text" style="width:250px" name="address" id="edit_address"
+                                     class="easyui-textbox"/>
+                          </li>
+                          <li>
+                              <span class="format-title">地址标签：</span>
+                              <input type="text" style="width:100px;" name="mark" id="edit_mark" class="easyui-textbox"/>
+                          </li>
+                          <li class="detail-package">
+                              <span class="format-title">套餐：</span>
+                              <select style="width:250px;" name="productCode" id="edit_productCode"
+                                      class="easyui-combobox" panelHeight="auto"></select>
+                          </li>
+                      </form>
+                  </ul>
+              </div>
+          </div>
+      </div>
+</div>&ndash;&gt;
+
+</div>
+<script th:src="@{/resource/js/member/add.js}"></script>
+<script th:src="@{/resource/js/common/ajax.js}"></script>
+<script th:src="@{/resource/js/common/validate.js}"></script>
+</body>
+
+-->
+
+</html>

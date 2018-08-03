@@ -301,7 +301,7 @@
             n.open = (typeof n.open == "string") ? tools.eqs(n.open, "true") : !!n.open;
             var isParent = data.nodeIsParent(setting, n);
             if (tools.isArray(children) &&
-              !(isParent === false || (typeof isParent == "string" && tools.eqs(isParent, "false")))) {
+                !(isParent === false || (typeof isParent == "string" && tools.eqs(isParent, "false")))) {
                 data.nodeIsParent(setting, n, true);
                 n.zAsync = true;
             } else {
@@ -690,11 +690,11 @@
                 return r;
 
                 function _do(_node) {
-                  r.push(_node);
-                  var children = data.nodeChildren(setting, _node);
-                  if (children) {
-                      r = r.concat(data.transformToArrayFormat(setting, children));
-                  }
+                    r.push(_node);
+                    var children = data.nodeChildren(setting, _node);
+                    if (children) {
+                        r = r.concat(data.transformToArrayFormat(setting, children));
+                    }
                 }
             },
             transformTozTreeFormat: function (setting, sNodes) {
@@ -816,7 +816,7 @@
             },
             onClickNode: function (event, node) {
                 var setting = data.getSetting(event.data.treeId),
-                    clickFlag = ( (setting.view.autoCancelSelected && (event.ctrlKey || event.metaKey)) && data.isSelectedNode(setting, node)) ? 0 : (setting.view.autoCancelSelected && (event.ctrlKey || event.metaKey) && setting.view.selectedMulti) ? 2 : 1;
+                    clickFlag = ((setting.view.autoCancelSelected && (event.ctrlKey || event.metaKey)) && data.isSelectedNode(setting, node)) ? 0 : (setting.view.autoCancelSelected && (event.ctrlKey || event.metaKey) && setting.view.selectedMulti) ? 2 : 1;
                 if (tools.apply(setting.callback.beforeClick, [setting.treeId, node, clickFlag], true) == false) return true;
                 if (clickFlag === 0) {
                     view.cancelPreSelectedNode(setting, node);
@@ -856,7 +856,7 @@
             },
             onSelectStart: function (e) {
                 var n = e.originalEvent.srcElement.nodeName.toLowerCase();
-                return (n === "input" || n === "textarea" );
+                return (n === "input" || n === "textarea");
             }
         },
         //method of tools for zTree
@@ -919,7 +919,7 @@
                 return ($(target).parent("li").get(0) || $(target).parentsUntil("li").parent().get(0));
             },
             isChildOrSelf: function (dom, parentId) {
-                return ( $(dom).closest("#" + parentId).length > 0 );
+                return ($(dom).closest("#" + parentId).length > 0);
             },
             uCanDo: function (setting, e) {
                 return true;
@@ -1425,13 +1425,13 @@
                 }
                 // support IE 7
                 if (typeof Element === 'undefined') {
-                  var contRect = setting.treeObj.get(0).getBoundingClientRect(),
-                    findMeRect = dom.getBoundingClientRect();
-                  if (findMeRect.top < contRect.top || findMeRect.bottom > contRect.bottom
-                    || findMeRect.right > contRect.right || findMeRect.left < contRect.left) {
-                    dom.scrollIntoView();
-                  }
-                  return;
+                    var contRect = setting.treeObj.get(0).getBoundingClientRect(),
+                        findMeRect = dom.getBoundingClientRect();
+                    if (findMeRect.top < contRect.top || findMeRect.bottom > contRect.bottom
+                        || findMeRect.right > contRect.right || findMeRect.left < contRect.left) {
+                        dom.scrollIntoView();
+                    }
+                    return;
                 }
                 // code src: http://jsfiddle.net/08u6cxwj/
                 if (!Element.prototype.scrollIntoViewIfNeeded) {
@@ -1865,12 +1865,12 @@
                     return data.isSelectedNode(setting, node);
                 },
                 reAsyncChildNodesPromise: function (parentNode, reloadType, isSilent) {
-                    var promise = new Promise(function(resolve, reject) {
+                    var promise = new Promise(function (resolve, reject) {
                         try {
-                            zTreeTools.reAsyncChildNodes(parentNode, reloadType, isSilent, function() {
+                            zTreeTools.reAsyncChildNodes(parentNode, reloadType, isSilent, function () {
                                 resolve(parentNode);
                             });
-                        } catch(e) {
+                        } catch (e) {
                             reject(e);
                         }
                     });

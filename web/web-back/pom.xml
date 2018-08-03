@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <!-- 继承本项目的父工程 -->
+    <parent>
+        <groupId>com.del.arc</groupId>
+        <artifactId>web</artifactId>
+        <version>1.0.0</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+
+
+    <!-- 基本信息 -->
+    <groupId>com.del</groupId>
+    <artifactId>web-back</artifactId>
+    <version>0.0.1</version>
+    <packaging>jar</packaging>
+
+    <name>web-back</name>
+    <description>back for Spring Boot</description>
+
+
+    <dependencies>
+        <!--back-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-thymeleaf</artifactId>
+        </dependency>
+        <!--但是呢，实际开发中我们不需要直接添加该依赖。
+        你会发现spring-boot-starter其中包含了 spring-boot-starter-logging，该依赖内容就是 Spring Boot 默认的日志框架 logback。工程中有用到了Thymeleaf，而Thymeleaf依赖包含了spring-boot-starter，最终我只要引入Thymeleaf即可。-->
+        <!--<dependency>-->
+        <!--<groupId>org.springframework.boot</groupId>-->
+        <!--<artifactId>spring-boot-starter-logging</artifactId>-->
+        <!--</dependency>-->
+
+    </dependencies>
+
+
+    <!--
+        <build>
+            <plugins>
+                &lt;!&ndash;多模块打包：只需在启动类所在模块的POM文件：指定打包插件 &ndash;&gt;
+                &lt;!&ndash;该插件主要用途：构建可执行的JAR &ndash;&gt;
+
+                <plugin>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-maven-plugin</artifactId>
+                </plugin>
+            </plugins>
+        </build>
+
+    -->
+
+</project>

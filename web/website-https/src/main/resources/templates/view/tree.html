@@ -21,7 +21,7 @@
 
 <div>
     # ================================================
-    #                   Thymeleaf配置
+    # Thymeleaf配置
     # ================================================
     # 是否启用thymeleaf模板解析
     spring.thymeleaf.enabled=true
@@ -69,9 +69,6 @@
 <h2>测试Ztree</h2><br>
 
 
-
-
-
 <br>
 <br>
 <br>
@@ -103,7 +100,8 @@
 <script type="text/javascript" th:src="@{/js/plugins/bootstrap/dist/js/bootstrap.js}"></script>
 <script th:inline="javascript">
     var single = [[${person}]];
-//    console.log(single.username + "/" + single.password);
+
+    //    console.log(single.username + "/" + single.password);
 
     function getusername(username) {
         console.log(username);
