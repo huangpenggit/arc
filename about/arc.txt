@@ -1,6 +1,10 @@
 https://github.com/lamymay/arc.git
 git@github.com:lamymay/arc.git
 
+ innodb_buffer_pool_size             | 8388608
+SET GLOBAL innodb_buffer_pool_size=104857600;
+
+
 
 JAVA_HOME=/usr/java/jdk1.8.0_181
 CLASSPATH=%JAVA_HOME%/lib:%JAVA_HOME%/jre/lib

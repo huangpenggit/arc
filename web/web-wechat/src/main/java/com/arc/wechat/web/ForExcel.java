@@ -262,4 +262,11 @@ public class ForExcel {
         cell2.setCellValue("参与时间");
     }
 
+    public static void main(String[] args) {
+        long p = 1024 * 1024;
+        System.out.println(109051904 / p);
+        System.out.println(109051904 / p);
+        System.out.println(109051904 / p);
+    }
+
 }
