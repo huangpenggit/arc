@@ -1,3 +1,4 @@
+/*
 package com.arc.wechat.mapper;
 
 import com.arc.model.common.User;
@@ -16,3 +17,4 @@ public interface UserMapper {
 
     List<User> list();
 }
+*/

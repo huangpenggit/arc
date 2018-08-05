@@ -24,6 +24,7 @@
     <!-- 模块说明：这里声明多个子模块 -->
     <modules>
         <module>server-common</module>
+        <module>multi_datasource</module>
         <module>server-druid</module>
         <module>server-mongo</module>
         <module>mybatis-tool</module>

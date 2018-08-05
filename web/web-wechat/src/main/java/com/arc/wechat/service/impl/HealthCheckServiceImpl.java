@@ -1,3 +1,4 @@
+/*
 package com.arc.wechat.service.impl;
 
 import com.arc.wechat.model.vo.DatabaseVo;
@@ -11,12 +12,14 @@ import org.springframework.stereotype.Service;
 import java.sql.Connection;
 import java.sql.DriverManager;
 
+*/
 /**
  * 服务器健康状态检测
  *
  * @author: yechao
  * @date: 2018/08/01
- */
+ *//*
+
 @Slf4j
 @Service
 public class HealthCheckServiceImpl implements IHealthCheckService {
@@ -121,3 +124,4 @@ public class HealthCheckServiceImpl implements IHealthCheckService {
 //
 //    }
 }
+*/

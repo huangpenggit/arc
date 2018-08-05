@@ -11,18 +11,18 @@ server:
 #########################################
 #  注意两个表的sql在本项目根目录
 #########################################
+#zhu
+master:
+  datasource:
+    url: jdbc:mysql://localhost:3306/cloud?useSSL=false&useUnicode=true
+    username: root
+    password: admin
+    driverClassName: com.mysql.jdbc.Driver
 
-
-
-datasource1:
-  url: jdbc:mysql://localhost:3306/cloud?useSSL=false&useUnicode=true
-  username: root
-  password: admin
-  driver-class-name: com.mysql.jdbc.Driver
-
-datasource2:
-  url: jdbc:mysql://localhost:3306/sso?useSSL=false&useUnicode=true
-  username: root
-  password: admin
-  driver-class-name: com.mysql.jdbc.Driver
+cluster:
+  datasource:
+    url: jdbc:mysql://localhost:3306/test?useSSL=false&useUnicode=true
+    username: root
+    password: admin
+    driverClassName: com.mysql.jdbc.Driver
 

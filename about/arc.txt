@@ -1,4 +1,6 @@
 https://github.com/lamymay/arc.git
+git@github.com:lamymay/arc.git
+
 
 JAVA_HOME=/usr/java/jdk1.8.0_181
 CLASSPATH=%JAVA_HOME%/lib:%JAVA_HOME%/jre/lib

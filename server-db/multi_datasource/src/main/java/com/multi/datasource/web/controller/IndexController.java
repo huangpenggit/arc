@@ -1,10 +1,10 @@
 package com.multi.datasource.web.controller;
 
 
-import com.multi.datasource.common.model.Area;
-import com.multi.datasource.common.model.User;
-import com.multi.datasource.mapper.one.UserMapper;
-import com.multi.datasource.mapper.two.AreaMapper;
+import com.arc.model.common.Area;
+import com.arc.model.common.User;
+import com.multi.datasource.mapper.master.UserMapper;
+import com.multi.datasource.mapper.cluster.AreaMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -20,18 +20,17 @@ public class IndexController {
     UserMapper userMapper;
 
     @Autowired
-    AreaMapper areaMapper ;
-
+    AreaMapper areaMapper;
 
 
     @RequestMapping("")
-    public Map<String,Object> index(){
-        Map<String,Object> result = new HashMap<>();
+    public Map<String, Object> index() {
+        Map<String, Object> result = new HashMap<>();
         User user = userMapper.get(1L);
         Area area = areaMapper.get("000000");
 
-        result.put("user",user);
-        result.put("area",area);
+        result.put("user", user);
+        result.put("area", area);
 
         return result;
     }

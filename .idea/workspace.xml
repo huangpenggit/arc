@@ -1,29 +1,107 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/web/web-validating/src/main/java/com/arc/boot/ValidatingFormInputApplication.java" line="17" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="ed46e8be-be3f-47c3-acda-84082c321854" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/web-fast-start/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/core/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/security/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/security/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/arc/dto/wechat/WeChatDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/arc/model/wechat/WeChatScanQRCodeRecord.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server-db/multi_datasource/src/main/java/com/multi/datasource/config/ClusterDataSourceConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server-db/multi_datasource/src/main/java/com/multi/datasource/config/MasterDataSourceConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server-db/multi_datasource/src/main/resources/mapper/master/UserMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/web-back/src/main/java/com/arc/back/config/ThreadAsyncConfigurer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/web-back/src/main/java/com/arc/back/controller/TestController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/web-back/src/main/java/com/arc/back/service/AsyncTaskService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/web-back/src/main/java/com/arc/back/service/DownloadUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/web-back/src/main/java/com/arc/back/service/Test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/web-back/src/main/java/com/arc/back/service/TestThread.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/web-back/src/main/java/com/arc/back/util/DBService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/web-back/src/main/java/com/arc/back/util/GetPictureUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/web-back/src/main/java/com/arc/back/util/ThreadExample.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/web-validating/src/main/java/com/arc/boot/web/CallableTask.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/web-wechat/src/main/java/com/arc/wechat/config/MybatisConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/web-wechat/src/main/java/com/arc/wechat/mapper/one/UserMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/web-wechat/src/main/java/com/arc/wechat/mapper/two/AreaMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/web-wechat/src/main/java/com/arc/wechat/mapper/two/WeChatScanQRCodeRecordMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/web-wechat/src/main/java/com/arc/wechat/service/WeChatScanQRCodeRecordService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/web-wechat/src/main/java/com/arc/wechat/service/impl/WeChatScanQRCodeRecordServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/web-wechat/src/main/java/com/arc/wechat/utils/excel/AESEncryptUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/web-wechat/src/main/java/com/arc/wechat/utils/excel/ExcelUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/web-wechat/src/main/java/com/arc/wechat/utils/excel/ExportUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/web-wechat/src/main/java/com/arc/wechat/web/ExcelTool.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/web-wechat/src/main/java/com/arc/wechat/web/ExcelTools.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/web-wechat/src/main/java/com/arc/wechat/web/ForExcel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/web-wechat/src/main/resources/mapper/two/AreaMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/web-wechat/src/main/resources/mapper/two/WeChatScanQRCodeRecordMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/about/arc.txt" beforeDir="false" afterPath="$PROJECT_DIR$/about/arc.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/target/core-1.0.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/core/target/core-1.0.0.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/security/server-security/target/server-security-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/security/server-security/target/server-security-0.0.1-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/security/server-security/target/surefire-reports/TEST-com.security.SecurityApplicationTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/security/server-security/target/surefire-reports/TEST-com.security.SecurityApplicationTests.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/security/server-security/target/surefire-reports/com.security.SecurityApplicationTests.txt" beforeDir="false" afterPath="$PROJECT_DIR$/security/server-security/target/surefire-reports/com.security.SecurityApplicationTests.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server-db/multi_datasource/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/server-db/multi_datasource/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-db/multi_datasource/src/main/java/com/multi/datasource/MultiDatasourceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-db/multi_datasource/src/main/java/com/multi/datasource/ServerMultiDatasourceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-db/multi_datasource/src/main/java/com/multi/datasource/common/model/Area.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-db/multi_datasource/src/main/java/com/multi/datasource/common/model/Stock.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-db/multi_datasource/src/main/java/com/multi/datasource/common/model/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-db/multi_datasource/src/main/java/com/multi/datasource/config/DataSourceConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/web-wechat/src/main/java/com/arc/wechat/config/DataSourceConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-db/multi_datasource/src/main/java/com/multi/datasource/config/MybatisConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-db/multi_datasource/src/main/java/com/multi/datasource/config/MybatisConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-db/multi_datasource/src/main/java/com/multi/datasource/mapper/one/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-db/multi_datasource/src/main/java/com/multi/datasource/mapper/master/UserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-db/multi_datasource/src/main/java/com/multi/datasource/mapper/two/AreaMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-db/multi_datasource/src/main/java/com/multi/datasource/mapper/cluster/AreaMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-db/multi_datasource/src/main/java/com/multi/datasource/mapper/two/TwoStockMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-db/multi_datasource/src/main/java/com/multi/datasource/web/controller/IndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-db/multi_datasource/src/main/java/com/multi/datasource/web/controller/IndexController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-db/multi_datasource/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/server-db/multi_datasource/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-db/multi_datasource/src/main/resources/mapper/one/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/web-wechat/src/main/resources/mapper/one/UserMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-db/multi_datasource/src/main/resources/mapper/two/AreaMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/server-db/multi_datasource/src/main/resources/mapper/cluster/AreaMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-db/multi_datasource/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/server-db/multi_datasource/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-db/multi_datasource/target/classes/com/multi/datasource/MultiDatasourceApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-db/multi_datasource/target/classes/com/multi/datasource/common/model/Area.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-db/multi_datasource/target/classes/com/multi/datasource/common/model/Stock.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-db/multi_datasource/target/classes/com/multi/datasource/common/model/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-db/multi_datasource/target/classes/com/multi/datasource/config/DataSourceConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-db/multi_datasource/target/classes/com/multi/datasource/config/MybatisConfig$DBOne.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-db/multi_datasource/target/classes/com/multi/datasource/config/MybatisConfig$DBTwo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-db/multi_datasource/target/classes/com/multi/datasource/config/MybatisConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-db/multi_datasource/target/classes/com/multi/datasource/mapper/one/UserMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-db/multi_datasource/target/classes/com/multi/datasource/mapper/two/AreaMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-db/multi_datasource/target/classes/com/multi/datasource/web/controller/IndexController.class" beforeDir="false" afterPath="$PROJECT_DIR$/server-db/multi_datasource/target/classes/com/multi/datasource/web/controller/IndexController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-db/multi_datasource/target/classes/mapper/one/UserMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-db/multi_datasource/target/classes/mapper/two/AreaMapper.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/server-db/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/server-db/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-db/server-common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/server-db/server-common/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-db/server-druid/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/server-db/server-druid/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-db/server-mongo/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/server-db/server-mongo/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/server/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/fast-start/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/fast-start/src/main/java/com/arc/faststart/FastStartApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/fast-start/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/fast-start/src/test/java/com/arc/faststart/FastStartApplicationTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-db/server-common/src/main/resources/logs" beforeDir="false" afterPath="$PROJECT_DIR$/server-db/server-common/src/main/resources/logs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-db/server-common/target/classes/logs" beforeDir="false" afterPath="$PROJECT_DIR$/server-db/server-common/target/classes/logs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/server-eureka/target/server-eureka-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/server/server-eureka/target/server-eureka-0.0.1-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/server-eureka/target/server-eureka-0.0.1-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/server/server-eureka/target/server-eureka-0.0.1-SNAPSHOT.jar.original" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/server-eureka/target/surefire-reports/TEST-com.arc.server.eureka.ServerEurekaApplicationTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/server/server-eureka/target/surefire-reports/TEST-com.arc.server.eureka.ServerEurekaApplicationTests.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/server-eureka/target/surefire-reports/com.arc.server.eureka.ServerEurekaApplicationTests.txt" beforeDir="false" afterPath="$PROJECT_DIR$/server/server-eureka/target/surefire-reports/com.arc.server.eureka.ServerEurekaApplicationTests.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/server-zuul/target/server-zuul-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/server/server-zuul/target/server-zuul-0.0.1-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/server-zuul/target/server-zuul-0.0.1-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/server/server-zuul/target/server-zuul-0.0.1-SNAPSHOT.jar.original" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/web-back/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/web-back/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/web-express/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/web-express/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/web-validating/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/web-validating/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/web-back/src/main/java/com/arc/back/WebBackApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/web-back/src/main/java/com/arc/back/WebBackApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/web-back/src/main/java/com/arc/back/config/AysncConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/web-back/src/main/java/com/arc/back/config/ThreadConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/web-back/src/main/java/com/arc/back/util/Hello.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/web-back/src/main/java/com/arc/back/util/Hello.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/web-back/src/main/java/com/arc/back/util/PictureUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/web-back/src/main/java/com/arc/back/util/PictureUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/web-back/src/main/java/com/arc/back/util/PrintService.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/web-back/src/main/java/com/arc/back/util/PrintService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/web-express/src/main/java/com/arc/express/ExpressApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/web-express/src/main/java/com/arc/express/WebExpressApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/web-fast-start/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/web-fast-start/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/web-fast-start/src/main/java/com/arc/faststart/FastStartApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/web-fast-start/src/main/java/com/arc/faststart/WebFastStartApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/web-fast-start/src/test/java/com/arc/faststart/FastStartApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/web-fast-start/src/test/java/com/arc/faststart/WebFastStartApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/web-validating/src/main/java/com/arc/boot/ValidatingFormInputApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/web-validating/src/main/java/com/arc/boot/ValidatingFormInputApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/web-validating/src/main/java/com/arc/boot/web/TestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/web-validating/src/main/java/com/arc/boot/web/TestController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/web-wechat/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/web-wechat/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/website-https/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/website-https/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/web-wechat/src/main/java/com/arc/wechat/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/web-wechat/src/main/java/com/arc/wechat/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/web-wechat/src/main/java/com/arc/wechat/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/web-wechat/src/main/java/com/arc/wechat/mapper/UserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/web-wechat/src/main/java/com/arc/wechat/service/impl/HealthCheckServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/web-wechat/src/main/java/com/arc/wechat/service/impl/HealthCheckServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/web-wechat/src/main/java/com/arc/wechat/service/impl/HealthyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/web-wechat/src/main/java/com/arc/wechat/service/impl/HealthyController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/web-wechat/src/main/java/com/arc/wechat/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/web-wechat/src/main/java/com/arc/wechat/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/web-wechat/src/main/java/com/arc/wechat/web/Index.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/web-wechat/src/main/java/com/arc/wechat/web/Index.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/web-wechat/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/web/web-wechat/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/web-wechat/src/main/resources/mapper/userMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/web-wechat/src/main/resources/pdf/userMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/web-wechat/src/test/java/com/arc/wechat/WechatApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/web-wechat/src/test/java/com/arc/wechat/WechatApplicationTests.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/security/target/" />
     <ignored path="$PROJECT_DIR$/security/server-security/target/" />
@@ -45,6 +123,7 @@
     <ignored path="$PROJECT_DIR$/server-db/server-mongo/target/" />
     <ignored path="$PROJECT_DIR$/web/web-fast-start/target/" />
     <ignored path="$PROJECT_DIR$/web/web-wechat/target/" />
+    <ignored path="$PROJECT_DIR$/.idea/httpRequests/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -56,108 +135,130 @@
     <option name="optimizeImportsOnTheFly" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server-db/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="18" selection-start-line="18" selection-end-line="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server-db/mybatis-tool/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-38">
-              <caret line="10" column="3" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/web-fast-start/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="16" column="12" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/web-express/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="37" column="6" lean-forward="true" selection-start-line="37" selection-start-column="6" selection-end-line="43" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/web-validating/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="18" selection-start-line="18" selection-end-line="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server-db/server-common/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="6" column="8" selection-start-line="6" selection-start-column="8" selection-end-line="8" selection-end-column="41" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/web/web-wechat/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="19">
-              <caret line="90" lean-forward="true" selection-start-line="90" selection-end-line="90" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server-db/server-druid/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="10" column="41" selection-start-line="10" selection-start-column="41" selection-end-line="10" selection-end-column="41" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server-db/server-mongo/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="10" column="41" selection-start-line="10" selection-start-column="41" selection-end-line="10" selection-end-column="41" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="WechatApplicationTests.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/web-wechat/src/test/java/com/arc/wechat/WechatApplicationTests.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="16" selection-start-line="16" selection-end-line="16" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.40252608">
+      <split-first>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file leaf-file-name="ForExcel.java" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/web/web-wechat/src/main/java/com/arc/wechat/web/ForExcel.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="739">
+                  <caret line="73" column="55" selection-start-line="73" selection-start-column="55" selection-end-line="73" selection-end-column="55" />
+                  <folding>
+                    <element signature="method#jdbcex#0;class#ForExcel#0" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="HSSFCellStyle.class" pinned="false" current-in-tab="false">
+            <entry file="jar://$MAVEN_REPOSITORY$/org/apache/poi/poi/3.17/poi-3.17.jar!/org/apache/poi/hssf/usermodel/HSSFCellStyle.class">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="-6054">
+                  <caret line="23" column="19" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="19" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Index.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/web/web-wechat/src/main/java/com/arc/wechat/web/Index.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="456">
+                  <caret line="49" column="5" lean-forward="true" selection-start-line="49" selection-start-column="5" selection-end-line="49" selection-end-column="5" />
+                  <folding>
+                    <element signature="e#1197#1198#0" expanded="true" />
+                    <element signature="e#1219#1220#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="ExcelTools.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/web/web-wechat/src/main/java/com/arc/wechat/web/ExcelTools.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="300">
+                  <caret line="473" column="7" lean-forward="true" selection-start-line="473" selection-start-column="7" selection-end-line="473" selection-end-column="7" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="WechatApplicationTests.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/web/web-wechat/src/test/java/com/arc/wechat/WechatApplicationTests.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="167">
+                  <caret line="31" column="8" lean-forward="true" selection-start-line="31" selection-start-column="8" selection-end-line="42" selection-end-column="13" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file leaf-file-name="ForExcel.java" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/web/web-wechat/src/main/java/com/arc/wechat/web/ForExcel.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="295">
+                  <caret line="57" column="37" lean-forward="true" selection-start-line="57" selection-start-column="37" selection-end-line="57" selection-end-column="37" />
+                  <folding>
+                    <element signature="method#jdbcex#0;class#ForExcel#0" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>jdbc</find>
       <find>myb</find>
       <find>test</find>
+      <find>web</find>
+      <find>threads</find>
+      <find>setRejectedExecutionHandler</find>
+      <find>ThreadPoolTaskExecutor</find>
+      <find>myExecutor</find>
+      <find>path</find>
+      <find>read2List</find>
+      <find>ataSource</find>
+      <find>datasource2</find>
+      <find>SqlSessionFactory</find>
+      <find>Configuration</find>
+      <find>com.arc.wechat.mapper</find>
+      <find>master</find>
+      <find>com.rongyi.activity.common.dal.WeChatScanQRCodeRecordDO</find>
+      <find>com.rongyi.activity.common.dto.WeChatDTO</find>
+      <find>driverClass2</find>
+      <find>dataSourceTwo</find>
+      <find>dataSource</find>
+      <find>SystemException</find>
+      <find>isClose</find>
+      <find>rs</find>
+      <find>HSSFRow</find>
+      <find>XSSFWorkbook</find>
+      <find>fos</find>
+      <find>main</find>
+      <find>write</find>
+      <find>xlsFile</find>
+      <find>SXSSFWorkbook</find>
     </findStrings>
+    <replaceStrings>
+      <replace>threadPool</replace>
+      <replace>com.arc.model.wechat.WeChatScanQRCodeRecord</replace>
+      <replace>com.arc.dto.wechat.WeChatDTO</replace>
+      <replace>RuntimeException</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -170,22 +271,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/server-db/multi_datasource/pom.xml" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/web/pom.xml" />
-        <option value="$PROJECT_DIR$/core/pom.xml" />
-        <option value="$PROJECT_DIR$/security/pom.xml" />
-        <option value="$PROJECT_DIR$/server/pom.xml" />
-        <option value="$PROJECT_DIR$/web/web-back/pom.xml" />
-        <option value="$PROJECT_DIR$/web/web-validating/pom.xml" />
-        <option value="$PROJECT_DIR$/web/web-fast-start/pom.xml" />
-        <option value="$PROJECT_DIR$/web/website-https/pom.xml" />
+        <option value="$PROJECT_DIR$/web/web-back/src/main/java/com/arc/back/controller/TestController.java" />
+        <option value="$PROJECT_DIR$/web/web-back/src/main/java/com/arc/back/util/DBService.java" />
+        <option value="$PROJECT_DIR$/web/web-back/src/main/java/com/arc/back/util/ThreadExample.java" />
+        <option value="$PROJECT_DIR$/web/web-validating/src/main/java/com/arc/boot/web/CallableTask.java" />
+        <option value="$PROJECT_DIR$/web/web-validating/src/main/java/com/arc/boot/web/TestController.java" />
+        <option value="$PROJECT_DIR$/web/web-validating/src/main/java/com/arc/boot/ValidatingFormInputApplication.java" />
         <option value="$PROJECT_DIR$/server-db/pom.xml" />
-        <option value="$PROJECT_DIR$/server-db/server-common/pom.xml" />
-        <option value="$PROJECT_DIR$/server-db/server-druid/pom.xml" />
-        <option value="$PROJECT_DIR$/server-db/server-mongo/pom.xml" />
-        <option value="$PROJECT_DIR$/web/web-express/pom.xml" />
-        <option value="$PROJECT_DIR$/web/web-wechat/pom.xml" />
+        <option value="$PROJECT_DIR$/server-db/multi_datasource/pom.xml" />
+        <option value="$PROJECT_DIR$/server-db/multi_datasource/src/main/java/com/multi/datasource/common/model/User.java" />
+        <option value="$PROJECT_DIR$/server-db/multi_datasource/src/main/java/com/multi/datasource/common/model/Stock.java" />
+        <option value="$PROJECT_DIR$/server-db/multi_datasource/src/main/java/com/multi/datasource/common/model/Area.java" />
+        <option value="$PROJECT_DIR$/server-db/multi_datasource/src/main/resources/mapper/one/UserMapper.xml" />
+        <option value="$PROJECT_DIR$/server-db/multi_datasource/src/main/java/com/multi/datasource/mapper/one/UserMapper.java" />
+        <option value="$PROJECT_DIR$/server-db/multi_datasource/src/main/java/com/multi/datasource/web/controller/IndexController.java" />
+        <option value="$PROJECT_DIR$/server-db/multi_datasource/src/main/java/com/multi/datasource/mapper/two/AreaMapper.java" />
+        <option value="$PROJECT_DIR$/server-db/multi_datasource/src/main/resources/mapper/two/AreaMapper.xml" />
+        <option value="$PROJECT_DIR$/server-db/multi_datasource/src/main/java/com/multi/datasource/config/DataSourceConfig.java" />
+        <option value="$PROJECT_DIR$/server-db/multi_datasource/src/main/java/com/multi/datasource/config/MybatisConfig.java" />
+        <option value="$PROJECT_DIR$/server-db/multi_datasource/src/main/java/com/multi/datasource/mapper/cluster/TwoStockMapper.java" />
+        <option value="$PROJECT_DIR$/server-db/multi_datasource/src/main/java/com/multi/datasource/ServerMultiDatasourceApplication.java" />
+        <option value="$PROJECT_DIR$/server-db/multi_datasource/src/main/java/com/multi/datasource/config/MasterDataSourceConfig.java" />
+        <option value="$PROJECT_DIR$/server-db/multi_datasource/src/main/java/com/multi/datasource/config/ClusterDataSourceConfig.java" />
+        <option value="$PROJECT_DIR$/server-db/multi_datasource/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/web/web-wechat/src/main/java/com/arc/wechat/mapper/two/AreaMapper.java" />
+        <option value="$PROJECT_DIR$/web/web-wechat/src/main/java/com/arc/wechat/mapper/one/UserMapper.java" />
+        <option value="$PROJECT_DIR$/web/web-wechat/src/main/java/com/arc/wechat/mapper/UserMapper.java" />
+        <option value="$PROJECT_DIR$/web/web-wechat/src/main/java/com/arc/wechat/service/impl/UserServiceImpl.java" />
+        <option value="$PROJECT_DIR$/core/src/main/java/com/arc/service/common/UserService.java" />
+        <option value="$PROJECT_DIR$/web/web-wechat/src/main/java/com/arc/wechat/controller/UserController.java" />
+        <option value="$PROJECT_DIR$/web/web-wechat/src/main/resources/mapper/one/UserMapper.xml" />
+        <option value="$PROJECT_DIR$/web/web-wechat/src/main/resources/mapper/two/AreaMapper.xml" />
+        <option value="$PROJECT_DIR$/web/web-wechat/src/main/java/com/arc/wechat/service/impl/HealthCheckServiceImpl.java" />
+        <option value="$PROJECT_DIR$/web/web-wechat/src/main/java/com/arc/wechat/service/impl/HealthyController.java" />
+        <option value="$PROJECT_DIR$/web/web-wechat/src/main/java/com/arc/wechat/config/DataSourceConfig.java" />
+        <option value="$PROJECT_DIR$/core/src/main/java/com/arc/model/wechat/WeChatScanQRCodeRecord.java" />
+        <option value="$PROJECT_DIR$/web/web-wechat/src/main/java/com/arc/wechat/config/MybatisConfig.java" />
+        <option value="$PROJECT_DIR$/web/web-wechat/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/core/src/main/java/com/arc/dto/wechat/WeChatDTO.java" />
+        <option value="$PROJECT_DIR$/web/web-wechat/src/main/java/com/arc/wechat/utils/excel/AESEncryptUtil.java" />
+        <option value="$PROJECT_DIR$/web/web-wechat/src/main/java/com/arc/wechat/utils/ExcelUtil.java" />
+        <option value="$PROJECT_DIR$/web/web-wechat/src/main/java/com/arc/wechat/utils/excel/ExcelUtil.java" />
+        <option value="$PROJECT_DIR$/web/web-wechat/src/main/java/com/arc/wechat/mapper/two/WeChatScanQRCodeRecordMapper.java" />
+        <option value="$PROJECT_DIR$/web/web-wechat/src/main/java/com/arc/wechat/service/WeChatScanQRCodeRecordService.java" />
+        <option value="$PROJECT_DIR$/web/web-wechat/src/main/java/com/arc/wechat/service/impl/WeChatScanQRCodeRecordServiceImpl.java" />
+        <option value="$PROJECT_DIR$/web/web-wechat/src/main/resources/mapper/two/WeChatScanQRCodeRecordMapper.xml" />
+        <option value="$PROJECT_DIR$/web/web-wechat/src/main/java/com/arc/wechat/utils/excel/ExportUtils.java" />
+        <option value="$PROJECT_DIR$/web/web-wechat/src/main/java/com/arc/wechat/web/ExcelTools.java" />
+        <option value="$PROJECT_DIR$/web/web-wechat/src/main/java/com/arc/wechat/web/ExcelTool.java" />
+        <option value="$PROJECT_DIR$/web/web-wechat/src/test/java/com/arc/wechat/WechatApplicationTests.java" />
+        <option value="$PROJECT_DIR$/web/web-wechat/src/main/java/com/arc/wechat/web/Index.java" />
+        <option value="$PROJECT_DIR$/web/web-wechat/src/main/java/com/arc/wechat/web/ForExcel.java" />
       </list>
     </option>
   </component>
@@ -213,15 +349,6 @@
       <expand>
         <path>
           <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="arc" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-        </path>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="arc" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
-        </path>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
           <item name="web-wechat" type="9519ce18:MavenProjectsStructure$ProjectNode" />
         </path>
         <path>
@@ -234,13 +361,22 @@
     </treeState>
   </component>
   <component name="NodePackageJsonFileManager">
-    <packageJsonPaths />
+    <packageJsonPaths>
+      <path value="$PROJECT_DIR$/server-db/server-common/src/main/resources/static/js/plugins/flipcountdown/package.json" />
+      <path value="$PROJECT_DIR$/server-db/server-druid/src/main/resources/static/js/plugins/bootstrap/package.json" />
+      <path value="$PROJECT_DIR$/server-db/server-druid/src/main/resources/static/js/plugins/flipcountdown/package.json" />
+      <path value="$PROJECT_DIR$/server-db/server-mongo/src/main/resources/static/js.plugins/bootstrap/package.json" />
+      <path value="$PROJECT_DIR$/web/web-back/src/main/resources/static/plugins/bootstrap/package.json" />
+      <path value="$PROJECT_DIR$/web/web-express/src/main/resources/static/plugins/bootstrap/package.json" />
+      <path value="$PROJECT_DIR$/web/web-wechat/src/main/resources/static/plugins/bootstrap/package.json" />
+      <path value="$PROJECT_DIR$/web/website-https/src/main/resources/static/js/plugins/bootstrap/package.json" />
+    </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="-2" />
-    <option name="y" value="-2" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="472" />
+    <option name="y" value="508" />
     <option name="width" value="1881" />
-    <option name="height" value="1080" />
+    <option name="height" value="1100" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -271,14 +407,16 @@
       </profile-state>
     </entry>
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
+      <showMembers ProjectPane="false" />
+      <autoscrollFromSource ProjectPane="true" />
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -289,60 +427,7 @@
             <path>
               <item name="arc" type="b2602c69:ProjectViewProjectNode" />
               <item name="arc" type="462c0819:PsiDirectoryNode" />
-              <item name="server-db" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="arc" type="b2602c69:ProjectViewProjectNode" />
-              <item name="arc" type="462c0819:PsiDirectoryNode" />
-              <item name="server-db" type="462c0819:PsiDirectoryNode" />
-              <item name="multi_datasource" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="arc" type="b2602c69:ProjectViewProjectNode" />
-              <item name="arc" type="462c0819:PsiDirectoryNode" />
-              <item name="server-db" type="462c0819:PsiDirectoryNode" />
-              <item name="mybatis-tool" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="arc" type="b2602c69:ProjectViewProjectNode" />
-              <item name="arc" type="462c0819:PsiDirectoryNode" />
-              <item name="server-db" type="462c0819:PsiDirectoryNode" />
-              <item name="server-common" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="arc" type="b2602c69:ProjectViewProjectNode" />
-              <item name="arc" type="462c0819:PsiDirectoryNode" />
-              <item name="server-db" type="462c0819:PsiDirectoryNode" />
-              <item name="server-druid" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="arc" type="b2602c69:ProjectViewProjectNode" />
-              <item name="arc" type="462c0819:PsiDirectoryNode" />
-              <item name="server-db" type="462c0819:PsiDirectoryNode" />
-              <item name="server-mongo" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="arc" type="b2602c69:ProjectViewProjectNode" />
-              <item name="arc" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="arc" type="b2602c69:ProjectViewProjectNode" />
-              <item name="arc" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="web-express" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="arc" type="b2602c69:ProjectViewProjectNode" />
-              <item name="arc" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="web-fast-start" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="arc" type="b2602c69:ProjectViewProjectNode" />
-              <item name="arc" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="web-validating" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="arc" type="b2602c69:ProjectViewProjectNode" />
@@ -356,6 +441,143 @@
               <item name="web" type="462c0819:PsiDirectoryNode" />
               <item name="web-wechat" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="arc" type="b2602c69:ProjectViewProjectNode" />
+              <item name="arc" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="web-wechat" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="arc" type="b2602c69:ProjectViewProjectNode" />
+              <item name="arc" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="web-wechat" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="arc" type="b2602c69:ProjectViewProjectNode" />
+              <item name="arc" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="web-wechat" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="wechat" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="arc" type="b2602c69:ProjectViewProjectNode" />
+              <item name="arc" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="web-wechat" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="wechat" type="462c0819:PsiDirectoryNode" />
+              <item name="mapper" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="arc" type="b2602c69:ProjectViewProjectNode" />
+              <item name="arc" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="web-wechat" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="wechat" type="462c0819:PsiDirectoryNode" />
+              <item name="mapper" type="462c0819:PsiDirectoryNode" />
+              <item name="two" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="arc" type="b2602c69:ProjectViewProjectNode" />
+              <item name="arc" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="web-wechat" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="wechat" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="arc" type="b2602c69:ProjectViewProjectNode" />
+              <item name="arc" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="web-wechat" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="wechat" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="impl" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="arc" type="b2602c69:ProjectViewProjectNode" />
+              <item name="arc" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="web-wechat" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="wechat" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="arc" type="b2602c69:ProjectViewProjectNode" />
+              <item name="arc" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="web-wechat" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="wechat" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
+              <item name="excel" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="arc" type="b2602c69:ProjectViewProjectNode" />
+              <item name="arc" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="web-wechat" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="wechat" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="arc" type="b2602c69:ProjectViewProjectNode" />
+              <item name="arc" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="web-wechat" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="arc" type="b2602c69:ProjectViewProjectNode" />
+              <item name="arc" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="web-wechat" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="mapper" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="arc" type="b2602c69:ProjectViewProjectNode" />
+              <item name="arc" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="web-wechat" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="mapper" type="462c0819:PsiDirectoryNode" />
+              <item name="two" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="arc" type="b2602c69:ProjectViewProjectNode" />
@@ -384,22 +606,160 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="wechat" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="arc" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
+            <path>
+              <item name="arc" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: org.apache.poi:poi:3.17" type="70bed36:NamedLibraryElementNode" />
+            </path>
+            <path>
+              <item name="arc" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: org.apache.poi:poi:3.17" type="70bed36:NamedLibraryElementNode" />
+              <item name="poi-3.17.jar" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="arc" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: org.apache.poi:poi:3.17" type="70bed36:NamedLibraryElementNode" />
+              <item name="poi-3.17.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="poi" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="arc" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: org.apache.poi:poi:3.17" type="70bed36:NamedLibraryElementNode" />
+              <item name="poi-3.17.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="poi" type="462c0819:PsiDirectoryNode" />
+              <item name="hssf" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="arc" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: org.apache.poi:poi:3.17" type="70bed36:NamedLibraryElementNode" />
+              <item name="poi-3.17.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="poi" type="462c0819:PsiDirectoryNode" />
+              <item name="hssf" type="462c0819:PsiDirectoryNode" />
+              <item name="usermodel" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="arc" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: org.apache.poi:poi:3.17" type="70bed36:NamedLibraryElementNode" />
+              <item name="poi-3.17.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="poi" type="462c0819:PsiDirectoryNode" />
+              <item name="hssf" type="462c0819:PsiDirectoryNode" />
+              <item name="util" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="arc" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: org.apache.poi:poi-ooxml:3.17" type="70bed36:NamedLibraryElementNode" />
+            </path>
+            <path>
+              <item name="arc" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: org.apache.poi:poi-ooxml:3.17" type="70bed36:NamedLibraryElementNode" />
+              <item name="poi-ooxml-3.17.jar" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="arc" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: org.apache.poi:poi-ooxml:3.17" type="70bed36:NamedLibraryElementNode" />
+              <item name="poi-ooxml-3.17.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="poi" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="arc" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: org.apache.poi:poi-ooxml:3.17" type="70bed36:NamedLibraryElementNode" />
+              <item name="poi-ooxml-3.17.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="poi" type="462c0819:PsiDirectoryNode" />
+              <item name="xssf" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="arc" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: org.apache.poi:poi-ooxml:3.17" type="70bed36:NamedLibraryElementNode" />
+              <item name="poi-ooxml-3.17.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="poi" type="462c0819:PsiDirectoryNode" />
+              <item name="xssf" type="462c0819:PsiDirectoryNode" />
+              <item name="streaming" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../csp/zhi1" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../TEM" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="C:/Program Files/nodejs/node" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="com.zeroturnaround.javarebel.idea.plugin.settings.JRebelSettingsComponent" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\X\Desktop\Zan\git\arc\web\web-wechat\src\main\resources\pdf" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.arc.wechat.service" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.arc.wechat.web" />
+      <recent name="com.arc.dto.wechat" />
+      <recent name="com.arc.model.wechat" />
+      <recent name="com.arc.wechat.mapper.two" />
+      <recent name="com.arc.wechat.mapper.one" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\X\Desktop\Zan\git\arc\web\web-wechat\src\main\java\com\arc\wechat\utils\excel" />
+      <recent name="C:\Users\X\Desktop\Zan\git\arc\web\web-wechat\src\main\java\com\arc\wechat\utils" />
+      <recent name="C:\Users\X\Desktop\Zan\git\arc\web\web-wechat\src\main\resources\mapper\two" />
+      <recent name="C:\Users\X\Desktop\Zan\git\arc\web\web-wechat\src\main\resources\mapper\one" />
+      <recent name="C:\Users\X\Desktop\Zan\git\arc\web\web-wechat\src\main\java\com\arc\wechat\mapper" />
+    </key>
+  </component>
+  <component name="RestClientSettings">
+    <option name="REQUEST_HISTORY">
+      <list>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8089" />
+          <option name="urlPath" value="test" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+      </list>
+    </option>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -413,7 +773,57 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.MultiDatasourceApplication">
+  <component name="RunManager" selected="Spring Boot.WechatApplication">
+    <configuration name="ExcelTools" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.arc.wechat.web.ExcelTools" />
+      <module name="web-wechat" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.arc.wechat.web.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+    </configuration>
+    <configuration name="ForExcel" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.arc.wechat.web.ForExcel" />
+      <module name="web-wechat" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.arc.wechat.web.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+    </configuration>
+    <configuration name="Index" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.arc.wechat.web.Index" />
+      <module name="web-wechat" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.arc.wechat.web.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+    </configuration>
+    <configuration name="TestController" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.arc.boot.web.TestController" />
+      <module name="web-validating" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.arc.boot.web.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+    </configuration>
+    <configuration name="ThreadExample" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.arc.back.util.ThreadExample" />
+      <module name="web-back" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.arc.back.util.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+    </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
@@ -434,10 +844,6 @@
       <module name="server-eureka" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.arc.server.eureka.EurekaServerApplication" />
     </configuration>
-    <configuration name="MultiDatasourceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="multi_datasource" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.multi.datasource.MultiDatasourceApplication" />
-    </configuration>
     <configuration name="ServerCommonApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="server-common" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.arc.server.common.ServerCommonApplication" />
@@ -446,9 +852,31 @@
       <module name="server-mongo" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.arc.servermongo.ServerMongoApplication" />
     </configuration>
+    <configuration name="ServerMultiDatasourceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="multi_datasource" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.multi.datasource.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.multi.datasource.ServerMultiDatasourceApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+    </configuration>
     <configuration name="ValidatingFormInputApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="web-validating" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.arc.boot.ValidatingFormInputApplication" />
+    </configuration>
+    <configuration name="WechatApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="web-wechat" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.arc.wechat.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.arc.wechat.WechatApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
     </configuration>
     <configuration name="ZuulServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="server-zuul" />
@@ -504,13 +932,28 @@
       <option name="PORT" value="5005" />
     </configuration>
     <list>
-      <item itemvalue="Spring Boot.MultiDatasourceApplication" />
       <item itemvalue="Spring Boot.ServerMongoApplication" />
       <item itemvalue="Spring Boot.ValidatingFormInputApplication" />
       <item itemvalue="Spring Boot.EurekaServerApplication" />
       <item itemvalue="Spring Boot.ZuulServerApplication" />
       <item itemvalue="Spring Boot.ServerCommonApplication" />
+      <item itemvalue="Spring Boot.WechatApplication" />
+      <item itemvalue="Application.ThreadExample" />
+      <item itemvalue="Application.TestController" />
+      <item itemvalue="Spring Boot.ServerMultiDatasourceApplication" />
+      <item itemvalue="Application.ForExcel" />
+      <item itemvalue="Application.ExcelTools" />
+      <item itemvalue="Application.Index" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Index" />
+        <item itemvalue="Application.ExcelTools" />
+        <item itemvalue="Application.ForExcel" />
+        <item itemvalue="Application.TestController" />
+        <item itemvalue="Application.ThreadExample" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration>C:\Users\X\AppData\Roaming\Subversion</configuration>
@@ -522,54 +965,97 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1533261751064</updated>
-      <workItem from="1533261752233" duration="3045000" />
+      <workItem from="1533261752233" duration="19727000" />
+      <workItem from="1533347688313" duration="27235000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3045000" />
+    <option name="totallyTimeSpent" value="46962000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-2" y="-2" width="1881" height="1080" extended-state="0" />
+    <frame x="-11" y="165" width="1881" height="1100" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="JRebel Console" order="15" side_tool="true" />
-      <window_info anchor="right" id="Maven Projects" order="6" visible="true" weight="0.28281164" />
-      <window_info anchor="bottom" id="JRebel Executor" order="14" />
-      <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="JRebel Console" order="16" sideWeight="0.5002746" side_tool="true" weight="0.49318182" />
+      <window_info anchor="right" id="Maven Projects" order="6" weight="0.2822625" />
+      <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
+      <window_info anchor="bottom" id="JRebel Executor" order="15" weight="0.32954547" />
       <window_info id="Designer" order="2" />
       <window_info anchor="right" id="Database" order="5" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="4" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3519553" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="16" weight="0.35281384" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49972543" weight="0.7552966" />
+      <window_info anchor="bottom" id="TODO" order="7" />
+      <window_info anchor="bottom" id="Messages" order="17" weight="0.35189873" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info anchor="bottom" id="Java Enterprise" order="11" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.49458873" />
-      <window_info anchor="bottom" id="Version Control" order="13" />
-      <window_info anchor="bottom" id="Spring" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2663372" />
+      <window_info anchor="bottom" id="Java Enterprise" order="12" />
+      <window_info anchor="bottom" id="Version Control" order="14" />
+      <window_info anchor="bottom" id="Run" order="4" weight="0.2936709" />
+      <window_info anchor="bottom" id="Spring" order="8" />
+      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.26908293" />
       <window_info anchor="right" id="Bean Validation" order="9" />
-      <window_info id="JRebel" order="8" side_tool="true" />
       <window_info id="Web" order="5" side_tool="true" />
+      <window_info id="JRebel" order="8" side_tool="true" />
       <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="REST Client" order="0" weight="0.3284091" />
       <window_info id="Capture Tool" order="7" />
-      <window_info anchor="bottom" id="SonarQube" order="17" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="SonarLint" order="10" />
+      <window_info anchor="bottom" id="SonarQube" order="18" />
+      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
+      <window_info anchor="bottom" id="SonarLint" order="11" />
       <window_info anchor="right" id="Theme Preview" order="8" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
       <window_info id="Image Layers" order="3" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Find" order="2" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
     </layout>
+    <layout-to-restore>
+      <window_info id="Designer" order="2" />
+      <window_info anchor="bottom" id="REST Client" order="0" weight="0.3284091" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info id="JRebel" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Spring" order="8" />
+      <window_info id="Image Layers" order="3" />
+      <window_info anchor="bottom" id="Run" order="4" visible="true" weight="0.2936709" />
+      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info id="Capture Tool" order="7" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="17" weight="0.35227272" />
+      <window_info anchor="bottom" id="TODO" order="7" />
+      <window_info anchor="bottom" id="SonarLint" order="11" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Java Enterprise" order="12" />
+      <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="14" />
+      <window_info anchor="right" id="Maven Projects" order="6" weight="0.2822625" />
+      <window_info anchor="bottom" id="Find" order="2" />
+      <window_info anchor="bottom" id="JRebel Executor" order="15" weight="0.32954547" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26908293" />
+      <window_info anchor="bottom" id="JRebel Console" order="16" sideWeight="0.5002746" side_tool="true" weight="0.49318182" />
+      <window_info anchor="right" id="Database" order="5" />
+      <window_info anchor="bottom" id="Message" order="1" />
+      <window_info id="Web" order="5" side_tool="true" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+      <window_info anchor="bottom" id="SonarQube" order="18" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49972543" weight="0.45779222" />
+      <window_info anchor="right" id="Bean Validation" order="9" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -577,195 +1063,426 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/web/web-wechat/src/main/java/com/arc/wechat/web/ForExcel.java</url>
+          <line>147</line>
+          <properties />
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="19" />
+    </breakpoint-manager>
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/web/website-https/src/main/java/com/arc/client/website/WebsiteHttpsApplication.java">
+    <entry file="file://$PROJECT_DIR$/server-db/multi_datasource/src/main/java/com/multi/datasource/mapper/cluster/TwoStockMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-190">
-          <caret line="2" column="36" selection-start-line="2" selection-start-column="36" selection-end-line="2" selection-end-column="36" />
+        <state relative-caret-position="19">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/website-https/src/main/java/com/arc/express/ExpressApplication.java">
+    <entry file="file://$PROJECT_DIR$/server-db/multi_datasource/src/main/java/com/multi/datasource/ServerMultiDatasourceApplication.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="5" column="10" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
+        <state relative-caret-position="131">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+          <folding>
+            <element signature="e#463#464#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/website-https/src/main/java/com/arc/client/website/controller/ZTreeController.java">
+    <entry file="file://$PROJECT_DIR$/server-db/multi_datasource/target/classes/templates/index.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="4" lean-forward="true" selection-start-column="4" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server-db/multi_datasource/db_table_sql/user.sql">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server-db/multi_datasource/src/main/java/com/multi/datasource/config/MasterDataSourceConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="25" selection-start-line="25" selection-end-line="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server-db/multi_datasource/src/main/java/com/multi/datasource/mapper/cluster/AreaMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" column="6" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server-db/multi_datasource/src/main/java/com/multi/datasource/mapper/master/UserMapper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="114">
-          <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+          <caret line="6" column="22" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server-db/multi_datasource/pom.xml">
+    <entry file="file://$PROJECT_DIR$/server-db/multi_datasource/src/main/resources/mapper/cluster/AreaMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
+        <state relative-caret-position="209">
+          <caret line="11" column="16" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server-db/multi_datasource/src/main/java/com/multi/datasource/web/controller/IndexController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="18" selection-start-line="18" selection-end-line="35" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/web-wechat/src/main/java/com/arc/wechat/model/vo/DatabaseVo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="148">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/web-wechat/src/main/resources/pdf/userMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="172">
+          <caret line="39" column="95" lean-forward="true" selection-start-line="39" selection-start-column="95" selection-end-line="39" selection-end-column="95" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/web-wechat/src/main/java/com/arc/wechat/service/impl/UserServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        <state relative-caret-position="19">
+          <caret line="4" column="34" selection-end-line="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/main/java/com/arc/service/common/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="13" selection-end-line="18" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/web-wechat/src/main/java/com/arc/wechat/controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="26" lean-forward="true" selection-start-column="2" selection-end-line="118" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server-db/multi_datasource/src/main/resources/mapper/master/UserMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="16" column="22" lean-forward="true" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/web-wechat/src/main/resources/mapper/one/AreaMapper.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server-db/multi_datasource/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="13" selection-start-line="13" selection-end-line="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/web-wechat/src/main/resources/mapper/one/UserMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" column="50" lean-forward="true" selection-start-line="3" selection-start-column="50" selection-end-line="3" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/web-wechat/src/main/java/com/arc/wechat/mapper/one/UserMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/web-wechat/src/main/java/com/arc/wechat/mapper/UserMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="10" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/web-wechat/src/main/java/com/arc/wechat/service/impl/HealthCheckServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="25" selection-end-line="127" />
+          <folding>
+            <element signature="e#0#3398#0" expanded="true" />
+            <element signature="method#getDataBaseType#0;class#HealthCheckServiceImpl#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/web-wechat/src/main/java/com/arc/wechat/service/impl/HealthyController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="314">
+          <caret line="25" column="54" selection-end-line="46" />
+          <folding>
+            <element signature="e#0#1040#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server-db/multi_datasource/src/main/java/com/multi/datasource/config/ClusterDataSourceConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="38" selection-start-line="38" selection-end-line="46" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server-db/mybatis-tool/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="16" column="49" selection-start-line="16" selection-start-column="49" selection-end-line="16" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/web-wechat/src/main/java/com/arc/wechat/mapper/two/AreaMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/main/java/com/arc/model/common/Area.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/web-wechat/src/main/resources/mapper/two/AreaMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="53" selection-start-line="4" selection-start-column="53" selection-end-line="4" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/main/java/com/arc/model/wechat/WeChatScanQRCodeRecord.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="157">
+          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Java/jdk1.8.0_45/src.zip!/javax/sql/DataSource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="188">
+          <caret line="71" column="15" lean-forward="true" selection-start-line="71" selection-start-column="15" selection-end-line="71" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/web-wechat/src/main/java/com/arc/wechat/config/MybatisConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/web-wechat/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="47" column="10" selection-start-line="47" selection-start-column="10" selection-end-line="47" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/web-back/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="29" column="4" selection-start-line="29" selection-start-column="4" selection-end-line="29" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/web-wechat/src/main/java/com/arc/wechat/config/DataSourceConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="60" column="63" lean-forward="true" selection-start-line="60" selection-start-column="63" selection-end-line="60" selection-end-column="63" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/web-wechat/src/main/java/com/arc/wechat/utils/excel/AESEncryptUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-389">
+          <caret line="26" column="20" lean-forward="true" selection-start-line="26" selection-start-column="20" selection-end-line="26" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/web-wechat/src/main/java/com/arc/wechat/utils/BeanUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/main/java/com/arc/dto/wechat/WeChatDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="18" column="18" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/web-wechat/src/main/java/com/arc/wechat/WechatApplication.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="18" column="10" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/web-validating/src/main/java/com/arc/boot/config/ThreadConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/web-validating/src/main/java/com/arc/boot/ValidatingFormInputApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/web-validating/src/main/java/com/arc/boot/domain/UserRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="33" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/security/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="15" column="20" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="41" selection-start-line="9" selection-start-column="41" selection-end-line="9" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" column="20" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="19" column="4" selection-start-line="19" selection-start-column="4" selection-end-line="21" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="13" column="2" selection-start-line="13" selection-start-column="2" selection-end-line="15" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/web-back/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="41" selection-start-line="9" selection-start-column="41" selection-end-line="9" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/website-https/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="41" selection-start-line="8" selection-start-column="41" selection-end-line="8" selection-end-column="41" />
-          <folding>
-            <element signature="n#dependencies#0;n#project#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server-db/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="18" selection-start-line="18" selection-end-line="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server-db/mybatis-tool/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-38">
-          <caret line="10" column="3" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server-db/server-common/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" column="8" selection-start-line="6" selection-start-column="8" selection-end-line="8" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server-db/server-druid/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="41" selection-start-line="10" selection-start-column="41" selection-end-line="10" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server-db/server-mongo/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="41" selection-start-line="10" selection-start-column="41" selection-end-line="10" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/web-wechat/src/test/java/com/arc/wechat/WechatApplicationTests.java">
-      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="304">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
+          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/web-wechat/src/main/java/com/arc/wechat/mapper/two/WeChatScanQRCodeRecordMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="430">
+          <caret line="43" lean-forward="true" selection-start-line="15" selection-end-line="43" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/web-validating/pom.xml">
+    <entry file="file://$PROJECT_DIR$/web/web-wechat/src/main/java/com/arc/wechat/service/impl/WeChatScanQRCodeRecordServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        <state relative-caret-position="80">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+          <folding>
+            <element signature="e#630#631#0" expanded="true" />
+            <element signature="e#654#655#0" expanded="true" />
+            <element signature="e#956#957#0" expanded="true" />
+            <element signature="e#980#981#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/web-fast-start/pom.xml">
+    <entry file="file://$PROJECT_DIR$/web/web-wechat/src/main/java/com/arc/wechat/service/WeChatScanQRCodeRecordService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="16" column="12" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
+        <state relative-caret-position="133">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/web-express/pom.xml">
+    <entry file="file://$PROJECT_DIR$/web/web-wechat/src/main/resources/mapper/two/WeChatScanQRCodeRecordMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="37" column="6" lean-forward="true" selection-start-line="37" selection-start-column="6" selection-end-line="43" />
+        <state relative-caret-position="243">
+          <caret line="31" column="34" selection-start-line="31" selection-start-column="34" selection-end-line="31" selection-end-column="34" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/web-wechat/pom.xml">
+    <entry file="file://$PROJECT_DIR$/web/web-wechat/src/main/java/com/arc/wechat/utils/excel/ExcelUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="90" lean-forward="true" selection-start-line="90" selection-end-line="90" />
+        <state relative-caret-position="589">
+          <caret line="40" column="30" lean-forward="true" selection-start-line="40" selection-start-column="30" selection-end-line="40" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/web-wechat/src/main/java/com/arc/wechat/utils/excel/ExportUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="313">
+          <caret line="117" lean-forward="true" selection-start-line="117" selection-end-line="117" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/poi/poi/3.17/poi-3.17.jar!/org/apache/poi/hssf/util/CellReference.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="8" column="11" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
+          <folding>
+            <element signature="e#262#263#0" expanded="true" />
+            <element signature="e#292#293#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/web-wechat/src/main/java/com/arc/wechat/web/ExcelTool.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="51" column="19" lean-forward="true" selection-end-line="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/poi/poi-ooxml/3.17/poi-ooxml-3.17.jar!/org/apache/poi/xssf/streaming/SXSSFSheet.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="82">
+          <caret line="82" column="40" selection-start-line="82" selection-start-column="34" selection-end-line="82" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/web-wechat/src/test/java/com/arc/wechat/WechatApplicationTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="31" column="8" lean-forward="true" selection-start-line="31" selection-start-column="8" selection-end-line="42" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/web-wechat/src/main/java/com/arc/wechat/web/Index.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="49" column="5" lean-forward="true" selection-start-line="49" selection-start-column="5" selection-end-line="49" selection-end-column="5" />
+          <folding>
+            <element signature="e#1197#1198#0" expanded="true" />
+            <element signature="e#1219#1220#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/web-wechat/src/main/java/com/arc/wechat/web/ExcelTools.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="473" column="7" lean-forward="true" selection-start-line="473" selection-start-column="7" selection-end-line="473" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/poi/poi/3.17/poi-3.17.jar!/org/apache/poi/hssf/usermodel/HSSFCellStyle.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-6054">
+          <caret line="23" column="19" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/web-wechat/src/main/java/com/arc/wechat/web/ForExcel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="295">
+          <caret line="57" column="37" lean-forward="true" selection-start-line="57" selection-start-column="37" selection-end-line="57" selection-end-column="37" />
+          <folding>
+            <element signature="method#jdbcex#0;class#ForExcel#0" />
+          </folding>
         </state>
       </provider>
     </entry>
