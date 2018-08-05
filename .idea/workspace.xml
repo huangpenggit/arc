@@ -5,103 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ed46e8be-be3f-47c3-acda-84082c321854" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/arc/dto/wechat/WeChatDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/arc/model/wechat/WeChatScanQRCodeRecord.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server-db/multi_datasource/src/main/java/com/multi/datasource/config/ClusterDataSourceConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server-db/multi_datasource/src/main/java/com/multi/datasource/config/MasterDataSourceConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server-db/multi_datasource/src/main/resources/mapper/master/UserMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/web-back/src/main/java/com/arc/back/config/ThreadAsyncConfigurer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/web-back/src/main/java/com/arc/back/controller/TestController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/web-back/src/main/java/com/arc/back/service/AsyncTaskService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/web-back/src/main/java/com/arc/back/service/DownloadUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/web-back/src/main/java/com/arc/back/service/Test.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/web-back/src/main/java/com/arc/back/service/TestThread.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/web-back/src/main/java/com/arc/back/util/DBService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/web-back/src/main/java/com/arc/back/util/GetPictureUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/web-back/src/main/java/com/arc/back/util/ThreadExample.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/web-validating/src/main/java/com/arc/boot/web/CallableTask.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/web-wechat/src/main/java/com/arc/wechat/config/MybatisConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/web-wechat/src/main/java/com/arc/wechat/mapper/one/UserMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/web-wechat/src/main/java/com/arc/wechat/mapper/two/AreaMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/web-wechat/src/main/java/com/arc/wechat/mapper/two/WeChatScanQRCodeRecordMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/web-wechat/src/main/java/com/arc/wechat/service/WeChatScanQRCodeRecordService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/web-wechat/src/main/java/com/arc/wechat/service/impl/WeChatScanQRCodeRecordServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/web-wechat/src/main/java/com/arc/wechat/utils/excel/AESEncryptUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/web-wechat/src/main/java/com/arc/wechat/utils/excel/ExcelUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/web-wechat/src/main/java/com/arc/wechat/utils/excel/ExportUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/web-wechat/src/main/java/com/arc/wechat/web/ExcelTool.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/web-wechat/src/main/java/com/arc/wechat/web/ExcelTools.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/web-wechat/src/main/java/com/arc/wechat/web/ForExcel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/web-wechat/src/main/resources/mapper/two/AreaMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/web-wechat/src/main/resources/mapper/two/WeChatScanQRCodeRecordMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/about/arc.txt" beforeDir="false" afterPath="$PROJECT_DIR$/about/arc.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/target/core-1.0.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/core/target/core-1.0.0.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/security/server-security/target/server-security-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/security/server-security/target/server-security-0.0.1-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/security/server-security/target/surefire-reports/TEST-com.security.SecurityApplicationTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/security/server-security/target/surefire-reports/TEST-com.security.SecurityApplicationTests.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/security/server-security/target/surefire-reports/com.security.SecurityApplicationTests.txt" beforeDir="false" afterPath="$PROJECT_DIR$/security/server-security/target/surefire-reports/com.security.SecurityApplicationTests.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-db/multi_datasource/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/server-db/multi_datasource/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-db/multi_datasource/src/main/java/com/multi/datasource/MultiDatasourceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-db/multi_datasource/src/main/java/com/multi/datasource/ServerMultiDatasourceApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-db/multi_datasource/src/main/java/com/multi/datasource/common/model/Area.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-db/multi_datasource/src/main/java/com/multi/datasource/common/model/Stock.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-db/multi_datasource/src/main/java/com/multi/datasource/common/model/User.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-db/multi_datasource/src/main/java/com/multi/datasource/config/DataSourceConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/web-wechat/src/main/java/com/arc/wechat/config/DataSourceConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-db/multi_datasource/src/main/java/com/multi/datasource/config/MybatisConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-db/multi_datasource/src/main/java/com/multi/datasource/config/MybatisConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-db/multi_datasource/src/main/java/com/multi/datasource/mapper/one/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-db/multi_datasource/src/main/java/com/multi/datasource/mapper/master/UserMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-db/multi_datasource/src/main/java/com/multi/datasource/mapper/two/AreaMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-db/multi_datasource/src/main/java/com/multi/datasource/mapper/cluster/AreaMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-db/multi_datasource/src/main/java/com/multi/datasource/mapper/two/TwoStockMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-db/multi_datasource/src/main/java/com/multi/datasource/web/controller/IndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-db/multi_datasource/src/main/java/com/multi/datasource/web/controller/IndexController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-db/multi_datasource/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/server-db/multi_datasource/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-db/multi_datasource/src/main/resources/mapper/one/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/web-wechat/src/main/resources/mapper/one/UserMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-db/multi_datasource/src/main/resources/mapper/two/AreaMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/server-db/multi_datasource/src/main/resources/mapper/cluster/AreaMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-db/multi_datasource/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/server-db/multi_datasource/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-db/multi_datasource/target/classes/com/multi/datasource/MultiDatasourceApplication.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-db/multi_datasource/target/classes/com/multi/datasource/common/model/Area.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-db/multi_datasource/target/classes/com/multi/datasource/common/model/Stock.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-db/multi_datasource/target/classes/com/multi/datasource/common/model/User.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-db/multi_datasource/target/classes/com/multi/datasource/config/DataSourceConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-db/multi_datasource/target/classes/com/multi/datasource/config/MybatisConfig$DBOne.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-db/multi_datasource/target/classes/com/multi/datasource/config/MybatisConfig$DBTwo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-db/multi_datasource/target/classes/com/multi/datasource/config/MybatisConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-db/multi_datasource/target/classes/com/multi/datasource/mapper/one/UserMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-db/multi_datasource/target/classes/com/multi/datasource/mapper/two/AreaMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-db/multi_datasource/target/classes/com/multi/datasource/web/controller/IndexController.class" beforeDir="false" afterPath="$PROJECT_DIR$/server-db/multi_datasource/target/classes/com/multi/datasource/web/controller/IndexController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-db/multi_datasource/target/classes/mapper/one/UserMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-db/multi_datasource/target/classes/mapper/two/AreaMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-db/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/server-db/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-db/server-common/src/main/resources/logs" beforeDir="false" afterPath="$PROJECT_DIR$/server-db/server-common/src/main/resources/logs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-db/server-common/target/classes/logs" beforeDir="false" afterPath="$PROJECT_DIR$/server-db/server-common/target/classes/logs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/server-eureka/target/server-eureka-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/server/server-eureka/target/server-eureka-0.0.1-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/server-eureka/target/server-eureka-0.0.1-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/server/server-eureka/target/server-eureka-0.0.1-SNAPSHOT.jar.original" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/server-eureka/target/surefire-reports/TEST-com.arc.server.eureka.ServerEurekaApplicationTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/server/server-eureka/target/surefire-reports/TEST-com.arc.server.eureka.ServerEurekaApplicationTests.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/server-eureka/target/surefire-reports/com.arc.server.eureka.ServerEurekaApplicationTests.txt" beforeDir="false" afterPath="$PROJECT_DIR$/server/server-eureka/target/surefire-reports/com.arc.server.eureka.ServerEurekaApplicationTests.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/server-zuul/target/server-zuul-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/server/server-zuul/target/server-zuul-0.0.1-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/server-zuul/target/server-zuul-0.0.1-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/server/server-zuul/target/server-zuul-0.0.1-SNAPSHOT.jar.original" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/web-back/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/web-back/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/web-back/src/main/java/com/arc/back/WebBackApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/web-back/src/main/java/com/arc/back/WebBackApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/web-back/src/main/java/com/arc/back/config/AysncConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/web-back/src/main/java/com/arc/back/config/ThreadConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/web-back/src/main/java/com/arc/back/util/Hello.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/web-back/src/main/java/com/arc/back/util/Hello.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/web-back/src/main/java/com/arc/back/util/PictureUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/web-back/src/main/java/com/arc/back/util/PictureUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/web-back/src/main/java/com/arc/back/util/PrintService.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/web-back/src/main/java/com/arc/back/util/PrintService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/web-express/src/main/java/com/arc/express/ExpressApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/web-express/src/main/java/com/arc/express/WebExpressApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/web-fast-start/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/web-fast-start/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/web-fast-start/src/main/java/com/arc/faststart/FastStartApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/web-fast-start/src/main/java/com/arc/faststart/WebFastStartApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/web-fast-start/src/test/java/com/arc/faststart/FastStartApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/web-fast-start/src/test/java/com/arc/faststart/WebFastStartApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/web-validating/src/main/java/com/arc/boot/ValidatingFormInputApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/web-validating/src/main/java/com/arc/boot/ValidatingFormInputApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/web-validating/src/main/java/com/arc/boot/web/TestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/web-validating/src/main/java/com/arc/boot/web/TestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/web-wechat/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/web-wechat/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/web-wechat/src/main/java/com/arc/wechat/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/web-wechat/src/main/java/com/arc/wechat/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/web-wechat/src/main/java/com/arc/wechat/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/web-wechat/src/main/java/com/arc/wechat/mapper/UserMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/web-wechat/src/main/java/com/arc/wechat/service/impl/HealthCheckServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/web-wechat/src/main/java/com/arc/wechat/service/impl/HealthCheckServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/web-wechat/src/main/java/com/arc/wechat/service/impl/HealthyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/web-wechat/src/main/java/com/arc/wechat/service/impl/HealthyController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/web-wechat/src/main/java/com/arc/wechat/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/web-wechat/src/main/java/com/arc/wechat/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/web-wechat/src/main/java/com/arc/wechat/web/Index.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/web-wechat/src/main/java/com/arc/wechat/web/Index.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/web-wechat/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/web/web-wechat/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/web-wechat/src/main/resources/mapper/userMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/web-wechat/src/main/resources/pdf/userMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/web-wechat/src/test/java/com/arc/wechat/WechatApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/web-wechat/src/test/java/com/arc/wechat/WechatApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/security/target/" />
     <ignored path="$PROJECT_DIR$/security/server-security/target/" />
@@ -135,17 +39,35 @@
     <option name="optimizeImportsOnTheFly" value="true" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.40252608">
+    <splitter split-orientation="horizontal" split-proportion="0.62885326">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="ForExcel.java" pinned="false" current-in-tab="true">
+          <file leaf-file-name="ForExcel.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/web/web-wechat/src/main/java/com/arc/wechat/web/ForExcel.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="739">
+                <state relative-caret-position="203">
                   <caret line="73" column="55" selection-start-line="73" selection-start-column="55" selection-end-line="73" selection-end-column="55" />
                   <folding>
                     <element signature="method#jdbcex#0;class#ForExcel#0" />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="hosts" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/about/hosts">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="399">
+                  <caret line="21" column="19" lean-forward="true" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="19" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/.gitignore">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="133">
+                  <caret line="7" column="3" lean-forward="true" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
                 </state>
               </provider>
             </entry>
@@ -163,7 +85,7 @@
             <entry file="file://$PROJECT_DIR$/web/web-wechat/src/main/java/com/arc/wechat/web/Index.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="456">
-                  <caret line="49" column="5" lean-forward="true" selection-start-line="49" selection-start-column="5" selection-end-line="49" selection-end-column="5" />
+                  <caret line="49" column="5" selection-start-line="49" selection-start-column="5" selection-end-line="49" selection-end-column="5" />
                   <folding>
                     <element signature="e#1197#1198#0" expanded="true" />
                     <element signature="e#1219#1220#0" expanded="true" />
@@ -176,7 +98,7 @@
             <entry file="file://$PROJECT_DIR$/web/web-wechat/src/main/java/com/arc/wechat/web/ExcelTools.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="300">
-                  <caret line="473" column="7" lean-forward="true" selection-start-line="473" selection-start-column="7" selection-end-line="473" selection-end-column="7" />
+                  <caret line="473" column="7" selection-start-line="473" selection-start-column="7" selection-end-line="473" selection-end-column="7" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -188,7 +110,7 @@
             <entry file="file://$PROJECT_DIR$/web/web-wechat/src/test/java/com/arc/wechat/WechatApplicationTests.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="167">
-                  <caret line="31" column="8" lean-forward="true" selection-start-line="31" selection-start-column="8" selection-end-line="42" selection-end-column="13" />
+                  <caret line="31" column="8" selection-start-line="31" selection-start-column="8" selection-end-line="42" selection-end-column="13" />
                 </state>
               </provider>
             </entry>
@@ -200,8 +122,8 @@
           <file leaf-file-name="ForExcel.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/web/web-wechat/src/main/java/com/arc/wechat/web/ForExcel.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="295">
-                  <caret line="57" column="37" lean-forward="true" selection-start-line="57" selection-start-column="37" selection-end-line="57" selection-end-column="37" />
+                <state relative-caret-position="67">
+                  <caret line="45" column="26" selection-start-line="45" selection-start-column="26" selection-end-line="45" selection-end-column="26" />
                   <folding>
                     <element signature="method#jdbcex#0;class#ForExcel#0" />
                   </folding>
@@ -271,7 +193,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/web/web-back/src/main/java/com/arc/back/controller/TestController.java" />
         <option value="$PROJECT_DIR$/web/web-back/src/main/java/com/arc/back/util/DBService.java" />
         <option value="$PROJECT_DIR$/web/web-back/src/main/java/com/arc/back/util/ThreadExample.java" />
         <option value="$PROJECT_DIR$/web/web-validating/src/main/java/com/arc/boot/web/CallableTask.java" />
@@ -322,6 +243,7 @@
         <option value="$PROJECT_DIR$/web/web-wechat/src/test/java/com/arc/wechat/WechatApplicationTests.java" />
         <option value="$PROJECT_DIR$/web/web-wechat/src/main/java/com/arc/wechat/web/Index.java" />
         <option value="$PROJECT_DIR$/web/web-wechat/src/main/java/com/arc/wechat/web/ForExcel.java" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -346,17 +268,7 @@
   </component>
   <component name="MavenProjectNavigator">
     <treeState>
-      <expand>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="web-wechat" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-        </path>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="web-wechat" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-          <item name="Dependencies" type="f4be9f2a:MavenProjectsStructure$DependenciesNode" />
-        </path>
-      </expand>
+      <expand />
       <select />
     </treeState>
   </component>
@@ -372,9 +284,9 @@
       <path value="$PROJECT_DIR$/web/website-https/src/main/resources/static/js/plugins/bootstrap/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="472" />
-    <option name="y" value="508" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-235" />
+    <option name="y" value="356" />
     <option name="width" value="1881" />
     <option name="height" value="1100" />
   </component>
@@ -423,6 +335,16 @@
             <path>
               <item name="arc" type="b2602c69:ProjectViewProjectNode" />
               <item name="arc" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="arc" type="b2602c69:ProjectViewProjectNode" />
+              <item name="arc" type="462c0819:PsiDirectoryNode" />
+              <item name="about" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="arc" type="b2602c69:ProjectViewProjectNode" />
+              <item name="arc" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="arc" type="b2602c69:ProjectViewProjectNode" />
@@ -966,21 +888,21 @@
       <option name="presentableId" value="Default" />
       <updated>1533261751064</updated>
       <workItem from="1533261752233" duration="19727000" />
-      <workItem from="1533347688313" duration="27235000" />
+      <workItem from="1533347688313" duration="28067000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46962000" />
+    <option name="totallyTimeSpent" value="47794000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-11" y="165" width="1881" height="1100" extended-state="0" />
+    <frame x="-8" y="-8" width="1867" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="JRebel Console" order="16" sideWeight="0.5002746" side_tool="true" weight="0.49318182" />
-      <window_info anchor="right" id="Maven Projects" order="6" weight="0.2822625" />
+      <window_info anchor="right" id="Maven Projects" order="6" visible="true" weight="0.28223574" />
       <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
       <window_info anchor="bottom" id="JRebel Executor" order="15" weight="0.32954547" />
       <window_info id="Designer" order="2" />
@@ -994,10 +916,10 @@
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="bottom" id="Java Enterprise" order="12" />
       <window_info anchor="bottom" id="Version Control" order="14" />
-      <window_info anchor="bottom" id="Run" order="4" weight="0.2936709" />
+      <window_info anchor="bottom" id="Run" order="4" visible="true" weight="0.293617" />
       <window_info anchor="bottom" id="Spring" order="8" />
       <window_info anchor="bottom" id="Terminal" order="9" />
-      <window_info content_ui="combo" id="Project" order="0" weight="0.26908293" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26895407" />
       <window_info anchor="right" id="Bean Validation" order="9" />
       <window_info id="Web" order="5" side_tool="true" />
       <window_info id="JRebel" order="8" side_tool="true" />
@@ -1077,23 +999,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/server-db/multi_datasource/src/main/java/com/multi/datasource/mapper/cluster/TwoStockMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server-db/multi_datasource/src/main/java/com/multi/datasource/ServerMultiDatasourceApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="131">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
-          <folding>
-            <element signature="e#463#464#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server-db/multi_datasource/target/classes/templates/index.ftl">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -1444,14 +1349,14 @@
     <entry file="file://$PROJECT_DIR$/web/web-wechat/src/test/java/com/arc/wechat/WechatApplicationTests.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="167">
-          <caret line="31" column="8" lean-forward="true" selection-start-line="31" selection-start-column="8" selection-end-line="42" selection-end-column="13" />
+          <caret line="31" column="8" selection-start-line="31" selection-start-column="8" selection-end-line="42" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/web-wechat/src/main/java/com/arc/wechat/web/Index.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="456">
-          <caret line="49" column="5" lean-forward="true" selection-start-line="49" selection-start-column="5" selection-end-line="49" selection-end-column="5" />
+          <caret line="49" column="5" selection-start-line="49" selection-start-column="5" selection-end-line="49" selection-end-column="5" />
           <folding>
             <element signature="e#1197#1198#0" expanded="true" />
             <element signature="e#1219#1220#0" expanded="true" />
@@ -1462,7 +1367,7 @@
     <entry file="file://$PROJECT_DIR$/web/web-wechat/src/main/java/com/arc/wechat/web/ExcelTools.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
-          <caret line="473" column="7" lean-forward="true" selection-start-line="473" selection-start-column="7" selection-end-line="473" selection-end-column="7" />
+          <caret line="473" column="7" selection-start-line="473" selection-start-column="7" selection-end-line="473" selection-end-column="7" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1478,11 +1383,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/web-wechat/src/main/java/com/arc/wechat/web/ForExcel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
-          <caret line="57" column="37" lean-forward="true" selection-start-line="57" selection-start-column="37" selection-end-line="57" selection-end-column="37" />
+        <state relative-caret-position="203">
+          <caret line="73" column="55" selection-start-line="73" selection-start-column="55" selection-end-line="73" selection-end-column="55" />
           <folding>
             <element signature="method#jdbcex#0;class#ForExcel#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/about/hosts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="21" column="19" lean-forward="true" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" column="3" lean-forward="true" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
         </state>
       </provider>
     </entry>
