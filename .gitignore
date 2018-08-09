@@ -4,6 +4,7 @@
 
 # IntelliJ project files
 .idea/
+sa/
 *.iml
 out
 gen### Clojure template
