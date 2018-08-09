@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <script type="text/javascript" th:src="@{https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js}"></script>
+    <link th:href="@{https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css}" rel="stylesheet"/>
+    <link th:href="@{/css/default.css}" rel="stylesheet"/>
+    <link rel="icon" th:href="@{/images/favicon.ico}" type="image/x-icon"/>
+    <meta charset="UTF-8"/>
+    <title>用户管理</title>
+</head>
+
+<body>
+<div class="contentDiv">
+
+    <h5>数据准备</h5>
+
+    <legend>
+        <strong>管理</strong>
+    </legend>
+
+    <form th:action="@{/projectEnvironment/{action}(action=${action})}" method="post" class="form-horizontal">
+
+        <input type="hidden" name="id" th:value="${projectEnvironment.id}"/>
+
+
+        <div class="form-group">
+            <label for="projectEnvironment_project_name" class="col-sm-2 control-label">项目名称:</label>
+            <div class="col-xs-4">
+                <input type="text" class="form-control" id="projectEnvironment_project_name" name="name"
+                       th:value="${projectEnvironment.projectName}"
+                       th:field="*{projectEnvironment.projectName}"/>
+            </div>
+            <label class="col-sm-2 control-label text-danger"
+                   th:if="${#fields.hasErrors('projectEnvironment.projectName')}"
+                   th:errors="*{projectEnvironment.projectName}">项目名称!</label>
+        </div>
+
+
+        <div class="form-group">
+            <label for="projectEnvironment_name" class="col-sm-2 control-label">环境名称:</label>
+            <div class="col-xs-4">
+                <input type="text" class="form-control" id="projectEnvironment_name" name="name"
+                       th:value="${projectEnvironment.name}"
+                       th:field="*{projectEnvironment.name}"/>
+            </div>
+            <label class="col-sm-2 control-label text-danger" th:if="${#fields.hasErrors('projectEnvironment.name')}"
+                   th:errors="*{projectEnvironment.name}">环境名称!</label>
+        </div>
+
+
+        <div class="form-group">
+            <label for="projectEnvironment_project_action" class="col-sm-2 control-label">项目动作:</label>
+            <div class="col-xs-4">
+                <input type="text" class="form-control"
+                       id="projectEnvironment_project_action"
+                       name="projectAction"
+                       th:value="${projectEnvironment.projectAction}"
+                       th:field="*{projectEnvironment.projectAction}"/>
+            </div>
+            <label class="col-sm-2 control-label text-danger"
+                   th:if="${#fields.hasErrors('projectEnvironment.projectAction')}"
+                   th:errors="*{projectEnvironment.projectAction}">项目动作!</label>
+        </div>
+
+
+        <div class="form-group">
+            <label for="projectEnvironment_project_description" class="col-sm-2 control-label">项目描述:</label>
+            <div class="col-xs-4">
+                <input type="text" class="form-control"
+                       id="projectEnvironment_project_description"
+                       name="projectDescription"
+                       th:value="${projectEnvironment.projectDescription}"
+                       th:field="*{projectEnvironment.projectDescription}"/>
+            </div>
+            <label class="col-sm-2 control-label text-danger"
+                   th:if="${#fields.hasErrors('projectEnvironment.projectDescription')}"
+                   th:errors="*{projectEnvironment.projectDescription}">项目描述!</label>
+        </div>
+
+        <div class="form-group">
+            <label for="projectEnvironment_source_type" class="col-sm-2 control-label">数据类型:</label>
+            <div class="col-xs-4">
+                <input type="text" class="form-control"
+                       id="projectEnvironment_source_type"
+                       name="projectDescription"
+                       th:value="${projectEnvironment.sourceType}"
+                       th:field="*{projectEnvironment.sourceType}"/>
+            </div>
+            <label class="col-sm-2 control-label text-danger"
+                   th:if="${#fields.hasErrors('projectEnvironment.sourceType')}"
+                   th:errors="*{projectEnvironment.sourceType}">数据类型!</label>
+        </div>
+
+
+
+        <div class="form-group">
+            <label for="projectEnvironment_source_type" class="col-sm-2 control-label">资源账号:</label>
+            <div class="col-xs-4">
+                <input type="text" class="form-control"
+                       id="projectEnvironment_source_username"
+                       name="projectDescription"
+                       th:value="${projectEnvironment.sourceUsername}"
+                       th:field="*{projectEnvironment.sourceUsername}"/>
+            </div>
+            <label class="col-sm-2 control-label text-danger"
+                   th:if="${#fields.hasErrors('projectEnvironment.sourceType')}"
+                   th:errors="*{projectEnvironment.sourceUsername}">资源账号!</label>
+        </div>
+
+
+
+        <div class="form-group">
+            <label for="projectEnvironment_source_type" class="col-sm-2 control-label">资源密码:</label>
+            <div class="col-xs-4">
+                <input type="text" class="form-control"
+                       id="projectEnvironment_source_password"
+                       name="projectDescription"
+                       th:value="${projectEnvironment.sourcePassword}"
+                       th:field="*{projectEnvironment.sourcePassword}"/>
+            </div>
+            <label class="col-sm-2 control-label text-danger"
+                   th:if="${#fields.hasErrors('projectEnvironment.sourceType')}"
+                   th:errors="*{projectEnvironment.sourcePassword}">资源密码!</label>
+        </div>
+
+
+        <div class="form-group">
+            <label for="projectEnvironment_source_type" class="col-sm-2 control-label">主从与否:</label>
+            <div class="col-xs-4">
+                <input type="text" class="form-control"
+                       id="projectEnvironment_source_primary"
+                       name="projectDescription"
+                       th:value="${projectEnvironment.sourcePrimary}"
+                       th:field="*{projectEnvironment.sourcePrimary}"/>
+            </div>
+            <label class="col-sm-2 control-label text-danger"
+                   th:if="${#fields.hasErrors('projectEnvironment.sourceType')}"
+                   th:errors="*{projectEnvironment.sourcePrimary}">主从与否!</label>
+        </div>
+
+
+        <div class="form-group">
+            <label for="projectEnvironment_source_type" class="col-sm-2 control-label">资源端口:</label>
+            <div class="col-xs-4">
+                <input type="text" class="form-control"
+                       id="projectEnvironment_source_port"
+                       name="projectDescription"
+                       th:value="${projectEnvironment.sourcePort}"
+                       th:field="*{projectEnvironment.sourcePort}"/>
+            </div>
+            <label class="col-sm-2 control-label text-danger"
+                   th:if="${#fields.hasErrors('projectEnvironment.sourceType')}"
+                   th:errors="*{projectEnvironment.sourcePort}">资源端口!</label>
+        </div>
+
+
+
+
+        <div class="form-group">
+            <label for="projectEnvironment_source_type" class="col-sm-2 control-label">资源地址:</label>
+            <div class="col-xs-4">
+                <input type="text" class="form-control"
+                       id="projectEnvironment_source_url"
+                       name="projectDescription"
+                       th:value="${projectEnvironment.sourceUrl}"
+                       th:field="*{projectEnvironment.sourceUrl}"/>
+            </div>
+            <label class="col-sm-2 control-label text-danger"
+                   th:if="${#fields.hasErrors('projectEnvironment.sourceType')}"
+                   th:errors="*{projectEnvironment.sourceUrl}">资源地址!</label>
+        </div>
+
+
+
+
+        <div class="form-group">
+            <label for="projectEnvironment_source_type" class="col-sm-2 control-label">资源驱动:</label>
+            <div class="col-xs-4">
+                <input type="text" class="form-control"
+                       id="projectEnvironment_source_driver"
+                       name="projectDescription"
+                       th:value="${projectEnvironment.sourceDriver}"
+                       th:field="*{projectEnvironment.sourceDriver}"/>
+            </div>
+            <label class="col-sm-2 control-label text-danger"
+                   th:if="${#fields.hasErrors('projectEnvironment.sourceType')}"
+                   th:errors="*{projectEnvironment.sourceDriver}">资源驱动!</label>
+        </div>
+
+
+
+
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <input class="btn btn-primary" type="submit" value="提交"/>&nbsp;&nbsp;
+                <input class="btn" type="button" value="返回" onclick="history.back()"/>
+            </div>
+        </div>
+    </form>
+</div>
+</body>
+</html>

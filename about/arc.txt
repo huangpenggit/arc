@@ -1,6 +1,24 @@
+两个地址是同一个项目， https、ssh协议的区别，
 https://github.com/lamymay/arc.git
 git@github.com:lamymay/arc.git
 
+还有 github 速度慢  去改hosts
+一个是https协议的（通常简单检出项目用这个，简单啊，不过提交的时候就要输密码，不爽），
+ssh 的初次使用设置麻烦，后面提交代码 爽，不要再次验证密码
+
+网上的好多都ping 不通了git容易卡住
+这些我都ping过的github的IP，延迟在200左右至少都能ping 通
+192.30.255.112 github.com
+192.30.255.113 www.github.com
+192.30.255.120 nodeload.github.com
+192.30.253.118 gist.github.com
+192.30.253.119 gist.github.com
+
+
+
+#MYSQL数据修改内存大小，提高大量数据插入速度，生产环境改此配置有隐患，本地测试无所谓
+（原因就是人多每个连接都分这么多内存，不够分啊，本地基本上开发中旧自己一个人用调到2G都没有问题）
+#原始大小是8388608 单位b （8M)
  innodb_buffer_pool_size             | 8388608
 SET GLOBAL innodb_buffer_pool_size=104857600;
 
@@ -46,8 +64,13 @@ export PATH=$PATH:$JAVA_HOME/bin:$M2_HOME/bin
 
 
 
-192.30.255.112 github.com
-192.30.255.113 www.github.com
-192.30.255.120 nodeload.github.com
-192.30.253.118 gist.github.com 
-192.30.253.119 gist.github.com
+
+
+
+
+
+#关于JAVA导出数据库数据的思路
+用异步方法(同时去导出到缓存文件夹)，主线程睡一会儿 去判断文件数量够不够（一个进程跑完应该有一个文件），最后去打包，然后返回客户端，最后去吧文件删了释放磁盘空间
+这样上亿数据也要不了几秒
+就是不知道电脑会不会卡
+还有一种觉得不靠谱，定时任务去吧数据搞成excel 放在某个文件夹，等你要数据的时候去打包，（只用关心最后一个分页的数据在不在文件夹里，不在去弄成excel）

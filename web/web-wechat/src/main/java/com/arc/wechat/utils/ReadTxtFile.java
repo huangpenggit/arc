@@ -15,6 +15,12 @@ public class ReadTxtFile {
     private static String PATH = "c:\\say.txt";
     private static String PATH1 = "c:\\say1.txt";
 
+    /**
+     * 过滤文本中的空格
+     *
+     * @param filePath
+     * @return
+     */
     public static String readTxt(String filePath) {
         StringBuffer resultBuffer = new StringBuffer();
 

@@ -45,9 +45,7 @@ public class ForExcel {
 
     @RequestMapping("/ex")
     @ResponseBody
-    public Object excel(HttpServletRequest request, HttpServletResponse response) throws IOException {
-
-
+    public void excel(HttpServletRequest request, HttpServletResponse response) throws Exception {
         long startTime = System.currentTimeMillis();    //开始时间
         log.info("导出excel开始::::::::::");
         SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
@@ -67,8 +65,6 @@ public class ForExcel {
         workbook = new SXSSFWorkbook(100);
         workbook.setCompressTempFiles(true);
 
-
-
         //创建sheet
 //        for (sheetNumber = 1; sheetNumber <= sheets; sheetNumber++) {
 //            sheet = workbook.createSheet("sheet标题名" + sheetNumber);
@@ -85,7 +81,7 @@ public class ForExcel {
 
 /////////////////////////////////////////////////
 
-        if (count>=0) {
+        if (count >= 0) {
             sheets = count / pageSize;//总页数
             if (sheets <= 0 || (count % pageSize) > 0) {//数据量不足一个sheet的 或者有余数的
                 sheets = sheets + 1;
@@ -111,7 +107,7 @@ public class ForExcel {
                 // 按次数将数据写入文件
 
                 // 最重要的就是使用SXSSFWorkbook，表示流的方式进行操作
-                // 在内存中保持1000行，超过100行将被刷新到磁盘
+                // 在内存中保持1000行，超过1000行将被刷新到磁盘
                 sheet = workbook.createSheet("sheet标题名" + sheetNumber);
                 createTitle(workbook, sheet);
                 int rowNumber = 1;            //创建sheet内的多行数据
@@ -124,23 +120,30 @@ public class ForExcel {
                 }
             }
         }
+        log.info("Export excel execute  time: " + (System.currentTimeMillis() - startTime) + "ms");
 
         //输出文件
+        // 如果文件名有中文，必须URL编码      String excelName = URLEncoder.encode("数据导出.xlsx", "UTF-8");
         String excelName = "数据导出.xlsx";
+        excelName = excelName.replaceAll("[^\u4e00-\u9fa5a-zA-Z0-9]", "");
+        String userAgent = request.getHeader("User-Agent");//user-agent  大小写都可以
+        if (userAgent != null && userAgent.toLowerCase().indexOf("firefox") > 0) {
+            excelName = new String(excelName.getBytes("UTF-8"), "ISO8859-1");
+        } else {
+            excelName = java.net.URLEncoder.encode(excelName, "UTF-8");
+        }
+        long millis = System.currentTimeMillis();
         response.reset();
         response.setContentType(request.getServletContext().getMimeType(excelName));
         response.addHeader("Content-Disposition", "attachment;filename=" + excelName);
-
+//        response.addHeader("Content-Disposition", "attachment;filename=" + getBrowserFileName(request, excelName));
         OutputStream outputStream = response.getOutputStream();
         workbook.write(outputStream);
         response.flushBuffer();
         outputStream.close();
-
-
-        System.out.println("finished execute  time: " + (System.currentTimeMillis() - startTime) + "ms");
-        return 111;
-
+        log.info("Transfer execute  time: " + (System.currentTimeMillis() - millis) + "ms");
     }
+
 
 // 测试
 //    public static void main(String[] args) throws Exception {
@@ -149,7 +152,13 @@ public class ForExcel {
 //    }
 
     public void jdbcex(boolean isClose) throws InstantiationException, IllegalAccessException, ClassNotFoundException, SQLException, IOException, InterruptedException {
-
+//        try {
+//
+//        } catch (Exception e) {
+//
+//        }finally {
+//
+//        }
         String xlsFile = "G:/poi.xlsx";        //输出文件
         //内存中只创建100个对象，写临时文件，当超过100条，就将内存中不用的对象释放。
         Workbook wb = new SXSSFWorkbook(1000);            //关键语句
@@ -267,6 +276,7 @@ public class ForExcel {
         System.out.println(109051904 / p);
         System.out.println(109051904 / p);
         System.out.println(109051904 / p);
+        System.out.println(1024 * p);//1073741824
     }
 
 }

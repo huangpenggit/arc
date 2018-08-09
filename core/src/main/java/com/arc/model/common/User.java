@@ -5,6 +5,9 @@ import lombok.Getter;
 import lombok.Setter;
 import org.springframework.validation.annotation.Validated;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 import java.util.Date;
 
 /*
@@ -15,11 +18,14 @@ import java.util.Date;
 @Getter
 @Setter
 @Validated
+@Entity
+@Table(name = "user")
 public class User extends BaseModel {
 
 	private static final long serialVersionUID = 1L;
-	
-	private Long id; // 
+
+    @Id
+    private Long id; //
 	
 	private String nickname; // 昵称
 	

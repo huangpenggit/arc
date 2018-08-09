@@ -2,7 +2,11 @@ package com.arc.client.website;
 
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.hazelcast.HazelcastAutoConfiguration;
+import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
+import org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.servlet.view.freemarker.FreeMarkerViewResolver;
 
@@ -10,6 +14,12 @@ import org.springframework.web.servlet.view.freemarker.FreeMarkerViewResolver;
 //import org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainerFactory;
 
 //@EnableWebMvc
+@EnableAutoConfiguration(
+        exclude = {
+                HazelcastAutoConfiguration.class,
+                DataSourceAutoConfiguration.class,
+                HibernateJpaAutoConfiguration.class
+        })
 @SpringBootApplication
 @MapperScan("com.del.client.website.mapper")
 public class WebsiteHttpsApplication {

@@ -4,12 +4,10 @@ import com.arc.arc.domain.User;
 import com.arc.arc.service.IUserService;
 import io.swagger.annotations.*;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@Controller
 @Api(value = "用户模块")
 @RestController
 @RequestMapping("/user")

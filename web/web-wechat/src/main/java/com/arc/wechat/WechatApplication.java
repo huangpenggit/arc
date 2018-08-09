@@ -14,7 +14,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 
 //@EnableSwagger2Doc // 开启 Swagger
-
 @ServletComponentScan
 @MapperScan("com.arc.wechat.mapper")
 @RestController

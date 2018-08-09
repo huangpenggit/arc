@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration scan="true" scanPeriod="5 seconds" debug="false">
+
+
+	<springProfile name="dev,local">
+		<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+			<encoder charset="UTF-8">
+				<pattern>%d{HH:mm:ss.SSS} %-7level %logger{36} - %m%n</pattern>
+			</encoder>
+		</appender>
+	</springProfile>
+
+	<springProfile name="preview,product">
+		<appender name="RollingFile" class="ch.qos.logback.core.rolling.RollingFileAppender">
+			<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+				<fileNamePattern>./logs/ms-business.%d{yyyy-MM-dd}.log</fileNamePattern>
+				<maxHistory>30</maxHistory>
+			</rollingPolicy>
+			<encoder>
+				<pattern>%d{HH:mm:ss.SSS} [%thread] %-7level %logger{36} %msg%n</pattern>
+			</encoder>
+		</appender>
+	</springProfile>
+	
+	<!-- 下面配置一些第三方包的日志过滤级别，用于避免刷屏 -->
+	<logger name="org.apache" level="WARN" />
+    <logger name="org.springframework.amqp" level="INFO" />
+    <logger name="org.springframework.scheduling" level="INFO" />
+    <!--<logger name="com.netflix.discovery" level="INFO" />-->
+    <!--<logger name="org.mongodb.driver" level="INFO" />-->
+    
+    <springProfile name="dev,local">
+	    <logger name="org.springframework" level="DEBUG" />
+    	<root level="DEBUG">
+    		<appender-ref ref="STDOUT" />
+    	</root>
+    </springProfile>
+
+    <springProfile name="test">
+	    <logger name="org.springframework" level="DEBUG" />
+    	<root level="DEBUG">
+    		<appender-ref ref="RollingFile" />
+    	</root>
+    </springProfile>
+    <springProfile name="prod">
+	    <logger name="org.springframework" level="INFO" />
+    	<root level="INFO">
+    		<appender-ref ref="RollingFile" />
+    	</root>
+    </springProfile>
+
+
+</configuration>

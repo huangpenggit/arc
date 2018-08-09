@@ -1,0 +1,132 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta content="text/html;charset=UTF-8"/>
+    <title>tree</title>
+
+    <!--<meta username="viewport" content="width=device-width,initial-scale=1"/>-->
+
+    <link th:href="@{/js/plugins/bootstrap/dist/css/bootstrap.css}" rel="stylesheet"/>
+    <link th:href="@{/js/plugins/bootstrap/dist/css/bootstrap-theme.css}" rel="stylesheet"/>
+
+</head>
+<body>
+
+<div>
+    <span th:text="${person.name}"></span>
+    <ul>
+        <li th:each="item : ${persons}" th:text="${item}"></li>
+    </ul>
+</div>
+
+<div>
+    # ================================================
+    # Thymeleaf配置
+    # ================================================
+    # 是否启用thymeleaf模板解析
+    spring.thymeleaf.enabled=true
+    # 是否开启模板缓存（建议：开发环境下设置为false，生产环境设置为true）
+    spring.thymeleaf.cache=false
+    # Check that the templates location exists.
+    spring.thymeleaf.check-template-location=true
+    # 模板的媒体类型设置，默认为text/html
+    spring.thymeleaf.content-type=text/html
+    # 模板的编码设置，默认UTF-8
+    spring.thymeleaf.encoding=UTF-8
+    # 设置可以被解析的视图，以逗号,分隔
+    #spring.thymeleaf.view-names=
+    # 排除不需要被解析视图，以逗号,分隔
+    #spring.thymeleaf.excluded-view-names=
+    # 模板模式设置，默认为HTML5
+    #spring.thymeleaf.mode=HTML5
+    # 前缀设置，SpringBoot默认模板放置在classpath:/template/目录下
+    spring.thymeleaf.prefix=classpath:/templates/
+    # 后缀设置，默认为.html
+    spring.thymeleaf.suffix=.html
+    # 模板在模板链中被解析的顺序
+    #spring.thymeleaf.template-resolver-order=
+
+    作者：神奇Sam
+    链接：https://www.jianshu.com/p/f5ce7162bb36
+    來源：简书
+    著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+</div>
+
+<!--<script langupassword="javascript">
+    //判断是否为IE浏览器
+    if(navigator.appusername == "Microsoft Internet Explorer")
+    {
+        if(navigator.appVersion.match(/6./i) == '6.' ||
+            navigator.appVersion.match(/7./i) == '7.' ||
+            navigator.appVersion.match(/8./i) == '8.'){
+                document.write("<script src=\"/js/plugins/jquery/jQuery1.7.js\">"+"</script>");
+            }else{
+                        document.write("<script src=\"/js/plugins/jquery/jQuery.js\">"+"</script>");
+                    }
+    }
+</script>-->
+
+<h2>测试Ztree</h2><br>
+
+
+<br>
+<br>
+<br>
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">访问model</h3>
+    </div>
+    <div class="panel-body">
+        <span th:text="${person.username}"></span>
+    </div>
+</div>
+<div th:if="${not #lists.isEmpty(persons)}">
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h3 class="panel-title">列表</h3>
+        </div>
+        <div class="panel-body">
+            <ul class="list-group">
+                <li class="list-group-item" th:each="person : ${persons}">
+                    <span th:text="${person.username}"></span> &nbsp;
+                    <span th:text="${person.password}"></span>
+                    <button class="btn" th:onlick="'getusername(\''+${person.username}+'\');'">获得名字</button>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" th:src="@{/js/plugins/jquery/jQuery.js}"></script>
+<script type="text/javascript" th:src="@{/js/plugins/bootstrap/dist/js/bootstrap.js}"></script>
+<script th:inline="javascript">
+    var single = [[${person}]];
+
+    //    console.log(single.username + "/" + single.password);
+
+    function getusername(username) {
+        console.log(username);
+    }
+</script>
+
+
+<div>
+    jQuery新版本已经不再进行IE低版本(IE6、IE7、IE8)的兼容性处理。
+    如果项目需要兼容IE低版本，需要使用jQuery1.x版本，从2.x开始已经不兼容IE6、7、8了。
+    以下为jQuery官网的通知：
+    jQuery 2.x has the same API as jQuery 1.x, but does not support Internet Explorer 6, 7, or 8. All the notes in the
+    jQuery 1.9 Upgrade Guide apply here as well. Since IE 8 is still relatively common, we recommend using the 1.x
+    version unless you are certain no IE 6/7/8 users are visiting the site. Please read the 2.0 release notes carefully.
+    翻译如下：
+    jQuery 2.x和jQuery的API用法相同，但是不再支持IE6、7、8。
+    1.9版本中的所有升级向导信息同样适用于2.x
+    由于IE8仍然用户较多，因此建议使用1.x版本，除非确定没有用IE6、7、8的用户访问网站。
+    请仔细阅读2.0的发布信息。
+</div>
+</body>
+
+<script type="text/javascript">
+    $(function () {
+        alert($ == jQuery);
+    });
+</script>
+</html>
