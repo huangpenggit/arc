@@ -64,7 +64,7 @@ spring:
 #      default-zone: http://1270.0.1:8761/eureka/
 
   datasource:
-    url: jdbc:mysql://localhost:3306/cloud?useUnicode=true&characterEncoding=UTF-8&useAffectedRows=true&useSSL=false
+    url: jdbc:mysql://localhost:3306/hla?useUnicode=true&characterEncoding=UTF-8&useAffectedRows=true&useSSL=false
     driver-class-name: com.mysql.jdbc.Driver
     username: root
     password: admin
@@ -76,7 +76,8 @@ spring:
     database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
     show-sql: true
     hibernate:
-      ddl-auto: none
+#      ddl-auto: none
+      ddl-auto: update
 
 
 
