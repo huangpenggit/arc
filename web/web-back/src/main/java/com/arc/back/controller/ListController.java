@@ -10,16 +10,16 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/list")
-public class HelloController {
+public class ListController {
 
     /**
      * 接收List的条件
-     * 1、使用JSON格式数据，如["a","b","c"] 放在RequestBody中传递
+     * 1、使用JSON格式数据，如["a","b","c"] 放在RequestBody中传递,POST方法
      * 2、RequestHeader中需要有 Content-Type: application/json;charset=utf8
      * 3、需要在参数前加上@RequestBody
      */
     @RequestMapping("1")
-    public String test(@RequestBody List<String> list) {
+    public String hi1(@RequestBody List<String> list) {
         System.out.println(list);
         return "  The list is  " + list + " and length is " + list.size();
 
@@ -27,22 +27,21 @@ public class HelloController {
 
     /**
      * 接收List<String>
-     * 1、Request Parameters中list=a,b,c
+     * 1、Request Parameters中list=a,b,c，GET方法：localhost:8089/list/2?list=1,2,3,4
      * 2、必须写上@RequestParam("list")
      */
     @RequestMapping("/2")
-    public String hi(@RequestParam("list") List<String> list) {
-
+    public String hi2(@RequestParam("list") List<String> list) {
         System.out.println(list.get(0));
         return "  The list is  " + list + " and length is " + list.size();
     }
 
     /**
      * 接收数组
-     * 1、Request Parameters中list=a,b,c 即可成功接收
+     * 1、Request Parameters中list=a,b,c 即可成功接收：GET方法：localhost:8089/list/3?list=1,2,3
      */
     @RequestMapping("/3")
-    public String hey(String[] list) {
+    public String hi3(String[] list) {
         System.out.println(list[0].toString());
         System.out.println(list[1].toString());
         StringBuilder stringBuilder = new StringBuilder();
@@ -51,9 +50,9 @@ public class HelloController {
         System.out.println(stringBuilder);
         return "  The list is  " + stringBuilder + list.toString() + " and length is " + list.length;
     }
-
+///////////////////////////////////////////////////////////////////////////////////////////////////////
     public static void main(String[] args) throws InterruptedException {
-        System.out.println(HelloController.ca());
+        System.out.println(ListController.ca());
         System.out.println(test1());
         System.out.println(test());
 
