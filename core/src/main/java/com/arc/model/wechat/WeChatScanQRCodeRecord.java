@@ -1,9 +1,7 @@
 package com.arc.model.wechat;
 
 import com.arc.model.BaseModel;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
+import lombok.*;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.Date;
@@ -15,7 +13,8 @@ import java.util.Date;
  * @author: 叶超
  * @date: 2018/07/27
  */
-@Data
+@Getter
+@Setter
 @Slf4j
 @ToString
 @NoArgsConstructor

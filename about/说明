@@ -49,3 +49,17 @@ https://blog.csdn.net/s164828378/article/details/52425208
 区块链解决了「信用」问题，它就像早期的互联网，让人难以相信，一个程序员写出的代码，为何可以改变金融市场的格局，甚至各行各业的格局。
 区块链、大数据及人工智能、物联网
 
+#读取图片
+https://www.cnblogs.com/Buffalo-L/p/4468483.html
+
+
+分页计算公式 初始页码是0
+limit start pageSize;
+
+start:就是当前页的起始索引,pageSize就是每页的条数
+currentPage:就是当前页
+公式:start=(currentPage-1)*pageSize
+
+#SpringBoot + Spring Security 基本使用及个性化登录配置详解
+https://www.jb51.net/article/140429.htm
+
