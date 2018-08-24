@@ -11,3 +11,26 @@ nohup java -jar  csp-ms-system.jar   --spring.profiles.active=dev >system.out  2
 -I INPUT -s 113.106.93.110 -p tcp --dport 8089 -j DROP
 #开放固定ipIP访问 8080
 -I INPUT -s 113.106.93.110 -p tcp --dport 8080 -j ACCEPT
+
+
+
+
+
+delete from a where id in (select id from (
+	select id from a where cardno in (select cardno from a group by cardno having count(cardno)>1)
+	and id not in(select min(id) from a group by cardno having count(cardno)>1)
+) as tmpresult)
+;
+
+INSERT INTO`user`(username,password) VALUES('Spring','1111');
+INSERT INTO `user`(username,password ) SELECT username,password FROM `user`;
+
+SELECT count(id) FROM `user`;
+
+
+DELETE FROM `user` WHERE id IN(#删除重复的数据（重复数据的id放在一个集合中）
+SELECT id FROM(#查出ID集合
+	SELECT id FROM `user` WHERE username in(SELECT username FROM `user` GROUP BY username HAVING COUNT(username)>1 )
+	AND id NOT IN(SELECT MIN(id) FROM `user` GROUP BY username HAVING COUNT(username)>1)#重复数据删除时要保留一条
+	) AS tem
+)

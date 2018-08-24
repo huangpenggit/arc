@@ -1,0 +1,1176 @@
+
+server {
+    listen       80;
+
+    location /bossImg {
+        root /data;
+    }
+
+    rewrite ^/bsoms/main/index /cms/main/bs/home redirect;
+    rewrite ^/bsoms/?$ /cms/main/login/home redirect;
+    rewrite ^/bsoms/users?/login$ /cms/main/login/home redirect;
+    rewrite ^/(bs_webapp)/ /$1_static/index.html break;
+    rewrite ^/hla/?(.*\;)(jsessionid=\w*)(.*)$  /hla/$1$2$3?$2 break;
+    rewrite ^/hla/?(.*)$ /hla/$1 break;
+
+    location ~ ^/main_static/.*\.(html|css|js|jpg|png|gif|swf|woff|woff2|eot|svg|ttf|otf|mp3|m4a|aac|mp4|ogg) {
+        add_header Cache-Control no-store;
+        proxy_pass http://fe1.rongyi.com:8196;
+        proxy_set_header  Host $http_host;
+        proxy_set_header   X-Real-IP  $remote_addr;
+        proxy_set_header  X-server_name $server_name;
+        proxy_set_header   X-Forwarded-For  $proxy_add_x_forwarded_for;
+        proxy_send_timeout 10s;
+        proxy_read_timeout 10s;
+        proxy_connect_timeout 10s;
+        expires           max;
+    }
+    location ~ ^/cms/main/ {
+        add_header Cache-Control no-store;
+        proxy_pass http://fe1.rongyi.com:8196;
+        proxy_set_header  Host $http_host;
+        proxy_set_header   X-Real-IP  $remote_addr;
+        proxy_set_header  X-server_name $server_name;
+        proxy_set_header   X-Forwarded-For  $proxy_add_x_forwarded_for;
+        proxy_send_timeout 10s;
+        proxy_read_timeout 10s;
+        proxy_connect_timeout 10s;
+        expires           max;
+    }
+
+    location /easy-shop-service {
+        proxy_pass http://127.0.0.1:9170;
+        proxy_redirect off;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+
+    location /ry-activity {
+        proxy_pass http://127.0.0.1:10290;
+        proxy_redirect off;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+    location /ry-activity-client {
+ 	add_header Access-Control-Allow-Origin *;
+        if ($request_method = 'OPTIONS') {
+         add_header 'Access-Control-Allow-Credentials' true;
+         add_header 'Access-Control-Allow-Origin' *;
+         add_header 'Access-Control-Allow-Methods' 'GET, POST, OPTIONS';
+         add_header 'Access-Control-Allow-Headers' 'DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Content-Range,Range';
+         add_header 'Access-Control-Max-Age' 1728000;
+         add_header 'Content-Type' 'text/plain; charset=utf-8';
+         add_header 'Content-Length' 0; return 204;
+        }
+        proxy_pass http://127.0.0.1:10370;
+        proxy_redirect off;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+	client_max_body_size    1000m;
+
+    }
+
+location /sephora-terminal-shopping  {
+    proxy_pass http://127.0.0.1:10360;
+    proxy_redirect off;
+    proxy_set_header Host $host;
+    proxy_set_header X-Real-IP $remote_addr;
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+}
+    location /ry-activity-helecheng-gongyi {
+        add_header Access-Control-Allow-Origin *;
+        if ($request_method = 'OPTIONS') {
+         add_header 'Access-Control-Allow-Credentials' true;
+         add_header 'Access-Control-Allow-Origin' *;
+         add_header 'Access-Control-Allow-Methods' 'GET, POST, OPTIONS';
+         add_header 'Access-Control-Allow-Headers' 'DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Content-Range,Range';
+         add_header 'Access-Control-Max-Age' 1728000;
+         add_header 'Content-Type' 'text/plain; charset=utf-8';
+         add_header 'Content-Length' 0; return 204;
+        }
+        proxy_pass http://127.0.0.1:10440;
+        proxy_redirect off;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        client_max_body_size    1000m;
+
+    }
+
+
+    location /ry-activity-dayuecheng-jifenpaimai {
+	add_header Access-Control-Allow-Origin *;
+	if ($request_method = 'OPTIONS') {
+	add_header 'Access-Control-Allow-Credentials' true;
+	add_header 'Access-Control-Allow-Origin' *;
+	add_header 'Access-Control-Allow-Methods' 'GET, POST, OPTIONS';
+	add_header 'Access-Control-Allow-Headers' 'DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Content-Range,Range';
+	add_header 'Access-Control-Max-Age' 1728000;
+	add_header 'Content-Type' 'text/plain; charset=utf-8';
+	add_header 'Content-Length' 0; return 204;
+	}
+	proxy_pass http://127.0.0.1:10450;
+	proxy_redirect off;
+	proxy_set_header Host $host;
+	proxy_set_header X-Real-IP $remote_addr;
+	proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+	}
+
+    location /easy-rpb {
+        proxy_pass http://127.0.0.1:9460;
+        proxy_redirect off;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+    location /ry-coupon-view {
+        proxy_pass http://127.0.0.1:10160;
+        proxy_redirect off;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+
+    location /ry-coupon-service {
+        proxy_pass http://127.0.0.1:10150;
+        proxy_redirect off;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+    location /easy-core {
+        proxy_pass http://127.0.0.1:9200;
+        proxy_redirect off;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+
+    location /coupon-service {
+        proxy_pass http://127.0.0.1:9860;
+        proxy_redirect off;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+
+    location /easy-rcc {
+        proxy_pass http://127.0.0.1:9420;
+        proxy_redirect off;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+
+    location /trade-schedule {
+        proxy_pass http://127.0.0.1:9280;
+        proxy_redirect off;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+
+    location /wcc-schedule {
+        proxy_pass http://127.0.0.1:10050;
+        proxy_redirect off;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+
+    location /easy-settle {
+        proxy_pass http://127.0.0.1:9500;
+        proxy_redirect off;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+
+    location /easy-smart-service {
+        proxy_pass http://127.0.0.1:10090;
+        proxy_redirect off;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+
+    location /trade-commodity {
+        proxy_pass http://127.0.0.1:9270;
+        proxy_redirect off;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+
+    location /message-service {
+        proxy_pass http://127.0.0.1:10120;
+        proxy_redirect off;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+
+    location /easy-content_management {
+        proxy_pass http://127.0.0.1:9640;
+        proxy_redirect off;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+
+    location /easy-bi-data {
+        proxy_pass http://127.0.0.1:9710;
+        proxy_redirect off;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+
+    location /easy-smartops-biz {
+        proxy_pass http://127.0.0.1:10110;
+        proxy_redirect off;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+
+    location /easy-redi {
+        proxy_pass http://127.0.0.1:9260;
+        proxy_redirect off;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+
+    location /lightning-pos {
+        proxy_pass http://127.0.0.1:9800;
+        proxy_redirect off;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+
+    location /easy-index {
+        proxy_pass http://127.0.0.1:9610;
+        proxy_redirect off;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+
+    location /easy-bdata-service {
+        proxy_pass http://127.0.0.1:9110;
+        proxy_redirect off;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+
+    location /wcc-bdata-service {
+        proxy_pass http://127.0.0.1:9940;
+        proxy_redirect off;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+
+    location /sso {
+        proxy_pass http://127.0.0.1:9130;
+        proxy_redirect off;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+
+    location /wcc-coupon-service {
+        proxy_pass http://127.0.0.1:10030;
+        proxy_redirect off;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+
+    location /easy-bi-dc {
+        proxy_pass http://127.0.0.1:9830;
+        proxy_redirect off;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+
+    location /easy-api-project {
+        proxy_pass http://127.0.0.1:9720;
+        proxy_redirect off;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+
+    location /cms {
+        proxy_pass http://127.0.0.1:9680;
+        proxy_redirect off;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+
+    location /crm {
+        proxy_pass http://127.0.0.1:9560;
+        proxy_redirect off;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+
+    location /easy-rcmq {
+        proxy_pass http://127.0.0.1:9060;
+        proxy_redirect off;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+
+    location /pay-api {
+        proxy_pass http://127.0.0.1:9980;
+        proxy_redirect off;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+
+    location /easy-rmc {
+        proxy_pass http://127.0.0.1:9530;
+        proxy_redirect off;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+
+    location /easy-log-core {
+        proxy_pass http://127.0.0.1:9990;
+        proxy_redirect off;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+
+    location /easy-mcmc-commodity-management {
+        proxy_pass http://127.0.0.1:9160;
+        proxy_redirect off;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+
+    location /easy-mobile-malllife-service {
+        proxy_pass http://127.0.0.1:9330;
+        proxy_redirect off;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+
+    location /easy-rmq {
+        proxy_pass http://127.0.0.1:9070;
+        proxy_redirect off;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+
+    location /easy-daq-task {
+        proxy_pass http://127.0.0.1:9700;
+        proxy_redirect off;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+
+    location /easy-mcmc {
+        proxy_pass http://127.0.0.1:9140;
+        proxy_redirect off;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+
+    location /lightning-trade-score {
+        proxy_pass http://127.0.0.1:9760;
+        proxy_redirect off;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+
+    location /activity-rule {
+        proxy_pass http://127.0.0.1:9650;
+        proxy_redirect off;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+
+    location /easy-revc {
+        proxy_pass http://127.0.0.1:9520;
+        proxy_redirect off;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+
+    location /easy-smms {
+        proxy_pass http://127.0.0.1:9150;
+        proxy_redirect off;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+
+    location /wcc-roa {
+        proxy_pass http://127.0.0.1:9880;
+        proxy_redirect off;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+
+    location /content-service {
+        proxy_pass http://127.0.0.1:9380;
+        proxy_redirect off;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+
+    location /easy-rsi {
+        proxy_pass http://127.0.0.1:9540;
+        proxy_redirect off;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+
+    location /easy-mock {
+        proxy_pass http://127.0.0.1:10010;
+        proxy_redirect off;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+
+    location /easy-rss {
+        proxy_pass http://127.0.0.1:9220;
+        proxy_redirect off;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+
+    location /content-view {
+        proxy_pass http://127.0.0.1:9390;
+        proxy_redirect off;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+
+    location /bsoms {
+        proxy_pass http://127.0.0.1:9000;
+        proxy_redirect off;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+
+    location /trade-valid-view {
+        proxy_pass http://127.0.0.1:9300;
+        proxy_redirect off;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+
+    location /trade-push {
+        proxy_pass http://127.0.0.1:9870;
+        proxy_redirect off;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+
+    location /activity-rule-schedule {
+        proxy_pass http://127.0.0.1:9660;
+        proxy_redirect off;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+
+    location /code-center {
+        proxy_pass http://127.0.0.1:9670;
+        proxy_redirect off;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+
+    location /easy-member-center {
+        proxy_pass http://127.0.0.1:9240;
+        proxy_redirect off;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+
+    location /xxxaa {
+        proxy_pass http://127.0.0.1:10080;
+        proxy_redirect off;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+
+    location /easy-roa {
+        proxy_pass http://127.0.0.1:9090;
+        proxy_redirect off;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+
+    location /wcc-bsoms {
+        proxy_pass http://127.0.0.1:9910;
+        proxy_redirect off;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+
+    location /activity-service {
+        proxy_pass http://127.0.0.1:9360;
+        proxy_redirect off;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+
+    location /easy-ramq {
+        proxy_pass http://127.0.0.1:9050;
+        proxy_redirect off;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+
+    location /easy-smartops-web {
+        proxy_pass http://127.0.0.1:10100;
+        proxy_redirect off;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+
+    location /easy-report {
+        proxy_pass http://127.0.0.1:9580;
+        proxy_redirect off;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+
+    location /easy-mcmc-commodity-operate {
+        proxy_pass http://127.0.0.1:9690;
+        proxy_redirect off;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+
+    location /lightning-integral-service {
+        proxy_pass http://127.0.0.1:9780;
+        proxy_redirect off;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+
+    location /push-service {
+        proxy_pass http://127.0.0.1:9570;
+        proxy_redirect off;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+
+    location /activity-view {
+        proxy_pass http://127.0.0.1:9370;
+        proxy_redirect off;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+
+    location /easy-gcc {
+        proxy_pass http://127.0.0.1:9010;
+        proxy_redirect off;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+
+    location /easy-bi-data-center {
+        proxy_pass http://127.0.0.1:9810;
+        proxy_redirect off;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+
+    location /easy-mobile-task {
+        proxy_pass http://127.0.0.1:9250;
+        proxy_redirect off;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+
+    location /merchant-coupon {
+        proxy_pass http://127.0.0.1:9440;
+        proxy_redirect off;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+    location /easy-virtual-makeup {
+        proxy_pass http://127.0.0.1:10460;
+        proxy_redirect off;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+
+    location /coupon-view {
+        proxy_pass http://127.0.0.1:9410;
+        proxy_redirect off;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+
+    location /easy-ruac {
+        proxy_pass http://127.0.0.1:9230;
+        proxy_redirect off;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+
+    location /easy-integral {
+        proxy_pass http://127.0.0.1:9190;
+        proxy_redirect off;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+
+    location /easy-entity {
+        proxy_pass http://127.0.0.1:9210;
+        proxy_redirect off;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+
+    location /wcc-data-dc {
+        proxy_pass http://127.0.0.1:9950;
+        proxy_redirect off;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+
+    location /easy-project {
+        proxy_pass http://127.0.0.1:9630;
+        proxy_redirect off;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+
+    location /lightning-settle {
+        proxy_pass http://127.0.0.1:9770;
+        proxy_redirect off;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+
+    location /message-view {
+        proxy_pass http://127.0.0.1:9600;
+        proxy_redirect off;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+
+    location /easy-rsmq {
+        proxy_pass http://127.0.0.1:9080;
+        proxy_redirect off;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+
+    location /easy-virtual-account {
+        proxy_pass http://127.0.0.1:9490;
+        proxy_redirect off;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+
+    location /lightning-coupon-service {
+        proxy_pass http://127.0.0.1:10140;
+        proxy_redirect off;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+
+    location /trade-merchant-view {
+        proxy_pass http://127.0.0.1:9310;
+        proxy_redirect off;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+
+    location /lightning-schedule {
+        proxy_pass http://127.0.0.1:9750;
+        proxy_redirect off;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+
+    location /wcc-pay-api {
+        proxy_pass http://127.0.0.1:10020;
+        proxy_redirect off;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+
+    location /lightning-external {
+        proxy_pass http://127.0.0.1:9840;
+        proxy_redirect off;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+
+    location /easy-interactive {
+        proxy_pass http://127.0.0.1:10060;
+        proxy_redirect off;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+
+    location /easy-log {
+        proxy_pass http://127.0.0.1:10000;
+        proxy_redirect off;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+
+    location /easy-mobile-malllife {
+        proxy_pass http://127.0.0.1:9320;
+        proxy_redirect off;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+
+    location /easy-mms {
+        proxy_pass http://127.0.0.1:9510;
+        proxy_redirect off;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+
+    location /trade-checkout {
+        proxy_pass http://127.0.0.1:9970;
+        proxy_redirect off;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+
+    location /trade-service {
+        proxy_pass http://127.0.0.1:9290;
+        proxy_redirect off;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+
+    location /easy-rvc {
+        proxy_pass http://127.0.0.1:9550;
+        proxy_redirect off;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+
+    location /ryoms {
+        proxy_pass http://127.0.0.1:9120;
+        proxy_redirect off;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+
+    location /easy-tms {
+        proxy_pass http://127.0.0.1:9470;
+        proxy_redirect off;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+
+    location /wcc-mobile-shopcart-order_billing {
+        proxy_pass http://127.0.0.1:9900;
+        proxy_redirect off;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+
+    location /easy-bi-schedule {
+        proxy_pass http://127.0.0.1:9820;
+        proxy_redirect off;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+
+    location /wcc-data-schedule {
+        proxy_pass http://127.0.0.1:9960;
+        proxy_redirect off;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+
+    location /lightning-user {
+        proxy_pass http://127.0.0.1:9790;
+        proxy_redirect off;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+
+    location /easy-ganghui {
+        proxy_pass http://127.0.0.1:9100;
+        proxy_redirect off;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+
+    location /lightning-coupon-center {
+        proxy_pass http://127.0.0.1:10130;
+        proxy_redirect off;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+
+    location /activity-web {
+        proxy_pass http://127.0.0.1:9450;
+        proxy_redirect off;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+
+    location /easy-im-service {
+        proxy_pass http://127.0.0.1:9030;
+        proxy_redirect off;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+
+    location /easy-sensitive-words-service {
+        proxy_pass http://127.0.0.1:9590;
+        proxy_redirect off;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+
+    location /easy-anti-cheat {
+        proxy_pass http://127.0.0.1:9480;
+        proxy_redirect off;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+
+    location /lightning-mall-service {
+        proxy_pass http://127.0.0.1:10070;
+        proxy_redirect off;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+
+    location /easy-search-service {
+        proxy_pass http://127.0.0.1:9020;
+        proxy_redirect off;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+
+    location /easy-redis-service {
+        proxy_pass http://127.0.0.1:9620;
+        proxy_redirect off;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+
+    location /wcc-push-service {
+        proxy_pass http://127.0.0.1:9920;
+        proxy_redirect off;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+
+    location /easy-shop-management {
+        proxy_pass http://127.0.0.1:9180;
+        proxy_redirect off;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+
+    location /wcc-message-view {
+        proxy_pass http://127.0.0.1:9930;
+        proxy_redirect off;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+
+    location /easy-mobile-shopcart-order_billing {
+        proxy_pass http://127.0.0.1:9350;
+        proxy_redirect off;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+
+    location /easy-vms {
+        proxy_pass http://127.0.0.1:9430;
+        proxy_redirect off;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+
+    location /wcc-trade-service {
+        proxy_pass http://127.0.0.1:10040;
+        proxy_redirect off;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+
+    location /easy-check {
+        proxy_pass http://127.0.0.1:9730;
+        proxy_redirect off;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+
+    location /easy-mobile-mallshop {
+        proxy_pass http://127.0.0.1:9340;
+        proxy_redirect off;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+
+    location /easy-solr {
+        proxy_pass http://127.0.0.1:9040;
+        proxy_redirect off;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+
+
+
+    location /bdata {
+        rewrite /bdata/?(.*)$ /easy-roa/bdata/$1 break;
+        proxy_pass http://127.0.0.1:9090;
+        proxy_redirect off;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+
+    location /rmmm {
+        rewrite /rmmm/?(.*\;)(jsessionid=\w*)(.*)$  /easy-mobile-mallshop/$1$2$3?$2 break;
+        rewrite ^/rmmm/?(.*)$ /easy-mobile-mallshop/$1 break;
+        proxy_pass        http://127.0.0.1:9340;
+        proxy_cookie_path /easy-mobile-mallshop/ /rmmm/;
+        proxy_redirect off;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+
+    location /app {
+        rewrite /app/?(.*\;)(jsessionid=\w*)(.*)$  /easy-mobile-malllife/$1$2$3?$2 break;
+        rewrite ^/app/?(.*)$ /easy-mobile-malllife/$1 break;
+        proxy_pass        http://127.0.0.1:9320;
+        proxy_cookie_path /app/ /easy-mobile-malllife/;
+        proxy_redirect off;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+
+    location /pos {
+        rewrite /pos/?(.*\;)(jsessionid=\w*)(.*)$ /lightning-pos/$1$2$3?$2 break;
+        rewrite /pos/?(.*)$ /lightning-pos/$1 break;
+        proxy_pass http://127.0.0.1:9800;
+        proxy_cookie_path /lightning-pos/ /pos/;
+        proxy_redirect off;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+
+    location /ops{
+       rewrite /ops/?(.*\;)(jsessionid=\w*)(.*)$  /easy-smartops-web/$1$2$3?$2 break;
+       rewrite /ops/?(.*)$ /easy-smartops-web/$1 break;
+       proxy_pass http://127.0.0.1:10100;
+       proxy_redirect off;
+       proxy_set_header Host $host;
+       proxy_set_header X-Real-IP $remote_addr;
+       proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+    #java接口 商家后台-智能终端
+    location /easy-smart{
+        rewrite /easy-smart/?(.*)$ /easy-smart-service/$1 break;
+        proxy_pass http://127.0.0.1:10090;
+        proxy_redirect off;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+    location /colombo-captain{
+       rewrite /colombo-captain/?(.*\;)(jsessionid=\w*)(.*)$  /colombo-captain/$1$2$3?$2 break;
+       rewrite /colombo-captain/?(.*)$ /colombo-captain/$1 break;
+       proxy_pass http://127.0.0.1:10310;
+       proxy_redirect off;
+       proxy_set_header Host $host;
+       proxy_set_header X-Real-IP $remote_addr;
+       proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+
+    #customized projects. ext
+    location /hla{
+
+        proxy_pass http://127.0.0.1:8089;
+        proxy_redirect off;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+
+    }
+
+    location /crossdomain.xml {
+        alias /etc/nginx/crossdomain.xml;
+    }
+
+}
+server {
+    listen 443;
+    ssl                  on;
+    ssl_certificate      /etc/ssl/rm-cert.pem;
+    ssl_certificate_key  /etc/ssl/rm-key.pem;
+    ssl_verify_client on;
+    ssl_client_certificate /etc/ssl/ca-cert.pem;
+    ssl_protocols  SSLv2 SSLv3 TLSv1;
+    ssl_ciphers  ALL:!ADH:!EXPORT56:RC4+RSA:+PKCS12:+HIGH:+MEDIUM:+LOW:+SSLv2:+EXP;
+    ssl_prefer_server_ciphers   on;
+
+    location /rmmm {
+        rewrite /rmmm/?(.*\;)(jsessionid=\w*)(.*)$  /easy-mobile-mallshop/$1$2$3?$2 break;
+        rewrite ^/rmmm/?(.*)$ /easy-mobile-mallshop/$1 break;
+        proxy_pass        http://127.0.0.1:9340;
+        proxy_cookie_path /easy-mobile-mallshop/ /rmmm/;
+        proxy_redirect off;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+
+    location /app {
+        rewrite /app/?(.*\;)(jsessionid=\w*)(.*)$  /easy-mobile-malllife/$1$2$3?$2 break;
+        rewrite ^/app/?(.*)$ /easy-mobile-malllife/$1 break;
+        proxy_pass        http://127.0.0.1:9320;
+        proxy_cookie_path /app/ /easy-mobile-malllife/;
+        proxy_redirect off;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+
+    location /pos {
+        rewrite /pos/?(.*\;)(jsessionid=\w*)(.*)$ /lightning-pos/$1$2$3?$2 break;
+        rewrite ^/pos/?(.*)$ /lightning-pos/$1 break;
+        proxy_pass http://127.0.0.1:9800;
+        proxy_redirect off;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+
+    #customized projects. ext
+    location /hla{
+
+        proxy_pass http://127.0.0.1:8089;
+        proxy_redirect off;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+}
+

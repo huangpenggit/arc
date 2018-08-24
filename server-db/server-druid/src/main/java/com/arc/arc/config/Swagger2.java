@@ -1,4 +1,4 @@
-package com.arc.arc;
+package com.arc.arc.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
