@@ -3355,8 +3355,8 @@ CREATE TABLE `users` (
 -- Records of users
 -- ----------------------------
 INSERT INTO `users` VALUES ('4', '4', null, null, null, null, '0', null, null, null, null, null, null, null, null, null, null, null, null, null, null, null);
-INSERT INTO `users` VALUES ('5', '测试', '1234', null, null, null, '0', null, null, null, null, null, null, null, null, null, null, null, null, null, null, null);
-INSERT INTO `users` VALUES ('6', '测试', '1234', null, null, null, '0', null, null, null, null, null, null, null, null, null, null, null, null, null, null, null);
+INSERT INTO `users` VALUES ('5', 'SQL', '1234', null, null, null, '0', null, null, null, null, null, null, null, null, null, null, null, null, null, null, null);
+INSERT INTO `users` VALUES ('6', 'SQL', '1234', null, null, null, '0', null, null, null, null, null, null, null, null, null, null, null, null, null, null, null);
 INSERT INTO `users` VALUES ('7', 'miao', '1234', null, null, null, '0', null, null, null, null, null, null, null, null, null, null, null, null, null, null, null);
 INSERT INTO `users` VALUES ('8', '规范和金刚护法', '为荣亚特让我也', null, null, null, '0', null, null, null, null, null, null, null, null, null, null, null, null, null, null, null);
 INSERT INTO `users` VALUES ('12', 'BBBB', '1111111111111', null, null, null, '0', null, null, null, null, null, null, null, null, null, null, null, null, null, null, null);

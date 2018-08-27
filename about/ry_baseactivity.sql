@@ -321,7 +321,7 @@ INSERT INTO `activity_prize` VALUES ('132', '39', '', '文案恭喜你中', '', 
 INSERT INTO `activity_prize` VALUES ('133', '40', '', '文案恭喜你中', '', '4', '', '文案恭喜你中', '0', '恭喜你中间两个', '0', null, '100', '98', '10', null, null, '2018-07-09 17:43:25');
 INSERT INTO `activity_prize` VALUES ('134', '42', '', '文案中奖了', '', '4', '', '文案中奖了', '0', '中奖了', '0', null, '0', '0', '0', null, null, '2018-06-11 17:54:21');
 INSERT INTO `activity_prize` VALUES ('135', '50', '', '会员积分1', '', '2', '', '会员积分1', '0', '', '1', null, '1', '1', '0', null, null, '2018-06-13 15:03:53');
-INSERT INTO `activity_prize` VALUES ('136', '51', '', '文案测试', '', '4', '', '文案测试', '0', '测试', '0', null, '100', '100', '0', null, null, '2018-06-22 16:12:13');
+INSERT INTO `activity_prize` VALUES ('136', '51', '', '文案测试', '', '4', '', '文案测试', '0', 'SQL', '0', null, '100', '100', '0', null, null, '2018-06-22 16:12:13');
 INSERT INTO `activity_prize` VALUES ('137', '52', '', '文案test', '', '4', '', '文案test', '0', 'test', '0', null, '2', '2', '0', null, null, '2018-06-22 16:16:28');
 INSERT INTO `activity_prize` VALUES ('138', '53', '', '文案test', '', '4', '', '文案test', '0', 'test', '0', null, '2', '2', '0', null, null, '2018-06-22 16:18:07');
 INSERT INTO `activity_prize` VALUES ('139', '54', '', '文案test', '', '4', '', '文案test', '0', 'test', '0', null, '2', '2', '0', null, null, '2018-06-22 16:18:11');
