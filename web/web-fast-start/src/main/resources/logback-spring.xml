@@ -25,7 +25,7 @@ debug:当此属性设置为true时，将打印出logback内部日志信息，实
     <root level="DEBUG">
         <!--appender将会添加到这个logger-->
         <appender-ref ref="consoleLog1"/>
-        <appender-ref ref="consoleLog2"/>
+        <!--<appender-ref ref="consoleLog2"/>-->
     </root>
 
 
