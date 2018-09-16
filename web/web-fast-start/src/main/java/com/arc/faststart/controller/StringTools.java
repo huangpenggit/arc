@@ -3,6 +3,9 @@ package com.arc.faststart.controller;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+/**
+ * String 工具类
+ */
 public class StringTools {
 
     public static String replaceBlank(String str) {
