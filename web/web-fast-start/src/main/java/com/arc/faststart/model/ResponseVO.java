@@ -17,12 +17,10 @@ public class ResponseVO {
      */
     private Integer code;
 
-
     /**
      * 消息
      */
     private String msg;
-
 
     /**
      * 数据
