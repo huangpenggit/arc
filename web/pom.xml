@@ -27,6 +27,7 @@
         <module>web-fast-start</module>
         <module>website-https</module>
         <module>web-validating</module>
+        <module>web-vue</module>
         <module>web-wechat</module>
         <module>web-environment</module>
     </modules>

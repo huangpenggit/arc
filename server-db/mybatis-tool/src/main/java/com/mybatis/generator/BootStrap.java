@@ -12,27 +12,27 @@ import com.mybatis.generator.meta.TableMeta;
 
 @Component
 public class BootStrap {
-	
+
 	private static final Logger logger = LoggerFactory.getLogger(BootStrap.class);
-	
+
 	@Autowired
 	private MetaMapper mapper;
-	
+
 	private @Value("${meta.schemaName}") 		String tableSchema;
 	private @Value("${meta.tableName}") 		String tableName;
-	
+
 	@Autowired
 	private FreemarkerGenerator generator;
-	
+
 	public void start() throws Exception {
 		TableMeta meta = mapper.get(tableSchema, tableName);
-		
+
 		if (meta == null) {
 			throw new IllegalArgumentException("Please check schemaName and tableName are correct. ");
 		}
-		
-		logger.info("{}", JacksonUtils.toJson(meta));
-		
+
+//		logger.info("meta信息为{}", JacksonUtils.toJson(meta));
+        System.out.println("meta信息为 "+meta);
 		generator.generate(meta);
 	}
 }

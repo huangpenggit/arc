@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <script type="text/javascript" th:src="@{/pulgins.js/jQuery.js}"></script>
+    <meta charset="UTF-8"/>
+    <title>测试</title>
+</head>
+
+<body>
+<h1>用static资源来渲染</h1>
+<div>
+    <input id="username" name="username" value="路人甲">
+    <input id="password" name="password">
+    <input id="button" type="button" value="获取新的名字">
+</div>
+<img src="/images/hua.jpg">
+<script type="application/javascript">
+    $(function () {
+        console.log("是否引入jQuery成功了呢" + $ == jQuery);
+        var username = $("#username").val();
+        var password = $("#password").val();
+        console.log(username);
+        console.log(password);
+    });
+    //
+    //设置input框的value
+    $("#button").click(function () {
+        $.get("/json/data.json", function (result) {
+            console.log(result);
+            if (result) {
+                username = result.username;
+                password = result.password;
+                $("#username").val(username);
+                $("#password").val(password);
+                console.log(1);
+            }
+        });
+    });
+</script>
+</body>
+</html>
