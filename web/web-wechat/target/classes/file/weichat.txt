@@ -1,0 +1,20 @@
+
+
+https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=wx13c5d7f72dc057fd&secret=d66abf648bcbeb19275606c49f2bb4f8
+
+{"errcode":40164,"errmsg":"invalid ip 101.80.183.16, not in whitelist hint: [pGFs900161501]"}
+#添加IP 白名单到微信公众号中，在网上修改
+{"access_token":"11_ENVtgMyF6D_PoA3sPjabAgSPKa-D69djSn7ATsHmRpP6uofV0irJQA8pjYBeKh9-oAL_UaQyyxqn1j6KdV6NQVW6Pmt7veD_AluFFP0OR5-j7e4KZi-TR4IAd7SzFEkpeocS-OiuG81-7ruMXFZdAFACKE","expires_in":7200}
+
+Slf4j和Log4j
+Slf4j 简单日记门面(simple logging Facade for Java)SLF4J是为各种loging
+APIs提供一个简单统一的接口，允许用户在部署最终应用时方便的变更其日志系统 从而使得最终用户能够在部署的时候配置自己希望的loging APIs实现
+下面对slf4j和log4j做一下总结：
+（1）大部分人在程序里面会去写logger.error(exception),其实这个时候log4j会去把这个exception tostring。真正的写法应该是logger(message.exception);而slf4j就不会使得程序员犯这个错误。
+（2）log4j间接的在鼓励程序员使用string相加的写法，而slf4j就不会有这个问题。你可以使用logger.error("{} is+serviceid",serviceid)。
+（3）使用slf4j可以方便的使用其提供的各种集体的实现的jar。（类似commons-logger）
+（4）从commons--logger和log4j merge非常方便，slf4j也提供了一个swing的tools来帮助大家完成这个merge。
+文章标签： Log4j Slf4j
+
+
+facade n.	外表; 建筑物的正面; 虚伪，假象;

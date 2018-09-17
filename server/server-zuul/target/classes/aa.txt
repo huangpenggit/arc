@@ -1,0 +1,104 @@
+server:
+  port: 8769
+
+spring:
+#  profiles:
+#    active: local
+  application:
+    name: arc-server-zuul
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8761/eureka/
+  instance:
+    prefer-ip-address: true
+#    instance-id: 1270.0.1 :8761
+    instance-id: 1270.0.1 :8761
+#    instance-id: ${spring.cloud.client.ipAddress}:${server.port}
+
+zuul:
+  max:
+    host:
+      connections: 500
+  host:
+    socket-timeout-millis: 60000
+    connect-timeout-millis: 60000
+#  routes:
+#    api-a:
+#      path: /api-a/**
+#      service-id: service-a
+#    api-a:
+#      path: /api-b/**
+#      service-id: service-b
+ribbon:
+  ReadTimeout: 10000
+  ConnectTimeout: 10000
+  MaxAutoRetries: 0
+  MaxAutoRetriesNextServer: 1
+  eureka:
+    enabled: true
+hystrix:
+  command:
+    default:
+      execution:
+        timeout:
+          enabled: true
+        isolation:
+          thread:
+            timeoutInMilliseconds: 60000
+
+
+#eureka:
+#  client:
+#    serviceUrl:
+#          defaultZone: http://localhost:8761/eureka/
+#  instance:
+#    prefer-ip-address: true
+#    instance-id: ${spring.cloud.client.ipAddress}:${server.port}
+
+#zuul:
+#  routes:
+#    api-a:
+#      path: /api-a/**
+#      serviceId: service-ribbon
+#    api-b:
+#      path: /api-b/**
+#      serviceId: service-feign
+################################################################################################################
+#          首先向eureka注册自己，5555，服务名为service-zuul；以/api-a/ 开头的请求都指向service-ribbon；以/api-b/开头的请求都指向service-feign；
+#           依次运行这五个工程;打开浏览器访问：http://localhost:8769/api-a/hi?name=forezp ;浏览器显示：
+#           hi forezp,i am from port:55555
+#           打开浏览器访问：http://localhost:8769/api-b/hi?name=forezp ;浏览器显示：
+#           hi forezp,i am from port:8762
+#           这说明zuul起到了路由的作用；
+########################################################
+
+
+########################################################
+#          Environment for Localhost
+########################################################
+#---
+#spring:
+#  profiles: local
+#eureka:
+#  client:
+#    registry-fetch-interval-seconds: 5
+#    service-url:
+#      defaultZone: http://a:a@127.0.0.1:8761/eureka/
+#      defaultZone: http://127.0.0.1:8761/eureka/
+
+
+
+
+########################################################
+#          Environment for Development
+########################################################
+
+########################################################
+#          Environment for Testing
+########################################################
+
+########################################################
+#          Environment for Production
+########################################################
