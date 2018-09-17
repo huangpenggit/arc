@@ -1,6 +1,6 @@
 package com.arc.servermongo.service;
 
-import com.arc.model.common.Person;
+import com.arc.model.domain.common.Person;
 
 import java.util.List;
 

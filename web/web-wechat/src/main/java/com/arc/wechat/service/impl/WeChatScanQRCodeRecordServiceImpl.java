@@ -1,7 +1,7 @@
 package com.arc.wechat.service.impl;
 
-import com.arc.dto.wechat.WeChatDTO;
-import com.arc.model.wechat.WeChatScanQRCodeRecord;
+import com.arc.model.domain.wechat.WeChatDTO;
+import com.arc.model.domain.wechat.WeChatScanQRCodeRecord;
 import com.arc.wechat.mapper.two.WeChatScanQRCodeRecordMapper;
 import com.arc.wechat.service.WeChatScanQRCodeRecordService;
 import lombok.extern.slf4j.Slf4j;

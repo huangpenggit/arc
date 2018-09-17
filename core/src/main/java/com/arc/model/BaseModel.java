@@ -9,8 +9,6 @@ import java.io.Serializable;
 
 @Setter
 @Getter
-@ToString
-@NoArgsConstructor
 public class BaseModel implements Serializable {
 
 

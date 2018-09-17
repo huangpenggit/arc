@@ -1,7 +1,7 @@
 package com.arc.wechat.service;
 
-import com.arc.dto.wechat.WeChatDTO;
-import com.arc.model.wechat.WeChatScanQRCodeRecord;
+import com.arc.model.domain.wechat.WeChatDTO;
+import com.arc.model.domain.wechat.WeChatScanQRCodeRecord;
 
 import java.util.List;
 

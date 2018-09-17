@@ -1,6 +1,6 @@
 package com.arc.servermongo.repository;
 
-import com.arc.model.common.User;
+import com.arc.model.domain.common.User;
 import org.springframework.data.mongodb.repository.MongoRepository;
 
 /**

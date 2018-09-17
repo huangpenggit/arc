@@ -1,6 +1,6 @@
 package com.arc.faststart.mapper;
 
-import com.arc.model.common.File;
+import com.arc.model.domain.common.File;
 import org.apache.ibatis.annotations.Param;
 
 public interface FileMapper   {

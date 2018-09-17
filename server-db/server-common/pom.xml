@@ -27,26 +27,12 @@
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
-        <!--freemarker-->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-freemarker</artifactId>
-        </dependency>
-
-
         <!--test-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
-
-        <!--log-->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-logging</artifactId>
-        </dependency>
-
 
         <!--fastjson-->
         <dependency>
@@ -55,6 +41,7 @@
             <!--<version>1.2.44</version>-->
         </dependency>
 
+        <!--commons-io-->
         <dependency>
             <groupId>commons-io</groupId>
             <artifactId>commons-io</artifactId>

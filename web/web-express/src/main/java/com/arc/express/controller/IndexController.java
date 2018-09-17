@@ -1,6 +1,6 @@
 package com.arc.express.controller;
 
-import com.arc.model.common.Person;
+import com.arc.model.domain.common.Person;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

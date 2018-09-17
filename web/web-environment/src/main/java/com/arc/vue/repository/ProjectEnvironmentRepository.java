@@ -1,6 +1,6 @@
 package com.arc.vue.repository;
 
-import com.arc.model.enviroment.ProjectEnvironment;
+import com.arc.model.domain.enviroment.ProjectEnvironment;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

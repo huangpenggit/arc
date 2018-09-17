@@ -1,7 +1,7 @@
 package com.arc.vue.controller;
 
 import com.arc.vue.service.ProjectEnvironmentService;
-import com.arc.model.enviroment.ProjectEnvironment;
+import com.arc.model.domain.enviroment.ProjectEnvironment;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

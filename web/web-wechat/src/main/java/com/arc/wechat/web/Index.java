@@ -1,7 +1,7 @@
 package com.arc.wechat.web;
 
-import com.arc.model.common.Area;
-import com.arc.model.common.User;
+import com.arc.model.domain.common.Area;
+import com.arc.model.domain.common.User;
 import com.arc.wechat.mapper.one.UserMapper;
 import com.arc.wechat.mapper.two.AreaMapper;
 import lombok.extern.slf4j.Slf4j;

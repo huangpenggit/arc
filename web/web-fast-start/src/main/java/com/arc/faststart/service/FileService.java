@@ -1,6 +1,6 @@
 package com.arc.faststart.service.impl;
 
-import com.arc.model.common.File;
+import com.arc.model.domain.common.File;
 
 public interface FileService {
 

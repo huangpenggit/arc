@@ -22,7 +22,7 @@
 
     <!-- 模块说明：这里声明多个子模块 -->
     <modules>
-        <module>web-back</module>
+        <module>web-shop</module>
         <module>web-express</module>
         <module>web-fast-start</module>
         <module>website-https</module>

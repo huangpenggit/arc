@@ -1,6 +1,6 @@
 package com.arc.servermongo.controller;
 
-import com.arc.model.common.Person;
+import com.arc.model.domain.common.Person;
 import com.arc.servermongo.service.PersonService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;

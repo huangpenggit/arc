@@ -1,7 +1,7 @@
 package com.arc.faststart.controller;
 
-import com.arc.dto.wechat.ImageDTO;
-import com.arc.vo.ResponseVO;
+import com.arc.model.domain.wechat.ImageDTO;
+import com.arc.model.vo.ResponseVo;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -24,7 +24,7 @@ public class File1Controller {
 
     public void testUpload(MultipartHttpServletRequest request, HttpServletResponse response) {
         //使用restful风格，返回值
-        ResponseVO result = new ResponseVO();
+        ResponseVo result = new ResponseVo();
         //项目的所在地，加上定义的uploadImg文件
         //1、获取请求中的数据，并转换为文件
         // 2、文件格式以及有效性判断

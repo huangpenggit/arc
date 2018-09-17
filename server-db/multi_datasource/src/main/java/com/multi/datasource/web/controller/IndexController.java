@@ -1,8 +1,8 @@
 package com.multi.datasource.web.controller;
 
 
-import com.arc.model.common.Area;
-import com.arc.model.common.User;
+import com.arc.model.domain.common.Area;
+import com.arc.model.domain.common.User;
 import com.multi.datasource.mapper.master.UserMapper;
 import com.multi.datasource.mapper.cluster.AreaMapper;
 import org.springframework.beans.factory.annotation.Autowired;

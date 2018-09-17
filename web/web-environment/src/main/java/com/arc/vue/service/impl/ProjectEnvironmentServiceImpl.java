@@ -2,7 +2,7 @@ package com.arc.vue.service.impl;
 
 import com.arc.vue.repository.ProjectEnvironmentRepository;
 import com.arc.vue.service.ProjectEnvironmentService;
-import com.arc.model.enviroment.ProjectEnvironment;
+import com.arc.model.domain.enviroment.ProjectEnvironment;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

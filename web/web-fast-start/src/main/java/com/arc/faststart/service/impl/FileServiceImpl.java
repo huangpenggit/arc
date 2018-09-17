@@ -1,7 +1,7 @@
 package com.arc.faststart.service.impl;
 
 import com.arc.faststart.mapper.FileMapper;
-import com.arc.model.common.File;
+import com.arc.model.domain.common.File;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

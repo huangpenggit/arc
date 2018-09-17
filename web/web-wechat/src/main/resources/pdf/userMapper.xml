@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.arc.wechat.mapper.UserMapper">
 
-    <resultMap id="user" type="com.arc.model.common.User">
+    <resultMap id="user" type="com.arc.model.domain.common.User">
         <id property="id" column="u_id" javaType="long" jdbcType="BIGINT"/>
         <result property="nickname" column="u_nickname" javaType="string" jdbcType="VARCHAR"/>
         <result property="avatar" column="u_avatar" javaType="string" jdbcType="VARCHAR"/>
@@ -37,7 +37,7 @@
         FROM user u_
     </select>
 
-    <insert id="save" parameterType="com.arc.model.common.User" useGeneratedKeys="true" keyProperty="id">
+    <insert id="save" parameterType="com.arc.model.domain.common.User" useGeneratedKeys="true" keyProperty="id">
         INSERT INTO user (
         nickname,
         avatar,
@@ -60,7 +60,7 @@
     <delete id="delete">
         delete from `user` where id={id, jdbcType="BIGINT"}
     </delete>
-    <update id="update" parameterType="com.arc.model.common.User">
+    <update id="update" parameterType="com.arc.model.domain.common.User">
         UPDATE user
         <set>
             <if test="nickname != null and nickname != ''">

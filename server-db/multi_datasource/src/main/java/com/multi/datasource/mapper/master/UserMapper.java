@@ -1,6 +1,6 @@
 package com.multi.datasource.mapper.master;
 
-import com.arc.model.common.User ;
+import com.arc.model.domain.common.User ;
 import org.springframework.stereotype.Service;
 
 @Service

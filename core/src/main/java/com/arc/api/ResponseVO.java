@@ -33,7 +33,7 @@ import java.io.Serializable;
  * @author Breggor
  *//*
 
-public class ResponseVO implements java.io.Serializable {
+public class ResponseVo implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
     private final static int DEFAULT_SUCCESS_STATUS = 0;
     private final static int DEFAULT_FAIL_STATUS = 1;
@@ -44,7 +44,7 @@ public class ResponseVO implements java.io.Serializable {
     private Meta meta;        //errno=0：成功, errno=1：失败
     private Result result;    //数据
 
-    public ResponseVO() {
+    public ResponseVo() {
     }
 
     */
@@ -70,8 +70,8 @@ public class ResponseVO implements java.io.Serializable {
      * @return ResponseData
      *//*
 
-    public static ResponseVO success() {
-        return new ResponseVO(ResponseVO.SUCCESS, null);
+    public static ResponseVo success() {
+        return new ResponseVo(ResponseVo.SUCCESS, null);
     }
 
     */
@@ -82,8 +82,8 @@ public class ResponseVO implements java.io.Serializable {
      * @return ResponseData
      *//*
 
-    public static <T> ResponseVO success(T data) {
-        return new ResponseVO(ResponseVO.SUCCESS, new Result(data, null));
+    public static <T> ResponseVo success(T data) {
+        return new ResponseVo(ResponseVo.SUCCESS, new Result(data, null));
     }
 
 
@@ -98,8 +98,8 @@ public class ResponseVO implements java.io.Serializable {
      * @return ResponseData
      *//*
 
-    public static <T> ResponseVO success(T data, Integer currentPage, Integer pageSize, Integer totalCount) {
-        return new ResponseVO(ResponseVO.SUCCESS, data, currentPage, pageSize, totalCount);
+    public static <T> ResponseVo success(T data, Integer currentPage, Integer pageSize, Integer totalCount) {
+        return new ResponseVo(ResponseVo.SUCCESS, data, currentPage, pageSize, totalCount);
     }
 
 
@@ -110,8 +110,8 @@ public class ResponseVO implements java.io.Serializable {
      * @return ResponseData
      *//*
 
-    public static ResponseVO failure() {
-        return new ResponseVO(ResponseVO.FAILURE, null);
+    public static ResponseVo failure() {
+        return new ResponseVo(ResponseVo.FAILURE, null);
     }
 
 
@@ -124,13 +124,13 @@ public class ResponseVO implements java.io.Serializable {
      * @return ResponseData
      *//*
 
-    public static ResponseVO failure(int errno, String msg) {
-        return new ResponseVO(new Meta(errno, msg), null);
+    public static ResponseVo failure(int errno, String msg) {
+        return new ResponseVo(new Meta(errno, msg), null);
     }
 
 
-    public static <T> ResponseVO redRebate(int errno, String msg, T data) {
-        return new ResponseVO(new Meta(errno, msg), new Result(data, null));
+    public static <T> ResponseVo redRebate(int errno, String msg, T data) {
+        return new ResponseVo(new Meta(errno, msg), new Result(data, null));
     }
 
 
@@ -143,12 +143,12 @@ public class ResponseVO implements java.io.Serializable {
      * @return ResponseData
      *//*
 
-    public static <T> ResponseVO failure(int errno, String msg, T data) {
-        return new ResponseVO(new Meta(errno, msg), new Result(data, null));
+    public static <T> ResponseVo failure(int errno, String msg, T data) {
+        return new ResponseVo(new Meta(errno, msg), new Result(data, null));
     }
 
 
-    private <T> ResponseVO(Meta meta, T data, Integer currentPage, Integer pageSize, Integer totalCount) {
+    private <T> ResponseVo(Meta meta, T data, Integer currentPage, Integer pageSize, Integer totalCount) {
         this.meta = meta;
         if (data != null && currentPage != null && pageSize != null && totalCount != null) {
             this.result = new Result(data, new Page(currentPage, pageSize, totalCount));
@@ -157,7 +157,7 @@ public class ResponseVO implements java.io.Serializable {
     }
 
 
-    private ResponseVO(Meta meta, Result result) {
+    private ResponseVo(Meta meta, Result result) {
         this.meta = meta;
         this.result = result;
     }
@@ -369,12 +369,12 @@ public class ResponseVO implements java.io.Serializable {
 //    	list.add("2");
 //    	Map<String, Object> map = new HashMap<String, Object>();
 //    	map.put("usable", true);
-//    	System.out.println(JSONObject.fromObject(ResponseVO.success(map)));
-//        System.out.println(JSONObject.fromObject(ResponseVO.success()));
-//        System.out.println(JSONObject.fromObject(ResponseVO.success("处理成功：返回单个对象")));
-//        System.out.println(JSONObject.fromObject(ResponseVO.success("处理成功：返回对象集合List<Object>", 1, 10, 200)));
-//        System.out.println(JSONObject.fromObject(ResponseVO.failure()));
-//        System.out.println(JSONObject.fromObject(ResponseVO.failure(1020001, "业务出错")));
+//    	System.out.println(JSONObject.fromObject(ResponseVo.success(map)));
+//        System.out.println(JSONObject.fromObject(ResponseVo.success()));
+//        System.out.println(JSONObject.fromObject(ResponseVo.success("处理成功：返回单个对象")));
+//        System.out.println(JSONObject.fromObject(ResponseVo.success("处理成功：返回对象集合List<Object>", 1, 10, 200)));
+//        System.out.println(JSONObject.fromObject(ResponseVo.failure()));
+//        System.out.println(JSONObject.fromObject(ResponseVo.failure(1020001, "业务出错")));
 //
 //
 //

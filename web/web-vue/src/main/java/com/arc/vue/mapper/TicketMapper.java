@@ -1,6 +1,6 @@
 package com.arc.vue.mapper;
 
-import com.arc.model.vue.Ticket;
+import com.arc.model.domain.vue.Ticket;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
