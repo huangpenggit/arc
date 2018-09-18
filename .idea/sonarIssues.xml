@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="issues">
+    <option name="index">
+      <map>
+        <entry key="/Dummy.txt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="/a.dummy">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$MAVEN_REPOSITORY$/com/zaxxer/HikariCP/2.7.9/HikariCP-2.7.9.jar!/com/zaxxer/hikari/pool/HikariPool.class">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/8.5.31/tomcat-embed-core-8.5.31.jar!/org/apache/catalina/core/ApplicationPart.class">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/about/arc-doc/临时">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/about/arc-doc/说明2">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/about/arc-doc/说明3">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/about/ry_baseactivity.sql">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/about/命令.txt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/about/测试">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/about/说明">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/web/web-fast-start/src/main/java/com/arc/faststart/Test.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/web/web-wechat/src/main/resources/application.yml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../ry/h/hlamall-terminal/hla-common/src/main/java/com/rongyi/api/ApiCode.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../ry/h/hlamall-terminal/hla-common/src/main/java/com/rongyi/dto/product/ProductDTO.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../ry/h/hlamall-terminal/hla-common/src/main/java/com/rongyi/enums/PullName.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../ry/h/hlamall-terminal/hla-common/src/main/java/com/rongyi/model/product/GroupSpu.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../ry/h/hlamall-terminal/hla-common/src/main/java/com/rongyi/model/product/GroupSpu1.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../ry/h/hlamall-terminal/hla-common/src/main/java/com/rongyi/model/product/ProductSpu.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../ry/h/hlamall-terminal/hla-common/src/main/java/com/rongyi/model/product/PullLog.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../ry/h/hlamall-terminal/hla-manage/src/main/java/com/rongyi/hla/agent/GroupAgent.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../ry/h/hlamall-terminal/hla-manage/src/main/java/com/rongyi/hla/agent/SkuAgent.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../ry/h/hlamall-terminal/hla-manage/src/main/java/com/rongyi/hla/agent/SpuAgent.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../ry/h/hlamall-terminal/hla-manage/src/main/java/com/rongyi/hla/controller/FileController.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../ry/h/hlamall-terminal/hla-manage/src/main/java/com/rongyi/hla/controller/ProductController.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../ry/h/hlamall-terminal/hla-manage/src/main/java/com/rongyi/hla/init/SystemInitializationStartup.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../ry/h/hlamall-terminal/hla-manage/src/main/java/com/rongyi/hla/mapper/product/InitDatabaseMapper.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../ry/h/hlamall-terminal/hla-manage/src/main/java/com/rongyi/hla/mapper/product/PullLogMapper.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../ry/h/hlamall-terminal/hla-manage/src/main/java/com/rongyi/hla/regular/SyncTask.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../ry/h/hlamall-terminal/hla-manage/src/main/java/com/rongyi/hla/service/product/impl/ProductServiceImpl.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../ry/h/hlamall-terminal/hla-manage/src/main/java/com/rongyi/hla/service/product/impl/ProductSpuServiceImpl.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../ry/h/hlamall-terminal/hla-manage/src/main/java/com/rongyi/hla/service/product/impl/PullLogServiceImpl.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../ry/h/hlamall-terminal/hla-manage/src/main/resources/application-test.yml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../ry/h/hlamall-terminal/hla-manage/src/main/resources/application.yml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../ry/h/hlamall-terminal/hla-manage/src/main/resources/logback-spring.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../ry/h/hlamall-terminal/hla-manage/src/main/resources/mapper/InitDatabase.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../ry/h/hlamall-terminal/hla-manage/src/main/resources/mapper/ProductMapper.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../ry/h/hlamall-terminal/hla-manage/src/main/resources/mapper/ProductSpuMapper.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../ry/h/hlamall-terminal/hla-manage/src/main/resources/mapper/PullLogMapper.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../ry/h/hlamall-terminal/hla-rbac/src/main/java/com/rongyi/dao/UserDao.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../ry/h/hlamall-terminal/hla-rbac/src/main/java/com/rongyi/param/AccountParam.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../ry/h/hlamall-terminal/hla-rbac/src/main/java/com/rongyi/service/impl/UserServiceImpl.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

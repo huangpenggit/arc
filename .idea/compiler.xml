@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="core" />
+        <module name="multi_datasource" />
+        <module name="mybatis-tool" />
+        <module name="server-common" />
+        <module name="server-druid" />
+        <module name="server-eureka" />
+        <module name="server-mongo" />
+        <module name="server-security" />
+        <module name="server-zuul" />
+        <module name="web-environment" />
+        <module name="web-express" />
+        <module name="web-fast-start" />
+        <module name="web-shop" />
+        <module name="web-validating" />
+        <module name="web-vue" />
+        <module name="web-wechat" />
+        <module name="website-https" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="web-back" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

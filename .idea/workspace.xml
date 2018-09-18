@@ -1,0 +1,1379 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="c848ed2e-dfe2-49cd-8073-f0f1953db0fa" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/web/web-shop/pom.xml" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/security/server-security/target/" />
+    <ignored path="$PROJECT_DIR$/server-db/server-druid/target/" />
+    <ignored path="$PROJECT_DIR$/server/server-eureka/target/" />
+    <ignored path="$PROJECT_DIR$/core/target/" />
+    <ignored path="$PROJECT_DIR$/web/web-validating/target/" />
+    <ignored path="$PROJECT_DIR$/server/target/" />
+    <ignored path="$PROJECT_DIR$/web/web-fast-start/target/" />
+    <ignored path="$PROJECT_DIR$/server-db/server-common/target/" />
+    <ignored path="$PROJECT_DIR$/target/" />
+    <ignored path="$PROJECT_DIR$/server-db/mybatis-tool/target/" />
+    <ignored path="$PROJECT_DIR$/server-db/target/" />
+    <ignored path="$PROJECT_DIR$/security/target/" />
+    <ignored path="$PROJECT_DIR$/server-db/server-mongo/target/" />
+    <ignored path="$PROJECT_DIR$/web/target/" />
+    <ignored path="$PROJECT_DIR$/web/web-express/target/" />
+    <ignored path="$PROJECT_DIR$/web/web-environment/target/" />
+    <ignored path="$PROJECT_DIR$/server-db/multi_datasource/target/" />
+    <ignored path="$PROJECT_DIR$/web/web-wechat/target/" />
+    <ignored path="$PROJECT_DIR$/web/web-back/target/" />
+    <ignored path="$PROJECT_DIR$/server/server-zuul/target/" />
+    <ignored path="$PROJECT_DIR$/web/website-https/target/" />
+    <ignored path="$PROJECT_DIR$/web/web-vue/target/" />
+    <ignored path="$PROJECT_DIR$/web/web-shop/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
+  <component name="CompilerWorkspaceConfiguration">
+    <option name="MAKE_PROJECT_ON_SAVE" value="true" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="1572966071">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="24" />
+          <entry key="project.open.time.0" value="3" />
+          <entry key="project.open.time.1" value="12" />
+          <entry key="project.open.time.2" value="4" />
+          <entry key="project.open.time.26" value="1" />
+          <entry key="project.open.time.27" value="1" />
+          <entry key="project.open.time.28" value="1" />
+          <entry key="project.open.time.29" value="1" />
+          <entry key="project.open.time.30" value="2" />
+          <entry key="project.open.time.31" value="1" />
+          <entry key="project.open.time.33" value="1" />
+          <entry key="project.opened" value="27" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="1" value="1" />
+          <entry key="MD" value="4" />
+          <entry key="class" value="18" />
+          <entry key="ftl" value="5" />
+          <entry key="gitignore" value="2" />
+          <entry key="html" value="7" />
+          <entry key="ico" value="1" />
+          <entry key="iml" value="3" />
+          <entry key="java" value="128" />
+          <entry key="jpg" value="1" />
+          <entry key="js" value="3" />
+          <entry key="json" value="3" />
+          <entry key="pom" value="1" />
+          <entry key="properties" value="6" />
+          <entry key="sql" value="3" />
+          <entry key="txt" value="3" />
+          <entry key="xml" value="33" />
+          <entry key="yml" value="10" />
+          <entry key="临时" value="2" />
+          <entry key="测试" value="1" />
+          <entry key="说明" value="1" />
+          <entry key="说明2" value="1" />
+          <entry key="说明3" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="CLASS" value="18" />
+          <entry key="FTL" value="5" />
+          <entry key="HTML" value="7" />
+          <entry key="IDEA_MODULE" value="3" />
+          <entry key="Image" value="2" />
+          <entry key="JAVA" value="128" />
+          <entry key="JSON" value="3" />
+          <entry key="JavaScript" value="3" />
+          <entry key="Markdown" value="4" />
+          <entry key="PLAIN_TEXT" value="11" />
+          <entry key="Properties" value="6" />
+          <entry key="SQL" value="3" />
+          <entry key="UML" value="1" />
+          <entry key="XML" value="34" />
+          <entry key="YAML" value="10" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="MD" value="190" />
+          <entry key="dummy" value="41" />
+          <entry key="ftl" value="11" />
+          <entry key="html" value="435" />
+          <entry key="java" value="7269" />
+          <entry key="json" value="45" />
+          <entry key="properties" value="28" />
+          <entry key="txt" value="112" />
+          <entry key="xml" value="148" />
+          <entry key="yml" value="91" />
+          <entry key="临时" value="11" />
+          <entry key="说明" value="3" />
+          <entry key="说明3" value="28" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="FTL" value="11" />
+          <entry key="HTML" value="435" />
+          <entry key="JAVA" value="7260" />
+          <entry key="JSON" value="45" />
+          <entry key="Markdown" value="190" />
+          <entry key="PLAIN_TEXT" value="195" />
+          <entry key="Properties" value="28" />
+          <entry key="RegExp" value="9" />
+          <entry key="SQL" value="1" />
+          <entry key="XML" value="147" />
+          <entry key="YAML" value="91" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1577">
+              <caret line="217" selection-start-line="217" selection-end-line="217" />
+              <folding>
+                <element signature="n#dependencyManagement#0;n#project#0;n#!!top" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server-db/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="23" column="27" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server-db/mybatis-tool/src/main/resources/application.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="247">
+              <caret line="13" column="19" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/web-environment/pom.xml">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/web-shop/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="15" column="30" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="133">
+              <caret line="7" column="5" lean-forward="true" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server-db/mybatis-tool/src/main/java/com/mybatis/generator/MybatisGeneratorMain.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="76">
+              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/src/main/java/com/arc/model/BaseModel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="76">
+              <caret line="9" selection-start-line="9" selection-end-line="15" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="JavaScript File" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>hla</find>
+      <find>client_max_body_size</find>
+      <find>group</find>
+      <find>user</find>
+      <find>nodejs</find>
+      <find>dataModel</find>
+      <find>above</find>
+      <find>StringModel</find>
+      <find>User</find>
+      <find>com.rongyi.model.product.ticket</find>
+      <find>LOGGER</find>
+      <find>用户</find>
+      <find>name</find>
+      <find>sql</find>
+      <find>my</find>
+      <find>新增票</find>
+      <find>web</find>
+      <find>myba</find>
+      <find>mysql</find>
+      <find>c</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>Ticket</replace>
+      <replace>ticket</replace>
+      <replace>logger</replace>
+      <replace>com.arc.model.vue.Ticket</replace>
+      <replace>票</replace>
+    </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GradleLocalSettings">
+    <option name="projectSyncType">
+      <map>
+        <entry key="$PROJECT_DIR$/../../../sso" value="PREVIEW" />
+      </map>
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/web/web-fast-start/src/main/java/com/arc/faststart/FileServiceImplTest.java" />
+        <option value="$PROJECT_DIR$/web/web-fast-start/pom.xml" />
+        <option value="$PROJECT_DIR$/web/web-fast-start/src/main/java/com/arc/faststart/mapper/FileMapper.java" />
+        <option value="$PROJECT_DIR$/web/web-fast-start/src/main/resources/mapper/FileMapper.xml" />
+        <option value="$PROJECT_DIR$/web/web-fast-start/src/main/java/com/arc/faststart/service/impl/FileService.java" />
+        <option value="$PROJECT_DIR$/web/web-fast-start/src/main/java/com/arc/faststart/controller/FileServiceImpl.java" />
+        <option value="$PROJECT_DIR$/web/web-fast-start/src/main/java/com/arc/faststart/service/impl/FileServiceImpl.java" />
+        <option value="$PROJECT_DIR$/web/web-fast-start/src/main/java/com/arc/faststart/controller/FileController.java" />
+        <option value="$PROJECT_DIR$/web/web-environment/src/main/java/com/arc/vue/tem/TestEnum.java" />
+        <option value="$PROJECT_DIR$/core/src/main/java/com/arc/dto/wechat/ImageDTO.java" />
+        <option value="$PROJECT_DIR$/core/src/main/java/com/arc/vo/ResponseVO.java" />
+        <option value="$PROJECT_DIR$/web/web-fast-start/src/main/java/com/arc/faststart/controller/File1Controller.java" />
+        <option value="$PROJECT_DIR$/web/web-fast-start/src/main/java/com/arc/faststart/controller/TmcPushInfo.java" />
+        <option value="$PROJECT_DIR$/web/web-fast-start/src/main/java/com/arc/faststart/controller/StringUtils.java" />
+        <option value="$PROJECT_DIR$/web/web-fast-start/src/main/java/com/arc/faststart/controller/StringTools.java" />
+        <option value="$PROJECT_DIR$/web/web-fast-start/src/main/java/com/arc/faststart/model/ResponseVO.java" />
+        <option value="$PROJECT_DIR$/web/web-back/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/web/web-back/src/main/java/com/arc/back/controller/test/TestController.java" />
+        <option value="$PROJECT_DIR$/web/web-back/src/main/java/com/arc/shop/IndexController.java" />
+        <option value="$PROJECT_DIR$/web/web-back/src/main/java/com/arc/shop/WebBackApplication.java" />
+        <option value="$PROJECT_DIR$/core/src/main/java/com/arc/model/shop/Product.java" />
+        <option value="$PROJECT_DIR$/core/src/main/java/com/arc/service/common/UserService.java" />
+        <option value="$PROJECT_DIR$/server-db/server-common/pom.xml" />
+        <option value="$PROJECT_DIR$/web/web-back/pom.xml" />
+        <option value="$PROJECT_DIR$/web/web-back/src/main/java/com/arc/shop/controller/IndexController.java" />
+        <option value="$PROJECT_DIR$/web/web-back/src/main/java/com/arc/shop/controller/ProductQuery.java" />
+        <option value="$PROJECT_DIR$/core/src/main/java/com/arc/model/query/ProductQuery.java" />
+        <option value="$PROJECT_DIR$/core/src/main/java/com/arc/model/query/PageQuery.java" />
+        <option value="$PROJECT_DIR$/core/src/main/java/com/arc/model/query/Query.java" />
+        <option value="$PROJECT_DIR$/core/src/main/java/com/arc/model/BaseModel.java" />
+        <option value="$PROJECT_DIR$/core/src/main/java/com/arc/model/query/product/ProductQuery.java" />
+        <option value="$PROJECT_DIR$/core/src/main/java/com/arc/model/vo/ResponseVo.java" />
+        <option value="$PROJECT_DIR$/web/web-back/src/main/java/com/arc/shop/controller/ProductService.java" />
+        <option value="$PROJECT_DIR$/core/src/main/java/com/arc/model/domain/enviroment/Project.java" />
+        <option value="$PROJECT_DIR$/core/src/main/java/com/arc/model/domain/enviroment/ProjectDto.java" />
+        <option value="$PROJECT_DIR$/core/src/main/java/com/arc/model/dto/enviroment/ProjectDto.java" />
+        <option value="$PROJECT_DIR$/web/web-back/src/main/java/com/arc/shop/service/ProductService.java" />
+        <option value="$PROJECT_DIR$/web/web-back/src/main/java/com/arc/shop/service/impl/ProductServiceImpl.java" />
+        <option value="$PROJECT_DIR$/web/web-back/src/main/java/com/arc/shop/controller/File1Controller.java" />
+        <option value="$PROJECT_DIR$/web/web-back/src/main/java/com/arc/shop/controller/ProductController.java" />
+        <option value="$PROJECT_DIR$/web/web-back/src/main/java/com/arc/shop/controller/ProductControllerForPage.java" />
+        <option value="$PROJECT_DIR$/web/web-back/src/main/java/com/arc/shop/controller/ProductControllerPage.java" />
+        <option value="$PROJECT_DIR$/web/web-back/src/main/java/com/arc/shop/controller/product/ProductController.java" />
+        <option value="$PROJECT_DIR$/web/web-back/src/main/java/com/arc/shop/controller/file/File1Controller.java" />
+        <option value="$PROJECT_DIR$/web/web-back/README.MD" />
+        <option value="$PROJECT_DIR$/web/web-shop/pom.xml" />
+        <option value="$PROJECT_DIR$/web/pom.xml" />
+        <option value="$PROJECT_DIR$/web/web-shop/README.MD" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/server-db/mybatis-tool/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/server-db/mybatis-tool/target/output/food.java" />
+      </list>
+    </option>
+  </component>
+  <component name="JRebelWorkspace">
+    <option name="jrebelEnabledAutocompile" value="true" />
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="C:/Java/apache-maven-3.5.4" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+        <option name="lookForNested" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="arc" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="arc" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="web" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="web" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
+  </component>
+  <component name="MavenRunner">
+    <option name="skipTests" value="true" />
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths>
+      <path value="$PROJECT_DIR$/server-db/server-common/src/main/resources/static/js/plugins/flipcountdown/package.json" />
+      <path value="$PROJECT_DIR$/server-db/server-druid/src/main/resources/static/js/plugins/bootstrap/package.json" />
+      <path value="$PROJECT_DIR$/server-db/server-druid/src/main/resources/static/js/plugins/flipcountdown/package.json" />
+      <path value="$PROJECT_DIR$/server-db/server-mongo/src/main/resources/static/js.plugins/bootstrap/package.json" />
+      <path value="$PROJECT_DIR$/web/web-express/src/main/resources/static/plugins/bootstrap/package.json" />
+      <path value="$PROJECT_DIR$/web/web-shop/src/main/resources/static/plugins/bootstrap/package.json" />
+      <path value="$PROJECT_DIR$/web/web-wechat/src/main/resources/static/plugins/bootstrap/package.json" />
+      <path value="$PROJECT_DIR$/web/website-https/src/main/resources/static/js/plugins/bootstrap/package.json" />
+    </packageJsonPaths>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="63" />
+    <option name="y" value="148" />
+    <option name="width" value="1916" />
+    <option name="height" value="1076" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State />
+          <State>
+            <id>Android</id>
+          </State>
+          <State>
+            <id>Java</id>
+          </State>
+          <State>
+            <id>Spring</id>
+          </State>
+          <State>
+            <id>Spring BootSpring</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>SpringBootApplicationSetup</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <autoscrollFromSource ProjectPane="true" />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="arc" type="b2602c69:ProjectViewProjectNode" />
+              <item name="arc" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="arc" type="b2602c69:ProjectViewProjectNode" />
+              <item name="arc" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="arc" type="b2602c69:ProjectViewProjectNode" />
+              <item name="arc" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="arc" type="b2602c69:ProjectViewProjectNode" />
+              <item name="arc" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="arc" type="b2602c69:ProjectViewProjectNode" />
+              <item name="arc" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="arc" type="b2602c69:ProjectViewProjectNode" />
+              <item name="arc" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="arc" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="arc" type="b2602c69:ProjectViewProjectNode" />
+              <item name="arc" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="arc" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="arc" type="b2602c69:ProjectViewProjectNode" />
+              <item name="arc" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="arc" type="b2602c69:ProjectViewProjectNode" />
+              <item name="arc" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="web-shop" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="SONARLINT_PRECOMMIT_ANALYSIS" value="false" />
+    <property name="SearchEverywhereHistoryKey" value="BaseModel&#9;FILE&#9;file://C:/Users/X/Desktop/Zan/git/arc/core/src/main/java/com/arc/model/BaseModel.java&#10;Product&#9;PSI&#9;JAVA://com.arc.model.domain.enviroment.Product&#10;.yml&#9;FILE&#9;file://C:/Users/X/Desktop/Zan/git/arc/server-db/server-druid/src/main/resources/static/js/plugins/bootstrap/.hound.yml&#10;StringModel&#9;PSI&#9;JAVA://freemarker.ext.beans.StringModel" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537284495240" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../csp/zhi1" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="C:/Program Files/nodejs/node" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="com.zeroturnaround.javarebel.idea.plugin.settings.JRebelSettingsComponent" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.arc.shop.controller" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.arc.shop" />
+      <recent name="com.arc.back" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\X\Desktop\Zan\git\arc\web\web-back\src\main\java\com\arc\shop\controller" />
+      <recent name="C:\Users\X\Desktop\Zan\git\arc\web\web-back\src\main\resources" />
+      <recent name="C:\Users\X\Desktop\Zan\git\arc\web\web-fast-start\src\main\resources" />
+      <recent name="C:\Users\X\Desktop\Zan\git\arc\web\web-environment\src\main\resources\templates" />
+      <recent name="C:\Users\X\Desktop\Zan\git\arc\web\web-environment\src\main\resources\static\images" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.arc.shop.controller" />
+      <recent name="com.arc.model.query.product" />
+      <recent name="com.arc.model.query" />
+      <recent name="com.arc.faststart.controller" />
+      <recent name="com.arc.vo" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\X\Desktop\Zan\git\arc\web\web-fast-start\src\main\resources\mapper" />
+      <recent name="C:\Users\X\Desktop\Zan\git\arc\web\web-vue\src\main\resources\mapper" />
+      <recent name="C:\Users\X\Desktop\Zan\git\arc\web\web-vue\src\main\java\com\arc\vue\mapper" />
+      <recent name="C:\Users\X\Desktop\Zan\git\arc\core\src\main\java\com\arc\model\vue" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.MybatisGeneratorMain">
+    <configuration default="true" type="Applet" factoryName="小应用程序">
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Application" factoryName="应用程序">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="File1Controller" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.arc.faststart.controller.File1Controller" />
+      <module name="web-fast-start" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.arc.faststart.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MybatisGeneratorMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.mybatis.generator.MybatisGeneratorMain" />
+      <module name="mybatis-tool" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.mybatis.generator.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PController" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.arc.vue.controller.test.PController" />
+      <module name="web-environment" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.arc.vue.controller.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestEnum" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.arc.vue.tem.TestEnum" />
+      <module name="web-environment" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.arc.vue.tem.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TmcPushInfo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.arc.faststart.controller.TmcPushInfo" />
+      <module name="web-fast-start" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.arc.faststart.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EnvironmentApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="web-environment" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.arc.vue.EnvironmentApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EurekaServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="server-eureka" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.arc.server.eureka.EurekaServerApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ServerCommonApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="server-common" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.arc.server.common.ServerCommonApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ServerMongoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="server-mongo" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.arc.servermongo.ServerMongoApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ServerMultiDatasourceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="multi_datasource" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.multi.datasource.ServerMultiDatasourceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ValidatingFormInputApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="web-validating" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.arc.vue.ValidatingFormInputApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="VueApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="web-vue" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.arc.vue.VueApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ZuulServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="server-zuul" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.arc.server.zuul.ZuulServerApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Spring Boot.EurekaServerApplication" />
+      <item itemvalue="Spring Boot.ValidatingFormInputApplication" />
+      <item itemvalue="Spring Boot.ServerCommonApplication" />
+      <item itemvalue="Spring Boot.ServerMongoApplication" />
+      <item itemvalue="Spring Boot.EnvironmentApplication" />
+      <item itemvalue="Spring Boot.ServerMultiDatasourceApplication" />
+      <item itemvalue="Spring Boot.ZuulServerApplication" />
+      <item itemvalue="Spring Boot.VueApplication" />
+      <item itemvalue="Application.MybatisGeneratorMain" />
+      <item itemvalue="Application.PController" />
+      <item itemvalue="Application.TestEnum" />
+      <item itemvalue="Application.File1Controller" />
+      <item itemvalue="Application.TmcPushInfo" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.MybatisGeneratorMain" />
+        <item itemvalue="Application.TmcPushInfo" />
+        <item itemvalue="Application.File1Controller" />
+        <item itemvalue="Application.TestEnum" />
+        <item itemvalue="Application.PController" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration>C:\Users\X\AppData\Roaming\Subversion</configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c848ed2e-dfe2-49cd-8073-f0f1953db0fa" name="Default Changelist" comment="" />
+      <created>1534730073657</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1534730073657</updated>
+      <workItem from="1534730100437" duration="463000" />
+      <workItem from="1534737119453" duration="599000" />
+      <workItem from="1534750654348" duration="798000" />
+      <workItem from="1534754070288" duration="613000" />
+      <workItem from="1534764525573" duration="803000" />
+      <workItem from="1534815165744" duration="2430000" />
+      <workItem from="1534837859762" duration="1408000" />
+      <workItem from="1535075161385" duration="1347000" />
+      <workItem from="1535182665793" duration="1944000" />
+      <workItem from="1535364910068" duration="473000" />
+      <workItem from="1535365492448" duration="237000" />
+      <workItem from="1535525925010" duration="98000" />
+      <workItem from="1535526046979" duration="81000" />
+      <workItem from="1535643035658" duration="19000" />
+      <workItem from="1536304405672" duration="122000" />
+      <workItem from="1536304566421" duration="2425000" />
+      <workItem from="1536307298851" duration="8679000" />
+      <workItem from="1536376667825" duration="1522000" />
+      <workItem from="1536500540828" duration="9180000" />
+      <workItem from="1536546955587" duration="8933000" />
+      <workItem from="1536761296804" duration="2280000" />
+      <workItem from="1536838884313" duration="1155000" />
+      <workItem from="1537104733638" duration="6027000" />
+      <workItem from="1537192338728" duration="5295000" />
+      <workItem from="1537280692247" duration="208000" />
+      <workItem from="1537280985712" duration="185000" />
+      <workItem from="1537281208428" duration="2440000" />
+    </task>
+    <task id="LOCAL-00001" summary="处理了一些文件的问题">
+      <created>1535076401098</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1535076401098</updated>
+    </task>
+    <task id="LOCAL-00002" summary="处理了一些文件的问题.0.1">
+      <created>1535365715692</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1535365715692</updated>
+    </task>
+    <task id="LOCAL-00003" summary="处理了一些文件的问题.0.2">
+      <created>1537110520053</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1537110520054</updated>
+    </task>
+    <task id="LOCAL-00004" summary="处理了一些文件的问题.0.3">
+      <created>1537110558271</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1537110558271</updated>
+    </task>
+    <task id="LOCAL-00005" summary="处理了一些文件的问题.0.3">
+      <created>1537110665466</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1537110665466</updated>
+    </task>
+    <task id="LOCAL-00006" summary="处理了一些文件的问题.0.4">
+      <created>1537110726295</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1537110726296</updated>
+    </task>
+    <task id="LOCAL-00007" summary="shop 项目初步&#10;1写了一部分商品相关的接口控制器&#10;2全局异常处理&#10;3表的设定&#10;4sso&#10;5页面展示&#10;6可以向weChat项目做支撑">
+      <created>1537199968794</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1537199968794</updated>
+    </task>
+    <task id="LOCAL-00008" summary="shop 项目初步&#10;1写了一部分商品相关的接口控制器&#10;2全局异常处理&#10;3表的设定&#10;4sso&#10;5页面展示&#10;6可以向weChat项目做支撑">
+      <created>1537200090615</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1537200090615</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="59764000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="63" y="148" width="1916" height="1076" extended-state="0" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.32596982" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="JRebel" order="3" side_tool="true" />
+      <window_info id="Image Layers" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info id="Capture Tool" order="7" />
+      <window_info id="Learn" order="8" />
+      <window_info id="Web" order="9" side_tool="true" />
+      <window_info id="设计师" order="10" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32829374" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.47705916" weight="0.35076252" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.7222222" weight="0.34341252" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Spring" order="7" weight="0.32937366" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5010776" side_tool="true" weight="0.5426106" />
+      <window_info anchor="bottom" id="SonarLint" order="10" />
+      <window_info anchor="bottom" id="Java Enterprise" order="11" />
+      <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="13" sideWeight="0.4989224" weight="0.54319656" />
+      <window_info anchor="bottom" id="JRebel Console" order="14" sideWeight="0.2777778" side_tool="true" weight="0.56911445" />
+      <window_info anchor="bottom" id="SonarQube" order="15" />
+      <window_info anchor="bottom" id="JRebel Executor" order="16" />
+      <window_info anchor="bottom" id="Messages" order="17" weight="0.3251599" />
+      <window_info anchor="bottom" id="Problems" order="18" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="JSF" order="4" weight="0.32978722" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="CDI" order="6" />
+      <window_info anchor="right" id="Maven Projects" order="7" visible="true" weight="0.22844827" />
+      <window_info anchor="right" id="Database" order="8" />
+      <window_info anchor="right" id="Palette&#9;" order="9" />
+      <window_info anchor="right" id="Theme Preview" order="10" />
+      <window_info anchor="right" id="Bean Validation" order="11" />
+      <window_info anchor="right" id="控制板" order="12" />
+    </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27659574" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="JRebel" order="3" side_tool="true" />
+      <window_info id="Image Layers" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info id="Capture Tool" order="7" />
+      <window_info id="Learn" order="8" />
+      <window_info id="Web" order="9" side_tool="true" />
+      <window_info id="设计师" order="10" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3293348" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.4384449" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.7222222" weight="0.34341252" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Spring" order="7" weight="0.32937366" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="SonarLint" order="10" />
+      <window_info anchor="bottom" id="Java Enterprise" order="11" />
+      <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="13" />
+      <window_info anchor="bottom" id="JRebel Console" order="14" sideWeight="0.2777778" side_tool="true" weight="0.56911445" />
+      <window_info anchor="bottom" id="SonarQube" order="15" />
+      <window_info anchor="bottom" id="JRebel Executor" order="16" />
+      <window_info anchor="bottom" id="Messages" order="17" weight="0.3261339" />
+      <window_info anchor="bottom" id="Problems" order="18" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="JSF" order="4" weight="0.32978722" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="CDI" order="6" />
+      <window_info anchor="right" id="Maven Projects" order="7" weight="0.3291962" />
+      <window_info anchor="right" id="Database" order="8" />
+      <window_info anchor="right" id="Palette&#9;" order="9" />
+      <window_info anchor="right" id="Theme Preview" order="10" />
+      <window_info anchor="right" id="Bean Validation" order="11" />
+      <window_info anchor="right" id="控制板" order="12" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
+    <MESSAGE value="处理了一些文件的问题" />
+    <MESSAGE value="处理了一些文件的问题.0.1" />
+    <MESSAGE value="处理了一些文件的问题.0.2" />
+    <MESSAGE value="处理了一些文件的问题.0.3" />
+    <MESSAGE value="处理了一些文件的问题.0.4" />
+    <MESSAGE value="shop 项目初步&#10;1写了一部分商品相关的接口控制器&#10;2全局异常处理&#10;3表的设定&#10;4sso&#10;5页面展示&#10;6可以向weChat项目做支撑" />
+    <option name="LAST_COMMIT_MESSAGE" value="shop 项目初步&#10;1写了一部分商品相关的接口控制器&#10;2全局异常处理&#10;3表的设定&#10;4sso&#10;5页面展示&#10;6可以向weChat项目做支撑" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/web/web-fast-start/src/main/java/com/arc/faststart/FileServiceImplTest.java</url>
+          <line>9</line>
+          <properties />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/web/web-fast-start/src/main/java/com/arc/faststart/FileServiceImplTest.java</url>
+          <line>12</line>
+          <properties />
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/server-db/mybatis-tool/src/main/java/com/mybatis/generator/generator/FreemarkerGenerator.java</url>
+          <line>56</line>
+          <properties />
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/server-db/mybatis-tool/src/main/java/com/mybatis/generator/BootStrap.java</url>
+          <line>35</line>
+          <properties />
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/server-db/mybatis-tool/src/main/java/com/mybatis/generator/BootStrap.java</url>
+          <line>33</line>
+          <properties />
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/server-db/mybatis-tool/src/main/java/com/mybatis/generator/generator/FreemarkerGenerator.java</url>
+          <line>67</line>
+          <properties />
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/server-db/mybatis-tool/src/main/java/com/mybatis/generator/generator/FreemarkerGenerator.java</url>
+          <line>71</line>
+          <properties />
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/web/web-environment/src/main/java/com/arc/vue/controller/test/PController.java</url>
+          <line>96</line>
+          <properties />
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/web/web-environment/src/main/java/com/arc/vue/controller/test/PController.java</url>
+          <line>80</line>
+          <properties />
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/web/web-back/src/main/java/com/arc/shop/test/service/AsyncTaskService.java" />
+    <entry file="file://$PROJECT_DIR$/web/web-back/src/main/java/com/arc/shop/test/service/DownloadUtil.java" />
+    <entry file="file://$PROJECT_DIR$/web/web-back/src/main/java/com/arc/shop/test/service/Test.java" />
+    <entry file="file://$PROJECT_DIR$/web/web-back/src/main/java/com/arc/shop/test/service/TestThread.java" />
+    <entry file="file://$PROJECT_DIR$/web/web-back/src/main/java/com/arc/shop/test/util/PictureUtil.java" />
+    <entry file="file://$PROJECT_DIR$/web/web-back/src/main/java/com/arc/shop/test/util/GetPictureUtil.java" />
+    <entry file="file://$PROJECT_DIR$/web/web-back/src/main/java/com/arc/shop/IndexController.java" />
+    <entry file="file://$PROJECT_DIR$/web/web-back/src/main/java/com/arc/shop/test/util/PrintService.java" />
+    <entry file="file://$PROJECT_DIR$/core/src/main/java/com/arc/model/domain/vue/Ticket.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="8" selection-start-line="8" selection-end-line="14" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/main/java/com/arc/model/domain/shop/Product.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" column="33" selection-start-line="11" selection-start-column="33" selection-end-line="11" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/main/java/com/arc/service/common/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="10" column="14" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/web-back/src/main/java/com/arc/shop/WebBackApplication.java" />
+    <entry file="file://$PROJECT_DIR$/server-db/server-common/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-57">
+          <caret line="87" selection-start-line="87" selection-end-line="100" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://MAVEN/com.arc:web-back:0.0.1">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>MAVEN</ID>
+          <OriginalElement>com.arc:web-back:0.0.1</OriginalElement>
+          <nodes>
+            <node x="" y="">com.arc:web-back:0.0.1</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:2.0.3.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:2.0.3.RELEASE/org.springframework.boot:spring-boot-starter:jar:2.0.3.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:2.0.3.RELEASE/org.springframework.boot:spring-boot-starter:jar:2.0.3.RELEASE/org.springframework.boot:spring-boot:jar:2.0.3.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:2.0.3.RELEASE/org.springframework.boot:spring-boot-starter:jar:2.0.3.RELEASE/org.springframework.boot:spring-boot-autoconfigure:jar:2.0.3.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:2.0.3.RELEASE/org.springframework.boot:spring-boot-starter:jar:2.0.3.RELEASE/org.springframework.boot:spring-boot-starter-logging:jar:2.0.3.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:2.0.3.RELEASE/org.springframework.boot:spring-boot-starter:jar:2.0.3.RELEASE/org.springframework.boot:spring-boot-starter-logging:jar:2.0.3.RELEASE/ch.qos.logback:logback-classic:jar:1.2.3</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:2.0.3.RELEASE/org.springframework.boot:spring-boot-starter:jar:2.0.3.RELEASE/org.springframework.boot:spring-boot-starter-logging:jar:2.0.3.RELEASE/ch.qos.logback:logback-classic:jar:1.2.3/ch.qos.logback:logback-core:jar:1.2.3</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:2.0.3.RELEASE/org.springframework.boot:spring-boot-starter:jar:2.0.3.RELEASE/org.springframework.boot:spring-boot-starter-logging:jar:2.0.3.RELEASE/org.apache.logging.log4j:log4j-to-slf4j:jar:2.10.0</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:2.0.3.RELEASE/org.springframework.boot:spring-boot-starter:jar:2.0.3.RELEASE/org.springframework.boot:spring-boot-starter-logging:jar:2.0.3.RELEASE/org.apache.logging.log4j:log4j-to-slf4j:jar:2.10.0/org.apache.logging.log4j:log4j-api:jar:2.10.0</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:2.0.3.RELEASE/org.springframework.boot:spring-boot-starter:jar:2.0.3.RELEASE/org.springframework.boot:spring-boot-starter-logging:jar:2.0.3.RELEASE/org.slf4j:jul-to-slf4j:jar:1.7.25</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:2.0.3.RELEASE/org.springframework.boot:spring-boot-starter:jar:2.0.3.RELEASE/javax.annotation:javax.annotation-api:jar:1.3.2</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:2.0.3.RELEASE/org.springframework.boot:spring-boot-starter:jar:2.0.3.RELEASE/org.yaml:snakeyaml:jar:1.19</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:2.0.3.RELEASE/org.springframework.boot:spring-boot-starter-json:jar:2.0.3.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:2.0.3.RELEASE/org.springframework.boot:spring-boot-starter-json:jar:2.0.3.RELEASE/com.fasterxml.jackson.core:jackson-databind:jar:2.9.6</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:2.0.3.RELEASE/org.springframework.boot:spring-boot-starter-json:jar:2.0.3.RELEASE/com.fasterxml.jackson.core:jackson-databind:jar:2.9.6/com.fasterxml.jackson.core:jackson-annotations:jar:2.9.0</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:2.0.3.RELEASE/org.springframework.boot:spring-boot-starter-json:jar:2.0.3.RELEASE/com.fasterxml.jackson.core:jackson-databind:jar:2.9.6/com.fasterxml.jackson.core:jackson-core:jar:2.9.6</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:2.0.3.RELEASE/org.springframework.boot:spring-boot-starter-json:jar:2.0.3.RELEASE/com.fasterxml.jackson.datatype:jackson-datatype-jdk8:jar:2.9.6</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:2.0.3.RELEASE/org.springframework.boot:spring-boot-starter-json:jar:2.0.3.RELEASE/com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.9.6</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:2.0.3.RELEASE/org.springframework.boot:spring-boot-starter-json:jar:2.0.3.RELEASE/com.fasterxml.jackson.module:jackson-module-parameter-names:jar:2.9.6</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:2.0.3.RELEASE/org.springframework.boot:spring-boot-starter-tomcat:jar:2.0.3.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:2.0.3.RELEASE/org.springframework.boot:spring-boot-starter-tomcat:jar:2.0.3.RELEASE/org.apache.tomcat.embed:tomcat-embed-core:jar:8.5.31</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:2.0.3.RELEASE/org.springframework.boot:spring-boot-starter-tomcat:jar:2.0.3.RELEASE/org.apache.tomcat.embed:tomcat-embed-el:jar:8.5.31</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:2.0.3.RELEASE/org.springframework.boot:spring-boot-starter-tomcat:jar:2.0.3.RELEASE/org.apache.tomcat.embed:tomcat-embed-websocket:jar:8.5.31</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:2.0.3.RELEASE/org.hibernate.validator:hibernate-validator:jar:6.0.10.Final</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:2.0.3.RELEASE/org.hibernate.validator:hibernate-validator:jar:6.0.10.Final/javax.validation:validation-api:jar:2.0.1.Final</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:2.0.3.RELEASE/org.hibernate.validator:hibernate-validator:jar:6.0.10.Final/org.jboss.logging:jboss-logging:jar:3.3.2.Final</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:2.0.3.RELEASE/org.hibernate.validator:hibernate-validator:jar:6.0.10.Final/com.fasterxml:classmate:jar:1.3.4</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:2.0.3.RELEASE/org.springframework:spring-web:jar:5.0.7.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:2.0.3.RELEASE/org.springframework:spring-web:jar:5.0.7.RELEASE/org.springframework:spring-beans:jar:5.0.7.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:2.0.3.RELEASE/org.springframework:spring-webmvc:jar:5.0.7.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:2.0.3.RELEASE/org.springframework:spring-webmvc:jar:5.0.7.RELEASE/org.springframework:spring-aop:jar:5.0.7.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:2.0.3.RELEASE/org.springframework:spring-webmvc:jar:5.0.7.RELEASE/org.springframework:spring-context:jar:5.0.7.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:2.0.3.RELEASE/org.springframework:spring-webmvc:jar:5.0.7.RELEASE/org.springframework:spring-expression:jar:5.0.7.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-thymeleaf:jar:2.0.3.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-thymeleaf:jar:2.0.3.RELEASE/org.thymeleaf:thymeleaf-spring5:jar:3.0.9.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-thymeleaf:jar:2.0.3.RELEASE/org.thymeleaf:thymeleaf-spring5:jar:3.0.9.RELEASE/org.thymeleaf:thymeleaf:jar:3.0.9.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-thymeleaf:jar:2.0.3.RELEASE/org.thymeleaf:thymeleaf-spring5:jar:3.0.9.RELEASE/org.thymeleaf:thymeleaf:jar:3.0.9.RELEASE/org.attoparser:attoparser:jar:2.0.4.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-thymeleaf:jar:2.0.3.RELEASE/org.thymeleaf:thymeleaf-spring5:jar:3.0.9.RELEASE/org.thymeleaf:thymeleaf:jar:3.0.9.RELEASE/org.unbescape:unbescape:jar:1.1.5.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-thymeleaf:jar:2.0.3.RELEASE/org.thymeleaf:thymeleaf-spring5:jar:3.0.9.RELEASE/org.slf4j:slf4j-api:jar:1.7.25</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-thymeleaf:jar:2.0.3.RELEASE/org.thymeleaf.extras:thymeleaf-extras-java8time:jar:3.0.1.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:2.0.3.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:2.0.3.RELEASE/org.springframework.boot:spring-boot-test:jar:2.0.3.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:2.0.3.RELEASE/org.springframework.boot:spring-boot-test-autoconfigure:jar:2.0.3.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:2.0.3.RELEASE/com.jayway.jsonpath:json-path:jar:2.4.0</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:2.0.3.RELEASE/com.jayway.jsonpath:json-path:jar:2.4.0/net.minidev:json-smart:jar:2.3</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:2.0.3.RELEASE/com.jayway.jsonpath:json-path:jar:2.4.0/net.minidev:json-smart:jar:2.3/net.minidev:accessors-smart:jar:1.2</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:2.0.3.RELEASE/com.jayway.jsonpath:json-path:jar:2.4.0/net.minidev:json-smart:jar:2.3/net.minidev:accessors-smart:jar:1.2/org.ow2.asm:asm:jar:5.0.4</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:2.0.3.RELEASE/junit:junit:jar:4.12</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:2.0.3.RELEASE/org.assertj:assertj-core:jar:3.9.1</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:2.0.3.RELEASE/org.mockito:mockito-core:jar:2.15.0</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:2.0.3.RELEASE/org.mockito:mockito-core:jar:2.15.0/net.bytebuddy:byte-buddy:jar:1.7.11</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:2.0.3.RELEASE/org.mockito:mockito-core:jar:2.15.0/net.bytebuddy:byte-buddy-agent:jar:1.7.11</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:2.0.3.RELEASE/org.mockito:mockito-core:jar:2.15.0/org.objenesis:objenesis:jar:2.6</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:2.0.3.RELEASE/org.hamcrest:hamcrest-core:jar:1.3</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:2.0.3.RELEASE/org.hamcrest:hamcrest-library:jar:1.3</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:2.0.3.RELEASE/org.skyscreamer:jsonassert:jar:1.5.0</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:2.0.3.RELEASE/org.skyscreamer:jsonassert:jar:1.5.0/com.vaadin.external.google:android-json:jar:0.0.20131108.vaadin1</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:2.0.3.RELEASE/org.springframework:spring-core:jar:5.0.7.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:2.0.3.RELEASE/org.springframework:spring-core:jar:5.0.7.RELEASE/org.springframework:spring-jcl:jar:5.0.7.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:2.0.3.RELEASE/org.springframework:spring-test:jar:5.0.7.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:2.0.3.RELEASE/org.xmlunit:xmlunit-core:jar:2.5.1</node>
+            <node x="" y="">org.mybatis.spring.boot:mybatis-spring-boot-starter:jar:1.3.1</node>
+            <node x="" y="">org.mybatis.spring.boot:mybatis-spring-boot-starter:jar:1.3.1/org.springframework.boot:spring-boot-starter-jdbc:jar:2.0.3.RELEASE</node>
+            <node x="" y="">org.mybatis.spring.boot:mybatis-spring-boot-starter:jar:1.3.1/org.springframework.boot:spring-boot-starter-jdbc:jar:2.0.3.RELEASE/com.zaxxer:HikariCP:jar:2.7.9</node>
+            <node x="" y="">org.mybatis.spring.boot:mybatis-spring-boot-starter:jar:1.3.1/org.springframework.boot:spring-boot-starter-jdbc:jar:2.0.3.RELEASE/org.springframework:spring-jdbc:jar:5.0.7.RELEASE</node>
+            <node x="" y="">org.mybatis.spring.boot:mybatis-spring-boot-starter:jar:1.3.1/org.springframework.boot:spring-boot-starter-jdbc:jar:2.0.3.RELEASE/org.springframework:spring-jdbc:jar:5.0.7.RELEASE/org.springframework:spring-tx:jar:5.0.7.RELEASE</node>
+            <node x="" y="">org.mybatis.spring.boot:mybatis-spring-boot-starter:jar:1.3.1/org.mybatis.spring.boot:mybatis-spring-boot-autoconfigure:jar:1.3.1</node>
+            <node x="" y="">org.mybatis.spring.boot:mybatis-spring-boot-starter:jar:1.3.1/org.mybatis:mybatis:jar:3.4.5</node>
+            <node x="" y="">org.mybatis.spring.boot:mybatis-spring-boot-starter:jar:1.3.1/org.mybatis:mybatis-spring:jar:1.3.1</node>
+            <node x="" y="">mysql:mysql-connector-java:jar:5.1.46</node>
+            <node x="" y="">com.arc:core:jar:0.0.1-SNAPSHOT</node>
+            <node x="" y="">com.arc:core:jar:0.0.1-SNAPSHOT/org.projectlombok:lombok:jar:1.16.18</node>
+            <node x="" y="">com.arc:core:jar:0.0.1-SNAPSHOT/org.springframework.boot:spring-boot-starter-aop:jar:2.0.3.RELEASE</node>
+            <node x="" y="">com.arc:core:jar:0.0.1-SNAPSHOT/org.springframework.boot:spring-boot-starter-aop:jar:2.0.3.RELEASE/org.aspectj:aspectjweaver:jar:1.8.13</node>
+            <node x="" y="">com.arc:core:jar:0.0.1-SNAPSHOT/org.apache.commons:commons-lang3:jar:3.7</node>
+            <node x="" y="">com.arc:core:jar:0.0.1-SNAPSHOT/javax:javaee-api:jar:7.0</node>
+            <node x="" y="">com.arc:core:jar:0.0.1-SNAPSHOT/javax:javaee-api:jar:7.0/com.sun.mail:javax.mail:jar:1.6.1</node>
+            <node x="" y="">com.arc:core:jar:0.0.1-SNAPSHOT/javax:javaee-api:jar:7.0/com.sun.mail:javax.mail:jar:1.6.1/javax.activation:activation:jar:1.1</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="0.9394210302256282" x="1002.0" y="789.0" />
+          <SelectedNodes />
+          <Categories />
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>All</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/web-back/pom.xml" />
+    <entry file="file://$PROJECT_DIR$/core/src/main/java/com/arc/model/query/Query.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="7" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/main/java/com/arc/model/query/PageQuery.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/main/java/com/arc/model/query/product/ProductQuery.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="16" column="18" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/main/java/com/arc/model/vo/ResponseVo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="10" column="23" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/web-back/src/main/java/com/arc/shop/service/新建文本文档.txt" />
+    <entry file="file://$PROJECT_DIR$/core/src/main/java/com/arc/model/domain/enviroment/Project.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="19" column="20" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/main/java/com/arc/model/domain/enviroment/ProjectEnvironment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/main/java/com/arc/model/dto/enviroment/ProjectDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-76">
+          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.0.7.RELEASE/spring-web-5.0.7.RELEASE.jar!/org/springframework/web/bind/annotation/RequestParam.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="17" column="18" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/web-back/src/main/java/com/arc/shop/service/ProductService.java" />
+    <entry file="file://$PROJECT_DIR$/web/web-back/src/main/java/com/arc/shop/service/impl/ProductServiceImpl.java" />
+    <entry file="file://$PROJECT_DIR$/core/pom.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/web-fast-start/src/main/java/com/arc/faststart/controller/File1Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="835">
+          <caret line="133" column="38" selection-start-line="133" selection-start-column="38" selection-end-line="133" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/web-back/src/main/java/com/arc/shop/controller/product/ProductController.java" />
+    <entry file="file://$PROJECT_DIR$/web/web-back/src/main/java/com/arc/shop/controller/file/FileController.java" />
+    <entry file="file://$PROJECT_DIR$/web/web-back/src/main/java/com/arc/shop/controller/product/ProductControllerPage.java" />
+    <entry file="file://$PROJECT_DIR$/web/web-back/src/main/java/com/arc/shop/controller/IndexController.java" />
+    <entry file="file://$PROJECT_DIR$/web/web-back/README.MD" />
+    <entry file="file://$PROJECT_DIR$/web/web-back/src/main/java/com/arc/shop/controller/file/File1Controller.java" />
+    <entry file="file://$PROJECT_DIR$/web/web-fast-start/src/main/java/com/arc/faststart/controller/FileController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="722">
+          <caret line="46" column="1" selection-start-line="46" selection-start-column="1" selection-end-line="46" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/web-shop/web-back.iml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/web-shop/README.MD">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="250">
+            <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.MD">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/web-validating/pom.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/web-validating/web-validating.iml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="760">
+          <caret line="40" column="48" selection-start-line="40" selection-start-column="48" selection-end-line="40" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1577">
+          <caret line="217" selection-start-line="217" selection-end-line="217" />
+          <folding>
+            <element signature="n#dependencyManagement#0;n#project#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server-db/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="23" column="27" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server-db/mybatis-tool/src/main/java/com/mybatis/generator/MybatisGeneratorMain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/main/java/com/arc/model/BaseModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="9" selection-start-line="9" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server-db/mybatis-tool/target/output/food.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server-db/mybatis-tool/target/output/foodMapper.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server-db/mybatis-tool/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="13" column="19" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/web-environment/pom.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/web-shop/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="15" column="30" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" column="5" lean-forward="true" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>jdk1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.7</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
