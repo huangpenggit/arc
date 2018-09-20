@@ -4,6 +4,7 @@ import java.time.*;
 import java.time.format.DateTimeFormatter;
 import java.time.temporal.TemporalAdjusters;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.Set;
 
 public class DateTools {
@@ -13,7 +14,7 @@ public class DateTools {
 
     /**
      * LocalDate、LocalTime、LocalDateTime
-     * 
+     * <p>
      * from     依据传入的 Temporal 对象创建对象实例
      * now      依据系统时钟创建 Temporal 对象
      * of       由 Temporal 对象的某个部分创建该对象的实例
@@ -53,7 +54,7 @@ public class DateTools {
 
     /**
      * TemporalAdjuster 时间校正器
-     * 
+     * <p>
      * TemporalAdjusters工具类方法：
      * dayOfWeekInMonth           创建一个新的日期，它的值为同一个月中每一周的第几天
      * firstDayOfMonth            创建一个新的日期，它的值为当月的第一天
@@ -187,13 +188,30 @@ public class DateTools {
         System.out.println(zdt);
     }
 
+
+    /**
+     * 获取当前日期是星期几<br>
+     *
+     * @param date
+     * @return 当前日期是星期几
+     */
+    public static String getWeekOfDate(Date date) {
+        String[] weekDays = {"星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"};
+        Calendar cal = Calendar.getInstance();
+        cal.setTime(date);
+        int w = cal.get(Calendar.DAY_OF_WEEK) == 0 ? 0 : (cal.get(Calendar.DAY_OF_WEEK) - 1);
+        return weekDays[w];
+    }
+
+
     public static void main(String[] args) {
 
-
+        String weekOfDate = getWeekOfDate(new Date());
+        System.out.println(weekOfDate);
         Calendar cal = Calendar.getInstance();
         int week = cal.get(Calendar.DAY_OF_WEEK);
         System.out.println(week);
-        System.out.println(week-1);//
+        System.out.println(week - 1);//
         //默认，周日是1。
         LocalDateTime now = LocalDateTime.now();
         System.out.println(now);//2018-09-19T19:32:54.881
