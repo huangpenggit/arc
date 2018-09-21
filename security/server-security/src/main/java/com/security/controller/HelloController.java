@@ -37,6 +37,11 @@ public class HelloController {
         return "/hello";
     }
 
+    public static void main(String[] args) {
+        Integer a = null;
+        String s = String.valueOf(a);
+        System.out.println(s);
+    }
 
 
 }
