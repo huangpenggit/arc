@@ -30,6 +30,7 @@
         <module>web-vue</module>
         <module>web-wechat</module>
         <module>web-environment</module>
+		<module>web-food</module>
     </modules>
 
 

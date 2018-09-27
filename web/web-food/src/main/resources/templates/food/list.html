@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <!--<link rel="stylesheet" type="text/css" th:href="@{/index.css}">-->
+    <!--<script th:src="@{/resources/js/jquery-1.9.1.min.js}"></script>-->
+    <script th:src="@{/plugins/vue.js}"></script>
+    <script th:src="@{/plugins/axios.js}"></script>
+    <title>食物列表</title>
+</head>
+<body>
+
+<div id="food_list">
+    <center><h2>{{title}}</h2></center>
+    <table border="0">
+        <!--        <tr>
+                    <th>主键</th>
+                    <th>影像</th>
+                    <th>食物品名称</th>
+
+                    <th>真实价格</th>
+                    <th>介绍</th>
+                    <th>标识</th>
+
+                    <th>描述</th>
+                    <th>供应者</th>
+                    <th>评价</th>
+                </tr>-->
+        <tr th:each="entry,index : ${list}">
+            <th th:text="${entry.id}">0</th>
+            <td><img th:src="${entry.image}" style="width: 100px;height: 100px"/></td>
+            <td th:text="'名称：'+${entry.name}">NAME</td>
+            <td th:text="'价格：'+${entry.realPrice}">realPrice</td>
+            <td th:text="'供应量：'+${entry.stock}">stock</td>
+            <td th:text="'余量：'+${entry.last}">last</td>
+            <td th:text="${entry.intro}">intro</td>
+            <td th:text="${entry.note}">note</td>
+            <td th:text="${entry.description}">description</td>
+            <td th:text="${entry.provider}">provider</td>
+            <td th:text="${entry.evaluation}">evaluation</td>
+            <td>
+                <button @click="fun2()">点击选择数据</button>
+            </td>
+            <!--<br>-->
+        </tr>
+
+    </table>
+    <hr>
+
+    <!--
+    <ul>
+            <li v-for="item in foods">
+                {{ item.name }}
+            </li>
+        </ul>
+    -->
+</div>
+<br>
+<hr>
+<div>
+    <a href="https://github.com/astaxie/build-web-application-with-golang/blob/master/zh/09.3.md">XSS</a>
+    <a href="https://www.npmjs.com/package/axios">axios</a>
+    <a href="https://segmentfault.com/q/1010000008462977">post</a>
+</div>
+</body>
+<script>
+
+
+    var food = new Vue({
+        el: '#food_list',
+        data: {
+            ok: true,     // true,返回：Yes，   false=> No
+            pageUrl: "/food/query",
+            title: "测试",
+            foods: [
+                // {name: 'Rice'},
+                // {name: 'Noodle'}
+
+            ],
+            query: {
+                id: 1
+            }
+        },
+        methods: {
+            fun1: function () {
+                axios.post(this.pageUrl, this.query, {
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                })
+                    .then(function (response) {
+                        console.log(response);
+                        console.log(response.data);
+                        console.log(response.status);
+                        console.log(response.config);
+                        console.log(response.data.success);
+                        console.log(response.data.result.data);
+                        console.log(response.data.result.data.length);
+
+                        if (response.data.success && response.status == 200) {
+                            // this.foods = response.data.result.data;
+                            //Vue 不允许在已经创建的实例上动态添加新的根级响应式属性 (root-level reactive property)。然而它可以使用 Vue.set(object, key, value) 方法将响应属性添加到嵌套的对象上：
+                            // Vue.set(vm.someObject, 'b', 2)
+                            // 您还可以使用 vm.$set 实例方法，这也是全局 Vue.set 方法的别名：
+                            // this.$set(this.someObject,'b',2)
+                            food.foods = response.data.result.data;
+                            console.table(this.foods);
+                            console.log(this.foods.length);
+                            console.log(typeof  this.foods);
+
+                        }
+
+                    })
+                    .catch(function (error) {
+                        console.log(error);
+                    });
+
+            }
+
+        },
+        mounted() {
+            console.log("页面加载完成");
+            this.fun1();
+        }
+        //此处填每次渲染完后执行的代码
+
+    });
+
+
+</script>
+</html>
