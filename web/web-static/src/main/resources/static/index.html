@@ -1,0 +1,391 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>智造工场</title>
+    <link rel="stylesheet" href="css/public.css"/>
+    <link rel="stylesheet" href="css/header.css"/>
+    <link rel="stylesheet" href="css/index.css"/>
+
+    <!--本地 或者网上引入 js -->
+    <!--<script type="text/javascript" src="/static/plugins/jquery/jQuery.js"></script>-->
+    <script src="http://libs.baidu.com/jquery/2.1.4/jquery.min.js"></script>
+
+    <!--本地引入-->
+    <script type="text/javascript" src="js/index.js"></script>
+
+
+    <script type="text/javascript">
+        $(function () {
+            $("#panorama_ta").css("height", $(window).height() - $(".header").outerHeight() + "px");
+            $(window).resize(function () {
+                $("#panorama_ta").css("height", $(window).height() - $(".header").outerHeight() + "px");
+            });
+
+        })
+    </script>
+
+</head>
+<body>
+<!-- 网页头信息 -->
+<#include "/common/head.ftl" parse=true ></#include>
+
+<!-- 网页尾部信息 -->
+<#include "common/foot-tpl.ftl" ></#include>
+
+
+<!-- ----------------------内容-------------->
+
+<!--<div id="panorama_ta" class="qujtp">
+    <iframe class="panorama_ta" src="http://www.gy720.com/pano/view/13656&v=ok"></iframe>
+    <div class="dazitle" onselectstart="return false">以工业设计全产业链为核心的半开放式创新及产业化服务平台</div>
+</div>-->
+<div>
+    <div>
+        <div class="lubbox">
+            <ul class="lubctn">
+                <!--<li><img src="/static/img/shouylb_01.jpg"/></li>-->
+                <!--<li><img src="/static/img/shouylb_02.jpg"/></li>-->
+                <!--<li><img src="/static/img/shouylb_03.jpg"/></li>-->
+                <li><a href="/pc/enter/toenter.html"><img src="/static/img/shouylb_04.jpg"/></a></li>
+            </ul>
+            <a href="javascript:" class="left_an"><img src="/static/img/left_an.png"/></a>
+            <a href="javascript:" class="right_an"><img src="/static/img/right_an.png"/></a>
+        </div>
+    </div>
+
+    <!-- 新闻 -->
+    <div class="news_box">
+        <div class="news_tle">
+            <div>新闻&活动</div>
+            <div>NEWS & ACTIVITY</div>
+        </div>
+        <div class="chakged"><a target="_blank" href="/pc/companynews.html">查看更多&gt;</a></div>
+        <div class="lubnctn">
+            <div class="huodbx">
+                <!-- 遮罩的div -->
+                <div class="zhezhud"></div>
+                <ul class="zddul">
+
+
+                    <li>
+                        <a href="/pc/newsDetail.html?NEWS_ID=80">
+                            <!--<div class="xiwediv"><img-->
+                            <!--src="http://www.artopcq.com/uploadFiles/uploadImgs//news/20171204/cec5192209734326ae74f7f720d773a3.jpg"/>-->
+                            <!--</div>-->
+                            <div class="xwxtle">
+
+
+                                浪尖集团荣获2017年Good Design...
+
+
+                            </div>
+                            <p class="newsri">
+                                2017年10月4日，大赛公布了GOOD
+                                DESIGN赏2017的1403件获奖作品（参评总数为4495件）。在这一千多件获奖作品中，由评委评选了7个大赏的候补名单和BEST100。
+                            </p>
+                            <div>more</div>
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a href="/pc/newsDetail.html?NEWS_ID=84">
+                        <!--    <div class="xiwediv"><img
+                                    src="http://www.artopcq.com/uploadFiles/uploadImgs//news/20171205/2d6411d235be4f3ab8548566aa549d91.jpg"/>
+                            </div>-->
+                            <div class="xwxtle">
+
+
+                                喜讯丨浪尖集团通过“国家级工业设计中心”复核
+
+
+                            </div>
+                            <p class="newsri">
+                                10月25日，中华人民共和国工业和信息化部将2017年拟认定的国家级工业设计中心名单以及拟通过复核的2013年、2015年国家级工业设计中心名单予以公示。浪尖继15年被国家工信部认定为“国家级工业设计中心”之后，今年再次获得“国家级工业设计中心”认定。
+                            </p>
+                            <div>more</div>
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a href="/pcactivity_info-144">
+                            <!--<div class="xiwediv"><img-->
+                            <!--src="http://www.artopcq.com/uploadFiles/uploadImgs//news/20180223/0bffcdb95fbb45efbab88b6e6997c680.jpg"/>-->
+                            <!--</div>-->
+                            <div class="xwxtle">
+
+
+                                开工啦，2018撸起袖子加油干！
+
+
+                            </div>
+                            <p class="newsri">
+                                2018年2月23日，开年后第一个工作日，D+M浪尖智造工场全体工作人员迅速切换到“工作模式”，以饱满的热情和踏实的干劲，开足马力，迅速投入到各项工作之中。
+                            </p>
+                            <div>more</div>
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a href="/pcactivity_info-143">
+                          <!--  <div class="xiwediv"><img
+                                    src="http://www.artopcq.com/uploadFiles/uploadImgs//news/20171110/4707c697ddd443c3be527391b50d9028.jpg"/>
+                            </div>-->
+                            <div class="xwxtle">
+
+
+                                沙坪坝区首届新能源汽车研发创意大赛 有料你就...
+
+
+                            </div>
+                            <p class="newsri">
+                                2017年11月10日，为进一步贯彻落实十九大精神，充分体现创新是引领发展的第一动力这一要求，将研发与产业相结合，沙坪坝区科学技术委员会联合重庆小康控股有限公司开展“新能源汽车研发创意大赛”，面向国内外征集新能源与智能汽车领域的优秀创新创业项目。聚集最有创意的新想法，用你的创意颠覆未来，丰厚的大奖。
+                            </p>
+                            <div>more</div>
+                        </a>
+                    </li>
+
+
+                    <!-- 第二屏 -->
+
+
+                    <li>
+                        <a href="/pc/newsDetail.html?NEWS_ID=89">
+                         <!--   <div class="xiwediv"><img
+                                    src="http://www.artopcq.com/uploadFiles/uploadImgs//news/20180113/7721d7aa8c38412cb9360a6dc44290e7.jpg"/>
+                            </div>-->
+                            <div class="xwxtle">
+
+
+                                智能上下楼梯辅助设备，科技惠民工程让老百姓享...
+
+
+                            </div>
+                            <p class="newsri">
+                                近日，重庆浪尖智能科技研究院有限公司自主研发了一款上下楼梯辅助设备，老旧楼房上下楼梯的问题将得到改善。
+                            </p>
+                            <div>more</div>
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a href="/pc/newsDetail.html?NEWS_ID=88">
+                      <!--      <div class="xiwediv"><img
+                                    src="http://www.artopcq.com/uploadFiles/uploadImgs//news/20171229/bc18a4a0124941f7afa01250181dd4a8.jpg"/>
+                            </div>-->
+                            <div class="xwxtle">
+
+
+                                喜讯！重庆浪尖渝力科技有限公司入选2017年...
+
+
+                            </div>
+                            <p class="newsri">
+                                12月28日，全国高新技术企业认定管理工作网根据《高新技术企业认定管理办法》（国科发火〔2016〕32号）和《高新技术企业认定管理工作指引》（国科发火〔2016〕195号）有关规定，将重庆市2017年拟认定高新技术企业名单予以公示，重庆浪尖渝力科技有限公司成功入选。
+                            </p>
+                            <div>more</div>
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a href="/pcactivity_info-142">
+                          <!--  <div class="xiwediv"><img
+                                    src="http://www.artopcq.com/uploadFiles/uploadImgs//news/20171025/57998a083bf340a590ee5e6ea2343989.png"/>
+                            </div>-->
+                            <div class="xwxtle">
+
+
+                                沙坪坝区2017年创业担保贷款政策宣讲会顺利...
+
+
+                            </div>
+                            <p class="newsri">
+                                2017年10月25日，为助推“大众创业、万众创新”，发挥创业担保贷款促进创业积极作用，帮助创业者解决融资难题，按照《普惠金融发展专项资金管理办法》（财金〔2016〕85号）、《关于实施创业担保贷款支持创业就业工作的通知》（银发〔2016〕202号）、《关于调整创业担保贷款政策支持创业就业的通知》（渝银发〔2016〕147号）等文件精神，结合我区实际，特组织“沙坪坝区2017年创业担保贷款政策宣讲
+                            </p>
+                            <div>more</div>
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a href="/pcactivity_info-140">
+                           <!-- <div class="xiwediv"><img
+                                    src="http://www.artopcq.com/uploadFiles/uploadImgs//news/20170817/2c63a45a196c405abd7c4098929c4c3e.jpg"/>
+                            </div>-->
+                            <div class="xwxtle">
+
+
+                                中国银行&D+M浪尖智造工场 创客融资调研会...
+
+
+                            </div>
+                            <p class="newsri">
+                                2017年8月17日，D+M浪尖智造工场应创客发展需求联合中国银行（沙坪坝支行）组织了此次创客融资调研会，实时有效地了解当代创客在公司运营和发展中对资金的需求，从而制定和推出针对创客融资贷款的相应政策，推动创新创业发展浪潮。
+                            </p>
+                            <div>more</div>
+                        </a>
+                    </li>
+
+
+                </ul>
+            </div>
+            <a href="javascript:" class="left_b"><img src="/static/img/left_an.png"/></a>
+            <a href="javascript:" class="right_b"><img src="/static/img/right_an.png"/></a>
+        </div>
+
+    </div>
+
+    <div class="hebbji" style="background-image: url('/static/img/hezbag.jpg');"></div>
+
+    <!-- 合作伙伴 -->
+    <div>
+        <div class="news_tle">
+            <div>合作伙伴</div>
+            <div>BUSINESS PARTNERS</div>
+        </div>
+        <div class="wd12">
+            <ul class="hzhbul">
+
+                <!--<div>
+                                <li><img
+                                        src="http://www.artopcq.com/uploadFiles/uploadImgs/partner/20180115/82c92ee5ba0a4f92bc71451662a1d911.jpg"/>
+                                </li>
+
+                                <li><img
+                                        src="http://www.artopcq.com/uploadFiles/uploadImgs/partner/20180115/af567cc644474f56be8bfcf954a52691.jpg"/>
+                                </li>
+
+                                <li><img
+                                        src="http://www.artopcq.com/uploadFiles/uploadImgs/partner/20180115/bec8286621ec4c75b2e8cff9c1cdfee2.jpg"/>
+                                </li>
+
+                                <li><img
+                                        src="http://www.artopcq.com/uploadFiles/uploadImgs/partner/20180115/b5e1300a922b440ab05a055ffd9d10d1.jpg"/>
+                                </li>
+
+                                <li><img
+                                        src="http://www.artopcq.com/uploadFiles/uploadImgs/partner/20180115/a82095dd5d304046981b5276d31f45c9.jpg"/>
+                                </li>
+
+                                <li><img
+                                        src="http://www.artopcq.com/uploadFiles/uploadImgs/partner/20180115/e7ed19f5bc484b1fa3d1bc43ca7c01da.jpg"/>
+                                </li>
+
+                                <li><img
+                                        src="http://www.artopcq.com/uploadFiles/uploadImgs/partner/20180115/783f470256ce460fbca34a589cf99798.jpg"/>
+                                </li>
+
+                                <li><img
+                                        src="http://www.artopcq.com/uploadFiles/uploadImgs/partner/20180115/120cff65b12d4d678b2964c5c7191a6c.jpg"/>
+                                </li>
+
+                                <li><img
+                                        src="http://www.artopcq.com/uploadFiles/uploadImgs/partner/20180115/776e482f3b694da28a863052873eb8aa.jpg"/>
+                                </li>
+
+                                <li><img
+                                        src="http://www.artopcq.com/uploadFiles/uploadImgs/partner/20180115/a8838bd64e1d4b2a86e1ca2a92243e54.jpg"/>
+                                </li>
+
+                                <li><img
+                                        src="http://www.artopcq.com/uploadFiles/uploadImgs/partner/20180115/ada678f33a54457f8280865737176432.jpg"/>
+                                </li>
+
+                                <li><img
+                                        src="http://www.artopcq.com/uploadFiles/uploadImgs/partner/20180115/b3ed5fd2014649b886ee2faabcf5d7bf.jpg"/>
+                                </li>
+
+                                <li><img
+                                        src="http://www.artopcq.com/uploadFiles/uploadImgs/partner/20180115/d0ab1a0520744b32b8ce7069346fda80.jpg"/>
+                                </li>
+
+                                <li><img
+                                        src="http://www.artopcq.com/uploadFiles/uploadImgs/partner/20180115/09bb4bc4505b401685a1460d60495012.jpg"/>
+                                </li>
+
+                                <li><img
+                                        src="http://www.artopcq.com/uploadFiles/uploadImgs/partner/20180115/b2c2c866ed7448b3b942e3ccaf319cea.jpg"/>
+                                </li>
+
+                                <li><img
+                                        src="http://www.artopcq.com/uploadFiles/uploadImgs/partner/20180115/358c71bbf44c4e5f8049c6cd415b29f5.jpg"/>
+                                </li>
+
+                                <li><img
+                                        src="http://www.artopcq.com/uploadFiles/uploadImgs/partner/20180115/8675e68d9d3d4ca2996b508c960dc59e.jpg"/>
+                                </li>
+
+                                <li><img
+                                        src="http://www.artopcq.com/uploadFiles/uploadImgs/partner/20180115/91641890a8bd4b60b17a792f1aee9b99.jpg"/>
+                                </li>
+
+                                <li><img
+                                        src="http://www.artopcq.com/uploadFiles/uploadImgs/partner/20180115/456e2915f5854c57bf196e0a53589ffd.jpg"/>
+                                </li>
+
+                                <li><img
+                                        src="http://www.artopcq.com/uploadFiles/uploadImgs/partner/20180115/49d5e9921bc941ab8b85d66873cecc2a.jpg"/>
+                                </li>
+
+                                <li><img
+                                        src="http://www.artopcq.com/uploadFiles/uploadImgs/partner/20180115/71a0b7db2f31497085be62d50c651223.jpg"/>
+                                </li>
+
+                                <li><img
+                                        src="http://www.artopcq.com/uploadFiles/uploadImgs/partner/20180115/6ae5b45ead50437596f6d92df4556889.jpg"/>
+                                </li>
+
+                                <li><img
+                                        src="http://www.artopcq.com/uploadFiles/uploadImgs/partner/20180115/5054c552774f4f11b2cf32cfeb132168.jpg"/>
+                                </li>
+
+                                <li><img
+                                        src="http://www.artopcq.com/uploadFiles/uploadImgs/partner/20180115/dcc26418b2e24c279677c58996bf2bfa.jpg"/>
+                                </li>
+
+                                <li><img
+                                        src="http://www.artopcq.com/uploadFiles/uploadImgs/partner/20180115/d3ccd228201742fd8cfe57a263ceff4d.jpg"/>
+                                </li>
+
+                </div>-->
+            </ul>
+            <div class="chakdg"><a href="/pcpartner.html">查看更多&gt;</a></div>
+        </div>
+    </div>
+
+</div>
+
+<!-- 底部被引入了-->
+
+<style>
+    .wxqqxl > div {
+        position: relative;
+    }
+
+    .erweimbox {
+        position: absolute;
+        top: 45px;
+        left: 50%;
+        margin-left: -50px;
+        z-index: 9;
+        width: 100px;
+        height: 100px;
+        display: none;
+    }
+
+    .erweimbox img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .wxqqxl > div:hover .erweimbox {
+        display: block;
+    }
+</style>
+</body>
+</html>
