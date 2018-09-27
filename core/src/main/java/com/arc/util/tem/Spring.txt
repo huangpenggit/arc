@@ -1,0 +1,278 @@
+package cn.com.besttone.csp.web.service.system.impl;
+
+import cn.com.besttone.csp.context.api.Api;
+import cn.com.besttone.csp.context.api.ApiClient;
+import cn.com.besttone.csp.context.api.ApiResponse;
+import cn.com.besttone.csp.context.config.annotations.RealmPermission;
+import cn.com.besttone.csp.context.enums.system.RealmMethod;
+import cn.com.besttone.csp.context.enums.system.RealmType;
+import cn.com.besttone.csp.context.utils.MD5Utils;
+import cn.com.besttone.csp.context.web.WebResult;
+import cn.com.besttone.csp.model.sys.Realm;
+import cn.com.besttone.csp.query.sys.RealmQuery;
+import cn.com.besttone.csp.web.service.system.RealmService;
+import com.fasterxml.jackson.core.type.TypeReference;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationContext;
+import org.springframework.stereotype.Controller;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
+
+import java.lang.reflect.Method;
+import java.util.*;
+
+import static org.springframework.web.bind.annotation.RequestMethod.GET;
+import static org.springframework.web.bind.annotation.RequestMethod.POST;
+
+@Service
+public class RealmServiceImpl implements RealmService {
+
+    @Autowired
+    private ApiClient client;
+    @Autowired
+    private ApplicationContext applicationContext;
+
+    /**
+     * 列表显示 realms
+     *
+     * @param query
+     * @return
+     */
+    @Override
+    public WebResult page(RealmQuery query) {
+        TypeReference<ApiResponse<List<Realm>>> typeRef = new TypeReference<ApiResponse<List<Realm>>>() {
+        };
+        ApiResponse<List<Realm>> response = client.postJson(Api.CSP_MS_SYSTEM, "/realm/page", typeRef, query);
+        WebResult build = WebResult.build(response);
+        return build;
+    }
+
+    /**
+     * 保存 realm
+     *
+     * @param realm
+     * @return
+     */
+    @Override
+    public WebResult save(Realm realm) {
+        TypeReference<ApiResponse<String>> typeRef = new TypeReference<ApiResponse<String>>() {
+        };
+        ApiResponse<String> response = client.postJson(Api.CSP_MS_SYSTEM, "/realm/save", typeRef, realm);
+        return WebResult.build(response);
+    }
+
+    /**
+     * 删除 单个realm
+     *
+     * @param id
+     * @return
+     */
+    @Override
+    public WebResult delete(String id) {
+        Map<String, Object> uriVariables = new HashMap<>();
+        uriVariables.put("id", id);
+        TypeReference<ApiResponse<Integer>> typeRef = new TypeReference<ApiResponse<Integer>>() {
+        };
+        ApiResponse<Integer> resp = client.get(Api.CSP_MS_SYSTEM, "/realm/delete", typeRef, uriVariables);
+        return WebResult.build(resp);
+    }
+
+    /**
+     * 更新 realm
+     *
+     * @param realm
+     * @return
+     */
+    @Override
+    public WebResult update(Realm realm) {
+        TypeReference<ApiResponse<Integer>> typeRef = new TypeReference<ApiResponse<Integer>>() {
+        };
+        ApiResponse<Integer> response = client.postJson(Api.CSP_MS_SYSTEM, "/realm/update", typeRef, realm);
+        return WebResult.build(response);
+    }
+
+
+    @Override
+    public WebResult get(String id) {
+        return null;
+    }
+
+
+    /**
+     * 获取一个realm  by  realmName
+     *
+     * @param realmName
+     * @return
+     */
+    @Override
+    public WebResult getByRealmName(String realmName) {
+        Map<String, Object> uriVariables = new HashMap<>();
+        uriVariables.put("realmName", realmName);
+        TypeReference<ApiResponse<Realm>> typeRef = new TypeReference<ApiResponse<Realm>>() {
+        };
+        ApiResponse<Realm> response = client.get(Api.CSP_MS_SYSTEM, "/realm/realmname", typeRef, uriVariables);
+        WebResult build = WebResult.build(response);
+        return build;
+    }
+
+    /**
+     * 获取 资源（权限列表）
+     *
+     * @return
+     */
+    @Override
+    public WebResult list() {
+        Map<String, Object> uriVariables = new HashMap<>();
+        TypeReference<ApiResponse<List<Realm>>> typeRef = new TypeReference<ApiResponse<List<Realm>>>() {
+        };
+        ApiResponse<List<Realm>> resp = client.get(Api.CSP_MS_SYSTEM, "/realm/list", typeRef, uriVariables);
+        return WebResult.build(resp);
+    }
+
+
+    //加载 资源 权限的方法
+    @Override
+    @Transactional(propagation = Propagation.REQUIRED)
+    public WebResult loadRealms() {
+        List<String> urls = new ArrayList<String>();//存储所有url集合
+        List<String> existUrls = new ArrayList<String>();//数据库中所有url集合
+        //获取当前的所有的 资源url表达式 表达式如果表达式存在则不要再添加;
+        List<Realm> realms = this.listExist();
+        for (Realm realm : realms) {
+            existUrls.add(realm.getPath());
+        }
+
+        System.out.println(realms);
+        System.out.println(existUrls);
+        System.out.println();
+        System.out.println(existUrls);
+
+        //获取所有的路径-- Controller  equestMappings
+
+
+        //获取所有@ResponseBody与@Controller的bean对象
+        Map<String, Object> beansWithAnnotation = applicationContext.getBeansWithAnnotation(Controller.class);
+        beansWithAnnotation.putAll(applicationContext.getBeansWithAnnotation(RestController.class));
+        Collection<Object> beans = beansWithAnnotation.values();
+        for (Object bean : beans) {
+            Method[] methods = bean.getClass().getDeclaredMethods();
+            for (Method method : methods) {
+                if (method.isAnnotationPresent(RealmPermission.class)) {
+                    String experssion = bean.getClass().getName() + ":" + method.getName();
+                    //if (!experssions.contains(experssion)) {     //如果表达式不包含则开始保存
+                    String realmName = method.getAnnotation(RealmPermission.class).realmName();
+                    String note = method.getAnnotation(RealmPermission.class).note();
+                    Integer priority = method.getAnnotation(RealmPermission.class).priority();
+                    RealmType type = method.getAnnotation(RealmPermission.class).type();
+
+                    RequestMethod[] requestMethods = method.getAnnotation(RequestMapping.class).method();//被请求的方法是何种类型 请求方法的 数组 7种
+
+
+                    String[] path = method.getAnnotation(RequestMapping.class).path();
+                    String packageName = method.getDeclaringClass().getPackage().getName();//预计是 packageName
+
+                    // 是类吗
+                    Class<?> aClass = bean.getClass();//C，，，类
+                    RequestMapping annotation = bean.getClass().getAnnotation(RequestMapping.class);
+                    String[] value1 = bean.getClass().getAnnotation(RequestMapping.class).value();//预期 类上的地址 对的！ 数组的[0]
+                    String[] path4 = bean.getClass().getAnnotation(RequestMapping.class).path();
+                    RequestMethod[] method2 = bean.getClass().getAnnotation(RequestMapping.class).method();
+                    String name2 = bean.getClass().getAnnotation(RequestMapping.class).name();
+
+                    String[] params1 = bean.getClass().getAnnotation(RequestMapping.class).params();
+                    String[] params2 = bean.getClass().getAnnotation(RequestMapping.class).params();
+
+
+                    Class<?> declaringClass = method.getDeclaringClass();//C .... 类？？？
+                    System.out.println(aClass == declaringClass);
+                    System.out.println(aClass == declaringClass);
+
+                    String[] path1 = method.getDeclaringClass().getAnnotation(RequestMapping.class).value();////预期 类上的地址 对的！ 数组的[0]
+                    String[] path2 = method.getAnnotation(RequestMapping.class).value();//路径 但是怎么获取类上贴的那部分url呢？
+
+                    String wholeUrl = path1[0].toString() + path2[0].toString();//预计是完整路径
+
+                    RequestMethod[] method1 = method.getDeclaringClass().getAnnotation(RequestMapping.class).method();//请求方法的 数组 7种？？
+
+                    String name1 = method.getDeclaringClass().getAnnotation(RequestMapping.class).name();
+                    String[] headers = method.getDeclaringClass().getAnnotation(RequestMapping.class).headers();
+
+                    String name = method.getAnnotation(RequestMapping.class).name();
+
+                    String[] params = method.getAnnotation(RequestMapping.class).params();
+
+                    RealmMethod requestMethod = RealmServiceImpl.getRequestMethods(requestMethods);//【请求方法】（GET，POST，ALL）
+
+                    //  pack url method
+                    String realmKey = RealmServiceImpl.getRealmKey(packageName, wholeUrl, requestMethod.toString());// id=realmKey
+
+                    Realm realm = new Realm();
+                    realm.setRealmName(realmName);
+                    realm.setNote(note);
+                    realm.setPriority(priority);
+                    realm.setType(type);
+
+
+                    realm.setPath(wholeUrl);//???
+                    realm.setMethod(requestMethod);//??? POST GET
+                    realm.setRealmKey(realmKey);// Key>???
+                    realm.setId(realmKey);
+
+                    //realm.getParentId(); // 父级id？？？
+
+
+                    System.out.println(realm);
+                    System.out.println(realm);
+                    System.out.println(realm);
+                    // this.save(realm);
+                    //this.saveBatch().insert(realm);  //@TODO 批量保存 realms
+
+                }
+            }
+        }
+        return null;
+    }
+
+    /**
+     * 获取数据库中保存着的 所有的 资源 realms
+     *
+     * @return
+     */
+    public List<Realm> listExist() {
+        Map<String, Object> uriVariables = new HashMap<>();
+        TypeReference<ApiResponse<List<Realm>>> typeRef = new TypeReference<ApiResponse<List<Realm>>>() {
+        };
+        ApiResponse<List<Realm>> back = client.get(Api.CSP_MS_SYSTEM, "/realm/list", typeRef, uriVariables);
+        List<Realm> list = back.getResult();
+        return list;
+    }
+
+    //获取资源标识（id）
+    public static String getRealmKey(String pack, String url, String method) {
+        return MD5Utils.getMD5Str(pack + url + method);
+    }
+
+    //判断请求方法 返回枚举
+    public static RealmMethod getRequestMethods(RequestMethod[] requestMethods) {
+        if (requestMethods.length == 1) {
+            for (RequestMethod requestMethod : requestMethods) {
+                if (GET.equals(requestMethod)) {
+                    return RealmMethod.GET;
+                } else if (POST.equals(requestMethod)) {
+                    return RealmMethod.POST;
+                } else {
+                    return null;
+                }
+            }
+        } else if (requestMethods.length == 0) {
+            return null;
+        } else {
+            return RealmMethod.ALL;
+        }
+        return null;
+    }
+}

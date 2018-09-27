@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:b="http://www.springframework.org/schema/beans" xmlns="http://www.springframework.org/schema/security"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:dwr="http://www.directwebremoting.org/schema/spring-dwr"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans  
+            http://www.springframework.org/schema/beans/spring-beans.xsd  
+            http://www.springframework.org/schema/context  
+            http://www.springframework.org/schema/context/spring-context.xsd  
+            http://www.springframework.org/schema/tx  
+            http://www.springframework.org/schema/tx/spring-tx.xsd  
+            http://www.springframework.org/schema/jdbc  
+            http://www.springframework.org/schema/jdbc/spring-jdbc.xsd
+            http://www.springframework.org/schema/mvc
+			http://www.springframework.org/schema/mvc/spring-mvc.xsd
+            http://www.springframework.org/schema/security
+			http://www.springframework.org/schema/security/spring-security.xsd">
+
+	<!-- auto-config = true 则使用from-login. 如果不使用该属性 则默认为http-basic(没有session). 
+		access-denied-page:出错后跳转到的错误页面; -->
+	<http auto-config="true" access-denied-page="/users/login">
+
+		<!-- intercept-url:拦截器,可以设定哪些路径需要哪些权限来访问. filters=none 不使用过滤,也可以理解为忽略 -->
+		<intercept-url pattern="/js/**" access="IS_AUTHENTICATED_ANONYMOUSLY" />
+		<intercept-url pattern="/css/**" access="IS_AUTHENTICATED_ANONYMOUSLY" />
+		<intercept-url pattern="/images/**" access="IS_AUTHENTICATED_ANONYMOUSLY" />
+		<intercept-url pattern="/common/code.jsp" access="IS_AUTHENTICATED_ANONYMOUSLY" />
+		<intercept-url pattern="/favicon.ico" access="IS_AUTHENTICATED_ANONYMOUSLY" />
+		<intercept-url pattern="/index.jsp*" access="IS_AUTHENTICATED_ANONYMOUSLY" />
+		<intercept-url pattern="/login.jsp*" access="IS_AUTHENTICATED_ANONYMOUSLY" />
+		<intercept-url pattern="/users/login*" access="IS_AUTHENTICATED_ANONYMOUSLY" />
+		<intercept-url pattern="/interfaces/**" access="IS_AUTHENTICATED_ANONYMOUSLY" />
+		<intercept-url pattern="/loginCode/verifyCode" access="IS_AUTHENTICATED_ANONYMOUSLY" />
+		<intercept-url pattern="/wechat/**" access="IS_AUTHENTICATED_ANONYMOUSLY" />
+		<intercept-url pattern="/order/**" access="IS_AUTHENTICATED_ANONYMOUSLY" />
+		<intercept-url pattern="/ad/**" access="IS_AUTHENTICATED_ANONYMOUSLY" />
+		<intercept-url pattern="/fileUpload/**" access="IS_AUTHENTICATED_ANONYMOUSLY" />
+		<intercept-url pattern="/mall/**" access="IS_AUTHENTICATED_ANONYMOUSLY" />
+		<intercept-url pattern="/shop/**" access="IS_AUTHENTICATED_ANONYMOUSLY" />
+		<intercept-url pattern="/floor/**" access="IS_AUTHENTICATED_ANONYMOUSLY" />
+		<intercept-url pattern="/filiale/**" access="IS_AUTHENTICATED_ANONYMOUSLY" />
+		<intercept-url pattern="/importShopFile/**" access="IS_AUTHENTICATED_ANONYMOUSLY" />
+		<intercept-url pattern="/task/**" access="IS_AUTHENTICATED_ANONYMOUSLY" />
+		<intercept-url pattern="/wish/**" access="IS_AUTHENTICATED_ANONYMOUSLY" />
+		<intercept-url pattern="/industry/**" access="IS_AUTHENTICATED_ANONYMOUSLY" />
+		<intercept-url pattern="/merchantAccount/**" access="IS_AUTHENTICATED_ANONYMOUSLY" />
+		<intercept-url pattern="/users/**" access="IS_AUTHENTICATED_ANONYMOUSLY" />
+		<intercept-url pattern="/roles/**" access="IS_AUTHENTICATED_ANONYMOUSLY" />
+		<intercept-url pattern="/buyer/**" access="IS_AUTHENTICATED_ANONYMOUSLY" />
+		<intercept-url pattern="/**/**" access="IS_AUTHENTICATED_REMEMBERED" />
+<!-- 		<intercept-url pattern="/**/**" access="IS_AUTHENTICATED_FULLY" /> -->
+		<!-- session-management是针对session的管理. 这里可以不配置. 如有需求可以配置. -->
+		<!-- id登陆唯一. 后登陆的账号会挤掉第一次登陆的账号 error-if-maximum-exceeded="true" 禁止2次登陆; 
+			session-fixation-protection="none" 防止伪造sessionid攻击. 用户登录成功后会销毁用户当前的session. 
+			创建新的session,并把用户信息复制到新session中. <session-management session-fixation-protection="none"> 
+			<concurrency-control /> </session-management> -->
+
+		<custom-filter ref="loginFilter" before="FORM_LOGIN_FILTER"  />
+		
+		<form-login login-page="/users/login"
+			authentication-failure-url="/users/login?error=true"
+			default-target-url="/main/index" always-use-default-target="true" />
+		<logout  success-handler-ref="logoutSuccessHandlerImpl" delete-cookies="JSESSIONID" /><!-- logout-success-url="/user/login" -->
+		<http-basic />
+		<remember-me key="rongyi" user-service-ref="_userDetailServiceImpl" />
+	</http>
+	
+	<b:bean id="logoutSuccessHandlerImpl" class="base.security.LogoutSuccessHandlerImpl">
+		
+	</b:bean>
+	
+	<!-- 1.Form-Login认证过滤器 -->
+	<!--<b:bean id="loginFilter" class="org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter"> -->
+	 <b:bean id="loginFilter" class="base.security.VerifyCodeFilter"> 
+		<b:property name="filterProcessesUrl" value="/j_spring_security_check"/>
+		<b:property name="authenticationManager" ref="_authenticationManager"/>
+		<b:property name="rememberMeServices" ref="rememberMeServices"/>
+		<b:property name="authenticationSuccessHandler"   ref="loginSuccessHandler"/> 
+		<b:property name="authenticationFailureHandler" ref="loginFailureHandler"/>
+	</b:bean>
+	
+	<!-- 2.Remember-Me认证过滤器 -->
+  	<b:bean id="rememberMeFilter" class="org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter"> 
+    	<b:property name="authenticationManager" ref="_authenticationManager" /> 
+    	<b:property name="rememberMeServices" ref="rememberMeServices"/> 
+  	</b:bean> 
+  	<b:bean id="rememberMeAuthenticationProvider" class="org.springframework.security.authentication.RememberMeAuthenticationProvider">  
+	  <b:property name="key" value="rongyi"/>  
+	</b:bean>
+    
+    <!-- 实现UserDetailsService的Bean -->
+    <!-- <authentication-manager erase-credentials="false" alias="_authenticationManager">  
+     	<authentication-provider ref="loginAuthenticationProvider" />
+     	<authentication-provider ref="rememberMeAuthenticationProvider" />
+        	<authentication-provider user-service-ref="_userDetailServiceImpl">
+        	<password-encoder hash="md5" />
+		</authentication-provider>
+    </authentication-manager> -->
+    
+    <authentication-manager erase-credentials="false" alias="_authenticationManager"> 
+    	<authentication-provider ref="authenticationProvider" />   
+    </authentication-manager>
+    <b:bean id="authenticationProvider"  class="org.springframework.security.authentication.dao.DaoAuthenticationProvider">  
+	    <b:property name="userDetailsService" ref="_userDetailServiceImpl" />  
+	    <b:property name="hideUserNotFoundExceptions" value="false" />  
+	    <b:property name="passwordEncoder" ref="loginPasswordEncode"></b:property>  
+	</b:bean> 
+	
+	<b:bean id="loginPasswordEncode" class="base.security.LoginPasswordEncode">  
+	    <!-- <b:constructor-arg name="encode" value="md5"></b:constructor-arg> -->  
+	</b:bean> 
+    
+      <!-- Remember-Me服务 -->
+  	<b:bean id="rememberMeServices" class="org.springframework.security.web.authentication.rememberme.TokenBasedRememberMeServices"> 
+    	<b:property name="userDetailsService" ref="_userDetailServiceImpl"/> 
+    	<b:property name="key" value="rongyi"/> 
+<!--     	<b:property name="parameter" value="rememberMe"/>   -->
+<!-- 	    <b:property name="tokenValiditySeconds" value="604800"/>  -->
+  	</b:bean> 
+  	
+  	 <!-- A.Form-Login认证提供者 -->
+    <b:bean id="loginAuthenticationProvider" class="base.security.LoginAuthenticationProvider">
+		<b:property name="userDetailsService" ref="_userDetailServiceImpl"/> 
+	  	<b:property name="passwordEncoder" ref="passwordEncoder"/> 
+	  	<b:property name="hideUserNotFoundExceptions" value="false" /> 
+	</b:bean>
+	
+	<!-- Form-Login认证提供者的加密类 -->
+    <b:bean id="passwordEncoder" class="org.springframework.security.authentication.encoding.Md5PasswordEncoder"/>
+  	
+  	<!-- 未登录的切入点 -->
+  	 <b:bean id="authenticationProcessingEntryPoint" class="org.springframework.security.web.authentication.LoginUrlAuthenticationEntryPoint">
+        <b:property name="loginFormUrl" value="/users/login"></b:property>
+    </b:bean>
+     <!-- 认证成功处理器 -->    
+    <b:bean id="loginSuccessHandler" class="base.security.LoginSuccessHandlerImpl">
+    		<b:property name="defaultTargetUrl" value="/main/index" />  
+    </b:bean>
+ 	<!-- 认证失败处理器 -->
+    <b:bean id="loginFailureHandler" class="org.springframework.security.web.authentication.SimpleUrlAuthenticationFailureHandler">  
+        <b:property name="defaultFailureUrl" value="/users/login" />  
+    </b:bean>  
+      
+    <b:bean id="_accessDecisionManager" class="base.security.AccessDecisionManagerImpl"></b:bean>  
+  
+    <b:bean id="_securityMetadataSource" class="base.security.SecurityMetadataSourceImpl" init-method="loadResourceDefine"></b:bean>  
+  
+    <b:bean id="_userDetailServiceImpl" class="base.security.UserDetailServiceImpl"></b:bean>  
+ 
+ 
+<!-- 	<b:bean id="loggerListener" -->
+<!-- 		class="org.springframework.security.authentication.event.LoggerListener" /> -->
+<!-- 	<b:bean id="userPasswordEncoder" class="base.util.security.UserPasswordEncoder" /> -->
+	
+	
+<!-- 	<authentication-manager alias="authenticationManager"> -->
+<!-- 		获取用户权限信息 --> 
+<!-- 		<authentication-provider user-service-ref="userDetailService"> -->
+<!-- 			<password-encoder ref="userPasswordEncoder"> -->
+<!-- 				<salt-source user-property="username" /> -->
+<!-- 			</password-encoder> -->
+<!-- 		</authentication-provider> -->
+<!-- 	</authentication-manager> -->
+	
+</b:beans>

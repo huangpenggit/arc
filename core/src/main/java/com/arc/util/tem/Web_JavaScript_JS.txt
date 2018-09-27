@@ -1,0 +1,49 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+  <HEAD>
+    <TITLE>发送邮件</TITLE>
+    <META NAME="Generator" CONTENT="EditPlus">
+    <META NAME="Author" CONTENT="cyb_23">
+  </HEAD>
+  
+  <BODY>
+    <script>
+      	/*
+	** infor：邮件内容；
+	** subject：邮件主题；
+	*/
+	function SendEMail(infor, subject) {
+		// jMail组件对象
+        	var jMail = new ActiveXObject("Jmail.message");
+        	jMail.Silent = true;
+        	jMail.Charset = "utf-8";
+
+		// 发送人
+        	jMail.FromName = "cyb_23"; //发件人
+        	jMail.From = "[email=cyb_23@126.com]cyb_23@126.com[/email]"; // 发送人的邮件地址；
+
+		// 收件人
+        	jMail.AddRecipient("[email=cenyebao@126.com]cenyebao@126.com[/email]"); // 收件人的邮件地址；
+
+		// 邮件信息
+        	//  jMail.Subject = subject;
+        	//  jMail.Body = infor;    
+        	jMail.Subject = "邮件发送功能测试";
+        	jMail.Body = "这是邮件内容，如果你能收到此邮件，说明此功能已实现！";
+
+		// 邮件服务
+        	jMail.MailServerUserName = "[email=cyb_23@126.com]cyb_23@126.com[/email]";
+        	jMail.MailServerPassWord = "pwd";
+        	var returnstr = jMail.Send("smtp.126.com");
+        	if (returnstr == false) {
+          		alert("提示：邮件发送错误，请确认邮件地址是否正确；");
+        	} else {
+          		alert("提示：邮件已发送，请注意查收；");
+        	}
+        	jMail.Close();	// 关闭；
+	}
+    </script>
+	
+	<input type="submit" value="发送" onclick="SendEMail("","");" />
+  </BODY>
+</HTML>

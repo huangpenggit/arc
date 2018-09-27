@@ -1,0 +1,19 @@
+说明：
+青蛙活动涉及接口文档地址
+http://rap.rongyi.so/workspace/myWorkspace.do?projectId=423#4935
+
+后台项目所在服务器：192.168.1.52
+例子：
+1、保存答案
+2、获取当前参加青蛙活动人的总数
+3、距离目标人数 
+4、手动刷人数接口
+5、抽奖
+注意：所有方法都是POST请求 注意方法名称
+http://192.168.1.52:21241/ry-activity-zhengjia-waerzi/frog/activity/save
+http://192.168.1.52:21241/ry-activity-zhengjia-waerzi/frog/activity/getCurrentTotal
+http://192.168.1.52:21241/ry-activity-zhengjia-waerzi/frog/activity/getRestTotal
+http://192.168.1.52:21241/ry-activity-zhengjia-waerzi/frog/activity/addTotal
+http://192.168.1.52:21241/ry-activity-zhengjia-waerzi/frog/activity/lotty
+
+

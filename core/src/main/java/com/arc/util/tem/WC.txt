@@ -1,0 +1,388 @@
+package com.rongyi.activity.client.web;
+
+import com.rongyi.activity.common.dal.WeChatScanQRCodeRecordDO;
+import com.rongyi.activity.common.dto.WeChatDTO;
+import com.rongyi.activity.common.enums.ErrorCodeEnum;
+import com.rongyi.activity.common.exceptions.BusinessException;
+import com.rongyi.activity.common.rss.service.IWechatService;
+import com.rongyi.activity.common.vo.WechatNoticeVO;
+import com.rongyi.core.bean.ResponseVO;
+import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.lang.StringUtils;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.xssf.streaming.SXSSFCell;
+import org.apache.poi.xssf.streaming.SXSSFRow;
+import org.apache.poi.xssf.streaming.SXSSFSheet;
+import org.apache.poi.xssf.streaming.SXSSFWorkbook;
+import org.springframework.beans.BeanUtils;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.io.OutputStream;
+import java.net.URLEncoder;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.List;
+
+/**
+ * Created With IntelliJ IDEA.
+ *
+ * @author: WUHUI
+ * @date: 2018/5/5
+ */
+@Slf4j
+@RestController
+@RequestMapping("/wechat")
+public class WechatController {
+
+    DateFormat formatter = new SimpleDateFormat("yyyy_MM_dd_HH_mm_ss_SSS");
+
+    @Autowired
+    private IWechatService weChatService;
+
+//    @Autowired
+//    private WeChatScanQRCodeRecordService weChatScanQRCodeRecordService;
+
+    /**
+     * 获取二维码信息
+     *
+     * @param wechatDTO
+     * @return
+     * @throws Exception
+     */
+    @RequestMapping("/getQRCode")
+    public ResponseVO getQRCode(@RequestBody WeChatDTO wechatDTO) throws Exception {
+        //活动编号 商场编号非空
+        if (wechatDTO == null
+                || StringUtils.isBlank(wechatDTO.getMerchantId())
+                || wechatDTO.getActivityId() == null) {
+            throw new BusinessException(ErrorCodeEnum.ERROR_PARAM);
+        }
+        return ResponseVO.success(weChatService.getQrcode(wechatDTO));
+    }
+
+    /**
+     * 二维码使用后回调后台，后台做逻辑处理
+     *
+     * @param wechatDTO
+     * @return
+     * @throws Exception
+     */
+    @RequestMapping("/notice")
+    public ResponseVO notice(@RequestBody WeChatDTO wechatDTO) throws Exception {
+        //校验参数 1、key  2、活动编号       3、 openID  4、昵称  5、图像url  6firstFollow
+        if (wechatDTO == null
+                || StringUtils.isBlank(wechatDTO.getKey())
+                || StringUtils.isBlank(wechatDTO.getOpenId())
+                || wechatDTO.getActivityId() == null
+//                || wechatDTO.getCodeNickName() == null
+//                || wechatDTO.getHeadImgUrl() == null
+//                || wechatDTO.getFirstFollow() == null
+                ) {
+            throw new BusinessException(ErrorCodeEnum.ERROR_PARAM);
+        }
+        log.info("头像 {} ", wechatDTO.getHeadImgUrl());
+        log.info("昵称 {} ", wechatDTO.getCodeNickName());
+        log.info("OPENID {} ", wechatDTO.getOpenId());
+        log.info("WeChatDTO {} ", wechatDTO.toString());
+
+        return ResponseVO.success(weChatService.notice(wechatDTO));
+    }
+
+    /**
+     * 接收微信扫码通知  jinWangNotice
+     *
+     * @param wechatDTO
+     * @return
+     * @throws Exception
+     */
+    @RequestMapping("/jinWangNotice")
+    public ResponseVO jinWangNotice(@RequestBody WeChatDTO wechatDTO) throws Exception {
+        if (wechatDTO == null || StringUtils.isBlank(wechatDTO.getKey())
+                || StringUtils.isBlank(wechatDTO.getOpenId()) || wechatDTO.getActivityId() == null) {
+            throw new BusinessException(ErrorCodeEnum.ERROR_PARAM);
+        }
+        WechatNoticeVO wechatNoticeVO = weChatService.jinWangNotice(wechatDTO);
+        return ResponseVO.success(wechatNoticeVO);
+    }
+
+
+    //增加校验规则
+    // 二维码有效期内是否可以复用
+
+    /**
+     * 检查二维码是否被扫
+     *
+     * @param wechatDTO
+     * @return
+     * @throws Exception
+     */
+    @RequestMapping("/checkNotice")
+    public ResponseVO checkNotice(@RequestBody WeChatDTO wechatDTO) throws Exception {
+        if (wechatDTO == null
+                || StringUtils.isBlank(wechatDTO.getKey())
+                || wechatDTO.getActivityId() == null) {
+            throw new BusinessException(ErrorCodeEnum.ERROR_PARAM.getErrorCode(), "必要参数: 1、activityId 2、key");
+
+        }
+        return ResponseVO.success(weChatService.checkNotice(wechatDTO));
+    }
+
+
+    /**
+     * 检查BASE64编码昵称
+     *
+     * @param wechatDTO
+     * @return
+     */
+    @RequestMapping("/checkNickname")
+    public ResponseVO nickUrl(@RequestBody WeChatDTO wechatDTO) {
+        if (wechatDTO == null || StringUtils.isBlank(wechatDTO.getMall()) || wechatDTO.getOpenId() == null) {
+            throw new BusinessException(ErrorCodeEnum.ERROR_PARAM);
+
+        }
+        return ResponseVO.success(weChatService.nickUrl(wechatDTO));
+    }
+
+
+    /**
+     * 通过活动编码查询扫码记录
+     *
+     * @param weChatDTO
+     * @return
+     */
+    @RequestMapping(value = "/getRecord", method = RequestMethod.POST)
+    public ResponseVO get(@RequestBody WeChatDTO weChatDTO) {
+        if (weChatDTO == null) {
+            log.info("分页参数weChatDTO 是null");
+
+            throw new BusinessException(ErrorCodeEnum.ERROR_PARAM.getErrorCode(), "参数: activityId不能为空");
+        }
+        log.info("dto 是   ", weChatDTO);
+        List<WeChatScanQRCodeRecordDO> results = weChatService.listPage(weChatDTO);
+        Integer totalCount = weChatService.listPageCount(weChatDTO);
+        //    public static <T> ResponseVO success(T data, Integer currentPage, Integer pageSize, Integer totalCount) {
+//        public static <T> ResponseVO success(T data, Integer currentPage, Integer pageSize, Integer totalCount) {
+        return ResponseVO.success(results, weChatDTO.getCurrentPage(), weChatDTO.getPageSize(), totalCount);
+    }
+
+
+    //@TODO 保存 测试时候用，待测试PASS后,注意删除该接口
+    @RequestMapping("/save")
+    public ResponseVO save(@RequestBody WeChatDTO dto) {
+        WeChatScanQRCodeRecordDO recordDO = new WeChatScanQRCodeRecordDO();
+        BeanUtils.copyProperties(dto, recordDO);
+        return ResponseVO.success(weChatService.save(recordDO));
+    }
+
+
+    /**
+     * 导出Excel
+     * 活动id是必须
+     *
+     * @param response
+     * @return
+     * @throws Exception
+     */
+    @RequestMapping(value = "/exportExcel", method = RequestMethod.GET)
+    public String export(@RequestParam(value = "activityId", required = true) Integer activityId, HttpServletRequest request, HttpServletResponse response) throws IOException {
+        long startTime = System.currentTimeMillis();    //开始时间
+        log.info("导出excel开始::::::::::");
+        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        int sheets = 0;//sheets 数目
+        int pageSize = 50000;
+        int sheetNumber = 1;
+        String path = "G:/test.xlsx";
+        SXSSFWorkbook workbook = null;
+        SXSSFSheet sheet = null;
+
+        WeChatDTO dto = new WeChatDTO();
+        dto.setActivityId(activityId);
+        dto.setCurrentPage(1);
+        dto.setPageSize(pageSize);
+
+        //1、获取将要到处数据的数据量
+        //2、判断集合sheet可以装下
+        int count = weChatService.listPageCount(dto);
+
+        workbook = new SXSSFWorkbook(100);
+        workbook.setCompressTempFiles(true);
+/////////////////////////////////////////////////
+        if (count >= 0) {
+            sheets = count / pageSize;//总页数
+            if (sheets <= 0 || (count % pageSize) > 0) {//数据量不足一个sheet的 或者有余数的
+                sheets = sheets + 1;
+            }
+
+            List<WeChatScanQRCodeRecordDO> records = new ArrayList<>(pageSize);
+            records = weChatService.listPage(dto);
+            log.info("##################################总数据量count{}--sheets数目{}", count, sheets);
+
+            //两个思路去处理
+            //一、分页查询MySQL获取数据 得到所有结果 然后一次处理  ---HashMap<String, List<WeChatScanQRCodeRecord>> map = new HashMap<>();
+            //二、分页查询MySQL获取数据 然后分批处理 ---用这个 避免程序消耗过多内存 -->按次数将数据写入文件
+
+            // 一次for 获取一页 处理这一页
+
+
+            for (sheetNumber = 1; sheetNumber <= sheets; sheetNumber++) {
+
+                // 数据库中存储的数据行---即单词分页大小，即pageSize
+                // 求数据库中待导出数据的行数-----总数据量，既count
+                // 根据行数求数据提取次数---分多少次操作完成，即sheets//            int export_times = list_count % page_size > 0 ? list_count / page_size + 1 : list_count / page_size;
+                // 按次数将数据写入文件
+
+                // 最重要的就是使用SXSSFWorkbook，表示流的方式进行操作
+                // 在内存中保持1000行，超过100行将被刷新到磁盘
+                sheet = workbook.createSheet("sheet标题名" + sheetNumber);
+                createTitle(workbook, sheet);
+                int rowNumber = 1;            //创建sheet内的多行数据
+                for (WeChatScanQRCodeRecordDO qrCodeRecord : records) {
+                    Row row = sheet.createRow(rowNumber);
+                    row.createCell(0).setCellValue(qrCodeRecord.getCodeNickName() == null ? "" : qrCodeRecord.getCodeNickName());
+                    row.createCell(1).setCellValue(qrCodeRecord.getOpenId());
+                    row.createCell(2).setCellValue(qrCodeRecord.getCreateTime() == null ? "" : formatter.format(qrCodeRecord.getCreateTime()));
+                    rowNumber++;//新增数据行，并且设置单元格数据
+                }
+            }
+        }
+
+        //输出文件
+//        String excelName = "数据导出.xlsx";
+
+        // 如果文件名有中文，必须URL编码
+        String excelName = URLEncoder.encode("数据导出.xlsx", "UTF-8");
+log.info("finished execute  time: " + (System.currentTimeMillis() - startTime) + "ms");
+        long millis = System.currentTimeMillis();
+        response.reset();
+        response.setContentType(request.getServletContext().getMimeType(excelName));
+        response.addHeader("Content-Disposition", "attachment;filename=" + excelName);
+
+        OutputStream outputStream = response.getOutputStream();
+        workbook.write(outputStream);
+        response.flushBuffer();
+        outputStream.close();
+
+        log.info("transform execute  time: " + (System.currentTimeMillis() - millis) + "ms");
+
+        return "download excel";
+
+    }
+
+
+    private void createTitle(SXSSFWorkbook workbook, SXSSFSheet sheet) {
+        SXSSFRow row = sheet.createRow(0);
+        //设置列宽，setColumnWidth的第二个参数要乘以256，这个参数的单位是1/256个字符宽度
+        sheet.setColumnWidth(1, 12 * 256);
+        sheet.setColumnWidth(3, 17 * 256);
+        SXSSFCell cell0 = row.createCell(0);
+        cell0.setCellValue("微信昵称");
+        SXSSFCell cell1 = row.createCell(1);
+        cell1.setCellValue("openId");
+        SXSSFCell cell2 = row.createCell(2);
+        cell2.setCellValue("参与时间");
+    }
+//    @Async
+//    @RequestMapping(value = "/exportExcel", method = RequestMethod.GET)
+//    public String export(@RequestParam(value = "activityId", required = true) Integer activityId, HttpServletResponse response) throws Exception {
+//        Long start = System.currentTimeMillis();
+//        long startTime = System.currentTimeMillis();    //开始时间
+//
+//        if (activityId == null) {
+//            log.info("dto 是   ", activityId);
+//            throw new BusinessException(ErrorCodeEnum.ERROR_PARAM.getErrorCode(), "参数: activityId不能为空");
+//        }
+//        log.info("扫码回执信息导出excel开始,查询条件活动编码{}", activityId);
+//
+//        int pageSize = 50000;
+//        int sheetNumber = 1;
+//
+//        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+//        HSSFWorkbook workbook = new HSSFWorkbook();        // 创建一个工作薄
+//
+//        //一个sheet写入5w 数据
+//        Integer count = weChatService.getCountByActivityId(activityId);
+//        int sheets;//sheets 数目
+//        int remainder;//余数
+//
+//        if (count != 0) {
+//            sheets = count / pageSize;//总页数
+//            remainder = count % pageSize;
+//            if (sheets <= 0||remainder > 0) {
+//                sheets = sheets + 1;
+//            }
+//
+//            List<WeChatScanQRCodeRecordDO> records = new ArrayList<>(50000);
+//
+//            log.info("##################################总sheet数目 {},--余数 sheetNumber {}", sheets, sheetNumber);
+//            WeChatDTO weChatDTO = new WeChatDTO();
+//            weChatDTO.setActivityId(activityId);
+//            for (sheetNumber = 1; sheetNumber <= sheets; sheetNumber++) {
+//                weChatDTO.setCurrentPage(sheetNumber);
+//                weChatDTO.setPageSize(pageSize);
+//
+//                //一次循环完成一个sheet  sheet++
+//                HSSFSheet sheet1 = workbook.createSheet("扫码回执信息" + sheetNumber);
+//                createTitle(workbook, sheet1);
+//
+//                records = weChatService.listPage(weChatDTO);
+//
+//                //新增数据行，并且设置单元格数据
+//                int rowNum = 1;
+//                for (WeChatScanQRCodeRecordDO qrCodeRecord : records) {
+//                    // log.info("数据导出，时间{}，数据{}", new Date(), qrCodeRecord);
+//                    HSSFRow row = sheet1.createRow(rowNum);
+//                    row.createCell(0).setCellValue(qrCodeRecord.getCodeNickName() == null ? "" : qrCodeRecord.getCodeNickName());
+//                    row.createCell(1).setCellValue(qrCodeRecord.getOpenId());
+//                    row.createCell(2).setCellValue(qrCodeRecord.getCreateTime() == null ? "" : formatter.format(qrCodeRecord.getCreateTime()));
+//                    rowNum++;
+//                }
+//            }
+//            String fileName = "数据列表列表.xls";
+//            System.out.println("finished execute  time: " + (System.currentTimeMillis() - startTime) + "ms");
+//
+//            ExcelUtil.exportExcel(response, workbook, fileName);
+//        }
+//        return "download excel";
+//    }
+//
+//
+//
+//    private void createTitle(HSSFWorkbook workbook, HSSFSheet sheet) {
+//        HSSFRow row = sheet.createRow(0);
+//        //设置列宽，setColumnWidth的第二个参数要乘以256，这个参数的单位是1/256个字符宽度
+//        sheet.setColumnWidth(1, 12 * 256);
+//        sheet.setColumnWidth(3, 17 * 256);
+//        //设置为居中加粗
+//        HSSFCellStyle style = workbook.createCellStyle();
+//        HSSFFont font = workbook.createFont();
+//        font.setBoldweight(HSSFFont.BOLDWEIGHT_BOLD);
+//        style.setAlignment(HSSFCellStyle.ALIGN_CENTER);
+//        style.setFont(font);
+//        HSSFCell cell0;
+//        cell0 = row.createCell(0);
+//        cell0.setCellValue("微信昵称");
+//        cell0.setCellStyle(style);
+//
+//
+//        HSSFCell cell1;
+//        cell1 = row.createCell(1);
+//        cell1.setCellValue("openId");
+//        cell1.setCellStyle(style);
+//
+//        HSSFCell cell2;
+//        cell2 = row.createCell(2);
+//        cell2.setCellValue("参与时间");
+//        cell2.setCellStyle(style);
+//    }
+
+}
+
+
+
+
+

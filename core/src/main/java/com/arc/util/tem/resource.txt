@@ -1,0 +1,198 @@
+/*
+Navicat MySQL Data Transfer
+
+Source Server         : 127.0.0.1
+Source Server Version : 50721
+Source Host           : localhost:3306
+Source Database       : cloud
+
+Target Server Type    : MYSQL
+Target Server Version : 50721
+File Encoding         : 65001
+
+Date: 2018-07-20 17:48:04
+*/
+
+SET FOREIGN_KEY_CHECKS=0;
+
+-- ----------------------------
+-- Table structure for `resource`
+-- ----------------------------
+DROP TABLE IF EXISTS `resource`;
+CREATE TABLE `resource` (
+  `id` bigint(20) NOT NULL COMMENT '主键',
+  `parent_id` varchar(20) DEFAULT NULL COMMENT '上级节点ID',
+  `key` varchar(50) NOT NULL COMMENT '资源代号',
+  `value` varchar(255) NOT NULL COMMENT '资源值',
+  `note` varchar(255) NOT NULL COMMENT '备注',
+  `priority` int(2) NOT NULL DEFAULT '0' COMMENT '级别',
+  `type` int(10) NOT NULL COMMENT '资源类型',
+  `create_time` datetime DEFAULT NULL COMMENT '创建时间',
+  `update_time` datetime DEFAULT NULL COMMENT '修改时间',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of resource
+-- ----------------------------
+
+-- ----------------------------
+-- Table structure for `role`
+-- ----------------------------
+DROP TABLE IF EXISTS `role`;
+CREATE TABLE `role` (
+  `id` bigint(20) NOT NULL COMMENT '自增id',
+  `name` varchar(50) NOT NULL COMMENT '角色名称',
+  `state` int(2) NOT NULL COMMENT '状态(用状态码判断 是否是会员，是否是启用状态)',
+  `note` varchar(255) DEFAULT NULL COMMENT '备注 描述',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `role_name` (`name`) USING BTREE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='系统角色表';
+
+-- ----------------------------
+-- Records of role
+-- ----------------------------
+
+-- ----------------------------
+-- Table structure for `user`
+-- ----------------------------
+DROP TABLE IF EXISTS `user`;
+CREATE TABLE `user` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `nickname` varchar(255) DEFAULT NULL COMMENT '昵称',
+  `avatar` varchar(255) DEFAULT NULL COMMENT '化身头像路径',
+  `level` int(11) DEFAULT NULL COMMENT '级别(权限控制中用)',
+  `gender` int(2) DEFAULT NULL COMMENT '性别｛0未知/1男/2女｝',
+  `birthday` datetime DEFAULT NULL COMMENT '出生日期',
+  `sign` varchar(255) DEFAULT NULL COMMENT '个性签名',
+  `user_type` int(11) DEFAULT NULL COMMENT '用户类型',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of user
+-- ----------------------------
+
+-- ----------------------------
+-- Table structure for `user_area`
+-- ----------------------------
+DROP TABLE IF EXISTS `user_area`;
+CREATE TABLE `user_area` (
+  `user_id` bigint(20) NOT NULL COMMENT '用户id',
+  `area_code` varchar(20) NOT NULL COMMENT '地址',
+  `create_time` datetime DEFAULT NULL COMMENT '创建时间',
+  PRIMARY KEY (`user_id`,`area_code`),
+  KEY `user_id` (`user_id`) USING BTREE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of user_area
+-- ----------------------------
+
+-- ----------------------------
+-- Table structure for `user_auths`
+-- ----------------------------
+DROP TABLE IF EXISTS `user_auths`;
+CREATE TABLE `user_auths` (
+  `id` bigint(255) NOT NULL AUTO_INCREMENT,
+  `user_id` bigint(20) DEFAULT NULL,
+  `identity_type` varchar(255) DEFAULT NULL COMMENT '登录类型（手机号 邮箱 用户名）或第三方应用名称（微信 微博等）',
+  `identifier` varchar(255) DEFAULT NULL COMMENT '标识（手机号 邮箱 用户名或第三方应用的唯一标识）',
+  `credential` varchar(255) DEFAULT NULL COMMENT '密码凭证（站内的保存密码，站外的不保存或保存token）',
+  `state` int(11) DEFAULT NULL COMMENT '状态(逻辑删除/停用)',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='用户授权信息表 ';
+
+-- ----------------------------
+-- Records of user_auths
+-- ----------------------------
+
+-- ----------------------------
+-- Table structure for `user_log`
+-- ----------------------------
+DROP TABLE IF EXISTS `user_log`;
+CREATE TABLE `user_log` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `user_id` bigint(20) DEFAULT NULL COMMENT '用户id',
+  `create_time` datetime DEFAULT NULL COMMENT '创建时间',
+  `update_time` datetime DEFAULT NULL COMMENT '更新时间',
+  `latest_login_time` datetime DEFAULT NULL,
+  `latest_login_ip` varchar(20) DEFAULT NULL,
+  `pwd_question_1` varchar(255) DEFAULT NULL,
+  `pwd_question_answer_1` varchar(255) DEFAULT NULL,
+  `pwd_question_2` varchar(255) DEFAULT NULL,
+  `pwd_question_answer_2` varchar(255) DEFAULT NULL,
+  `pwd_question_3` varchar(255) DEFAULT NULL,
+  `pwd_question_answer_3` varchar(255) DEFAULT NULL,
+  `freeze_date` datetime DEFAULT NULL COMMENT '冻结时间',
+  `remarks` varchar(255) DEFAULT NULL COMMENT '备注信息',
+  `extend_1` varchar(255) DEFAULT NULL COMMENT '扩展字段1',
+  `extend_2` varchar(255) DEFAULT NULL,
+  `extend_3` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of user_log
+-- ----------------------------
+
+-- ----------------------------
+-- Table structure for `user_role`
+-- ----------------------------
+DROP TABLE IF EXISTS `user_role`;
+CREATE TABLE `user_role` (
+  `user_id` bigint(20) NOT NULL COMMENT '用户ID',
+  `role_id` varchar(20) NOT NULL COMMENT '角色ID',
+  `create_time` datetime DEFAULT NULL COMMENT '创建时间',
+  PRIMARY KEY (`user_id`,`role_id`),
+  KEY `role_id` (`role_id`) USING BTREE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='用户角色表';
+
+-- ----------------------------
+-- Records of user_role
+-- ----------------------------
+
+-- ----------------------------
+-- Table structure for `users`
+-- ----------------------------
+DROP TABLE IF EXISTS `users`;
+CREATE TABLE `users` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增id',
+  `username` varchar(50) NOT NULL COMMENT '用户名',
+  `password` varchar(64) DEFAULT NULL COMMENT '密码',
+  `nickname` varchar(255) DEFAULT NULL COMMENT '账号姓名',
+  `cellphone` varchar(20) DEFAULT NULL COMMENT '移动电话号码',
+  `email` varchar(128) DEFAULT NULL COMMENT '电子邮箱',
+  `state` int(10) DEFAULT '0' COMMENT '账号状态(？0：正常 1:暂停,state表示一个确定的状态集中的某个状态（比如水的三态），status表示一种笼统的情形（比如你的生活状态、工作状态），不存在确定的状态集))',
+  `create_time` datetime DEFAULT NULL COMMENT '创建时间',
+  `update_time` datetime DEFAULT NULL COMMENT '更新时间',
+  `latest_time` datetime DEFAULT NULL COMMENT '最新时间',
+  `open_id` varchar(255) DEFAULT NULL,
+  `access_token` varchar(255) DEFAULT NULL,
+  `subscribe` varchar(255) DEFAULT NULL,
+  `remark` varchar(255) DEFAULT NULL,
+  `sex` int(11) DEFAULT NULL,
+  `headimgurl` varchar(255) DEFAULT NULL,
+  `subscribe_time` datetime DEFAULT NULL,
+  `unsubscribe_time` datetime DEFAULT NULL,
+  `becomeVip_time` datetime DEFAULT NULL,
+  `totalPoint` bigint(20) DEFAULT NULL,
+  `cardNumber` varchar(255) DEFAULT NULL,
+  `vipLevel` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8 COMMENT='系统用户表';
+
+-- ----------------------------
+-- Records of users
+-- ----------------------------
+INSERT INTO `users` VALUES ('4', '4', null, null, null, null, '0', null, null, null, null, null, null, null, null, null, null, null, null, null, null, null);
+INSERT INTO `users` VALUES ('5', '测试', '1234', null, null, null, '0', null, null, null, null, null, null, null, null, null, null, null, null, null, null, null);
+INSERT INTO `users` VALUES ('6', '测试', '1234', null, null, null, '0', null, null, null, null, null, null, null, null, null, null, null, null, null, null, null);
+INSERT INTO `users` VALUES ('7', 'miao', '1234', null, null, null, '0', null, null, null, null, null, null, null, null, null, null, null, null, null, null, null);
+INSERT INTO `users` VALUES ('8', '规范和金刚护法', '为荣亚特让我也', null, null, null, '0', null, null, null, null, null, null, null, null, null, null, null, null, null, null, null);
+INSERT INTO `users` VALUES ('12', 'BBBB', '1111111111111', null, null, null, '0', null, null, null, null, null, null, null, null, null, null, null, null, null, null, null);
+INSERT INTO `users` VALUES ('13', '大法', '的太阳花', null, null, null, '0', null, null, null, null, null, null, null, null, null, null, null, null, null, null, null);
+INSERT INTO `users` VALUES ('14', '测试保存by feign with ribbon', null, null, null, null, '0', null, null, null, null, null, null, null, null, null, null, null, null, null, null, null);
+INSERT INTO `users` VALUES ('15', '是你何必呢', '的太阳花', null, null, null, '0', null, null, null, null, null, null, null, null, null, null, null, null, null, null, null);
+INSERT INTO `users` VALUES ('16', 'FFFFF', null, null, null, null, '0', null, null, null, null, null, null, null, null, null, null, null, null, null, null, null);
+INSERT INTO `users` VALUES ('17', '111111111111111111', null, null, null, null, '0', null, null, null, null, null, null, null, null, null, '2018-07-20 10:42:54', '2018-07-20 10:42:54', null, null, null, null);

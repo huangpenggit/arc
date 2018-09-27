@@ -1,0 +1,167 @@
+
+
+        public static boolean writeFileToDisk (String path,byte[] bs){
+
+
+            File file = new File(path);
+            if (!file.exists()) {//如果文件夹不存在
+                boolean mkdir = file.mkdir();//创建文件夹
+                if (!mkdir) {
+                    //创建文件夹失败
+                    throw new RuntimeException("文件夹不存在，尝试创建失败，可能的原因是权限不够或者磁盘空间不足");
+                }
+            }
+            try { //异常处理
+                //如果 path文件夹下没有  xxx.txt就会创建该文件
+
+                String date = DateFormat.getDateTimeInstance().format(new Date());
+
+                BufferedWriter bw = new BufferedWriter(new FileWriter(path + date + ".txt"));
+
+//            OutputStream out = new FileOutputStream("H:\\pic.jpg");
+//            InputStream is = new ByteArrayInputStream(bs);
+//            byte[] buff = new byte[1024];
+//            int len = 0;
+//            while((len=is.read(buff))!=-1){
+//                out.write(buff, 0, len);
+//            }
+
+                bw.write(bs.toString());//在创建好的文件中写入"Hello I/O"
+
+
+                bw.close();//一定要关闭文件
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            return false;
+
+        }
+
+
+
+
+
+    public static void main(String[] args) {
+
+        FileOutputStream fileOut = null;
+
+        BufferedImage bufferImg = null;//图片一
+        BufferedImage bufferImg1 = null;//图片二
+
+        try {
+            // 先把读进来的图片放到一个 ByteArrayOutputStream 中，以便产生 ByteArray
+            ByteArrayOutputStream byteArrayOut = new ByteArrayOutputStream();
+            ByteArrayOutputStream byteArrayOut1 = new ByteArrayOutputStream();
+
+            //将两张图片读到 BufferedImage
+            bufferImg = ImageIO.read(new File("E:/a.jpg"));
+            bufferImg1 = ImageIO.read(new File("E:/b.jpg"));
+            ImageIO.write(bufferImg, "jpg", byteArrayOut);
+            ImageIO.write(bufferImg1, "jpg", byteArrayOut1);
+
+            // 创建一个工作薄
+            HSSFWorkbook wb = new HSSFWorkbook();
+            //创建一个sheet
+            HSSFSheet sheet = wb.createSheet("out put excel");
+
+            HSSFPatriarch patriarch = sheet.createDrawingPatriarch();
+//  该构造函数有8个参数
+//     * 前四个参数是控制图片在单元格的位置，分别是图片距离单元格 left，top，right，bottom  左上 右下  的像素距离
+//     * 后四个参数，前两个表示图片左上角所在的 cellNum 和 rowNum，后天个参数对应的表示图片右下角所在的cellNum和 rowNum，
+//     * excel中的cellNum和rowNum的index都是从0开始的
+//     *
+
+            //图片一导出到单元格B2中
+            HSSFClientAnchor anchor = new HSSFClientAnchor(0, 0, 0, 0, (short) 1, 1, (short) 2, 2);
+            //图片二导出到单元格C3到E5中，且图片的left和top距离边框50
+            HSSFClientAnchor anchor1 = new HSSFClientAnchor(50, 50, 0, 0, (short) 2, 2, (short) 2, 2);
+
+            // 插入图片
+            patriarch.createPicture(anchor, wb.addPicture(byteArrayOut.toByteArray(), HSSFWorkbook.PICTURE_TYPE_JPEG));
+            patriarch.createPicture(anchor1, wb.addPicture(byteArrayOut1.toByteArray(), HSSFWorkbook.PICTURE_TYPE_JPEG));
+
+            fileOut = new FileOutputStream("E:/Excel.xls");
+            // 写入excel文件
+            wb.write(fileOut);
+
+
+        } catch (IOException io) {
+            io.printStackTrace();
+            log.debug("异常IOException{}", io.getMessage());
+        } finally {
+            if (fileOut != null) {
+                try {
+                    fileOut.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+     public static void main(String[] args) {
+        String path = "http://img.hb.aicdn.com/0b6b384ca5b41815b2b6c163f6fcd725a2ab4d3a1044e0-NYYTv1_fw658";
+        String localPath = "H:\\Z";
+        try {
+            byte[] bs = readInputStreamByNet(path);
+
+            //向磁盘中写入文件
+            //writeFileToDisk(path,bs);
+
+            OutputStream out = new FileOutputStream("H:\\pic.jpg");
+
+
+            InputStream is = new ByteArrayInputStream(bs);
+
+
+            byte[] buff = new byte[1024];
+            int len = 0;
+
+
+            while ((len = is.read(buff)) != -1) {
+                out.write(buff, 0, len);
+            }
+            is.close();
+            out.close();
+
+
+            ////
+            File file = new File(path);
+            if (!file.exists()) {//如果文件夹不存在
+                boolean mkdir = file.mkdir();//创建文件夹
+                if (!mkdir) {
+                    //创建文件夹失败
+                    throw new RuntimeException("文件夹不存在，尝试创建失败，可能的原因是权限不够或者磁盘空间不足");
+                }
+            }
+            try { //异常处理
+                //如果 path文件夹下没有  xxx.txt就会创建该文件
+
+                String date = DateFormat.getDateTimeInstance().format(new Date());
+
+                BufferedWriter bw = new BufferedWriter(new FileWriter(path + date + ".txt"));
+
+
+                bw.write(bs.toString());//在创建好的文件中写入"Hello I/O"
+
+
+                bw.close();//一定要关闭文件
+
+
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+
+
+
+}

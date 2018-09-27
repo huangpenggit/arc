@@ -6,6 +6,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Slf4j
 @Service
 public class FileServiceImpl implements com.arc.faststart.service.impl.FileService {
@@ -20,7 +22,7 @@ public class FileServiceImpl implements com.arc.faststart.service.impl.FileServi
     }
 
     @Override
-    public File get(int id) {
+    public File get(Long id) {
         return fileMapper.get(id);
     }
 
@@ -32,6 +34,10 @@ public class FileServiceImpl implements com.arc.faststart.service.impl.FileServi
     @Override
     public File getByUrl(String url ) {
         return fileMapper.getByUrl(url);
+    }
 
+    @Override
+    public List<File> list() {
+        return fileMapper.list();
     }
 }

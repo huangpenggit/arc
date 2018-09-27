@@ -1,0 +1,14 @@
+
+
+#GET 请求
+http://192.168.1.52:21231/ry-activity-client/wechat/exportExcel?activityId=65
+
+#POST 请求
+http://192.168.1.52:21231/ry-activity-client/wechat/getRecord
+参数body
+{
+	"activityId":65
+	,"currentPage":2
+	,"pageSize":1
+	
+}

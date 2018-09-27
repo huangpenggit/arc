@@ -1,0 +1,395 @@
+package com.rongyi.activity.client.web;
+
+import com.rongyi.activity.common.dal.WeChatScanQRCodeRecordDO;
+import com.rongyi.activity.common.dto.WeChatDTO;
+import com.rongyi.activity.common.enums.ErrorCodeEnum;
+import com.rongyi.activity.common.exceptions.BusinessException;
+import com.rongyi.activity.common.rss.service.IWechatService;
+import com.rongyi.activity.common.vo.WechatNoticeVO;
+import com.rongyi.core.bean.ResponseVO;
+import com.rongyi.core.common.util.ExcelUtil;
+import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.lang.StringUtils;
+import org.apache.poi.hssf.usermodel.*;
+import org.springframework.beans.BeanUtils;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.scheduling.annotation.Async;
+import org.springframework.web.bind.annotation.*;
+
+import javax.imageio.ImageIO;
+import javax.servlet.http.HttpServletResponse;
+import java.awt.image.BufferedImage;
+import java.io.ByteArrayOutputStream;
+import java.io.InputStream;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.List;
+
+/**
+ * Created With IntelliJ IDEA.
+ *
+ * @author: WUHUI
+ * @date: 2018/5/5
+ */
+@Slf4j
+@RestController
+@RequestMapping("/wechat")
+public class WechatController {
+
+    DateFormat formatter = new SimpleDateFormat("yyyy_MM_dd_HH_mm_ss_SSS");
+
+    @Autowired
+    private IWechatService weChatService;
+
+//    @Autowired
+//    private WeChatScanQRCodeRecordService weChatScanQRCodeRecordService;
+
+    /**
+     * 获取二维码信息
+     *
+     * @param wechatDTO
+     * @return
+     * @throws Exception
+     */
+    @RequestMapping("/getQRCode")
+    public ResponseVO getQRCode(@RequestBody WeChatDTO wechatDTO) throws Exception {
+        //活动编号 商场编号非空
+        if (wechatDTO == null
+                || StringUtils.isBlank(wechatDTO.getMerchantId())
+                || wechatDTO.getActivityId() == null) {
+            throw new BusinessException(ErrorCodeEnum.ERROR_PARAM);
+        }
+        return ResponseVO.success(weChatService.getQrcode(wechatDTO));
+    }
+
+    /**
+     * 二维码使用后回调后台，后台做逻辑处理
+     *
+     * @param wechatDTO
+     * @return
+     * @throws Exception
+     */
+    @RequestMapping("/notice")
+    public ResponseVO notice(@RequestBody WeChatDTO wechatDTO) throws Exception {
+        //校验参数 1、key  2、活动编号       3、 openID  4、昵称  5、图像url  6firstFollow
+        if (wechatDTO == null
+                || StringUtils.isBlank(wechatDTO.getKey())
+                || StringUtils.isBlank(wechatDTO.getOpenId())
+                || wechatDTO.getActivityId() == null
+//                || wechatDTO.getCodeNickName() == null
+//                || wechatDTO.getHeadImgUrl() == null
+//                || wechatDTO.getFirstFollow() == null
+
+                ) {
+            throw new BusinessException(ErrorCodeEnum.ERROR_PARAM);
+        }
+        log.info("头像 {} ", wechatDTO.getHeadImgUrl());
+        log.info("昵称 {} ", wechatDTO.getCodeNickName());
+        log.info("OPENID {} ", wechatDTO.getOpenId());
+        log.info("WeChatDTO {} ", wechatDTO.toString());
+
+        return ResponseVO.success(weChatService.notice(wechatDTO));
+    }
+
+    /**
+     * 接收微信扫码通知  jinWangNotice
+     *
+     * @param wechatDTO
+     * @return
+     * @throws Exception
+     */
+    @RequestMapping("/jinWangNotice")
+    public ResponseVO jinWangNotice(@RequestBody WeChatDTO wechatDTO) throws Exception {
+        if (wechatDTO == null || StringUtils.isBlank(wechatDTO.getKey())
+                || StringUtils.isBlank(wechatDTO.getOpenId()) || wechatDTO.getActivityId() == null) {
+            throw new BusinessException(ErrorCodeEnum.ERROR_PARAM);
+        }
+        WechatNoticeVO wechatNoticeVO = weChatService.jinWangNotice(wechatDTO);
+        return ResponseVO.success(wechatNoticeVO);
+    }
+
+
+    //增加校验规则
+    // 二维码有效期内是否可以复用
+
+    /**
+     * 检查二维码是否被扫
+     *
+     * @param wechatDTO
+     * @return
+     * @throws Exception
+     */
+    @RequestMapping("/checkNotice")
+    public ResponseVO checkNotice(@RequestBody WeChatDTO wechatDTO) throws Exception {
+        if (wechatDTO == null
+                || StringUtils.isBlank(wechatDTO.getKey())
+                || wechatDTO.getActivityId() == null) {
+            throw new BusinessException(ErrorCodeEnum.ERROR_PARAM.getErrorCode(), "必要参数: 1、activityId 2、key");
+
+        }
+        return ResponseVO.success(weChatService.checkNotice(wechatDTO));
+    }
+
+
+    /**
+     * 检查BASE64编码昵称
+     *
+     * @param wechatDTO
+     * @return
+     */
+    @RequestMapping("/checkNickname")
+    public ResponseVO nickUrl(@RequestBody WeChatDTO wechatDTO) {
+        if (wechatDTO == null || StringUtils.isBlank(wechatDTO.getMall()) || wechatDTO.getOpenId() == null) {
+            throw new BusinessException(ErrorCodeEnum.ERROR_PARAM);
+
+        }
+        return ResponseVO.success(weChatService.nickUrl(wechatDTO));
+    }
+
+
+    /**
+     * 通过活动编码查询扫码记录
+     *
+     * @param weChatDTO
+     * @return
+     */
+    @RequestMapping(value = "/getRecord", method = RequestMethod.POST)
+    public ResponseVO get(@RequestBody WeChatDTO weChatDTO) {
+        if (weChatDTO == null) {
+            log.info("分页参数weChatDTO 是null");
+
+            throw new BusinessException(ErrorCodeEnum.ERROR_PARAM.getErrorCode(), "参数: activityId不能为空");
+        }
+        log.info("dto 是   ", weChatDTO);
+        List<WeChatScanQRCodeRecordDO> results = weChatService.listPage(weChatDTO);
+        Integer totalCount = weChatService.listPageCount(weChatDTO);
+        //    public static <T> ResponseVO success(T data, Integer currentPage, Integer pageSize, Integer totalCount) {
+//        public static <T> ResponseVO success(T data, Integer currentPage, Integer pageSize, Integer totalCount) {
+        return ResponseVO.success(results, weChatDTO.getCurrentPage(), weChatDTO.getPageSize(), totalCount);
+    }
+
+
+    //@TODO 保存 测试时候用，待测试PASS后,注意删除该接口
+    @RequestMapping("/save")
+    public ResponseVO save(@RequestBody WeChatDTO dto) {
+        WeChatScanQRCodeRecordDO recordDO = new WeChatScanQRCodeRecordDO();
+        BeanUtils.copyProperties(dto, recordDO);
+        return ResponseVO.success(weChatService.save(recordDO));
+    }
+
+
+    /**
+     * 导出Excel
+     *
+     * @param activityId 活动id是必须
+     * @param response
+     * @return
+     * @throws Exception
+     */
+    @Async
+    @RequestMapping(value = "/exportExcel", method = RequestMethod.GET)
+    public String export(@RequestParam(value = "activityId", required = true) Integer activityId, HttpServletResponse response) throws Exception {
+        Long start = System.currentTimeMillis();
+
+        if (activityId == null) {
+            log.info("dto 是   ", activityId);
+            throw new BusinessException(ErrorCodeEnum.ERROR_PARAM.getErrorCode(), "参数: activityId不能为空");
+        }
+
+        log.info("扫码回执信息导出excel开始,查询条件活动编码{}", activityId);
+
+
+        int pageSize = 50000;
+        int sheetNumber = 1;
+
+        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        HSSFWorkbook workbook = new HSSFWorkbook();        // 创建一个工作薄
+
+        //一个sheet写入5w 数据
+        Integer count = weChatService.getCountByActivityId(activityId);
+        int sheets;//sheets 数目
+        int remainder;//余数
+
+        if (count != 0) {
+            sheets = count / pageSize;//总页数
+            remainder = count % pageSize;
+            sheets = remainder > 0 ? sheets++ : sheets;
+
+            List<WeChatScanQRCodeRecordDO> records = new ArrayList<>(50000);
+
+            log.info("################################## sheetNumber {},总sheets {}",sheetNumber,sheets);
+                for (sheetNumber = 1; sheetNumber <= sheets; sheetNumber++) {
+                    WeChatDTO weChatDTO = new WeChatDTO();
+                    weChatDTO.setActivityId(activityId);
+                    weChatDTO.setCurrentPage(sheetNumber);
+                    weChatDTO.setPageSize(pageSize);
+
+                    //sheet++  一次循环完成一个sheet
+                    HSSFSheet sheet1 = workbook.createSheet("扫码回执信息" + sheetNumber);
+                    createTitle(workbook, sheet1);
+
+                    records = weChatService.listPage(weChatDTO);
+
+                    //新增数据行，并且设置单元格数据
+                    int rowNum = 1;
+                    for (WeChatScanQRCodeRecordDO qrCodeRecord : records) {
+                       // log.info("数据导出，时间{}，数据{}", new Date(), qrCodeRecord);
+                        HSSFRow row1 = sheet1.createRow(rowNum);
+
+
+                        //20S 后就 不要图片了
+                        if ((System.currentTimeMillis() - start) < 20000) {
+                            //写入图片
+                            writePictureToExcel(workbook, sheet1, row1, rowNum, qrCodeRecord.getHeadImgUrl());
+                        } else {
+                            row1.createCell(1).setCellValue("");
+                        }
+
+                        row1.createCell(0).setCellValue(qrCodeRecord.getCodeNickName() == null ? "" : qrCodeRecord.getCodeNickName());
+                        row1.createCell(2).setCellValue(qrCodeRecord.getOpenId());
+                        row1.createCell(3).setCellValue(qrCodeRecord.getCreateTime() == null ? "" : formatter.format(qrCodeRecord.getCreateTime()));
+                        rowNum++;
+
+                    }
+
+
+                }
+
+//            String fileName = "数据列表列表.xlsx";
+            String fileName = "数据列表列表.xls";
+            ExcelUtil.exportExcel(response, workbook, fileName);
+        }
+        return "download excel";
+    }
+
+
+    //创建表头  public static final String[] EXCEL_TITTLE = {"头像","昵称","是否首次关注",      "机器商场编号","活动编号","主键编号",""创建时间","OPENID","KEY"};
+    private void createTitle(HSSFWorkbook workbook, HSSFSheet sheet) {
+        HSSFRow row = sheet.createRow(0);
+        //设置列宽，setColumnWidth的第二个参数要乘以256，这个参数的单位是1/256个字符宽度
+        sheet.setColumnWidth(1, 12 * 256);
+        sheet.setColumnWidth(3, 17 * 256);
+        //设置为居中加粗
+        HSSFCellStyle style = workbook.createCellStyle();
+        HSSFFont font = workbook.createFont();
+        font.setBoldweight(HSSFFont.BOLDWEIGHT_BOLD);
+        style.setAlignment(HSSFCellStyle.ALIGN_CENTER);
+        style.setFont(font);
+        //        public static final String[] EXCEL_TITTLE = {"头像","昵称","是否首次关注",      "机器商场编号","活动编号","主键编号",""创建时间","OPENID","KEY"};
+
+        HSSFCell cell0;
+        cell0 = row.createCell(0);
+        cell0.setCellValue("微信昵称");
+        cell0.setCellStyle(style);
+
+
+        HSSFCell cell1;
+        cell1 = row.createCell(1);
+        cell1.setCellValue("微信头像");
+        cell1.setCellStyle(style);
+
+        HSSFCell cell2;
+        cell2 = row.createCell(2);
+        cell2.setCellValue("openId");
+        cell2.setCellStyle(style);
+
+
+        HSSFCell cell3;
+        cell3 = row.createCell(3);
+        cell3.setCellValue("参与时间");
+        cell3.setCellStyle(style);
+
+
+    }
+
+
+    //--------------------------------------------------------------------------------------
+    //                         从网络获取图
+    //--------------------------------------------------------------------------------------
+
+    private void writePictureToExcel(HSSFWorkbook workbook, HSSFSheet sheet, HSSFRow row, int index, String
+            headImgUrl) {
+
+        if (headImgUrl == null || headImgUrl == "" || !headImgUrl.contains("http")) {
+            row.createCell(1).setCellValue("");
+        } else {
+            //writePictureToExcel(row, qrCodeRecord.getHeadImgUrl());
+            try {
+                //写入图片
+                //1、读取网络图片 超时限制5秒
+//                InputStream inputStream = readInputStreamOverNet(headImgUrl);
+
+                //打开链接
+                java.net.HttpURLConnection conn = (java.net.HttpURLConnection) new java.net.URL(headImgUrl).openConnection();
+                //设置请求方式为"GET"
+                conn.setRequestMethod("GET");
+                //超时响应时间为5秒
+                conn.setConnectTimeout(5 * 1000);
+                //通过输入流获取图片数据
+                InputStream inputStream = conn.getInputStream();
+//                2、获取文件名称
+//                String date = formatter.format(new Date());
+//                String fileName = headImgUrl + date + ".jpg";
+
+                //写入表格
+                BufferedImage bufferImg = ImageIO.read(inputStream);     //将in作为输入流，读取图片存入image中，而这里in可以为ByteArrayInputStream();
+                ByteArrayOutputStream byteArrayOut = new ByteArrayOutputStream();
+
+                ImageIO.write(bufferImg, "jpg", byteArrayOut);
+
+
+                HSSFPatriarch patriarch = sheet.createDrawingPatriarch();
+                //     图片导出到单元格中
+                //     * 前四个参数是控制图片在单元格的位置，分别是图片距离单元格 left，top，right，bottom  左上 右下  的像素距离
+                //     * 后四个参数，前两个表示图片左上角所在的 cellNum 和 rowNum，后天个参数对应的表示图片右下角所在的cellNum和 rowNum，
+                //     * excel中的cellNum和rowNum的index都是从0开始的
+//                log.info("index=row表示第几行" + index);
+//                HSSFClientAnchor anchor = new HSSFClientAnchor(0, 1, 0, 1,    (short) index, index, (short) index, index);
+//                第一列
+                HSSFClientAnchor anchor = new HSSFClientAnchor(0, 0, 0, 0, (short) 1, index, (short) 2, index + 1);
+//                    public HSSFClientAnchor  (                              int dx1, int dy1, int dx2, int dy2,   short col1,  int row1, short col2 , int row2) {
+//                HSSFClientAnchor a1 = new HSSFClientAnchor(255, 125, 1023, 150, 0, 0,2, 2);
+                //dx1：起始单元格的x偏移量，如例子中的255表示直线起始位置距A1单元格左侧的距离；
+                //dy1：起始单元格的y偏移量，如例子中的125表示直线起始位置距A1单元格上侧的距离；
+                //dx2：终止单元格的x偏移量，如例子中的1023表示直线起始位置距C3单元格左侧的距离；
+                //dy2：终止单元格的y偏移量，如例子中的150表示直线起始位置距C3单元格上侧的距离；
+
+                //col1：起始单元格列序号，从0开始计算；
+                //row1：起始单元格行序号，从0开始计算，如例子中col1=0,row1=0就表示起始单元格为A1(0,0)；
+                //col2：终止单元格列序号，从0开始计算；
+                //row2：终止单元格行序号，从0开始计算，如例子中col2=2,row2=2就表示起始单元格为C3(2,2)；
+                patriarch.createPicture(anchor, workbook.addPicture(byteArrayOut.toByteArray(), HSSFWorkbook.PICTURE_TYPE_JPEG));
+
+
+            } catch (Exception e) {
+                e.printStackTrace();//获取或者写入图片异常的时候
+                row.createCell(0).setCellValue("");
+                log.info("index-{}!!!!!!!!异常{}", index, e.getMessage());
+            }
+        }
+
+
+    }
+
+
+    // 从网络获取图
+    private static InputStream readInputStreamOverNet(String url) throws Exception {
+        //打开链接
+        java.net.HttpURLConnection conn = (java.net.HttpURLConnection) new java.net.URL(url).openConnection();
+        //设置请求方式为"GET"
+        conn.setRequestMethod("GET");
+        //超时响应时间为5秒
+        conn.setConnectTimeout(5 * 1000);
+        //通过输入流获取图片数据
+        return conn.getInputStream();
+
+    }
+
+
+}
+
+
+
+
+

@@ -1,0 +1,65 @@
+
+#GET
+http://192.168.1.52:21231/ry-activity-client/wechat/exportExcel?activityId=66
+
+#POST
+http://192.168.1.52:21231/ry-activity-client/wechat/getQRCode
+{
+	"merchantId":"54f403eae4b002000cf63762",
+	"activityId":66,
+	"openId":"555555",
+	"otherParam":"ppppppppppppppppppppppppp"
+	
+}
+
+
+
+
+
+ private void writePictureToExcel1(HSSFWorkbook workbook, HSSFSheet sheet, HSSFRow row, int index, String headImgUrl) {
+
+
+        if (headImgUrl == null || headImgUrl == "" || !headImgUrl.contains("http")) {
+            row.createCell(1).setCellValue("");
+        } else {
+            //writePictureToExcel(row, qrCodeRecord.getHeadImgUrl());
+            ExecutorService exs = Executors.newFixedThreadPool(5000);
+
+            try {
+
+
+                List<Future<Integer>> futureList = new ArrayList<>();
+
+                Future<Integer> submit = exs.submit(new CallableTask(headImgUrl));
+                futureList.add(submit);
+
+
+                java.net.HttpURLConnection conn = (java.net.HttpURLConnection) new java.net.URL(headImgUrl).openConnection();
+                conn.setRequestMethod("GET");
+                conn.setConnectTimeout(3 * 1000);
+                BufferedImage bufferImg = ImageIO.read(conn.getInputStream());     //将in作为输入流，读取图片存入image中，而这里in可以为ByteArrayInputStream();
+                ByteArrayOutputStream byteArrayOut = new ByteArrayOutputStream();
+
+                ImageIO.write(bufferImg, "jpg", byteArrayOut);
+
+                HSSFPatriarch patriarch = sheet.createDrawingPatriarch();
+                log.info("index=row表示第几行" + index);
+
+                HSSFClientAnchor anchor = new HSSFClientAnchor(0, 0, 0, 0, (short) 1, index, (short) 2, index + 1);
+                patriarch.createPicture(anchor, workbook.addPicture(byteArrayOut.toByteArray(), HSSFWorkbook.PICTURE_TYPE_JPEG));
+
+
+                Long getResultStart = System.currentTimeMillis();
+                System.out.println("结果归集开始时间=" + new Date());
+
+
+            } catch (Exception e) {
+                e.printStackTrace();//获取或者写入图片异常的时候
+                row.createCell(0).setCellValue("");
+                log.info("index-{}!!!!!!!!异常{}", index, e.getMessage());
+            } finally {
+                exs.shutdown();
+            }
+
+        }
+    }

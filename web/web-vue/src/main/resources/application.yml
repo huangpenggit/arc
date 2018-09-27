@@ -8,7 +8,6 @@ spring:
     active: local
   mvc:
     throw-exception-if-no-handler-found: true
-#    https://blog.csdn.net/catoop/article/details/50501706
 # 其中默认配置的 /** 映射到 /static （或/public、/resources、/META-INF/resources）
 #其中默认配置的 /webjars/** 映射到 classpath:/META-INF/resources/webjars/
 #META/resources > resources > static > public

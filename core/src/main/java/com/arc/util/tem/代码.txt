@@ -1,0 +1,67 @@
+ if (false) {
+            sheets = count / pageSize;//总页数
+            if (sheets <= 0 || (count % pageSize) > 0) {//数据量不足一个sheet的 或者有余数的
+                sheets = sheets + 1;
+            }
+
+
+        List<WeChatScanQRCodeRecord> records = new ArrayList<>(pageSize);
+        records = weChatScanQRCodeRecordService.listPage(dto);
+        log.debug("##################################总数据量count{}--sheets数目{}", count, sheets);
+
+        //两个思路去处理
+        //一、分页查询MySQL获取数据 得到所有结果 然后一次处理  ---HashMap<String, List<WeChatScanQRCodeRecord>> map = new HashMap<>();
+        //二、分页查询MySQL获取数据 然后分批处理 ---用这个 避免程序消耗过多内存 -->按次数将数据写入文件
+
+        // 一次for 获取一页 处理这一页
+
+
+        for (sheetNumber = 1; sheetNumber <= sheets; sheetNumber++) {
+
+            // 数据库中存储的数据行---即单词分页大小，即pageSize
+            // 求数据库中待导出数据的行数-----总数据量，既count
+            // 根据行数求数据提取次数---分多少次操作完成，即sheets//            int export_times = list_count % page_size > 0 ? list_count / page_size + 1 : list_count / page_size;
+            // 按次数将数据写入文件
+
+
+            // 最重要的就是使用SXSSFWorkbook，表示流的方式进行操作
+            // 在内存中保持1000行，超过100行将被刷新到磁盘
+
+
+
+            Sheet sheet = wb.createSheet(); // 建立新的sheet对象
+            int rowNum = 1;
+            for (WeChatScanQRCodeRecord qrCodeRecord : records) {
+                Row row = sheet.createRow(sheetNumber);   // 创建第一行对象
+                 log.debug("数据导出时间{}---数据{}", new Date(), qrCodeRecord);
+//                HSSFRow row = sheet.createRow(rowNum);
+
+                row.createCell(0).setCellValue(qrCodeRecord.getCodeNickName() == null ? "" : qrCodeRecord.getCodeNickName());
+                row.createCell(1).setCellValue(qrCodeRecord.getOpenId());
+                row.createCell(2).setCellValue(qrCodeRecord.getCreateTime() == null ? "" : formatter.format(qrCodeRecord.getCreateTime()));
+                rowNum++;//新增数据行，并且设置单元格数据
+            }
+
+
+//            Row row_value = sheet.createRow(j * page_size + i + 1);
+//            Cell cel0_value = row_value.createCell(0);
+//            cel0_value.setCellValue(records.get(i).getaa());
+//            Cell cel2_value = row_value.createCell(1);
+//            cel2_value.setCellValue(records.get(i).getaa());
+//            Cell cel3_value = row_value.createCell(2);
+//            cel3_value.setCellValue(records.get(i).getaa_person());
+
+            //records.clear(); // 每次存储len行，用完了将内容清空，以便内存可重复利用
+
+
+//            FileOutputStream fileOut = new FileOutputStream(path);
+//            wb.write(fileOut);
+//            wb.dispose();
+//            fileOut.close();
+        }
+        }
+        //2018-08-04 18:19:24,084 - ##################################总数据量count163840--sheets数目4
+          //finished execute  time: 5104ms
+、、2018-08-04 18:26:08,044 - ##################################总数据量count131 0720--sheets数目27
+  finished execute  time: 21307ms
+  2018-08-04 18:53:04 JRebel: Found offline lease from local storage.. executing JRebel with offline licensing.
