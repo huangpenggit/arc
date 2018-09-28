@@ -8,7 +8,7 @@ sa/
 *.iml
 out
 gen### Clojure template
-pom.xml
+#pom.xml
 pom.xml.asc
 *.jar
 *.class
