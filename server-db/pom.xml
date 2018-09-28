@@ -28,7 +28,8 @@
         <module>server-druid</module>
         <module>server-mongo</module>
         <module>mybatis-tool</module>
-        <module>server-system</module>
+        <!--<module>server-system</module>-->
+        <module>server-elasticsearch</module>
     </modules>
 
     <dependencies>
