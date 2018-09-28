@@ -2,29 +2,14 @@ server:
   port: 8761
 
 spring:
+  application:
+    name: arc-eureka
   profiles:
     active: local
 #  security:
 #    user:
 #      name: user
 #      password: admin
-  application:
-    name: arc-eureka
-#  profiles:
-#    active: local
-
-#eureka:
-#  instance:
-#    prefer-ip-address: true
-#    hostname: localhost
-#  client:
-#    register-with-eureka: false
-#    fetch-registry: false
-#    service-url:
-#      defaultZone:  http://${eureka.instance.hostname}:${server.port}/eureka/
-#  server:
-#    enable-self-preservation: false
-
 
 
 ########################################################
@@ -44,8 +29,8 @@ eureka:
     register-with-eureka: false
     fetch-registry: false
     service-url:
-#      defaultZone: http://127.0.0.1:8761/eureka/
       defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+#      defaultZone: http://127.0.0.1:8761/eureka/
 #      defaultZone: http://a:a@127.0.0.1:8761/eureka/
 #      defaultZone:  http://a:a@${eureka.instance.hostname}:${server.port}/eureka/
 

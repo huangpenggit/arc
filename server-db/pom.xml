@@ -28,6 +28,7 @@
         <module>server-druid</module>
         <module>server-mongo</module>
         <module>mybatis-tool</module>
+        <module>server-system</module>
     </modules>
 
     <dependencies>
