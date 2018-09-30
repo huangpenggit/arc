@@ -20,7 +20,7 @@ public class ClientConnection extends Thread {
             String s = null;
             while ((s = br.readLine()) != null && !s.equals("")) {
             }
-                System.out.println(s);
+            System.out.println(s);
 
             BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(socket.getOutputStream()));
             bw.write("HTTP/1.1 200 OK\n");

@@ -84,14 +84,14 @@ public class HttpUtil {
                 os.close();
             }
             //获得响应状态
-            int resultCode=conn.getResponseCode();
+            int resultCode = conn.getResponseCode();
             if (resultCode == 200) {
 //                in = conn.getInputStream();
 //                result = StreamUtils.copyToString(in, Charset.forName("utf-8"));
-                StringBuffer sb=new StringBuffer();
-                String readLine=new String();
-                BufferedReader responseReader=new BufferedReader(new InputStreamReader(conn.getInputStream(),"UTF-8"));
-                while((readLine=responseReader.readLine())!=null){
+                StringBuffer sb = new StringBuffer();
+                String readLine = new String();
+                BufferedReader responseReader = new BufferedReader(new InputStreamReader(conn.getInputStream(), "UTF-8"));
+                while ((readLine = responseReader.readLine()) != null) {
                     sb.append(readLine).append("\n");
                 }
 
@@ -112,10 +112,9 @@ public class HttpUtil {
                 ex.printStackTrace();
             }
         }
-        log.debug("result \n"+result);
+        log.debug("result \n" + result);
         return result;
     }
-
 
 
     //多参数
@@ -153,14 +152,14 @@ public class HttpUtil {
                 os.close();
             }
             //获得响应状态
-            int resultCode=conn.getResponseCode();
+            int resultCode = conn.getResponseCode();
             if (resultCode == 200) {
 //                in = conn.getInputStream();
 //                result = StreamUtils.copyToString(in, Charset.forName("utf-8"));
-                StringBuffer sb=new StringBuffer();
-                String readLine=new String();
-                BufferedReader responseReader=new BufferedReader(new InputStreamReader(conn.getInputStream(),"UTF-8"));
-                while((readLine=responseReader.readLine())!=null){
+                StringBuffer sb = new StringBuffer();
+                String readLine = new String();
+                BufferedReader responseReader = new BufferedReader(new InputStreamReader(conn.getInputStream(), "UTF-8"));
+                while ((readLine = responseReader.readLine()) != null) {
                     sb.append(readLine).append("\n");
                 }
                 result = sb.toString();
@@ -181,27 +180,9 @@ public class HttpUtil {
             }
         }
         String ascii2native = UnicodeUtil.ascii2native(result);
-        log.info(" 调用方法 static String post时候的返回(unicode)\n{}",ascii2native);
+        log.info(" 调用方法 static String post时候的返回(unicode)\n{}", ascii2native);
         return ascii2native;
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     //   String encode = "utf-8";

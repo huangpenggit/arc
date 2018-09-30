@@ -24,7 +24,6 @@ import java.util.List;
 public class TokenCacheUtil {
 
 
-
     @Autowired
     private Hla hla;
 
@@ -37,15 +36,15 @@ public class TokenCacheUtil {
     public String getToken() {
         String json = "{ \"app_id\": \"" + hla.getAppId() + "\", \"app_key\": \"" + GetSignature(hla.getAppId(), hla.getAppSecret()) + "\",\"grant_type\": \"client_credentials\"}";
         log.debug("获取token的请求参数 \n{} \n时间{}", json, new Date());
-        return HttpUtil.post(hla.getHost()+hla.getAccessTokenUrl(), json);
+        return HttpUtil.post(hla.getHost() + hla.getAccessTokenUrl(), json);
     }
 
 
-
-//依赖内存缓存token
+    //依赖内存缓存token
     public static long expiresIn;//
     public static String accessToken = null;          //全局唯一接口调用凭据
     public static long expiresTime = 3000000L;//  1时(h)=3600000毫秒(ms) 过期时间，这里提早十分钟
+
     public String getAccessToken() {
         //如果 1、accessToken为null 2、或者超时---则必须去重新获取
         log.debug(accessToken);
@@ -229,19 +228,19 @@ public class TokenCacheUtil {
     }
 
     public String getSkuUrl() {
-        return hla.getHost()+hla.getSkuUrl();
+        return hla.getHost() + hla.getSkuUrl();
     }
 
     public String getAppId() {
-        return hla.getHost()+hla.getAppId();
+        return hla.getHost() + hla.getAppId();
     }
 
     public String getSpuUrl() {
-        return hla.getHost()+hla.getSpuUrl();
+        return hla.getHost() + hla.getSpuUrl();
     }
 
     public String getGroupUrl() {
-        return hla.getHost()+hla.getGroupUrl();
+        return hla.getHost() + hla.getGroupUrl();
     }
 
 
@@ -255,14 +254,14 @@ public class TokenCacheUtil {
 //    @ConfigurationProperties(prefix = "hla.hudao")
     public static class Hla {
         //这边先硬编码
-        private String appId="ntdf3d4ee23dadf28e6aec6268a29a6c";
-        private String appSecret="61ca53afa8bcd6698058515ede60d88e";
+        private String appId = "ntdf3d4ee23dadf28e6aec6268a29a6c";
+        private String appSecret = "61ca53afa8bcd6698058515ede60d88e";
 
-        private String host="https://open.hlzj.com:4000";
-        private String skuUrl="/api/v6/shop/product/query/get";
-        private String spuUrl="/api/v6/shop/product/spu/query/get";
-        private String groupUrl="/api/v6/shop/product/group/query/get";
-        private String accessTokenUrl="/api/v6/data/auth_token/get";
+        private String host = "https://open.hlzj.com:4000";
+        private String skuUrl = "/api/v6/shop/product/query/get";
+        private String spuUrl = "/api/v6/shop/product/spu/query/get";
+        private String groupUrl = "/api/v6/shop/product/group/query/get";
+        private String accessTokenUrl = "/api/v6/data/auth_token/get";
 
     }
 

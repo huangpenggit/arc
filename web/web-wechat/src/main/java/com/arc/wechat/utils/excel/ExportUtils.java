@@ -108,8 +108,8 @@ public class ExportUtils {
         }
     }
 
-//SXSSFWorkbook     HSSFWorkbook
-    public static void export(String name, HttpServletRequest request, HttpServletResponse response,SXSSFWorkbook  book) throws IOException {
+    //SXSSFWorkbook     HSSFWorkbook
+    public static void export(String name, HttpServletRequest request, HttpServletResponse response, SXSSFWorkbook book) throws IOException {
         String filename = name + ".xls";
         response.reset();
         response.setContentType(request.getServletContext().getMimeType(filename));

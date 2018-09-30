@@ -12,22 +12,22 @@ window.onload = function () { // wait for load in a dumb way because B-0
   'use strict';
 
   var cw = '/*!\n' +
-           ' * Bootstrap v3.3.7 (http://getbootstrap.com)\n' +
-           ' * Copyright 2011-' + new Date().getFullYear() + ' Twitter, Inc.\n' +
-           ' * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)\n' +
-           ' */\n\n'
+    ' * Bootstrap v3.3.7 (http://getbootstrap.com)\n' +
+    ' * Copyright 2011-' + new Date().getFullYear() + ' Twitter, Inc.\n' +
+    ' * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)\n' +
+    ' */\n\n'
 
   var supportsFile = window.File && window.FileReader && window.FileList && window.Blob
   var $importDropTarget = $('#import-drop-target')
 
   function showError(msg, err) {
     $('<div id="bsCustomizerAlert" class="bs-customizer-alert">' +
-        '<div class="container">' +
-          '<a href="#bsCustomizerAlert" data-dismiss="alert" class="close pull-right" aria-label="Close" role="button"><span aria-hidden="true">&times;</span></a>' +
-          '<p class="bs-customizer-alert-text"><span class="glyphicon glyphicon-warning-sign" aria-hidden="true"></span><span class="sr-only">Warning:</span>' + msg + '</p>' +
-          (err.message ? $('<p></p>').text('Error: ' + err.message)[0].outerHTML : '') +
-          (err.extract ? $('<pre class="bs-customizer-alert-extract"></pre>').text(err.extract.join('\n'))[0].outerHTML : '') +
-        '</div>' +
+      '<div class="container">' +
+      '<a href="#bsCustomizerAlert" data-dismiss="alert" class="close pull-right" aria-label="Close" role="button"><span aria-hidden="true">&times;</span></a>' +
+      '<p class="bs-customizer-alert-text"><span class="glyphicon glyphicon-warning-sign" aria-hidden="true"></span><span class="sr-only">Warning:</span>' + msg + '</p>' +
+      (err.message ? $('<p></p>').text('Error: ' + err.message)[0].outerHTML : '') +
+      (err.extract ? $('<pre class="bs-customizer-alert-extract"></pre>').text(err.extract.join('\n'))[0].outerHTML : '') +
+      '</div>' +
       '</div>').appendTo('body').alert()
     throw err
   }
@@ -35,14 +35,14 @@ window.onload = function () { // wait for load in a dumb way because B-0
   function showSuccess(msg) {
     $('<div class="bs-callout bs-callout-info">' +
       '<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>' + msg +
-    '</div>').insertAfter('.bs-customize-download')
+      '</div>').insertAfter('.bs-customize-download')
   }
 
   function showCallout(msg, showUpTop) {
     var $callout = $('<div class="bs-callout bs-callout-danger">' +
       '<h4>Attention!</h4>' +
       '<p>' + msg + '</p>' +
-    '</div>')
+      '</div>')
 
     if (showUpTop) {
       $callout.appendTo('.bs-docs-container')
@@ -79,23 +79,23 @@ window.onload = function () { // wait for load in a dumb way because B-0
       dataType: 'json',
       data: JSON.stringify(data)
     })
-    .success(function (result) {
-      var gistUrl = result.html_url;
-      var origin = window.location.protocol + '//' + window.location.host
-      var customizerUrl = origin + window.location.pathname + '?id=' + result.id
-      showSuccess('<strong>Success!</strong> Your configuration has been saved to <a href="' + gistUrl + '">' + gistUrl + '</a> ' +
-        'and can be revisited here at <a href="' + customizerUrl + '">' + customizerUrl + '</a> for further customization.')
-      history.replaceState(false, document.title, customizerUrl)
-      callback(gistUrl, customizerUrl)
-    })
-    .error(function (err) {
-      try {
-        showError('<strong>Ruh roh!</strong> Could not save gist file, configuration not saved.', err)
-      } catch (sameErr) {
-        // deliberately ignore the error
-      }
-      callback('<none>', '<none>')
-    })
+      .success(function (result) {
+        var gistUrl = result.html_url;
+        var origin = window.location.protocol + '//' + window.location.host
+        var customizerUrl = origin + window.location.pathname + '?id=' + result.id
+        showSuccess('<strong>Success!</strong> Your configuration has been saved to <a href="' + gistUrl + '">' + gistUrl + '</a> ' +
+          'and can be revisited here at <a href="' + customizerUrl + '">' + customizerUrl + '</a> for further customization.')
+        history.replaceState(false, document.title, customizerUrl)
+        callback(gistUrl, customizerUrl)
+      })
+      .error(function (err) {
+        try {
+          showError('<strong>Ruh roh!</strong> Could not save gist file, configuration not saved.', err)
+        } catch (sameErr) {
+          // deliberately ignore the error
+        }
+        callback('<none>', '<none>')
+      })
   }
 
   function getCustomizerData() {
@@ -108,8 +108,12 @@ window.onload = function () { // wait for load in a dumb way because B-0
 
     var data = {
       vars: vars,
-      css: $('#less-section input:checked')  .map(function () { return this.value }).toArray(),
-      js:  $('#plugin-section input:checked').map(function () { return this.value }).toArray()
+      css: $('#less-section input:checked').map(function () {
+        return this.value
+      }).toArray(),
+      js: $('#plugin-section input:checked').map(function () {
+        return this.value
+      }).toArray()
     }
 
     if ($.isEmptyObject(data.vars) && !data.css.length && !data.js.length) return null
@@ -145,13 +149,13 @@ window.onload = function () { // wait for load in a dumb way because B-0
       type: 'GET',
       dataType: 'json'
     })
-    .success(function (result) {
-      var data = JSON.parse(result.files['config.json'].content)
-      updateCustomizerFromJson(data)
-    })
-    .error(function (err) {
-      showError('Error fetching bootstrap config file', err)
-    })
+      .success(function (result) {
+        var data = JSON.parse(result.files['config.json'].content)
+        updateCustomizerFromJson(data)
+      })
+      .error(function (err) {
+        showError('Error fetching bootstrap config file', err)
+      })
   }
 
   function generateZip(css, js, fonts, config, complete) {
@@ -176,7 +180,7 @@ window.onload = function () { // wait for load in a dumb way because B-0
     if (fonts) {
       var fontsFolder = zip.folder('fonts')
       for (var fontsFileName in fonts) {
-        fontsFolder.file(fontsFileName, fonts[fontsFileName], { base64: true })
+        fontsFolder.file(fontsFileName, fonts[fontsFileName], {base64: true})
       }
     }
 
@@ -184,7 +188,7 @@ window.onload = function () { // wait for load in a dumb way because B-0
       zip.file('config.json', config)
     }
 
-    var content = zip.generate({ type: 'blob' })
+    var content = zip.generate({type: 'blob'})
 
     complete(content)
   }
@@ -241,7 +245,7 @@ window.onload = function () { // wait for load in a dumb way because B-0
       // Core stylesheets like 'normalize.less' are not included in the form
       // since disabling them would wreck everything, and so their 'fileInclude'
       // will be 'undefined'.
-      if (fileInclude || fileInclude == null)    lessSource += __less[filename]
+      if (fileInclude || fileInclude == null) lessSource += __less[filename]
 
       // Custom variables are added after Bootstrap variables so the custom
       // ones take precedence.
@@ -265,8 +269,8 @@ window.onload = function () { // wait for load in a dumb way because B-0
         return promise.reject(parseErr)
       }
       try {
-        intoResult[baseFilename + '.css']     = cw + tree.toCSS()
-        intoResult[baseFilename + '.min.css'] = cw + tree.toCSS({ compress: true })
+        intoResult[baseFilename + '.css'] = cw + tree.toCSS()
+        intoResult[baseFilename + '.min.css'] = cw + tree.toCSS({compress: true})
       } catch (compileErr) {
         return promise.reject(compileErr)
       }
@@ -298,10 +302,10 @@ window.onload = function () { // wait for load in a dumb way because B-0
         $(this).val() && (vars[$(this).prev().text()] = $(this).val())
       })
 
-    var bsLessSource    = preamble + generateLESS('bootstrap.less', lessFileIncludes, vars)
-    var themeLessSource = preamble + generateLESS('theme.less',     lessFileIncludes, vars)
+    var bsLessSource = preamble + generateLESS('bootstrap.less', lessFileIncludes, vars)
+    var themeLessSource = preamble + generateLESS('theme.less', lessFileIncludes, vars)
 
-    var prefixer = autoprefixer({ browsers: __configBridge.autoprefixerBrowsers })
+    var prefixer = autoprefixer({browsers: __configBridge.autoprefixerBrowsers})
 
     $.when(
       compileLESS(bsLessSource, 'bootstrap', result),
@@ -344,7 +348,9 @@ window.onload = function () { // wait for load in a dumb way because B-0
     if (!$checked.length) return false
 
     var js = $checked
-      .map(function () { return __js[this.value] })
+      .map(function () {
+        return __js[this.value]
+      })
       .toArray()
       .join('\n')
 
@@ -407,7 +413,7 @@ window.onload = function () { // wait for load in a dumb way because B-0
   $('#import-manual-trigger').on('click', removeImportAlerts)
 
   var $inputsComponent = $('#less-section input')
-  var $inputsPlugin    = $('#plugin-section input')
+  var $inputsPlugin = $('#plugin-section input')
   var $inputsVariables = $('#less-variables-section input')
 
   $('#less-section .toggle').on('click', function (e) {
@@ -486,8 +492,9 @@ window.onload = function () { // wait for load in a dumb way because B-0
     function failback() {
       $('.bs-docs-section, .bs-docs-sidebar').css('display', 'none')
       showCallout('Looks like your current browser doesn\'t support the Bootstrap Customizer. Please take a second ' +
-                    'to <a href="http://browsehappy.com/">upgrade to a more modern browser</a> (other than Safari).', true)
+        'to <a href="http://browsehappy.com/">upgrade to a more modern browser</a> (other than Safari).', true)
     }
+
     /**
      * Based on:
      *   Blob Feature Check v1.1.0
@@ -497,7 +504,7 @@ window.onload = function () { // wait for load in a dumb way because B-0
     var url = window.webkitURL || window.URL // Safari 6 uses "webkitURL".
     var svg = new Blob(
       ['<svg xmlns=\'http://www.w3.org/2000/svg\'></svg>'],
-      { type: 'image/svg+xml;charset=utf-8' }
+      {type: 'image/svg+xml;charset=utf-8'}
     )
     var objectUrl = url.createObjectURL(svg);
 

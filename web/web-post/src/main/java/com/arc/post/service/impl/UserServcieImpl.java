@@ -13,14 +13,14 @@ public class UserServcieImpl implements UserService {
     @Override
     public List<User> list() {
         ArrayList<User> users = new ArrayList<>();
-        User user = new User("admin", "admin",1);
+        User user = new User("admin", "admin", 1);
         users.add(user);
         return users;
     }
 
     @Override
-    public User get( Long id) {
-        User user = new User("bbb", "bbb",Integer.parseInt(String.valueOf(id)));
+    public User get(Long id) {
+        User user = new User("bbb", "bbb", Integer.parseInt(String.valueOf(id)));
         return user;
     }
 }

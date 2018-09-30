@@ -25,10 +25,10 @@ body,
 .page-header {
   margin-bottom: 30px;
 }
+
 .page-header .lead {
   margin-bottom: 10px;
 }
-
 
 /* Non-responsive overrides
  *
@@ -47,9 +47,9 @@ body,
   padding-top: 15px;
   padding-bottom: 15px;
   background-color: #eee;
-  background-color: rgba(86,61,124,.15);
+  background-color: rgba(86, 61, 124, .15);
   border: 1px solid #ddd;
-  border: 1px solid rgba(86,61,124,.2);
+  border: 1px solid rgba(86, 61, 124, .2);
 }
 
 .container .navbar-header,
@@ -75,6 +75,7 @@ body,
 .navbar-toggle {
   display: none;
 }
+
 .navbar-collapse {
   border-top: 0;
 }
@@ -88,9 +89,11 @@ body,
   float: left;
   margin: 0;
 }
+
 .navbar-nav > li {
   float: left;
 }
+
 .navbar-nav > li > a {
   padding: 15px;
 }
@@ -110,11 +113,13 @@ body,
   border-width: 0 1px 1px;
   border-radius: 0 0 4px 4px;
   -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
-          box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
 }
+
 .navbar-default .navbar-nav .open .dropdown-menu > li > a {
   color: #333;
 }
+
 .navbar .navbar-nav .open .dropdown-menu > li > a:hover,
 .navbar .navbar-nav .open .dropdown-menu > li > a:focus,
 .navbar .navbar-nav .open .dropdown-menu > .active > a,
@@ -123,6 +128,7 @@ body,
   color: #fff !important;
   background-color: #428bca !important;
 }
+
 .navbar .navbar-nav .open .dropdown-menu > .disabled > a,
 .navbar .navbar-nav .open .dropdown-menu > .disabled > a:hover,
 .navbar .navbar-nav .open .dropdown-menu > .disabled > a:focus {
@@ -140,7 +146,7 @@ body,
   margin-left: 0;
   border: 0;
   -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
 }
 
 /* Copy-pasted from forms.less since we mixin the .form-inline styles. */
@@ -224,6 +230,7 @@ body,
   display: inline-table;
   vertical-align: middle;
 }
+
 .form-inline .input-group .input-group-addon,
 .form-inline .input-group .input-group-btn,
 .form-inline .input-group .form-control {
@@ -246,6 +253,7 @@ body,
   margin-bottom: 0;
   vertical-align: middle;
 }
+
 .form-inline .radio label,
 .form-inline .checkbox label {
   padding-left: 0;

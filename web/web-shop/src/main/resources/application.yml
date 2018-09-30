@@ -11,7 +11,7 @@ spring:
   resources:
     add-mappings: false
     static-locations: classpath:/static/,classpath:/templates/index/
-#   static-locations: classpath:/META-INF/resources/,classpath:/resources/,classpath:/static/,classpath:/public/
+  #   static-locations: classpath:/META-INF/resources/,classpath:/resources/,classpath:/static/,classpath:/public/
   #,file:${web.upload-path},file:${web.vue-path}
   mvc:
     throw-exception-if-no-handler-found: true
@@ -26,10 +26,10 @@ spring:
 
 
 
-#配置日志
-#  这里日志用xml去配置
+  #配置日志
+  #  这里日志用xml去配置
 
-#logging:
+  #logging:
   #配置日志文件路径
 #  path: /log
 #  pattern:

@@ -54,8 +54,8 @@ public class TicketController {
     }
 
 
-    @RequestMapping(value = "/get/{id}",method = RequestMethod.GET)
-    public Object list(@PathVariable (name="id")Long id) {
+    @RequestMapping(value = "/get/{id}", method = RequestMethod.GET)
+    public Object list(@PathVariable(name = "id") Long id) {
         return ticketService.get(id);
     }
 

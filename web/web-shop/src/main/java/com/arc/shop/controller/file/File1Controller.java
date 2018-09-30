@@ -115,10 +115,8 @@ public class File1Controller {
     }
 
 
-
-
-    public  static  String cutLine(String str) {
-        return  str.substring(str.indexOf('-') + 1, str.length()).trim();
+    public static String cutLine(String str) {
+        return str.substring(str.indexOf('-') + 1, str.length()).trim();
     }
 
 }

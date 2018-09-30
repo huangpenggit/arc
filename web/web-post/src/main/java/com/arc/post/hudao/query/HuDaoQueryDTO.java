@@ -22,9 +22,9 @@ public class HuDaoQueryDTO implements Serializable {
 
     private String end_time;//2017-08-01 10:00:00
 
-    private String order_by="asc";//asc desc
+    private String order_by = "asc";//asc desc
 
-    private int page=1;//1、2、3、、、、
+    private int page = 1;//1、2、3、、、、
 
-    private int page_size=1000;//1、2、3、、、
+    private int page_size = 1000;//1、2、3、、、
 }

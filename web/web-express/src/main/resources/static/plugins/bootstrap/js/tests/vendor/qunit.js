@@ -282,13 +282,13 @@
         id: "noglobals",
         label: "Check for Globals",
         tooltip: "Enabling this will test if any test introduces new properties on the " +
-        "global object (`window` in Browsers). Stored as query-strings."
+          "global object (`window` in Browsers). Stored as query-strings."
       },
       {
         id: "notrycatch",
         label: "No try-catch",
         tooltip: "Enabling this will run tests outside of a try-catch block. Makes debugging " +
-        "exceptions in IE reasonable. Stored as query-strings."
+          "exceptions in IE reasonable. Stored as query-strings."
       }
     ],
 

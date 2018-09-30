@@ -10,7 +10,6 @@
     </parent>
 
 
-
     <modelVersion>4.0.0</modelVersion>
     <groupId>spring.boot.core</groupId>
     <artifactId>web-validating</artifactId>
@@ -19,11 +18,6 @@
 
     <name>web-validating</name>
     <description>web-validating表单校验案例</description>
-
-
-
-
-
 
 
     <dependencies>

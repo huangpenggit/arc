@@ -22,15 +22,15 @@ spring:
 
 
 mybatis:
-#为实体对象所在的包，跟数据库表一一对应
+  #为实体对象所在的包，跟数据库表一一对应
   type-aliases-package: com.arc.food.model.domain
-#mapper文件的位置
+  #mapper文件的位置
   mapper-locations: classpath:mapper/*.xml
 
-#配置日志
-#logging:
-#  pattern:
-#    console: "%d - %msg%n"
+  #配置日志
+  #logging:
+  #  pattern:
+  #    console: "%d - %msg%n"
   #配置日志文件路径
 #  file: C:\Users\X\Desktop\Zan\git\arc\server-db\server-common\src\main\resources\logs\
 #  level:

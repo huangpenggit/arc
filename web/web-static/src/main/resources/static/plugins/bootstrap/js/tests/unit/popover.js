@@ -243,7 +243,7 @@ $(function () {
   QUnit.test('should throw an error when initializing popover on the document object without specifying a delegation selector', function (assert) {
     assert.expect(1)
     assert.throws(function () {
-      $(document).bootstrapPopover({ title: 'What am I on?', content: 'My selector is missing' })
+      $(document).bootstrapPopover({title: 'What am I on?', content: 'My selector is missing'})
     }, new Error('`selector` option must be specified when initializing popover on the window.document object!'))
   })
 
@@ -264,7 +264,7 @@ $(function () {
     assert.throws(function () {
       $('<span data-toggle="popover" data-title="some title" data-content="some content">some text</span>')
         .appendTo('#qunit-fixture')
-        .bootstrapPopover({ template: '<div>Foo</div><div>Bar</div>' })
+        .bootstrapPopover({template: '<div>Foo</div><div>Bar</div>'})
         .bootstrapPopover('show')
     }, new Error('popover `template` option must consist of exactly 1 top-level element!'))
   })

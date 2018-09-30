@@ -75,11 +75,11 @@ public class PController {
 
 
     //冒泡
-    public static  void bubbleSort() {
+    public static void bubbleSort() {
         int length = parm.length;
         System.out.println(length);
         for (int i = 0; i < length; i++) {
-            for (int j = 0; j < length - i-1; j++) {
+            for (int j = 0; j < length - i - 1; j++) {
 
 //                if (parm[j] > parm[j+1]) {
 //                    int tem = parm[j ];
@@ -87,9 +87,9 @@ public class PController {
 //                    parm[j + 1] = tem;
 //                }
                 if (parm[j] > parm[j + 1]) {//前一个比后一个大， 把小的往前移动
-                    System.out.println(parm[j] +"    "+parm[j+1] );
+                    System.out.println(parm[j] + "    " + parm[j + 1]);
                     int tem = parm[j];
-                    parm[j] = parm[j+1];
+                    parm[j] = parm[j + 1];
                     parm[j + 1] = tem;
                 }
 

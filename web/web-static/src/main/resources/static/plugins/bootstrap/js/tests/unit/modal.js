@@ -171,7 +171,7 @@ $(function () {
       .on('shown.bs.modal', function () {
         assert.ok($('#modal-test').length, 'modal inserted into dom')
         assert.ok($('#modal-test').is(':visible'), 'modal visible')
-        $div.trigger($.Event('keydown', { which: 27 }))
+        $div.trigger($.Event('keydown', {which: 27}))
 
         setTimeout(function () {
           assert.ok(!$('#modal-test').is(':visible'), 'modal hidden')
@@ -191,7 +191,7 @@ $(function () {
       .on('shown.bs.modal', function () {
         assert.ok($('#modal-test').length, 'modal inserted into dom')
         assert.ok($('#modal-test').is(':visible'), 'modal visible')
-        $div.trigger($.Event('keyup', { which: 27 }))
+        $div.trigger($.Event('keyup', {which: 27}))
 
         setTimeout(function () {
           assert.ok($div.is(':visible'), 'modal still visible')

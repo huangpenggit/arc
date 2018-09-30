@@ -6,12 +6,12 @@ public class User {
 
     private String password;
 
-    private int age ;
+    private int age;
 
     private char sex;
 
     public User() {
-        super ();
+        super();
     }
 
 
@@ -21,16 +21,16 @@ public class User {
     }
 
     public User(String name, int age, char sex) {
-        super ();
-        this .name = name;
-        this .age = age;
-        this .sex = sex;
+        super();
+        this.name = name;
+        this.age = age;
+        this.sex = sex;
     }
 
     public User(String name, String password, int age) {
-        this .name = name;
-        this .password = password;
-        this .age = age;
+        this.name = name;
+        this.password = password;
+        this.age = age;
     }
 
     public String getPassword() {
@@ -42,46 +42,46 @@ public class User {
     }
 
     public String getName() {
-        return name ;
+        return name;
     }
 
     public void setName(String name) {
-        this .name = name;
+        this.name = name;
     }
 
     public int getAge() {
-        return age ;
+        return age;
     }
 
     public void setAge(int age) {
-        this .age = age;
+        this.age = age;
     }
 
     public char getSex() {
-        return sex ;
+        return sex;
     }
 
     public void setSex(char sex) {
-        this .sex = sex;
+        this.sex = sex;
     }
-    public void eat()
-    {
-        System. out .println("吃了" );
+
+    public void eat() {
+        System.out.println("吃了");
     }
 
     @Override
     public String toString() {
-        return "Person [name=" + name + ", age=" + age + ", sex=" + sex + "]" ;
+        return "Person [name=" + name + ", age=" + age + ", sex=" + sex + "]";
     }
 
     public void sayChina() {
         // TODO Auto-generated method stub
-        System. out .println("作者：" + 1+ "国籍："+ 2 );
+        System.out.println("作者：" + 1 + "国籍：" + 2);
     }
 
     public String sayHello(String name, int age, char sex) {
         // TODO Auto-generated method stub
-        return "姓名:" + name + "年龄："+ age + "性别:" + sex;
+        return "姓名:" + name + "年龄：" + age + "性别:" + sex;
     }
 
 }

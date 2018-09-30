@@ -24,7 +24,7 @@ public class VueApplication {
         SpringApplication.run(VueApplication.class, args);
     }
 
-    @RequestMapping(value = "/info",method = RequestMethod.GET)
+    @RequestMapping(value = "/info", method = RequestMethod.GET)
     public Object list() {
         return "success";
     }

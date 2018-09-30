@@ -8,9 +8,9 @@ spring:
     active: local
   mvc:
     throw-exception-if-no-handler-found: true
-# 其中默认配置的 /** 映射到 /static （或/public、/resources、/META-INF/resources）
-#其中默认配置的 /webjars/** 映射到 classpath:/META-INF/resources/webjars/
-#META/resources > resources > static > public
+    # 其中默认配置的 /** 映射到 /static （或/public、/resources、/META-INF/resources）
+    #其中默认配置的 /webjars/** 映射到 classpath:/META-INF/resources/webjars/
+    #META/resources > resources > static > public
     static-path-pattern: /**
   thymeleaf:
     cache: false
@@ -32,15 +32,15 @@ spring:
 #
 
 mybatis:
-#为实体对象所在的包，跟数据库表一一对应
-#  type-aliases-package: com.arc.model.common
-#mapper文件的位置
+  #为实体对象所在的包，跟数据库表一一对应
+  #  type-aliases-package: com.arc.model.common
+  #mapper文件的位置
   mapper-locations: classpath:mapper/*.xml
 
-#配置日志
-#logging:
-#  pattern:
-#    console: "%d - %msg%n"
+  #配置日志
+  #logging:
+  #  pattern:
+  #    console: "%d - %msg%n"
   #配置日志文件路径
 #  file: classpath:/logs
 #  level:
@@ -59,10 +59,10 @@ logback:
 spring:
   profiles: local
 
-#eureka:
-#  client:
-#    service-url:
-#      default-zone: http://1270.0.1:8761/eureka/
+  #eureka:
+  #  client:
+  #    service-url:
+  #      default-zone: http://1270.0.1:8761/eureka/
 
   datasource:
     url: jdbc:mysql://localhost:3306/invoice?useUnicode=true&characterEncoding=UTF-8&useAffectedRows=true&useSSL=false

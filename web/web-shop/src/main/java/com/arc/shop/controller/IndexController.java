@@ -17,9 +17,9 @@ import java.util.List;
 public class IndexController {
 
 
-    @RequestMapping(value = "",method = RequestMethod.GET)
+    @RequestMapping(value = "", method = RequestMethod.GET)
     public String index(Model model) {
-       log.debug("访问index时间{}",new Date());
+        log.debug("访问index时间{}", new Date());
 
         Person single = new Person("名称", 21);
         List<Person> people = new ArrayList<>();

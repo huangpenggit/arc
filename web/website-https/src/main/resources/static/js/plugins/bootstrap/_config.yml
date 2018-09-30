@@ -14,7 +14,7 @@ url:              http://getbootstrap.com
 encoding:         UTF-8
 
 gems:
-  - jekyll-sitemap
+- jekyll-sitemap
 
 # Custom vars
 current_version:  3.3.7

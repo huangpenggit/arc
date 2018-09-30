@@ -25,7 +25,6 @@ debug:当此属性设置为true时，将打印出logback内部日志信息，实
     </appender>
 
 
-
     <!--输出到文件 RollingFileAppender-->
     <appender name="fileInfoLog" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <!--如果只是想要 Info 级别的日志，只是过滤 info 还是会输出 Error 日志，因为 Error 的级别高，
@@ -63,7 +62,6 @@ debug:当此属性设置为true时，将打印出logback内部日志信息，实
     </appender>
 
 
-
     <!--指定最基础的日志输出级别-->
     <root level="DEBUG">
         <!--appender将会添加到这个logger  class用来指定哪种输出策略 -->
@@ -99,12 +97,7 @@ debug:当此属性设置为true时，将打印出logback内部日志信息，实
     </springProfile>
 
 
-
 </configuration>
-
-
-
-
 
 
         <!--<appender name="fileErrorLog" class="ch.qos.logback.core.rolling.RollingFileAppender">-->
@@ -132,12 +125,6 @@ debug:当此属性设置为true时，将打印出logback内部日志信息，实
         <!--<pattern>%d [%thread] %-5level %logger{36} %line - %msg%n</pattern>-->
         <!--</encoder>-->
         <!--</appender>-->
-
-
-
-
-
-
 
 
         <!--根节点<configuration>有5个子节点-->

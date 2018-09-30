@@ -23,7 +23,7 @@ public class HuDaoProductSpuDTO implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-//    private Integer code;//商品分组ID
+    //    private Integer code;//商品分组ID
     private String name; // spu名称
 
     private String comment; // spu备注
@@ -33,15 +33,11 @@ public class HuDaoProductSpuDTO implements Serializable {
     private String spu_code; //   spu_code
 
 
-
-
-
     private PriceDTO json_price; // spu价格   -sale
 
     private ImagesDTO json_images; // spu图片---默认 default_url
 
     private BelongDTO json_belong; // spu商品相关隶属关系
-
 
 
     //暂时传来，但是没有使用到的字段

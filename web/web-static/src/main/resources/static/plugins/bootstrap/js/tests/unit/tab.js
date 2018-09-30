@@ -35,9 +35,9 @@ $(function () {
   QUnit.test('should activate element by tab id', function (assert) {
     assert.expect(2)
     var tabsHTML = '<ul class="tabs">'
-        + '<li><a href="#home">Home</a></li>'
-        + '<li><a href="#profile">Profile</a></li>'
-        + '</ul>'
+      + '<li><a href="#home">Home</a></li>'
+      + '<li><a href="#profile">Profile</a></li>'
+      + '</ul>'
 
     $('<ul><li id="home"/><li id="profile"/></ul>').appendTo('#qunit-fixture')
 
@@ -51,9 +51,9 @@ $(function () {
   QUnit.test('should activate element by tab id', function (assert) {
     assert.expect(2)
     var pillsHTML = '<ul class="pills">'
-        + '<li><a href="#home">Home</a></li>'
-        + '<li><a href="#profile">Profile</a></li>'
-        + '</ul>'
+      + '<li><a href="#home">Home</a></li>'
+      + '<li><a href="#profile">Profile</a></li>'
+      + '</ul>'
 
     $('<ul><li id="home"/><li id="profile"/></ul>').appendTo('#qunit-fixture')
 
@@ -85,27 +85,27 @@ $(function () {
     var done = assert.async()
 
     var dropHTML = '<ul class="drop">'
-        + '<li class="dropdown"><a data-toggle="dropdown" href="#">1</a>'
-        + '<ul class="dropdown-menu">'
-        + '<li><a href="#1-1" data-toggle="tab">1-1</a></li>'
-        + '<li><a href="#1-2" data-toggle="tab">1-2</a></li>'
-        + '</ul>'
-        + '</li>'
-        + '</ul>'
+      + '<li class="dropdown"><a data-toggle="dropdown" href="#">1</a>'
+      + '<ul class="dropdown-menu">'
+      + '<li><a href="#1-1" data-toggle="tab">1-1</a></li>'
+      + '<li><a href="#1-2" data-toggle="tab">1-2</a></li>'
+      + '</ul>'
+      + '</li>'
+      + '</ul>'
 
     $(dropHTML)
       .find('ul > li:first a')
-        .bootstrapTab('show')
+      .bootstrapTab('show')
       .end()
       .find('ul > li:last a')
-        .on('show.bs.tab', function (e) {
-          assert.strictEqual(e.relatedTarget.hash, '#1-1', 'references correct element as relatedTarget')
-        })
-        .on('shown.bs.tab', function (e) {
-          assert.strictEqual(e.relatedTarget.hash, '#1-1', 'references correct element as relatedTarget')
-          done()
-        })
-        .bootstrapTab('show')
+      .on('show.bs.tab', function (e) {
+        assert.strictEqual(e.relatedTarget.hash, '#1-1', 'references correct element as relatedTarget')
+      })
+      .on('shown.bs.tab', function (e) {
+        assert.strictEqual(e.relatedTarget.hash, '#1-1', 'references correct element as relatedTarget')
+        done()
+      })
+      .bootstrapTab('show')
   })
 
   QUnit.test('should fire hide and hidden events', function (assert) {
@@ -113,30 +113,30 @@ $(function () {
     var done = assert.async()
 
     var tabsHTML = '<ul class="tabs">'
-        + '<li><a href="#home">Home</a></li>'
-        + '<li><a href="#profile">Profile</a></li>'
-        + '</ul>'
+      + '<li><a href="#home">Home</a></li>'
+      + '<li><a href="#profile">Profile</a></li>'
+      + '</ul>'
 
     $(tabsHTML)
       .find('li:first a')
-        .on('hide.bs.tab', function () {
-          assert.ok(true, 'hide event fired')
-        })
-        .bootstrapTab('show')
+      .on('hide.bs.tab', function () {
+        assert.ok(true, 'hide event fired')
+      })
+      .bootstrapTab('show')
       .end()
       .find('li:last a')
-        .bootstrapTab('show')
+      .bootstrapTab('show')
 
     $(tabsHTML)
       .find('li:first a')
-        .on('hidden.bs.tab', function () {
-          assert.ok(true, 'hidden event fired')
-          done()
-        })
-        .bootstrapTab('show')
+      .on('hidden.bs.tab', function () {
+        assert.ok(true, 'hidden event fired')
+        done()
+      })
+      .bootstrapTab('show')
       .end()
       .find('li:last a')
-        .bootstrapTab('show')
+      .bootstrapTab('show')
   })
 
   QUnit.test('should not fire hidden when hide is prevented', function (assert) {
@@ -144,24 +144,24 @@ $(function () {
     var done = assert.async()
 
     var tabsHTML = '<ul class="tabs">'
-        + '<li><a href="#home">Home</a></li>'
-        + '<li><a href="#profile">Profile</a></li>'
-        + '</ul>'
+      + '<li><a href="#home">Home</a></li>'
+      + '<li><a href="#profile">Profile</a></li>'
+      + '</ul>'
 
     $(tabsHTML)
       .find('li:first a')
-        .on('hide.bs.tab', function (e) {
-          e.preventDefault()
-          assert.ok(true, 'hide event fired')
-          done()
-        })
-        .on('hidden.bs.tab', function () {
-          assert.ok(false, 'hidden event fired')
-        })
-        .bootstrapTab('show')
+      .on('hide.bs.tab', function (e) {
+        e.preventDefault()
+        assert.ok(true, 'hide event fired')
+        done()
+      })
+      .on('hidden.bs.tab', function () {
+        assert.ok(false, 'hidden event fired')
+      })
+      .bootstrapTab('show')
       .end()
       .find('li:last a')
-        .bootstrapTab('show')
+      .bootstrapTab('show')
   })
 
   QUnit.test('hide and hidden events contain correct relatedTarget', function (assert) {
@@ -169,31 +169,31 @@ $(function () {
     var done = assert.async()
 
     var tabsHTML = '<ul class="tabs">'
-        + '<li><a href="#home">Home</a></li>'
-        + '<li><a href="#profile">Profile</a></li>'
-        + '</ul>'
+      + '<li><a href="#home">Home</a></li>'
+      + '<li><a href="#profile">Profile</a></li>'
+      + '</ul>'
 
     $(tabsHTML)
       .find('li:first a')
-        .on('hide.bs.tab', function (e) {
-          assert.strictEqual(e.relatedTarget.hash, '#profile', 'references correct element as relatedTarget')
-        })
-        .on('hidden.bs.tab', function (e) {
-          assert.strictEqual(e.relatedTarget.hash, '#profile', 'references correct element as relatedTarget')
-          done()
-        })
-        .bootstrapTab('show')
+      .on('hide.bs.tab', function (e) {
+        assert.strictEqual(e.relatedTarget.hash, '#profile', 'references correct element as relatedTarget')
+      })
+      .on('hidden.bs.tab', function (e) {
+        assert.strictEqual(e.relatedTarget.hash, '#profile', 'references correct element as relatedTarget')
+        done()
+      })
+      .bootstrapTab('show')
       .end()
       .find('li:last a')
-        .bootstrapTab('show')
+      .bootstrapTab('show')
   })
 
   QUnit.test('selected tab should have aria-expanded', function (assert) {
     assert.expect(8)
     var tabsHTML = '<ul class="nav nav-tabs">'
-        + '<li class="active"><a href="#home" toggle="tab" aria-expanded="true">Home</a></li>'
-        + '<li><a href="#profile" toggle="tab" aria-expanded="false">Profile</a></li>'
-        + '</ul>'
+      + '<li class="active"><a href="#home" toggle="tab" aria-expanded="true">Home</a></li>'
+      + '<li><a href="#profile" toggle="tab" aria-expanded="false">Profile</a></li>'
+      + '</ul>'
     var $tabs = $(tabsHTML).appendTo('#qunit-fixture')
 
     $tabs.find('li:first a').bootstrapTab('show')

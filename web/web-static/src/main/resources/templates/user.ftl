@@ -8,7 +8,7 @@
 <body>
 <div>
 
-<h1>    welcome ${user}  to freemarker!  </h1>
+    <h1> welcome ${user} to freemarker! </h1>
 </div>
 
 <!-- 网页版权 -->

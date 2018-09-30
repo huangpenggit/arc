@@ -3,6 +3,7 @@ package com.lb.staticweb.controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+
 /**
  * 主页链接跳转控制
  */
@@ -15,11 +16,11 @@ public class IndexController {
         return "redirect:/static/index.html";
     }
 
-@RequestMapping("/test")
-@ResponseBody
-public String a() {
-    return "这个链接有效";
-}
+    @RequestMapping("/test")
+    @ResponseBody
+    public String a() {
+        return "这个链接有效";
+    }
 
 
 /*    @RequestMapping("/index")
@@ -36,8 +37,6 @@ public String a() {
         return "b.html";
     }*/
 }
-
-
 
 
 //System.out.println("****************************");

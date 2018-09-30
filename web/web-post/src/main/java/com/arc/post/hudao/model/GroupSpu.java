@@ -15,7 +15,7 @@ import java.io.Serializable;
 @Setter
 @Getter
 @NoArgsConstructor
-public class GroupSpu  implements Serializable {
+public class GroupSpu implements Serializable {
 
     private String spuCode;
 

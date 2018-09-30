@@ -44,12 +44,12 @@ $(function () {
     var done = assert.async()
 
     var templateHTML = '<div id="affixTarget">'
-        + '<ul>'
-        + '<li>Please affix</li>'
-        + '<li>And unaffix</li>'
-        + '</ul>'
-        + '</div>'
-        + '<div id="affixAfter" style="height: 20000px; display: block;"/>'
+      + '<ul>'
+      + '<li>Please affix</li>'
+      + '<li>And unaffix</li>'
+      + '</ul>'
+      + '</div>'
+      + '<div id="affixAfter" style="height: 20000px; display: block;"/>'
     $(templateHTML).appendTo(document.body)
 
     $('#affixTarget').bootstrapAffix({
@@ -60,10 +60,10 @@ $(function () {
       .on('affix.bs.affix', function () {
         assert.ok(true, 'affix event fired')
       }).on('affixed.bs.affix', function () {
-        assert.ok(true, 'affixed event fired')
-        $('#affixTarget, #affixAfter').remove()
-        done()
-      })
+      assert.ok(true, 'affixed event fired')
+      $('#affixTarget, #affixAfter').remove()
+      done()
+    })
 
     setTimeout(function () {
       window.scrollTo(0, document.body.scrollHeight)
@@ -79,16 +79,16 @@ $(function () {
     var done = assert.async()
 
     var templateHTML = '<div id="padding-offset" style="padding-top: 20px;">'
-        + '<div id="affixTopTarget">'
-        + '<p>Testing affix-top class is added</p>'
-        + '</div>'
-        + '<div style="height: 1000px; display: block;"/>'
-        + '</div>'
+      + '<div id="affixTopTarget">'
+      + '<p>Testing affix-top class is added</p>'
+      + '</div>'
+      + '<div style="height: 1000px; display: block;"/>'
+      + '</div>'
     $(templateHTML).appendTo(document.body)
 
     $('#affixTopTarget')
       .bootstrapAffix({
-        offset: { top: 120, bottom: 0 }
+        offset: {top: 120, bottom: 0}
       })
       .on('affixed-top.bs.affix', function () {
         assert.ok($('#affixTopTarget').hasClass('affix-top'), 'affix-top class applied')

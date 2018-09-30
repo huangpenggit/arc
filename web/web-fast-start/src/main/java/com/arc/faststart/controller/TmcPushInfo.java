@@ -58,26 +58,25 @@ public class TmcPushInfo implements Serializable {
 
     public static void main(String[] args) {
 //        String useName=" F:\\workspace\\ssh_photo\\WebContent\\uploadFile\\1444783552338pic.jpg";
-        String useName="ORDER:6:20180913:eee :T:orderNo-213180912000028:orderStatus-3:amount-209.0:ticketNum-0:resultCode-6000024";
+        String useName = "ORDER:6:20180913:eee :T:orderNo-213180912000028:orderStatus-3:amount-209.0:ticketNum-0:resultCode-6000024";
 
-        int begin=useName.indexOf('-')+1;
+        int begin = useName.indexOf('-') + 1;
 
-        int last=useName.length();
+        int last = useName.length();
 
-        System.out.println(useName.substring(begin,last));
+        System.out.println(useName.substring(begin, last));
 
 
         //\t表示一个tab键的缩进
         //'\r'是回车，前者使光标到行首，（carriage return）
         //'\n'是换行，后者使光标下移一格，（line feed）
-        String str="    hello a\n\nb\t\tcde       \t\t\t\t\t\t\t\tv          world    ";
+        String str = "    hello a\n\nb\t\tcde       \t\t\t\t\t\t\t\tv          world    ";
         System.out.print(str);
         System.out.println("\n----------");
         System.out.println(str.trim());
         System.out.println("\n----------");
-        System.out.println(str.trim().replace(" ","").replace("\t","").replace("\n","").replace("\r",""));
-        System.out.println(str.trim().replaceAll("\\s","").replace("\t","").replace("\n","").replace("\r",""));
-
+        System.out.println(str.trim().replace(" ", "").replace("\t", "").replace("\n", "").replace("\r", ""));
+        System.out.println(str.trim().replaceAll("\\s", "").replace("\t", "").replace("\n", "").replace("\r", ""));
 
 
     }

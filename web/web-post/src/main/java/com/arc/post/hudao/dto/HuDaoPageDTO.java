@@ -11,9 +11,9 @@ import java.util.List;
 @Data
 @ToString
 @NoArgsConstructor
-public class HuDaoPageDTO  implements Serializable {
+public class HuDaoPageDTO implements Serializable {
 
-    private Integer total=0;
+    private Integer total = 0;
 
-    private List<HuDaoProductSkuDTO> rows=new ArrayList<>();
+    private List<HuDaoProductSkuDTO> rows = new ArrayList<>();
 }

@@ -14,12 +14,12 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class StaticwebApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(StaticwebApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(StaticwebApplication.class, args);
+    }
 
-	@RequestMapping(value = "/call", method = RequestMethod.GET)
-	public String call() {
-		return "<h1>项目已经正常启动，访问正常！</><br><a href=\"http://localhost:8087/\">跳转首页</a>";
-	}
+    @RequestMapping(value = "/call", method = RequestMethod.GET)
+    public String call() {
+        return "<h1>项目已经正常启动，访问正常！</><br><a href=\"http://localhost:8087/\">跳转首页</a>";
+    }
 }

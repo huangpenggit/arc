@@ -14,8 +14,6 @@ import java.util.Iterator;
 public class FileController {
 
 
-
-
     @RequestMapping(method = RequestMethod.GET)
     public String getUserList(MultipartFile file) {
 
@@ -23,12 +21,11 @@ public class FileController {
     }
 
 
-
-    public static String getFormatName(Object object) throws Exception{
+    public static String getFormatName(Object object) throws Exception {
         ImageInputStream iis = ImageIO.createImageInputStream(object);
         Iterator<ImageReader> iterator = ImageIO.getImageReaders(iis);
         while (iterator.hasNext()) {
-            ImageReader reader = (ImageReader)iterator.next();
+            ImageReader reader = (ImageReader) iterator.next();
             return reader.getFormatName();
         }
         return null;
@@ -38,7 +35,7 @@ public class FileController {
     public static void main(String[] args) {
         String suffix = ".png";
 //        if(suffix!=".png" &&suffix!=".PNG"&&suffix!=".jpg" &&suffix!=".JPG"){  //根据后缀，判断是否符合图片格式
-        if(!(".png"==suffix ||".PNG"==suffix||".jpg"==suffix ||".JPG"==suffix)){  //根据后缀，判断是否符合图片格式
+        if (!(".png" == suffix || ".PNG" == suffix || ".jpg" == suffix || ".JPG" == suffix)) {  //根据后缀，判断是否符合图片格式
             System.out.println("图片上传错误,不是指定图片格式,重新选择!");
         }
         System.out.println("合格!");

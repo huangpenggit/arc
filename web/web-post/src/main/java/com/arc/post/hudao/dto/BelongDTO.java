@@ -14,7 +14,7 @@ import java.util.List;
 @Setter
 @Getter
 @NoArgsConstructor
-public class BelongDTO  implements Serializable {
+public class BelongDTO implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -22,5 +22,5 @@ public class BelongDTO  implements Serializable {
 
     private String category_name; //类别名称
 
-   private List<ExtGroupDTO> ext_groups;
+    private List<ExtGroupDTO> ext_groups;
 }

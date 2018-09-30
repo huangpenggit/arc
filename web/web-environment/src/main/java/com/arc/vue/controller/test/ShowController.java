@@ -21,8 +21,8 @@ import java.util.Date;
 public class ShowController {
 
     @RequestMapping("")
-    public String  main(String[] args) {
-        log.debug("访问时间 {}",new Date());
+    public String main(String[] args) {
+        log.debug("访问时间 {}", new Date());
         return "show";
     }
 }

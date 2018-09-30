@@ -20,7 +20,7 @@ import java.util.List;
 @Setter
 @ToString
 @NoArgsConstructor
-public class ProductSpu  implements Serializable {
+public class ProductSpu implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -42,6 +42,6 @@ public class ProductSpu  implements Serializable {
     //分组信息
     private List<GroupSpu> productGroup;//分组信息
 
-   //数据不要
-   // private GroupSpu1 category;//主分类（code，name）
+    //数据不要
+    // private GroupSpu1 category;//主分类（code，name）
 }

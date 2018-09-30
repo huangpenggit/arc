@@ -98,7 +98,7 @@ public class ExcelUtil {
      * @MethodName : listToExcel
      * @Description : 导出Excel（可以导出到本地文件系统，也可以导出到浏览器，工作表大小为2003支持的最大值）
      */
-    public static <T> void listToExcel(            List<T> list,            LinkedHashMap<String, String> fieldMap,            String sheetName,            OutputStream out    ) throws RuntimeException {
+    public static <T> void listToExcel(List<T> list, LinkedHashMap<String, String> fieldMap, String sheetName, OutputStream out) throws RuntimeException {
         listToExcel(list, fieldMap, sheetName, 65535, out);
     }
 
@@ -179,7 +179,7 @@ public class ExcelUtil {
      * @MethodName : excelToList
      * @Description : 将Excel转化为List
      */
-    public static <T> List<T> excelToList(            InputStream in,            String sheetIndex,            Class<T> entityClass,            LinkedHashMap<String, String> fieldMap,            String[] uniqueFields    ) throws RuntimeException {
+    public static <T> List<T> excelToList(InputStream in, String sheetIndex, Class<T> entityClass, LinkedHashMap<String, String> fieldMap, String[] uniqueFields) throws RuntimeException {
         //定义要返回的list  
         List<T> resultList = new ArrayList<T>();
         try {

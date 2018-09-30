@@ -1,4 +1,4 @@
-server: 
+server:
   port: 8081
 
 spring:
@@ -8,10 +8,10 @@ spring:
     active: local
   mvc:
     throw-exception-if-no-handler-found: true
-#    https://blog.csdn.net/catoop/article/details/50501706
-# 其中默认配置的 /** 映射到 /static （或/public、/resources、/META-INF/resources）
-#其中默认配置的 /webjars/** 映射到 classpath:/META-INF/resources/webjars/
-#META/resources > resources > static > public
+    #    https://blog.csdn.net/catoop/article/details/50501706
+    # 其中默认配置的 /** 映射到 /static （或/public、/resources、/META-INF/resources）
+    #其中默认配置的 /webjars/** 映射到 classpath:/META-INF/resources/webjars/
+    #META/resources > resources > static > public
     static-path-pattern: /**
   thymeleaf:
     cache: false
@@ -21,27 +21,27 @@ spring:
     encoding: utf-8
 
 
-#  freemarker:
-#    template-loader-path: classpath:/templates
-#    suffix: .ftl #freemarker模板后缀
-#    charset: utf-8 #配置freemarker的内容编码
-#    content-type: text/html;charset=UTF-8 #配置视图的输出HTML的contentType
-#    expose-session-attributes: true
-#  mvc:
-#    static-path-pattern: /static/**
-#    throw-exception-if-no-handler-found: true
-#
+  #  freemarker:
+  #    template-loader-path: classpath:/templates
+  #    suffix: .ftl #freemarker模板后缀
+  #    charset: utf-8 #配置freemarker的内容编码
+  #    content-type: text/html;charset=UTF-8 #配置视图的输出HTML的contentType
+  #    expose-session-attributes: true
+  #  mvc:
+  #    static-path-pattern: /static/**
+  #    throw-exception-if-no-handler-found: true
+  #
 
-#mybatis:
-#为实体对象所在的包，跟数据库表一一对应
-#  type-aliases-package: com.arc.model.common
-#mapper文件的位置
-#  mapper-locations: classpath:mapper/*.xml
+  #mybatis:
+  #为实体对象所在的包，跟数据库表一一对应
+  #  type-aliases-package: com.arc.model.common
+  #mapper文件的位置
+  #  mapper-locations: classpath:mapper/*.xml
 
-#配置日志
-#logging:
-#  pattern:
-#    console: "%d - %msg%n"
+  #配置日志
+  #logging:
+  #  pattern:
+  #    console: "%d - %msg%n"
   #配置日志文件路径
 #  file: classpath:/logs
 #  level:

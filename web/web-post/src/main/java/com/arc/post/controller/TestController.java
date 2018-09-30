@@ -1,7 +1,6 @@
 package com.arc.post.controller;
 
 
-
 //@TODO 测试完成后请移除
 
 import com.arc.post.agent.SkuAgent;
@@ -37,8 +36,6 @@ public class TestController {
     private TokenCacheUtil tokenCacheUtil;
 
 
-
-
     @RequestMapping(value = "/getAccessToken", method = RequestMethod.GET)
     public Object getAccessToken() {
         return tokenCacheUtil.getAccessToken();
@@ -62,8 +59,6 @@ public class TestController {
 //        log.debug("groups");
 //        return groupAgent.syncGroups();
 //    }
-
-
 
 
 }

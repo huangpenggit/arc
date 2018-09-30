@@ -33,7 +33,7 @@ public class ProjectEnvironmentServiceImpl implements ProjectEnvironmentService 
 
     @Override
     public void delete(Long id) {
-         projectEnvironmentRepository.deleteById(id);
+        projectEnvironmentRepository.deleteById(id);
     }
 
     @Override

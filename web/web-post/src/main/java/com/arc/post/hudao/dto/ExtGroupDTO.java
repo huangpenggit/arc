@@ -12,7 +12,7 @@ import java.io.Serializable;
 @Setter
 @Getter
 @NoArgsConstructor
-public class ExtGroupDTO  implements Serializable {
+public class ExtGroupDTO implements Serializable {
 
     private String code; // spu对应分组的code
 

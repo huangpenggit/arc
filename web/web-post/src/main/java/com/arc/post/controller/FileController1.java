@@ -72,7 +72,7 @@ public class FileController1 {
 
 
         //处理文件夹
-        String localFilePath ="/"+ format;
+        String localFilePath = "/" + format;
         log.debug("处理文件夹{}", localFilePath);
         File localFile = new File(localFilePath);
         if (localFile.exists()) {
@@ -94,7 +94,7 @@ public class FileController1 {
 
         // 返回图片的存放路径
         result.setSuccess(true);
-        result.setMsg(localFilePath +File.separator + file.getOriginalFilename());
+        result.setMsg(localFilePath + File.separator + file.getOriginalFilename());
         return result;
     }
 

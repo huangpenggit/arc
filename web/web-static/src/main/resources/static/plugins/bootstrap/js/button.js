@@ -14,21 +14,21 @@
   // ==============================
 
   var Button = function (element, options) {
-    this.$element  = $(element)
-    this.options   = $.extend({}, Button.DEFAULTS, options)
+    this.$element = $(element)
+    this.options = $.extend({}, Button.DEFAULTS, options)
     this.isLoading = false
   }
 
-  Button.VERSION  = '3.3.7'
+  Button.VERSION = '3.3.7'
 
   Button.DEFAULTS = {
     loadingText: 'loading...'
   }
 
   Button.prototype.setState = function (state) {
-    var d    = 'disabled'
-    var $el  = this.$element
-    var val  = $el.is('input') ? 'val' : 'html'
+    var d = 'disabled'
+    var $el = this.$element
+    var val = $el.is('input') ? 'val' : 'html'
     var data = $el.data()
 
     state += 'Text'
@@ -77,8 +77,8 @@
 
   function Plugin(option) {
     return this.each(function () {
-      var $this   = $(this)
-      var data    = $this.data('bs.button')
+      var $this = $(this)
+      var data = $this.data('bs.button')
       var options = typeof option == 'object' && option
 
       if (!data) $this.data('bs.button', (data = new Button(this, options)))
@@ -90,7 +90,7 @@
 
   var old = $.fn.button
 
-  $.fn.button             = Plugin
+  $.fn.button = Plugin
   $.fn.button.Constructor = Button
 
 

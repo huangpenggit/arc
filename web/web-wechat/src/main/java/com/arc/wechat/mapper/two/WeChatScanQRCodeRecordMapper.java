@@ -12,7 +12,7 @@ import java.util.List;
  * @author yechao
  * @since 2018-07-26
  */
-public interface WeChatScanQRCodeRecordMapper   {
+public interface WeChatScanQRCodeRecordMapper {
 
     /**
      * 保存

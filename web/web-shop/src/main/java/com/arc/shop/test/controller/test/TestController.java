@@ -21,14 +21,14 @@ public class TestController {
     @ResponseBody
     public Object index() {
         long begin = new Date().getTime();
-        for (int i=0; i < 101; i++) {
+        for (int i = 0; i < 101; i++) {
             Object byHttp = getPictureUtil.getByHttp("path-" + i);
 //            System.out.println(getPictureUtil.getByHttp("wwww.222"));
 //            System.out.println(getPictureUtil.getByHttp("wwww.33333"));
         }
         long end = new Date().getTime();
         System.out.println("###########################################");
-        System.out.println("调用的结果byHttp"  + "   耗时" + (end - begin));
+        System.out.println("调用的结果byHttp" + "   耗时" + (end - begin));
 
         return new Date();
     }

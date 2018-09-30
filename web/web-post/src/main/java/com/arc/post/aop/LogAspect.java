@@ -25,9 +25,6 @@ public class LogAspect {
     //    @Pointcut(value = "execution(* com.arc.post.service.*.*(..))")
 
 
-
-
-
     //申明一个切点 里面是 execution表达式
     @Pointcut(value = "execution (public * com.arc.post.service.UserService.*(..))")
     public void pointcut() {

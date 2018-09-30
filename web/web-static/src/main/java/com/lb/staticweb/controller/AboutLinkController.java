@@ -23,7 +23,8 @@ public class AboutLinkController {
     public String partner() {
         return "about/partner";
     }
-  @RequestMapping(value = "/industryChain", method = RequestMethod.GET)
+
+    @RequestMapping(value = "/industryChain", method = RequestMethod.GET)
     public String industryChain() {
         return "about/industryChain";
     }

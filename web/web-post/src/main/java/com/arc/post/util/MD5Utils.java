@@ -60,7 +60,6 @@ public class MD5Utils {
     }
 
 
-
     public static String encrypt16(String text) {
         String md5 = encrypt(text);
         return md5.substring(8, 24);

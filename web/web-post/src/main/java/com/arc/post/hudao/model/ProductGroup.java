@@ -19,7 +19,7 @@ import java.io.Serializable;
 @Setter
 @ToString
 @NoArgsConstructor
-public class ProductGroup  implements Serializable {
+public class ProductGroup implements Serializable {
     private static final long serialVersionUID = 1L;
 
     private String code; //分组编码

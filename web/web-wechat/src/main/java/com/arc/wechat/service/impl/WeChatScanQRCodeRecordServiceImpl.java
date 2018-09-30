@@ -15,7 +15,7 @@ import java.util.List;
 
 @Service
 @Slf4j
-public class WeChatScanQRCodeRecordServiceImpl implements WeChatScanQRCodeRecordService  {
+public class WeChatScanQRCodeRecordServiceImpl implements WeChatScanQRCodeRecordService {
     @Autowired
     private WeChatScanQRCodeRecordMapper weChatScanQRCodeRecordMapper;
 
@@ -62,7 +62,7 @@ public class WeChatScanQRCodeRecordServiceImpl implements WeChatScanQRCodeRecord
         byte[] decodeFromString = Base64Utils.decodeFromString(encodeToString);
         String decodeToString = null;
         try {
-            decodeToString = new String(decodeFromString,"utf-8");
+            decodeToString = new String(decodeFromString, "utf-8");
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
             log.debug("解码出错了     " + e.getMessage());

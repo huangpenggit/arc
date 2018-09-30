@@ -15,6 +15,6 @@ public interface ProjectEnvironmentRepository extends JpaRepository<ProjectEnvir
 
 
     //根据学生姓名查询数据
-     List<ProjectEnvironment> findByName(String name);
+    List<ProjectEnvironment> findByName(String name);
 
 }

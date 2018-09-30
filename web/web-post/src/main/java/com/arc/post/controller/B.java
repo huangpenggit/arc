@@ -6,7 +6,7 @@ public abstract class B {
     public B() {
     }
 
-    public B(String a){
+    public B(String a) {
         System.out.println("父类已经实例化");
 //        B b = new B();
         this.str = a;

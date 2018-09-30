@@ -62204,13 +62204,13 @@
          * Here is an example source map, taken from the source map spec[0]:
          *
          *     {
-   *       version : 3,
-   *       file: "out.js",
-   *       sourceRoot : "",
-   *       sources: ["foo.js", "bar.js"],
-   *       names: ["src", "maps", "are", "fun"],
-   *       mappings: "AA,AB;;ABCDE;"
-   *     }
+         *       version : 3,
+         *       file: "out.js",
+         *       sourceRoot : "",
+         *       sources: ["foo.js", "bar.js"],
+         *       names: ["src", "maps", "are", "fun"],
+         *       mappings: "AA,AB;;ABCDE;"
+         *     }
          *
          * [0]: https://docs.google.com/document/d/1U1RGAehQwRypUTovF1KRlpiOFze0b-_2gc6fAH0KY0k/edit?pli=1#
          */
@@ -62725,19 +62725,19 @@
          * modified to omit a section which uses the "url" field.
          *
          *  {
-   *    version : 3,
-   *    file: "app.js",
-   *    sections: [{
-   *      offset: {line:100, column:10},
-   *      map: {
-   *        version : 3,
-   *        file: "section.js",
-   *        sources: ["foo.js", "bar.js"],
-   *        names: ["src", "maps", "are", "fun"],
-   *        mappings: "AAAA,E;;ABCDE;"
-   *      }
-   *    }],
-   *  }
+         *    version : 3,
+         *    file: "app.js",
+         *    sections: [{
+         *      offset: {line:100, column:10},
+         *      map: {
+         *        version : 3,
+         *        file: "section.js",
+         *        sources: ["foo.js", "bar.js"],
+         *        names: ["src", "maps", "are", "fun"],
+         *        mappings: "AAAA,E;;ABCDE;"
+         *      }
+         *    }],
+         *  }
          *
          * [0]: https://docs.google.com/document/d/1U1RGAehQwRypUTovF1KRlpiOFze0b-_2gc6fAH0KY0k/edit#heading=h.535es3xeprgt
          */
@@ -62857,11 +62857,11 @@
 
             return section.consumer.originalPositionFor({
               line: needle.generatedLine -
-              (section.generatedOffset.generatedLine - 1),
+                (section.generatedOffset.generatedLine - 1),
               column: needle.generatedColumn -
-              (section.generatedOffset.generatedLine === needle.generatedLine
-                ? section.generatedOffset.generatedColumn - 1
-                : 0)
+                (section.generatedOffset.generatedLine === needle.generatedLine
+                  ? section.generatedOffset.generatedColumn - 1
+                  : 0)
             });
           };
 
@@ -62916,11 +62916,11 @@
               if (generatedPosition) {
                 var ret = {
                   line: generatedPosition.line +
-                  (section.generatedOffset.generatedLine - 1),
+                    (section.generatedOffset.generatedLine - 1),
                   column: generatedPosition.column +
-                  (section.generatedOffset.generatedLine === generatedPosition.line
-                    ? section.generatedOffset.generatedColumn - 1
-                    : 0)
+                    (section.generatedOffset.generatedLine === generatedPosition.line
+                      ? section.generatedOffset.generatedColumn - 1
+                      : 0)
                 };
                 return ret;
               }
@@ -62961,7 +62961,7 @@
                 var adjustedMapping = {
                   source: source,
                   generatedLine: mapping.generatedLine +
-                  (section.generatedOffset.generatedLine - 1),
+                    (section.generatedOffset.generatedLine - 1),
                   generatedColumn: mapping.column +
                   (section.generatedOffset.generatedLine === mapping.generatedLine)
                     ? section.generatedOffset.generatedColumn - 1

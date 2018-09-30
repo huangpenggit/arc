@@ -37,7 +37,6 @@ public class HuDaoProductSkuDTO implements Serializable {
     private String short_notes; // 商品简介，就是描述
 
 
-
     private PriceDTO json_price;
 
     private BelongDTO json_belong;//商品主分类
@@ -49,12 +48,6 @@ public class HuDaoProductSkuDTO implements Serializable {
     private String size;
 
     private String huDaoId;
-
-
-
-
-
-
 
 
 //

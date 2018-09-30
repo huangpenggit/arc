@@ -15,12 +15,12 @@ public class UserController {
 
 
     @RequestMapping("/list")
-    public  Object list() {
+    public Object list() {
         return userService.list();
     }
 
     @RequestMapping("/get")
-    public  Object get(Long id) {
+    public Object get(Long id) {
         return userService.get(id);
     }
 }

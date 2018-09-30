@@ -39,34 +39,28 @@ public class DataSourceConfig {
     private String driverClass2;
 
 
-
-
-
-
     @Bean(name = "dataSourceOne")
     @Primary
 //    @ConfigurationProperties(prefix = "master") // application.properteis中对应属性的前缀
     public DataSource dbOneDataSource() {
 //        return DataSourceBuilder.create().build();
-            DruidDataSource dataSource = new DruidDataSource();
-            dataSource.setDriverClassName(driverClass1);
-            dataSource.setUrl(url1);
-            dataSource.setUsername(user1);
-            dataSource.setPassword(password1);
-            return dataSource;
+        DruidDataSource dataSource = new DruidDataSource();
+        dataSource.setDriverClassName(driverClass1);
+        dataSource.setUrl(url1);
+        dataSource.setUsername(user1);
+        dataSource.setPassword(password1);
+        return dataSource;
     }
 
     @Bean(name = "dataSourceTwo")
     public DataSource dataSourceTwo() {
-            DruidDataSource dataSource = new DruidDataSource();
-            dataSource.setDriverClassName(driverClass2);
-            dataSource.setUrl(url2);
-            dataSource.setUsername(user2);
-            dataSource.setPassword(password2);
-            return dataSource;
+        DruidDataSource dataSource = new DruidDataSource();
+        dataSource.setDriverClassName(driverClass2);
+        dataSource.setUrl(url2);
+        dataSource.setUsername(user2);
+        dataSource.setPassword(password2);
+        return dataSource;
     }
-
-
 
 
 //    @Bean(name = "dataSourceTwo")

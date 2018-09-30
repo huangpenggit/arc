@@ -144,7 +144,7 @@ public class SkuAgent {
             pageDTO = postForSkus(JSON.toJSONString(queryDTO));
 //            save = skuService.batchSave((List<Product>) pageDTO.getRows());
 
-            List<Product> products2= (List<Product>) pageDTO.getRows();
+            List<Product> products2 = (List<Product>) pageDTO.getRows();
 
             mark = mark + save;
         }

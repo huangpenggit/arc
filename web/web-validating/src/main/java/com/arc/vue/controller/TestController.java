@@ -42,7 +42,6 @@ public class TestController {
     }
 
 
-
     public static void main(String[] args) {
 
         Long start = System.currentTimeMillis();
@@ -54,7 +53,7 @@ public class TestController {
             List<Future<Integer>> futureList = new ArrayList<>();
 
 
-            for(int i=1; i<4; i++) {
+            for (int i = 1; i < 4; i++) {
                 System.out.println(i);
                 Future<Integer> submit = exs.submit(new CallableTask(i));
 
@@ -64,18 +63,17 @@ public class TestController {
 
 
             Long getResultStart = System.currentTimeMillis();
-            System.out.println("结果归集开始时间="+ LocalDate.now());
+            System.out.println("结果归集开始时间=" + LocalDate.now());
 
-            for(Future<Integer> future : futureList) {
+            for (Future<Integer> future : futureList) {
                 Integer i = future.get();
-                System.out.println("任务i="+i+"获取完成!"+LocalDate.now());
+                System.out.println("任务i=" + i + "获取完成!" + LocalDate.now());
                 list.add(i);
             }
 
 
-
             System.out.println("list = " + Arrays.toString(list.toArray()));
-            System.out.println("总耗时="+(System.currentTimeMillis()-start)+",取结果归集耗时="+(System.currentTimeMillis()-getResultStart));
+            System.out.println("总耗时=" + (System.currentTimeMillis() - start) + ",取结果归集耗时=" + (System.currentTimeMillis() - getResultStart));
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
@@ -84,7 +82,6 @@ public class TestController {
 
 
     }
-
 
 
 }

@@ -32,7 +32,7 @@ public class FileServiceImpl implements com.arc.faststart.service.impl.FileServi
     }
 
     @Override
-    public File getByUrl(String url ) {
+    public File getByUrl(String url) {
         return fileMapper.getByUrl(url);
     }
 

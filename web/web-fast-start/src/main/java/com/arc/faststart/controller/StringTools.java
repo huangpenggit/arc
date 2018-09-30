@@ -10,13 +10,14 @@ public class StringTools {
 
     public static String replaceBlank(String str) {
         String dest = "";
-        if (str!=null) {
+        if (str != null) {
             Pattern p = Pattern.compile("\\s*|\t|\r|\n");
             Matcher m = p.matcher(str);
             dest = m.replaceAll("");
         }
         return dest;
     }
+
     public static void main(String[] args) {
         System.out.println(StringTools.replaceBlank("just do it!"));
     }

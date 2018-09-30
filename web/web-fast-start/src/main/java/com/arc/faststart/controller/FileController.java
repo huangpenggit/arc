@@ -29,7 +29,7 @@ public class FileController {
     private FileService fileService;
 
     @ResponseBody
-    @RequestMapping( value = "/upload",method = RequestMethod.GET)
+    @RequestMapping(value = "/upload", method = RequestMethod.GET)
     public Object list() {
         return fileService.list();
     }

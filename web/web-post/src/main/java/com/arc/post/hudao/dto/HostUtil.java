@@ -35,7 +35,7 @@ public class HostUtil {
     }
 
     public static String getHostNameAtAddress() {
-       return getHostName() + "@" + getHostAddress();
+        return getHostName() + "@" + getHostAddress();
     }
 
 //    public static void main(String[] args) {

@@ -1,11 +1,12 @@
 package com.arc.post.controller;
 
-public class C extends B{
-    public C(String c){
+public class C extends B {
+    public C(String c) {
         super(c);
         System.out.println("子类已经被实例化");
     }
-    public C( ){
+
+    public C() {
 
     }
 
@@ -14,7 +15,7 @@ public class C extends B{
         System.out.println("我实现了父类的方法");
     }
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
 //        Class<C> cClass = C.class;
 
 //        Cla

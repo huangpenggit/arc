@@ -11,8 +11,6 @@
     </parent>
 
 
-
-
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.arc</groupId>
@@ -22,9 +20,6 @@
 
     <name>web-wechat</name>
     <description>web-wechat By Spring Boot</description>
-
-
-
 
 
     <dependencies>

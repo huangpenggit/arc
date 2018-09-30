@@ -30,22 +30,22 @@
         <module>web-vue</module>
         <module>web-wechat</module>
         <module>web-environment</module>
-		<module>web-food</module>
-		<module>web-post</module>
-		<module>web-static</module>
+        <module>web-food</module>
+        <module>web-post</module>
+        <module>web-static</module>
     </modules>
 
 
-<dependencies>
-    <!--core-->
-    <dependency>
-        <groupId>com.arc</groupId>
-        <artifactId>core</artifactId>
-        <!--<version>0.0.1-SNAPSHOT</version>-->
+    <dependencies>
+        <!--core-->
+        <dependency>
+            <groupId>com.arc</groupId>
+            <artifactId>core</artifactId>
+            <!--<version>0.0.1-SNAPSHOT</version>-->
 
-    </dependency>
+        </dependency>
 
-</dependencies>
+    </dependencies>
 
 
 

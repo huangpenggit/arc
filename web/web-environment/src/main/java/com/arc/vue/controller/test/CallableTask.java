@@ -12,10 +12,10 @@ public class CallableTask implements Callable<Integer> {
 
     @Override
     public Integer call() throws Exception {
-        if(i == 1) {
+        if (i == 1) {
             Thread.sleep(50000);
         }
-        System.out.println("task线程："+Thread.currentThread().getName()+"任务i="+i+",完成！");
+        System.out.println("task线程：" + Thread.currentThread().getName() + "任务i=" + i + ",完成！");
         return i;
     }
 }

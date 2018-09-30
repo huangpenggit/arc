@@ -10,7 +10,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @EnableSwagger2
 public class SwaggerCfg {
 
-    public Docket swaggerCfg(){
-        return  new Docket(DocumentationType.SWAGGER_2).select().build();
+    public Docket swaggerCfg() {
+        return new Docket(DocumentationType.SWAGGER_2).select().build();
     }
 }

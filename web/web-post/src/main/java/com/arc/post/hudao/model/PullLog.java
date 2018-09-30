@@ -31,7 +31,7 @@ public class PullLog implements Serializable {
 
     private boolean success = true;//操作结果
 
-    private String sourceAddress= HostUtil.getHostName()+"@"+HostUtil.getHostAddress(); // 操作的目标地址
+    private String sourceAddress = HostUtil.getHostName() + "@" + HostUtil.getHostAddress(); // 操作的目标地址
 
 
     private String remark; // 操作备注、、、异常可以记载这里
@@ -39,9 +39,9 @@ public class PullLog implements Serializable {
 
     private String url = "0.0.0.0"; // 操作者的地址
 
-    private String operator= "程序"; // 操作者
+    private String operator = "程序"; // 操作者
 
-    private Date createDate=new Date(); // 操作时间
+    private Date createDate = new Date(); // 操作时间
 
     private Date requestDate; // 请求时间
 
@@ -74,7 +74,7 @@ public class PullLog implements Serializable {
     }
 
     /**
-     * @param requestDate  开始时间
+     * @param requestDate   开始时间
      * @param operator      谁
      * @param name          操作名称
      * @param sourceAddress 目标地址

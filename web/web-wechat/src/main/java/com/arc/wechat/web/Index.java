@@ -61,7 +61,7 @@ public class Index {
 
 
     public static void main(String[] args) {
-        System.out.println(        2953156-6822690);
+        System.out.println(2953156 - 6822690);
     }
 
 

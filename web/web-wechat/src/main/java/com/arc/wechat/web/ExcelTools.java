@@ -21,11 +21,16 @@ public class ExcelTools {
 
     private static final Logger logger = LoggerFactory.getLogger(ExcelTools.class);
 
-    /** 日期格式 yyyy-MM-dd*/
+    /**
+     * 日期格式 yyyy-MM-dd
+     */
     private static DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
 
-    /** 日期格式yyyy-MM-dd HH:mm:ss*/
-    private static final DateFormat DATE_FORMAT_YYYY_MM_DD_HH_MM_SS=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+    /**
+     * 日期格式yyyy-MM-dd HH:mm:ss
+     */
+    private static final DateFormat DATE_FORMAT_YYYY_MM_DD_HH_MM_SS = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+
     /**
      * 单元格映射
      */
@@ -58,10 +63,11 @@ public class ExcelTools {
 
     /**
      * 导出Excel
-     * @param cellMapList 单元格映射列表
-     * @param dataList 数据列表
+     *
+     * @param cellMapList         单元格映射列表
+     * @param dataList            数据列表
      * @param rowAccessWindowSize 内存中缓存记录数
-     * @param out 输出流
+     * @param out                 输出流
      * @throws Exception
      */
     public static void exportSXSSFExcel(String sheetName, List<CellMap> cellMapList, List<?> dataList, int rowAccessWindowSize, OutputStream out) throws Exception {
@@ -103,9 +109,9 @@ public class ExcelTools {
                 cell = row.createCell(j);
                 cell.setCellStyle(dataCellStyle);
                 String property = cellMap.getProperty();
-                if(property.equals("rowNumber") || StringUtils.isEmpty(property)){
+                if (property.equals("rowNumber") || StringUtils.isEmpty(property)) {
                     cell.setCellValue(i);
-                }else{
+                } else {
                     String propertyValue = getPropertyValue(obj, property);
                     cell.setCellValue(propertyValue);
                     if (propertyValue != null) {
@@ -125,13 +131,14 @@ public class ExcelTools {
 
     /**
      * 导出Excel
-     * @param cellMapList 单元格映射列表
-     * @param dataList 数据列表
+     *
+     * @param cellMapList         单元格映射列表
+     * @param dataList            数据列表
      * @param rowAccessWindowSize 内存中缓存记录数
-     * @param out 输出流
+     * @param out                 输出流
      * @throws Exception
      */
-    public static void exportSXSSFExcelFromMapData(String sheetName, List<CellMap> cellMapList, List<Map<String,String>> dataList, int rowAccessWindowSize, OutputStream out) throws Exception {
+    public static void exportSXSSFExcelFromMapData(String sheetName, List<CellMap> cellMapList, List<Map<String, String>> dataList, int rowAccessWindowSize, OutputStream out) throws Exception {
         SXSSFWorkbook workbook = new SXSSFWorkbook(rowAccessWindowSize);
         Sheet sheet = workbook.createSheet(sheetName);
         Row row = null;
@@ -163,16 +170,16 @@ public class ExcelTools {
 //        dataCellStyle.setAlignment(HSSFCellStyle.ALIGN_CENTER);
         int rowSize = (dataList == null) ? 0 : dataList.size();
         for (int i = rowIndex; i < rowSize + rowIndex; i++) {
-            Map<String,String> obj = dataList.get(i - rowIndex);
+            Map<String, String> obj = dataList.get(i - rowIndex);
             row = sheet.createRow(i);
             for (int j = 0; j < cellSize; j++) {
                 CellMap cellMap = cellMapList.get(j);
                 cell = row.createCell(j);
                 cell.setCellStyle(dataCellStyle);
                 String property = cellMap.getProperty();
-                if(property.equals("rowNumber") || StringUtils.isEmpty(property)){
+                if (property.equals("rowNumber") || StringUtils.isEmpty(property)) {
                     cell.setCellValue(i);
-                }else{
+                } else {
 //                	String propertyValue = getPropertyValue(obj, property);
                     String propertyValue = obj.get(property);
                     cell.setCellValue(propertyValue);
@@ -192,17 +199,16 @@ public class ExcelTools {
 
     /**
      * 获取属性值
+     *
      * @param obj
      * @param property
      * @return
      * @throws Exception
      */
     private static String getPropertyValue(Object obj, String property) throws Exception {
-        if (obj instanceof Map)
-        {
-            Object val = ((Map<String,Object>)obj).get(StringUtils.upperCase(property));
-            if (val==null)
-            {
+        if (obj instanceof Map) {
+            Object val = ((Map<String, Object>) obj).get(StringUtils.upperCase(property));
+            if (val == null) {
                 return "";
             }
             return val.toString();
@@ -248,9 +254,9 @@ public class ExcelTools {
 //    }
 
     /**
-     *
      * 填充excel数据
      * <功能详细描述>
+     *
      * @param dataCellStyle
      * @param cellSize
      * @param sheet
@@ -264,7 +270,7 @@ public class ExcelTools {
      * @throws Exception
      * @see [类、类#方法、类#成员]
      */
-    public static int fillExcel_2007_SXSSF(CellStyle dataCellStyle, int cellSize, Sheet sheet, int rowIndex, SXSSFWorkbook workbook, HttpServletResponse response, String excelName, List<CellMap> cellMapList, List<?> dataList) throws Exception{
+    public static int fillExcel_2007_SXSSF(CellStyle dataCellStyle, int cellSize, Sheet sheet, int rowIndex, SXSSFWorkbook workbook, HttpServletResponse response, String excelName, List<CellMap> cellMapList, List<?> dataList) throws Exception {
         Row row = null;
         Cell cell = null;
         int rowSize = (dataList == null) ? 0 : dataList.size();
@@ -276,9 +282,9 @@ public class ExcelTools {
                 cell = row.createCell(j);
                 cell.setCellStyle(dataCellStyle);
                 String property = cellMap.getProperty();
-                if(property.equals("rowNumber") || StringUtils.isEmpty(property)){
+                if (property.equals("rowNumber") || StringUtils.isEmpty(property)) {
                     cell.setCellValue(i);
-                }else{
+                } else {
                     String propertyValue = getPropertyValue(obj, property);
                     cell.setCellValue(propertyValue);
                     if (propertyValue != null) {
@@ -462,9 +468,6 @@ public class ExcelTools {
     }
 
 
-
-
-
     /**
      * 写入标题
      *
@@ -497,8 +500,6 @@ public class ExcelTools {
             cell.setCellValue((RichTextString) value);
         }
     }
-
-
 
 
     public static void main(String[] args) throws Exception {
@@ -553,7 +554,7 @@ public class ExcelTools {
         FileOutputStream out = new FileOutputStream(file);
         workbook.write(out);
 
-        System.out.println((System.currentTimeMillis()-start));
+        System.out.println((System.currentTimeMillis() - start));
         out.close();
     }
 

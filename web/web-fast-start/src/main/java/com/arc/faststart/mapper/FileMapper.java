@@ -5,7 +5,7 @@ import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
-public interface FileMapper   {
+public interface FileMapper {
 
     File get(Long id);
 

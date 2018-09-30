@@ -1,4 +1,4 @@
-server: 
+server:
   port: 8082
 
 spring:
@@ -6,10 +6,10 @@ spring:
     name: web-environment
   profiles:
     active: dev
-#    https://blog.csdn.net/catoop/article/details/50501706
-# 其中默认配置的 /** 映射到 /static （或/public、/resources、/META-INF/resources）
-#其中默认配置的 /webjars/** 映射到 classpath:/META-INF/resources/webjars/
-#META/resources > resources > static > public
+    #    https://blog.csdn.net/catoop/article/details/50501706
+    # 其中默认配置的 /** 映射到 /static （或/public、/resources、/META-INF/resources）
+    #其中默认配置的 /webjars/** 映射到 classpath:/META-INF/resources/webjars/
+    #META/resources > resources > static > public
     static-path-pattern: /**
   thymeleaf:
     cache: false
@@ -19,12 +19,12 @@ spring:
     encoding: utf-8
 
 
-#  freemarker:
-#    template-loader-path: classpath:/templates
-#    suffix: .ftl #freemarker模板后缀
-#    charset: utf-8 #配置freemarker的内容编码
-#    content-type: text/html;charset=UTF-8 #配置视图的输出HTML的contentType
-#    expose-session-attributes: true
+  #  freemarker:
+  #    template-loader-path: classpath:/templates
+  #    suffix: .ftl #freemarker模板后缀
+  #    charset: utf-8 #配置freemarker的内容编码
+  #    content-type: text/html;charset=UTF-8 #配置视图的输出HTML的contentType
+  #    expose-session-attributes: true
   mvc:
     static-path-pattern: /**
     throw-exception-if-no-handler-found: true
@@ -43,8 +43,8 @@ logging:
   #配置日志文件路径
   file: classpath:/logs
   level:
-   com.arc: debug #不同目录下的日志可配置不同级别
-   com: info
+    com.arc: debug #不同目录下的日志可配置不同级别
+    com: info
 
 #logback:
 #  logdir: H:/
@@ -58,10 +58,10 @@ logging:
 spring:
   profiles: dev
 
-#eureka:
-#  client:
-#    service-url:
-#      default-zone: http://1270.0.1:8761/eureka/
+  #eureka:
+  #  client:
+  #    service-url:
+  #      default-zone: http://1270.0.1:8761/eureka/
 
   datasource:
     url: jdbc:mysql://localhost:3306/hla?useUnicode=true&characterEncoding=UTF-8&useAffectedRows=true&useSSL=false
@@ -76,7 +76,7 @@ spring:
     database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
     show-sql: true
     hibernate:
-#      ddl-auto: none
+      #      ddl-auto: none
       ddl-auto: update
 
 

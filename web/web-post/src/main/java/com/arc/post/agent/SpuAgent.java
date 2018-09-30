@@ -32,6 +32,18 @@ import java.util.List;
  * @author: yechao
  * @date: 2018/08/07 15:27
  * @version: V1.0
+ * <p>
+ * 保存spu
+ * <p>
+ * 步骤：
+ * 1、获取list<spu>
+ * 2、批量保存
+ * 3、注意可能分页
+ * 注意：
+ * 什么情况算同步成功
+ * 怎么增量更新
+ * @return 获取对方数据spus
+ * @return
  *//*
 
 @Slf4j
@@ -59,17 +71,17 @@ public class SpuAgent {
 
     */
 /**
-     * 保存spu
-     * <p>
-     * 步骤：
-     * 1、获取list<spu>
-     * 2、批量保存
-     * 3、注意可能分页
-     *注意：
-     * 什么情况算同步成功
-     * 怎么增量更新
-     * @return
-     *//*
+ * 保存spu
+ * <p>
+ * 步骤：
+ * 1、获取list<spu>
+ * 2、批量保存
+ * 3、注意可能分页
+ *注意：
+ * 什么情况算同步成功
+ * 怎么增量更新
+ * @return
+ *//*
 
     public PullLog syncSpus() {
         long start = System.currentTimeMillis();
@@ -149,10 +161,10 @@ public class SpuAgent {
 
     */
 /**
-     * 获取对方数据spus
-     *
-     * @return
-     *//*
+ * 获取对方数据spus
+ *
+ * @return
+ *//*
 
     public PageDTO postForSpus(String jsonString) {
         long start = System.currentTimeMillis();

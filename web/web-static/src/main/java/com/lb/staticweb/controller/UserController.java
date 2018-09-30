@@ -17,11 +17,16 @@ public class UserController {
 
     */
 /**
-     * 注册
-     *
-     * @param user
-     * @return
-     *//*
+ * 注册
+ *
+ * @param user
+ * @return 用户登录
+ * @param username
+ * @param password
+ * @return 用户注销
+ * @param token
+ * @return
+ *//*
 
     @RequestMapping(value = "register", method = RequestMethod.POST)
     public JSONResult register(User user) {
@@ -38,11 +43,11 @@ public class UserController {
 
     */
 /**
-     * 用户登录
-     * @param username
-     * @param password
-     * @return
-     *//*
+ * 用户登录
+ * @param username
+ * @param password
+ * @return
+ *//*
 
     @RequestMapping(value = "token", method = RequestMethod.POST)
     public JSONResult login(String username, String password) {
@@ -61,10 +66,10 @@ public class UserController {
 
     */
 /**
-     * 用户注销
-     * @param token
-     * @return
-     *//*
+ * 用户注销
+ * @param token
+ * @return
+ *//*
 
     @RequestMapping(value = "token", method = RequestMethod.DELETE)
     public JSONResult logout(@RequestHeader("token") String token) {

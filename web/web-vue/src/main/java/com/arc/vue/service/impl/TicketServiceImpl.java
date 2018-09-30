@@ -30,7 +30,7 @@ public class TicketServiceImpl implements TicketService {
         int save = ticketMapper.save(ticket);
         if (save == 1) {
             return ticket;
-        }else {
+        } else {
             return null;
         }
     }
@@ -41,7 +41,7 @@ public class TicketServiceImpl implements TicketService {
         int update = ticketMapper.update(ticket);
         if (update == 1) {
             return ticket;
-        }else {
+        } else {
             return null;
         }
     }
@@ -49,7 +49,7 @@ public class TicketServiceImpl implements TicketService {
     @Override
     public int delete(Integer sn) {
         logger.info("删除票：" + sn);
-        return  ticketMapper.delete(sn);
+        return ticketMapper.delete(sn);
     }
 
     @Override

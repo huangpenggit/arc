@@ -23,7 +23,7 @@ public class PCLinkController {
     }
 
 
-    @RequestMapping(value = "/activity",method = RequestMethod.GET)
+    @RequestMapping(value = "/activity", method = RequestMethod.GET)
     public String activity() {
         return "view/activity";
     }

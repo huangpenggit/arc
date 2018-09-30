@@ -5,10 +5,10 @@ import java.lang.reflect.Modifier;
 
 public class Test {
 
-//    name的值经过运行才能获得, 那么就不会被处理为常量
+    //    name的值经过运行才能获得, 那么就不会被处理为常量
     // 防止JVM编译时就把"default4"作为常量处理
 //    private static  final String name = (null == null ? "defaultAAA" : "");
-    private static  final String name = new StringBuilder("defaultAAA").toString();
+    private static final String name = new StringBuilder("defaultAAA").toString();
 
 
     public String getName() {
@@ -16,7 +16,7 @@ public class Test {
         return this.name;
     }
 
-    public  void  printName() {
+    public void printName() {
         System.out.println(name);
     }
 
@@ -30,7 +30,6 @@ public class Test {
 //            field.set(test, "bbbb");
 
 //            field.setInt(field, field.getModifiers() & ~Modifier.FINAL);
-
 
 
             //先通过反射把name字段的final修饰符去掉. 然后设置值后再次设置final
@@ -49,8 +48,6 @@ public class Test {
             //最后别忘了再把final修饰符加回来:
             modifiers.setInt(nameField, nameField.getModifiers() & ~Modifier.FINAL);
             p.printName();
-
-
 
 
         } catch (NoSuchFieldException e) {

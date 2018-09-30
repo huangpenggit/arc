@@ -10,9 +10,9 @@ public interface FileService {
 
     Long save(File file);
 
-    File getByFilePath( String filePath);
+    File getByFilePath(String filePath);
 
-    File getByUrl( String url);
+    File getByUrl(String url);
 
 
     List<File> list();
