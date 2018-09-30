@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<modelVersion>4.0.0</modelVersion>
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.del</groupId>
-	<artifactId>server-eureka</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	<packaging>jar</packaging>
+    <groupId>com.del</groupId>
+    <artifactId>server-eureka</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>jar</packaging>
 
-	<name>server-eureka</name>
-	<description>server-eureka for Spring Boot</description>
+    <name>server-eureka</name>
+    <description>server-eureka for Spring Boot</description>
 
 
     <parent>
@@ -20,33 +20,29 @@
     </parent>
 
 
-	<dependencies>
-
+    <dependencies>
+        <!--用于测试的，本例可省略-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-devtools</artifactId>
-            <scope>runtime</scope>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
         </dependency>
 
 
-		<!--增加eureka-server的依赖-->
         <!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-eureka-server -->
+<!--
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-eureka-server</artifactId>
             <version>1.4.5.RELEASE</version>
         </dependency>
 
-
-		<!--用于测试的，本例可省略-->
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-test</artifactId>
-			<scope>test</scope>
-		</dependency>
-
-
-   <!--     <dependency>
+        <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
@@ -56,47 +52,8 @@
             <artifactId>spring-cloud-starter-security</artifactId>
         </dependency>
 -->
-    <!--    <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-dependencies</artifactId>
-            &lt;!&ndash;<version>Finchley.RELEASE</version>&ndash;&gt;
-            &lt;!&ndash;<version>Finchley.BUILD-SNAPSHOT</version>&ndash;&gt;
-            &lt;!&ndash;<cloud.version>Finchley.BUILD-SNAPSHOT</cloud.version>(这个版本号不与springboot冲突)&ndash;&gt;
-            <type>pom</type>
-            <scope>import</scope>
-        </dependency>
--->
 
     </dependencies>
-
-<!--
-    <dependencyManagement>
-        <dependencies>
-            <dependency>
-                <groupId>org.springframework.cloud</groupId>
-                <artifactId>spring-cloud-dependencies</artifactId>
-                <version>${spring-cloud.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
-
--->
-
-
-<!--
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-        </plugins>
-    </build>
--->
-
-
 
 
 </project>

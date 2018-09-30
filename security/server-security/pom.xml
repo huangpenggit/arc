@@ -16,15 +16,9 @@
         <groupId>com.del.arc</groupId>
         <artifactId>security</artifactId>
         <version>1.0.0</version>
-
         <relativePath>../pom.xml</relativePath>
         <!--<relativePath/> &lt;!&ndash; lookup parent from repository &ndash;&gt;-->
     </parent>
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <java.version>1.8</java.version>
-    </properties>
 
     <dependencies>
         <!--thymeleaf-->
@@ -54,95 +48,79 @@
             <artifactId>mysql-connector-java</artifactId>
             <scope>runtime</scope>
         </dependency>
-        <!--spring-boot-starter-security-->
+        <dependency>
+            <groupId>com.arc</groupId>
+            <artifactId>core</artifactId>
+        </dependency>
+<!--
+        &lt;!&ndash;spring-boot-starter-security&ndash;&gt;
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-security</artifactId>
         </dependency>
-        <!--spring-security-test-->
+        &lt;!&ndash;spring-security-test&ndash;&gt;
         <dependency>
             <groupId>org.springframework.security</groupId>
             <artifactId>spring-security-test</artifactId>
             <scope>test</scope>
         </dependency>
-
-
-<!--
-        <dependency>
-            <groupId>org.springframework.security.oauth</groupId>
-            <artifactId>spring-security-oauth2</artifactId>
-        </dependency>
-
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-jpa</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-jdbc</artifactId>
-        </dependency>
-
-        &lt;!&ndash;阿里巴巴的druid&ndash;&gt;
-        <dependency>
-            <groupId>com.alibaba</groupId>
-            <artifactId>druid</artifactId>
-            <version>1.0.15</version>
-        </dependency>
-                <dependency>
-            <groupId>io.springfox</groupId>
-            <artifactId>springfox-swagger2</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>io.springfox</groupId>
-            <artifactId>springfox-swagger-ui</artifactId>
-        </dependency>
-
 -->
+        <dependency>
+            <groupId>net.unicon.cas</groupId>
+            <artifactId>cas-client-autoconfig-support</artifactId>
+            <version>1.5.0-GA</version>
+        </dependency>
 
 
+        <!--
+                <dependency>
+                    <groupId>org.springframework.security.oauth</groupId>
+                    <artifactId>spring-security-oauth2</artifactId>
+                </dependency>
+
+
+                <dependency>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-starter-data-jpa</artifactId>
+                </dependency>
+                <dependency>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-starter-jdbc</artifactId>
+                </dependency>
+
+                &lt;!&ndash;阿里巴巴的druid&ndash;&gt;
+                <dependency>
+                    <groupId>com.alibaba</groupId>
+                    <artifactId>druid</artifactId>
+                    <version>1.0.15</version>
+                </dependency>
+                        <dependency>
+                    <groupId>io.springfox</groupId>
+                    <artifactId>springfox-swagger2</artifactId>
+                </dependency>
+                <dependency>
+                    <groupId>io.springfox</groupId>
+                    <artifactId>springfox-swagger-ui</artifactId>
+                </dependency>
+
+        -->
+
+        <!--<dependency>-->
+            <!--<groupId>org.springframework.cloud</groupId>-->
+            <!--<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>-->
+        <!--</dependency>-->
+        <!--<dependency>-->
+            <!--<groupId>org.springframework.cloud</groupId>-->
+            <!--<artifactId>spring-cloud-starter-netflix-ribbon</artifactId>-->
+        <!--</dependency>-->
+        <!--<dependency>-->
+            <!--<groupId>com.arc</groupId>-->
+            <!--<artifactId>core</artifactId>-->
+        <!--</dependency>-->
 
 
     </dependencies>
 
-    <build>
-        <plugins>
-            <!--mybatis-generator-->
-            <plugin>
-                <groupId>org.mybatis.generator</groupId>
-                <artifactId>mybatis-generator-maven-plugin</artifactId>
-                <version>1.3.2</version>
-                <configuration>
-                    <verbose>true</verbose>
-                    <overwrite>false</overwrite>
-                </configuration>
-                <dependencies>
-                    <!--          <dependency>
-                                  <groupId>mysql</groupId>
-                                  <artifactId>mysql-connector-java</artifactId>
-                                  <version>5.1.21</version>
-                              </dependency>-->
-
-                    <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
-                    <dependency>
-                        <groupId>mysql</groupId>
-                        <artifactId>mysql-connector-java</artifactId>
-                        <!--<version>8.0.8-dmr</version>-->
-                        <version>6.0.6</version>
-                    </dependency>
-
-                </dependencies>
-            </plugin>
-            <!--从父级继承-->
-            <!--
-            <plugin>
-                    <groupId>org.springframework.boot</groupId>
-                    <artifactId>spring-boot-maven-plugin</artifactId>
-                </plugin>
-               -->
-
-        </plugins>
-    </build>
 
 
 </project>

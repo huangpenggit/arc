@@ -27,7 +27,7 @@ public class JacksonUtils {
 	}
 
 	/**
-	 * 
+	 *
 	 * @param obj
 	 * @return
 	 */
@@ -36,7 +36,7 @@ public class JacksonUtils {
 	}
 
 	/**
-	 * 
+	 *
 	 * @param obj
 	 * @param isPretty
 	 * @return
@@ -54,7 +54,7 @@ public class JacksonUtils {
 	}
 
 	/**
-	 * 
+	 *
 	 * @param json
 	 * @param requiredType
 	 * @return

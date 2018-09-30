@@ -1,6 +1,6 @@
 package com.arc.model.domain.system;
 
-import com.arc.model.BaseModel;
+import com.arc.model.vo.BaseModel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;

@@ -1,6 +1,6 @@
 package com.arc.model.domain.wechat;
 
-import com.arc.model.BaseModel;
+import com.arc.model.vo.BaseModel;
 import lombok.*;
 import lombok.extern.slf4j.Slf4j;
 

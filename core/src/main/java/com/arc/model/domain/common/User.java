@@ -1,6 +1,6 @@
 package com.arc.model.domain.common;
 
-import com.arc.model.BaseModel;
+import com.arc.model.vo.BaseModel;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.validation.annotation.Validated;

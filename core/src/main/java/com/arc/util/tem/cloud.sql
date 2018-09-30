@@ -3383,7 +3383,7 @@ CREATE TABLE `user_area` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `user_auths`
+-- Table structure for `UserAuth`
 -- ----------------------------
 DROP TABLE IF EXISTS `user_auths`;
 CREATE TABLE `user_auths` (
@@ -3397,7 +3397,7 @@ CREATE TABLE `user_auths` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='用户授权信息表 ';
 
 -- ----------------------------
--- Records of user_auths
+-- Records of UserAuth
 -- ----------------------------
 
 -- ----------------------------

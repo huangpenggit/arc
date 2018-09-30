@@ -11,9 +11,9 @@ public class EurekaServerApplication {
     public static void main(String[] args) {
         SpringApplication.run(EurekaServerApplication.class, args);
     }
-//下面两行代码都可以用来启动
-// SpringApplication.run(ServerApplication.class, args);
-//new SpringApplicationBuilder(Application.class).web(true).run(args);
+    //项目启动方式二：下面两行代码都可以用来启动
+    // SpringApplication.run(ServerApplication.class, args);
+    //new SpringApplicationBuilder(Application.class).web(true).run(args);
 }
 
 //eureka是一个高可用的组件，它没有后端缓存，每一个实例注册之后需要向注册中心发送心跳（因此可以在内存中完成），在默认情况下erureka server也是一个eureka client ,必须要指定一个 server。eureka server的配置文件appication.yml：

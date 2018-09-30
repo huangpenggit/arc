@@ -1,19 +1,24 @@
 package com.security.mapper;
 
-import com.security.domain.User;
+import com.arc.model.domain.system.SsoUser;
+import org.apache.ibatis.annotations.Param;
+
 import java.util.List;
 
 public interface UserMapper {
-    int deleteByPrimaryKey(Long id);
 
-    int insert(User record);
+    int save(SsoUser record);
 
-    User selectByPrimaryKey(Long id);
+    int delete(Long id);
 
-    List<User> selectAll();
+    int update(SsoUser record);
 
-    int updateByPrimaryKey(User record);
+    SsoUser get( Long id);
 
-    User selectByUsername(String username);
-//    org.springframework.security.core.userdetails.User selectByUsername(String username);
+    SsoUser getByUsername(@Param("username") String username);
+
+    SsoUser getByNickname(@Param("nickname") String nickname);
+
+    List<SsoUser> list();
+
 }

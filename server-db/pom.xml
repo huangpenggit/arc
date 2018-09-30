@@ -28,8 +28,8 @@
         <module>server-druid</module>
         <module>server-mongo</module>
         <module>mybatis-tool</module>
-        <!--<module>server-system</module>-->
-        <module>server-elasticsearch</module>
+        <module>server-system</module>
+        <!--<module>server-elasticsearch</module>-->
     </modules>
 
     <dependencies>
@@ -38,25 +38,7 @@
             <groupId>com.arc</groupId>
             <artifactId>core</artifactId>
         </dependency>
-
-<!--
-
-            &lt;!&ndash; swagger RESTful API 文档 &ndash;&gt;
-            <dependency>
-                <groupId>io.springfox</groupId>
-                <artifactId>springfox-swagger2</artifactId>
-                <version>2.2.2</version>
-            </dependency>
-            <dependency>
-                <groupId>io.springfox</groupId>
-                <artifactId>springfox-swagger-ui</artifactId>
-                <version>2.2.2</version>
-            </dependency>
-
--->
-
-
-        </dependencies>
+    </dependencies>
 
 
 </project>

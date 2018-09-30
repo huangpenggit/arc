@@ -11,7 +11,7 @@ debug:当此属性设置为true时，将打印出logback内部日志信息，实
     <!--application.yml 传递参数，不能使用logback 自带的<property>标签 -->
     <springProperty scope="context" name="appname" source="logback.appname"/>
     <springProperty scope="context" name="logdir" source="logback.logdir"/>
-    <contextName>微信项目日志${appname}：)</contextName>
+    <contextName>SSO项目日志${appname}：)</contextName>
 
 
     <!--输出到控制台 ConsoleAppender-->

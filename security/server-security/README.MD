@@ -41,4 +41,104 @@ UnanimousBased实现类轮询所有配置AccessDecisionVoter的每个配置，�
 //决策方法，如果决策不通过就抛出异常
 void decide(Authentication authentication, Object object,Collection<ConfigAttribute> configAttributes) throws AccessDeniedException,InsufficientAuthenticationException;
 org.springframework.security.authentication
-权限认证处理层，实现了对权限的管理和认证，dao封装了用户信息的访问，encoding封装了对用户密码加密的处理，event实现对授权验证的成功、失败等事件，jaas是对Java Jaas授权API的封装，rcp提供了远程授权验证与管理。
+权限认证处层，实现了对权限的管理和认证，dao封装了用户信息的访问，encoding封装了对用户密码加密的处理，event实现对授权验证的成功、失败等事件，jaas是对Java Jaas授权API的封装，rcp提供了远程授权验证与管理。
+
+
+1. 什么是CAS？什么是单点登录？
+
+CAS是一个单点登录框架，开始是由耶鲁大学的一个组织开发，后来归到apereo去管。 
+同时CAS也是开源，遵循着apache 2.0协议，代码目前是在github上管理。
+
+单点登录：Single Sign On,简称SSO，SSO使得在多个应用系统中，用户只需要登录一次就可以访问所有相互信任的应用系统。
+
+通俗理解为一个应用登录了，其他被授权的应用不用再登录。 
+应用例子为：淘宝登录了天猫不用再登录。
+
+
+
+2. 应用场景
+
+
+分布式多系统用户集中管理
+用户权限集中管理
+多因素认证（如微信pc端登录手机确认）
+
+
+如公司有多个系统，分别OA系统、CRM系统、财务管理系统、设备管理系统等，总不能访问每个系统都要登录一遍吧，用户会疯掉的，应该我们认证一遍，其他系统即可访问。
+
+
+
+3. CAS特性
+
+
+多协议认证支持 
+CAS
+OAuth
+OpenID
+SAML
+REST
+多因素认证 
+Duo
+Google Authenticator 
+YubiKey
+Cas-Management 服务管理中心（谁能接入SSO）
+TGT（授权码）管理、ST（票据）管理
+动态主题（不通客户端提供不同的登录页）
+多方式认证（校验器）
+配置中心
+监控平台
+多属性管理（默认只返回用户名，例如后续返回权限数据）
+密码管理
+…
+
+
+CAS特性非常强大，我们可以到官网文档一一了解。
+
+
+
+3. 计划
+
+
+
+3.1. 博文计划
+
+笔者也是有工作，可能不会输出得很快。那么计划一周会输出1~3篇博文来搭建CAS以及介绍CAS。
+
+3.2. SSO搭建计划
+
+
+CAS搭建HelloWorld
+SSL证书生成并导入https
+配置中心搭建
+cas-management搭建
+监控平台搭建
+CAS数据库认证，密码管理
+多属性返回
+自定义主题
+授权码持久化配置、票据持久化配置
+CAS多系统安全
+CAS client demo测试单点登录
+pa4j客户端单点登录整合
+rest协议认证
+
+
+
+
+4. 注意事项
+
+所需知识：
+
+
+spring boot
+spring security
+spring cloud
+maven
+
+
+
+
+5. 复习
+
+---------------------
+
+本文来自 悟空_ 的CSDN 博客 ，全文地址请点击：https://blog.csdn.net/u010475041/article/details/77886765?utm_source=copy 
