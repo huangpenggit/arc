@@ -78,7 +78,7 @@ public class SyncTask {
     @Scheduled(cron = "0 0 0 * * ?")
     public void autoCallout() {
         boolean executeFlag = false;
-        try {
+        try {file://C:/Users/nozom/Desktop/Zan/git/arc/web/web-back/src/main/resources/static/plugins/bootstrap/docs/assets/js/ie-emulation-modes-warning.js
             // do something
         } catch (Exception e) {
             log.info("每天零点调出，服务器:{}，定时任务任务执行失败,详情 {}" + new Date(), e.getMessage());
