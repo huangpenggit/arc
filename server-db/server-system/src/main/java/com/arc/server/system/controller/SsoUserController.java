@@ -48,11 +48,12 @@ public class SsoUserController {
         log.debug("查询结果{}", ssoUser);
         return ssoUser;
     }
+
     //获取用通过username
     @RequestMapping(value = "/get/nickname", method = RequestMethod.GET)
     public Object getByNickname(@RequestParam(name = "nickname", required = true) String nickname) {
 //        return ssoUserService.getByNickname(username);
-        log.debug("参数Parameter {}",nickname);
+        log.debug("参数Parameter {}", nickname);
         SsoUser ssoUser = ssoUserService.getByNickname(nickname);
         log.debug("查询结果{}", ssoUser);
         return ssoUser;

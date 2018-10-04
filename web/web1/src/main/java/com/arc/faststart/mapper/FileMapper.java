@@ -1,6 +1,6 @@
 package com.arc.faststart.mapper;
 
-import com.arc.faststart.model.domain.File;
+import com.arc.model.domain.common.File;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
@@ -11,11 +11,19 @@ import java.util.List;
  */
 public interface FileMapper {
 
-    File get(Long id);
-
     int save(File file);
 
+    int delete(Long id);
+
+    int update(File file);
+
     List<File> list();
+
+    File getLatest();
+
+    File get(Long id);
+
+    File getByFilename(@Param("name") String filename);
 
     File getByFilePath(@Param("filePath") String filePath);
 

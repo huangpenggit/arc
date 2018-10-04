@@ -6,19 +6,13 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-//@EnableAutoConfiguration(
-//        exclude = {
-//                HazelcastAutoConfiguration.class,
-//                DataSourceAutoConfiguration.class,
-//                HibernateJpaAutoConfiguration.class
-//        })
 @SpringBootApplication
 @RestController
 @MapperScan("com.arc.faststart.mapper")
-public class WebFastStartApplication {
+public class Web1FastStartApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(WebFastStartApplication.class, args);
+        SpringApplication.run(Web1FastStartApplication.class, args);
     }
 
     @RequestMapping("/info")

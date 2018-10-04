@@ -24,7 +24,6 @@
     <modules>
         <module>web-shop</module>
         <module>web-express</module>
-        <module>web-fast-start</module>
         <module>website-https</module>
         <module>web-validating</module>
         <module>web-vue</module>
