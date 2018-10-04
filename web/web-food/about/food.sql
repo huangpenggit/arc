@@ -8,7 +8,7 @@ Source Database       : food
 
 Target Server Type    : MYSQL
 Target Server Version : 80012
-File Encoding         : 65001
+SystemFile Encoding         : 65001
 
 Date: 2018-09-21 10:09:29
 */
@@ -3395,10 +3395,10 @@ INSERT INTO `customer` VALUES ('2', 'yflow', '222@yahoo.com', '2017-02-12');
 INSERT INTO `customer` VALUES ('3', 'zilap', '333@yahoo.com', '2017-02-13');
 
 -- ----------------------------
--- Table structure for file
+-- Table structure for systemFile
 -- ----------------------------
-DROP TABLE IF EXISTS `file`;
-CREATE TABLE `file` (
+DROP TABLE IF EXISTS `systemFile`;
+CREATE TABLE `systemFile` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `url` varchar(255) DEFAULT NULL COMMENT '图片地址',
   `path` varchar(255) DEFAULT NULL COMMENT '图片本地地址',
@@ -3410,9 +3410,9 @@ CREATE TABLE `file` (
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
--- Records of file
+-- Records of systemFile
 -- ----------------------------
-INSERT INTO `file` VALUES ('1', 'wwww.www', '/sss/1.jpg', 'ces ', '.jpg', null, '2018-09-10 19:27:18');
+INSERT INTO `systemFile` VALUES ('1', 'wwww.www', '/sss/1.jpg', 'ces ', '.jpg', null, '2018-09-10 19:27:18');
 
 -- ----------------------------
 -- Table structure for food

@@ -16,7 +16,7 @@ import java.util.Date;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class File extends BaseModel {
+public class SystemFile extends BaseModel {
 
     private static final long serialVersionUID = 1L;
 
@@ -29,7 +29,7 @@ public class File extends BaseModel {
     private Date updateDate;//更新时间
 
 
-    public File(String url, String path, String name, String suffix  ) {
+    public SystemFile(String url, String path, String name, String suffix  ) {
         this.url = url;
         this.path = path;
         this.name = name;

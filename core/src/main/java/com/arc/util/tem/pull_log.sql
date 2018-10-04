@@ -8,7 +8,7 @@ Source Database       : hla
 
 Target Server Type    : MYSQL
 Target Server Version : 50543
-File Encoding         : 65001
+SystemFile Encoding         : 65001
 
 Date: 2018-08-20 14:53:18
 */

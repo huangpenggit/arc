@@ -32,8 +32,8 @@ public class ForFile2Controller {
 //            ByteArrayOutputStream byteArrayOut1 = new ByteArrayOutputStream();
 
             //将两张图片读到 BufferedImage
-//            bufferImg = ImageIO.read(new File("E:/a.jpg"));
-//            bufferImg1 = ImageIO.read(new File("E:/b.jpg"));
+//            bufferImg = ImageIO.read(new SystemFile("E:/a.jpg"));
+//            bufferImg1 = ImageIO.read(new SystemFile("E:/b.jpg"));
 
 //            ImageIO.write(bufferImg, "jpg", byteArrayOut);
 //            ImageIO.write(bufferImg1, "jpg", byteArrayOut1);
@@ -101,7 +101,7 @@ public class ForFile2Controller {
 
 
     /*    public static void main(String[] args) {//主程序，程序入口
-            File file = new File("H:\\a");
+            SystemFile file = new SystemFile("H:\\a");
 
             if (!file.exists()) {//如果文件夹不存在
                 boolean mkdir = file.mkdir();//创建文件夹

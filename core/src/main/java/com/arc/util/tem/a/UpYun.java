@@ -658,7 +658,7 @@ public class UpYun {
             String[] a = data.split("\t");
             if (a.length == 4) {
                 this.name = a[0];
-                this.type = "N".equals(a[1]) ? "File" : "Folder";
+                this.type = "N".equals(a[1]) ? "SystemFile" : "Folder";
 
                 try {
                     this.size = Long.parseLong(a[2].trim());

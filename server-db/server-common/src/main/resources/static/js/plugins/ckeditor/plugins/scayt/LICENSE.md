@@ -15,7 +15,7 @@ Licensed under the terms of any of the following licenses at your choice:
 *   Mozilla Public License Version 1.1 or later (the "MPL"):
     http://www.mozilla.org/MPL/MPL-1.1.html
 
-You are not required to, but if you want to explicitly declare the license you have chosen to be bound to when using, reproducing, modifying and distributing this software, just include a text file titled "legal.txt" in your version of this software, indicating your license choice.
+You are not required to, but if you want to explicitly declare the license you have chosen to be bound to when using, reproducing, modifying and distributing this software, just include a text systemFile titled "legal.txt" in your version of this software, indicating your license choice.
 
 Sources of Intellectual Property Included in this plugin
 --------------------------------------------------------

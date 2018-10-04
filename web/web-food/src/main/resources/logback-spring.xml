@@ -41,8 +41,8 @@ debug:当此属性设置为true时，将打印出logback内部日志信息，实
         </filter>
 
         <!--日志名称，如果没有File 属性，那么只会使用FileNamePattern的文件路径规则
-            如果同时有<File>和<FileNamePattern>，那么当天日志是<File>，明天会自动把今天
-            的日志改名为今天的日期。即，<File> 的日志都是当天的。
+            如果同时有<SystemFile>和<FileNamePattern>，那么当天日志是<SystemFile>，明天会自动把今天
+            的日志改名为今天的日期。即，<SystemFile> 的日志都是当天的。
         -->
         <File>${logback.logdir}/info.${logback.appname}.log</File>
         <!--滚动策略，按照时间滚动 TimeBasedRollingPolicy-->
@@ -106,10 +106,10 @@ debug:当此属性设置为true时，将打印出logback内部日志信息，实
         <!--<level>Error</level>-->
         <!--</filter>-->
         <!--&lt;!&ndash;日志名称，如果没有File 属性，那么只会使用FileNamePattern的文件路径规则-->
-        <!--如果同时有<File>和<FileNamePattern>，那么当天日志是<File>，明天会自动把今天-->
-        <!--的日志改名为今天的日期。即，<File> 的日志都是当天的。-->
+        <!--如果同时有<SystemFile>和<FileNamePattern>，那么当天日志是<SystemFile>，明天会自动把今天-->
+        <!--的日志改名为今天的日期。即，<SystemFile> 的日志都是当天的。-->
         <!--&ndash;&gt;-->
-        <!--<File>${logback.logdir}/error.${logback.appname}.log</File>-->
+        <!--<SystemFile>${logback.logdir}/error.${logback.appname}.log</SystemFile>-->
         <!--&lt;!&ndash;滚动策略，按照时间滚动 TimeBasedRollingPolicy&ndash;&gt;-->
         <!--<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">-->
         <!--&lt;!&ndash;文件路径,定义了日志的切分方式——把每一天的日志归档到一个文件中,以防止日志填满整个磁盘空间&ndash;&gt;-->

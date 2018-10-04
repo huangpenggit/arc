@@ -7,7 +7,7 @@
 //package com.arc.util.tem;
 //
 //import java.io.BufferedReader;
-//import java.io.File;
+//import java.io.SystemFile;
 //import java.io.FileInputStream;
 //import java.io.FileOutputStream;
 //import java.io.IOException;
@@ -167,7 +167,7 @@
 //    }
 //
 //    public boolean writeFile(String filePath, byte[] datas, boolean auto, Map<String, String> params) {
-//        return this.HttpAction("PUT", this.formatPath(filePath), datas, (File)null, auto, params) != null;
+//        return this.HttpAction("PUT", this.formatPath(filePath), datas, (SystemFile)null, auto, params) != null;
 //    }
 //
 //    public boolean writeFile(String filePath, String datas) {
@@ -190,15 +190,15 @@
 //        return result;
 //    }
 //
-//    public boolean writeFile(String filePath, File file) throws IOException {
-//        return this.writeFile(filePath, (File)file, false, (Map)null);
+//    public boolean writeFile(String filePath, SystemFile file) throws IOException {
+//        return this.writeFile(filePath, (SystemFile)file, false, (Map)null);
 //    }
 //
-//    public boolean writeFile(String filePath, File file, boolean auto) throws IOException {
-//        return this.writeFile(filePath, (File)file, auto, (Map)null);
+//    public boolean writeFile(String filePath, SystemFile file, boolean auto) throws IOException {
+//        return this.writeFile(filePath, (SystemFile)file, auto, (Map)null);
 //    }
 //
-//    public boolean writeFile(String filePath, File file, boolean auto, Map<String, String> params) throws IOException {
+//    public boolean writeFile(String filePath, SystemFile file, boolean auto, Map<String, String> params) throws IOException {
 //        filePath = this.formatPath(filePath);
 //        InputStream is = null;
 //        OutputStream os = null;
@@ -279,7 +279,7 @@
 //        return this.HttpAction("GET", this.formatPath(filePath));
 //    }
 //
-//    public boolean readFile(String filePath, File file) {
+//    public boolean readFile(String filePath, SystemFile file) {
 //        String result = this.HttpAction("GET", this.formatPath(filePath), (byte[])null, file, false);
 //        return "".equals(result);
 //    }
@@ -308,7 +308,7 @@
 //    public boolean mkDir(String path, boolean auto) {
 //        Map<String, String> params = new HashMap(1);
 //        params.put(PARAMS.KEY_MAKE_DIR.getValue(), "true");
-//        String result = this.HttpAction("PUT", this.formatPath(path), (byte[])null, (File)null, auto, params);
+//        String result = this.HttpAction("PUT", this.formatPath(path), (byte[])null, (SystemFile)null, auto, params);
 //        return result != null;
 //    }
 //
@@ -378,7 +378,7 @@
 //        return new String(finalValue);
 //    }
 //
-//    public static String md5(File file) throws IOException {
+//    public static String md5(SystemFile file) throws IOException {
 //        FileInputStream is = new FileInputStream(file);
 //        char[] hexDigits = new char[]{'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f'};
 //        MessageDigest md5 = null;
@@ -432,14 +432,14 @@
 //    }
 //
 //    private String HttpAction(String method, String uri) {
-//        return this.HttpAction(method, uri, (byte[])null, (File)null, false);
+//        return this.HttpAction(method, uri, (byte[])null, (SystemFile)null, false);
 //    }
 //
-//    private String HttpAction(String method, String uri, byte[] datas, File outFile, boolean auto) {
+//    private String HttpAction(String method, String uri, byte[] datas, SystemFile outFile, boolean auto) {
 //        return this.HttpAction(method, uri, datas, outFile, auto, (Map)null);
 //    }
 //
-//    private String HttpAction(String method, String uri, byte[] datas, File outFile, boolean auto, Map<String, String> params) {
+//    private String HttpAction(String method, String uri, byte[] datas, SystemFile outFile, boolean auto, Map<String, String> params) {
 //        String result = null;
 //        HttpURLConnection conn = null;
 //        OutputStream os = null;
@@ -671,7 +671,7 @@
 //            String[] a = data.split("\t");
 //            if (a.length == 4) {
 //                this.name = a[0];
-//                this.type = "N".equals(a[1]) ? "File" : "Folder";
+//                this.type = "N".equals(a[1]) ? "SystemFile" : "Folder";
 //
 //                try {
 //                    this.size = Long.parseLong(a[2].trim());

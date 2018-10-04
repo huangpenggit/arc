@@ -108,7 +108,7 @@ stylecop.*
 *.dbmdl
 Generated_Code #added for RIA/Silverlight projects
 
-# Backup & report files from converting an old project file to a newer
+# Backup & report files from converting an old project systemFile to a newer
 # Visual Studio version. Backup files are not needed, because we have git ;-)
 _UpgradeReport_Files/
 Backup*/
@@ -120,10 +120,10 @@ UpgradeLog*.XML
 ## Windows
 ############
 
-# Windows image file caches
+# Windows image systemFile caches
 Thumbs.db
 
-# Folder config file
+# Folder config systemFile
 Desktop.ini
 
 

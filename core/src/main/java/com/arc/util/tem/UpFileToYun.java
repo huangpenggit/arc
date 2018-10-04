@@ -5,7 +5,7 @@
 //import org.springframework.beans.factory.annotation.Value;
 //import org.springframework.stereotype.Component;
 //
-//import java.io.File;
+//import java.io.SystemFile;
 //import java.io.IOException;
 //import java.util.Map;
 //
@@ -34,7 +34,7 @@
 //     */
 //    public boolean uploadPicBySync(String filePath, String picUrl) throws IOException {
 //        UpYun upyun = new UpYun(bucketName, username, password);
-//        return upyun.writeFile(picUrl,  new File(filePath), true);
+//        return upyun.writeFile(picUrl,  new SystemFile(filePath), true);
 //    }
 //
 //    /**
@@ -77,13 +77,13 @@
 //     */
 //    public boolean writeFile(String localFilePath, String remoteFilePath) throws IOException {
 //        UpYun upyun = new UpYun(bucketName, username, password);
-//        File file = new File(localFilePath);
+//        SystemFile file = new SystemFile(localFilePath);
 //        return upyun.writeFile(remoteFilePath, file);
 //    }
 //
 //    public boolean writeFile(String localFilePath, String remoteFilePath, boolean auto) throws IOException {
 //        UpYun upyun = new UpYun(bucketName, username, password);
-//        File file = new File(localFilePath);
+//        SystemFile file = new SystemFile(localFilePath);
 //        return upyun.writeFile(remoteFilePath, file, auto);
 //    }
 //
@@ -101,7 +101,7 @@
 //        } catch (Exception e) {
 //            log.error("上传又拍云失败 e: ", e);
 //        }
-//        File file = new File(localFilePath);
+//        SystemFile file = new SystemFile(localFilePath);
 //        if (!file.delete()) {
 //            log.warn("删除本地文件失败 localFilePath: {}", localFilePath);
 //        }

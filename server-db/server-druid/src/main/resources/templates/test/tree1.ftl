@@ -28,7 +28,7 @@
         <span class="folder">条目1</span>
         <ul>
             <li>
-                <span class="file"><a href="javascript:alert('项1')">项1</a></span>
+                <span class="systemFile"><a href="javascript:alert('项1')">项1</a></span>
             </li>
         </ul>
     </li>
@@ -36,7 +36,7 @@
         <span class="folder">初始关闭的条目2</span>
         <ul>
             <li>
-                <span class="file"><a href="javascript:alert('项2')">项2</a></span>
+                <span class="systemFile"><a href="javascript:alert('项2')">项2</a></span>
             </li>
         </ul>
     </li>

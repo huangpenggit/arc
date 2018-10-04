@@ -9,7 +9,7 @@ Installation
 ------------
 
 1. Clone/copy this repository contents in a new "plugins/scayt" folder in your CKEditor installation.
-2. Enable the "scayt" plugin in the CKEditor configuration file (config.js):
+2. Enable the "scayt" plugin in the CKEditor configuration systemFile (config.js):
 
         config.extraPlugins = 'scayt';
 

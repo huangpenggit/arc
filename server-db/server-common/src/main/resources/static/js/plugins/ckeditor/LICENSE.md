@@ -21,7 +21,7 @@ choice:
 
 You are not required to, but if you want to explicitly declare the
 license you have chosen to be bound to when using, reproducing,
-modifying and distributing this software, just include a text file
+modifying and distributing this software, just include a text systemFile
 titled "legal.txt" in your version of this software, indicating your
 license choice. In any case, your choice will not restrict any
 recipient of your version of this software to use, reproduce, modify
@@ -605,17 +605,17 @@ contains portions of the Library), rather than a "work that uses the
 library".  The executable is therefore covered by this License.
 Section 6 states terms for distribution of such executables.
 
-  When a "work that uses the Library" uses material from a header file
+  When a "work that uses the Library" uses material from a header systemFile
 that is part of the Library, the object code for the work may be a
 derivative work of the Library even though the source code is not.
 Whether this is true is especially significant if the work can be
 linked without the Library, or if the work is itself a library.  The
 threshold for this to be true is not precisely defined by law.
 
-  If such an object file uses only numerical parameters, data
+  If such an object systemFile uses only numerical parameters, data
 structure layouts and accessors, and small macros and small inline
 functions (ten lines or less in length), then the use of the object
-file is unrestricted, regardless of whether it is legally a derivative
+systemFile is unrestricted, regardless of whether it is legally a derivative
 work.  (Executables containing this object code plus portions of the
 Library will still fall under Section 6.)
 
@@ -861,10 +861,10 @@ Version 1.1
      substance or structure of either the Original Code or any previous
      Modifications. When Covered Code is released as a series of files, a
      Modification is:
-          A. Any addition to or deletion from the contents of a file
+          A. Any addition to or deletion from the contents of a systemFile
           containing Original Code or previous Modifications.
 
-          B. Any new file that contains any part of the Original Code or
+          B. Any new systemFile that contains any part of the Original Code or
           previous Modifications.
 
      1.10. "Original Code" means Source Code of computer software code
@@ -988,7 +988,7 @@ Version 1.1
 
      3.3. Description of Modifications.
      You must cause all Covered Code to which You contribute to contain a
-     file documenting the changes You made to create that Covered Code and
+     systemFile documenting the changes You made to create that Covered Code and
      the date of any change. You must include a prominent statement that
      the Modification is derived, directly or indirectly, from Original
      Code provided by the Initial Developer and including the name of the
@@ -1001,12 +1001,12 @@ Version 1.1
           If Contributor has knowledge that a license under a third party's
           intellectual property rights is required to exercise the rights
           granted by such Contributor under Sections 2.1 or 2.2,
-          Contributor must include a text file with the Source Code
+          Contributor must include a text systemFile with the Source Code
           distribution titled "LEGAL" which describes the claim and the
           party making the claim in sufficient detail that a recipient will
           know whom to contact. If Contributor obtains such knowledge after
           the Modification is made available as described in Section 3.2,
-          Contributor shall promptly modify the LEGAL file in all copies
+          Contributor shall promptly modify the LEGAL systemFile in all copies
           Contributor makes available thereafter and shall take other steps
           (such as notifying appropriate mailing lists or newsgroups)
           reasonably calculated to inform those who received the Covered
@@ -1016,7 +1016,7 @@ Version 1.1
           If Contributor's Modifications include an application programming
           interface and Contributor has knowledge of patent licenses which
           are reasonably necessary to implement that API, Contributor must
-          also include this information in the LEGAL file.
+          also include this information in the LEGAL systemFile.
 
                (c)    Representations.
           Contributor represents that, except as disclosed pursuant to
@@ -1026,9 +1026,9 @@ Version 1.1
           this License.
 
      3.5. Required Notices.
-     You must duplicate the notice in Exhibit A in each file of the Source
+     You must duplicate the notice in Exhibit A in each systemFile of the Source
      Code.  If it is not possible to put such notice in a particular Source
-     Code file due to its structure, then You must include such notice in a
+     Code systemFile due to its structure, then You must include such notice in a
      location (such as a relevant directory) where a user would be likely
      to look for such a notice.  If You created one or more Modification(s)
      You may add your name as a Contributor to the notice described in
@@ -1081,7 +1081,7 @@ Version 1.1
      statute, judicial order, or regulation then You must: (a) comply with
      the terms of this License to the maximum extent possible; and (b)
      describe the limitations and the code they affect. Such description
-     must be included in the LEGAL file described in Section 3.4 and must
+     must be included in the LEGAL systemFile described in Section 3.4 and must
      be included with all distributions of the Source Code. Except to the
      extent prohibited by statute or regulation, such description must be
      sufficiently detailed for a recipient of ordinary skill to be able to
@@ -1147,7 +1147,7 @@ Version 1.1
      8.2.  If You initiate litigation by asserting a patent infringement
      claim (excluding declatory judgment actions) against Initial Developer
      or a Contributor (the Initial Developer or Contributor against whom
-     You file such action is referred to as "Participant")  alleging that:
+     You systemFile such action is referred to as "Participant")  alleging that:
 
      (a)  such Participant's Contributor Version directly or indirectly
      infringes any patent, then any and all rights granted by such
@@ -1248,12 +1248,12 @@ Version 1.1
      "Multiple-Licensed".  "Multiple-Licensed" means that the Initial
      Developer permits you to utilize portions of the Covered Code under
      Your choice of the NPL or the alternative licenses, if any, specified
-     by the Initial Developer in the file described in Exhibit A.
+     by the Initial Developer in the systemFile described in Exhibit A.
 
 EXHIBIT A -Mozilla Public License.
 
-     ``The contents of this file are subject to the Mozilla Public License
-     Version 1.1 (the "License"); you may not use this file except in
+     ``The contents of this systemFile are subject to the Mozilla Public License
+     Version 1.1 (the "License"); you may not use this systemFile except in
      compliance with the License. You may obtain a copy of the License at
      http://www.mozilla.org/MPL/
 
@@ -1270,15 +1270,15 @@ EXHIBIT A -Mozilla Public License.
 
      Contributor(s): ______________________________________.
 
-     Alternatively, the contents of this file may be used under the terms
+     Alternatively, the contents of this systemFile may be used under the terms
      of the _____ license (the  "[___] License"), in which case the
      provisions of [______] License are applicable instead of those
-     above.  If you wish to allow use of your version of this file only
+     above.  If you wish to allow use of your version of this systemFile only
      under the terms of the [____] License and not to allow others to use
-     your version of this file under the MPL, indicate your decision by
+     your version of this systemFile under the MPL, indicate your decision by
      deleting  the provisions above and replace  them with the notice and
      other provisions required by the [___] License.  If you do not delete
-     the provisions above, a recipient may use your version of this file
+     the provisions above, a recipient may use your version of this systemFile
      under either the MPL or the [___] License."
 
      [NOTE: The text of this Exhibit A may differ slightly from the text of

@@ -20,7 +20,7 @@
 
                 $this.uploadifive({
                     buttonText: "选择图片",
-                    fileObjName: "file",
+                    fileObjName: "systemFile",
                     fileType: "image",
                     uploadScript: "/productUpload",
                     overrideEvents: ["onUploadSuccess", "onUploadProgress",
@@ -29,7 +29,7 @@
                         $(".uploadifive-queue").hide();
                         num = $(this).val();
                     },
-                    onUploadComplete: function (file, data) {
+                    onUploadComplete: function (systemFile, data) {
                         var parent = $this.parent('div').parent('div');
                         var num = $this.data("id");
                         var inputNum = $this.data("input");

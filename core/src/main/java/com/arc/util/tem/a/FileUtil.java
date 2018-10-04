@@ -76,8 +76,8 @@ public class FileUtil {
         return filePath;
     }
 
-/*    public static File transferFile(MultipartFile file, String filePath) throws IOException {
-        File convertFile = new File(filePath);
+/*    public static SystemFile transferFile(MultipartFile file, String filePath) throws IOException {
+        SystemFile convertFile = new SystemFile(filePath);
         if (convertFile.exists()) {
             if (!convertFile.delete()) {
                 log.debug("本地文件已存在");

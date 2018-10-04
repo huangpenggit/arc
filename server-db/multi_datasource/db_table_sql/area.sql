@@ -8,7 +8,7 @@ Source Database       : cloud
 
 Target Server Type    : MYSQL
 Target Server Version : 50721
-File Encoding         : 65001
+SystemFile Encoding         : 65001
 
 Date: 2018-07-26 10:50:25
 */

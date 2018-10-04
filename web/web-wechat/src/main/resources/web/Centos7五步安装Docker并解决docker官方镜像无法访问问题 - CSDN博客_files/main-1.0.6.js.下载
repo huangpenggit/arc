@@ -253,7 +253,7 @@
 })(jQuery);
 
 /*
- @file 推广位跟踪
+ @systemFile 推广位跟踪
  @author 曹宇 <caoyu#at#csdn.net>
  @version 20130902
  */

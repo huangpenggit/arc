@@ -17,7 +17,7 @@ Version 1.5.4
  * combobox: The 'setValues' method can be called to initialize the displaying text.
  * combotreegrid: Press ENTER key to select the highlighted rows.
  * panel: Improve the resizing performance.
- * filebox: The 'files' method allows the user to get the selected file list.
+ * filebox: The 'files' method allows the user to get the selected systemFile list.
  * searchbox: Improvent the 'selectName' method.
 
 Version 1.5.3
@@ -215,7 +215,7 @@ Version 1.4
 * New Plugins
  * textbox: A enhanced input field that allows users build their form easily.
  * datetimespinner: A date and time spinner that allows to pick a specific day.
- * filebox: The filebox component represents a file field of the forms.
+ * filebox: The filebox component represents a systemFile field of the forms.
 
 Version 1.3.6
 -------------

@@ -11,25 +11,25 @@
         <result column="icon_open" property="iconOpen"/>
         <result column="icon_close" property="iconClose"/>
         <result column="url" property="url"/>
-        <result column="file" property="file"/>
+        <result column="systemFile" property="systemFile"/>
     </resultMap>
 
     <insert id="insert">
-        insert into `tree` (id,p_id, `name`, `open`, checked, icon, icon_open, icon_close, url, file )
-        values (#{id},#{pId}, #{name}, #{open}, #{checked}, #{icon}, #{iconOpen}, #{iconClose}, #{url}, #{file} )
+        insert into `tree` (id,p_id, `name`, `open`, checked, icon, icon_open, icon_close, url, systemFile )
+        values (#{id},#{pId}, #{name}, #{open}, #{checked}, #{icon}, #{iconOpen}, #{iconClose}, #{url}, #{systemFile} )
     </insert>
 
     <insert id="batchSave">
-        insert into `tree` (id,p_id, `name`, `open`, checked, icon, icon_open, icon_close, url, file )
+        insert into `tree` (id,p_id, `name`, `open`, checked, icon, icon_open, icon_close, url, systemFile )
         values
         <foreach collection="list" item="item" index="index" separator=",">
             (#{item.id},#{item.pId},#{item.name},#{item.open} ,#{item.checked} ,#{item.icon}
-            ,#{item.iconOpen},#{item.iconClose},#{item.url},#{item.file} )
+            ,#{item.iconOpen},#{item.iconClose},#{item.url},#{item.systemFile} )
         </foreach>
     </insert>
 
     <select id="selectAll" resultMap="BaseResultMap">
-        select id, p_id, `name`, `open`, checked, icon, icon_open, icon_close, url, file
+        select id, p_id, `name`, `open`, checked, icon, icon_open, icon_close, url, systemFile
         from tree
     </select>
 
@@ -51,7 +51,7 @@
         `icon_open`=#{iconOpen},
         `icon_close`=#{iconClose},
         `url`=#{url},
-        `file`=#{file}
+        `systemFile`=#{systemFile}
         where id=#{id}
     </update>
 

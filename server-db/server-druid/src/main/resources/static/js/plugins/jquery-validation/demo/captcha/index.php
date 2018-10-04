@@ -3,7 +3,7 @@
 // Make the page validate
 ini_set('session.use_trans_sid', '0');
 
-// Include the random string file
+// Include the random string systemFile
 require 'rand.php';
 
 // Begin the session

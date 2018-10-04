@@ -64,7 +64,7 @@ Fixed Issues:
 New Features:
 
 * Introduced the [`CKEDITOR.tools.getCookie()`](http://docs.ckeditor.com/#!/api/CKEDITOR.tools-method-getCookie) and [`CKEDITOR.tools.setCookie()`](http://docs.ckeditor.com/#!/api/CKEDITOR.tools-method-setCookie) methods for accessing cookies.
-* Introduced the [`CKEDITOR.tools.getCsrfToken()`](http://docs.ckeditor.com/#!/api/CKEDITOR.tools-method-getCsrfToken) method. The CSRF token is now automatically sent by the [File Browser](http://ckeditor.com/addon/filebrowser) and [File Tools](http://ckeditor.com/addon/filetools) plugins during file uploads. The server-side upload handlers may check it and use it to additionally secure the communication.
+* Introduced the [`CKEDITOR.tools.getCsrfToken()`](http://docs.ckeditor.com/#!/api/CKEDITOR.tools-method-getCsrfToken) method. The CSRF token is now automatically sent by the [File Browser](http://ckeditor.com/addon/filebrowser) and [File Tools](http://ckeditor.com/addon/filetools) plugins during systemFile uploads. The server-side upload handlers may check it and use it to additionally secure the communication.
 
 Other Changes:
 
@@ -140,7 +140,7 @@ Other Changes:
 
 New Features:
 
-* [#13501](http://dev.ckeditor.com/ticket/13501): Added the [`config.fileTools_defaultFileName`](http://docs.ckeditor.com/#!/api/CKEDITOR.config-cfg-fileTools_defaultFileName) option to allow setting a default file name for paste uploads.
+* [#13501](http://dev.ckeditor.com/ticket/13501): Added the [`config.fileTools_defaultFileName`](http://docs.ckeditor.com/#!/api/CKEDITOR.config-cfg-fileTools_defaultFileName) option to allow setting a default systemFile name for paste uploads.
 * [#13603](http://dev.ckeditor.com/ticket/13603): Added support for uploading dropped BMP images.
 
 Fixed Issues:
@@ -230,7 +230,7 @@ Fixed Issues:
 * [#13186](http://dev.ckeditor.com/ticket/13186): Fixed: Content dropped into a nested editable is not filtered by [Advanced Content Filter](http://docs.ckeditor.com/#!/guide/dev_acf).
 * [#13140](http://dev.ckeditor.com/ticket/13140): Fixed: Error thrown when dropping a block widget right after itself.
 * [#13176](http://dev.ckeditor.com/ticket/13176): [IE8] Fixed: Errors on drag&drop of embed widgets.
-* [#13015](http://dev.ckeditor.com/ticket/13015): Fixed: Dropping an image file on [Enhanced Image](http://ckeditor.com/addon/image2) causes a page reload.
+* [#13015](http://dev.ckeditor.com/ticket/13015): Fixed: Dropping an image systemFile on [Enhanced Image](http://ckeditor.com/addon/image2) causes a page reload.
 * [#13080](http://dev.ckeditor.com/ticket/13080): Fixed: Ugly notification shown when the response contains HTML content.
 * [#13011](http://dev.ckeditor.com/ticket/13011): [IE8] Fixed: Anchors are duplicated on drag&drop in specific locations.
 * [#13105](http://dev.ckeditor.com/ticket/13105): Fixed: Various issues related to [`CKEDITOR.tools.htmlEncode()`](http://docs.ckeditor.com/#!/api/CKEDITOR.tools-method-htmlEncode) and [`CKEDITOR.tools.htmlDecode()`](http://docs.ckeditor.com/#!/api/CKEDITOR.tools-method-htmlDecode) methods.
@@ -261,12 +261,12 @@ Other Changes:
 
 New Features:
 
-* Clipboard (copy&paste, drag&drop) and file uploading features and improvements ([#11437](http://dev.ckeditor.com/ticket/11437)).
+* Clipboard (copy&paste, drag&drop) and systemFile uploading features and improvements ([#11437](http://dev.ckeditor.com/ticket/11437)).
 
   * Major features:
     * Support for dropping and pasting files into the editor was introduced. Through a set of new facades for native APIs it is now possible to easily intercept and process inserted files.
     * [File upload tools](http://docs.ckeditor.com/#!/api/CKEDITOR.fileTools) were introduced in order to simplify controlling the loading, uploading and handling server response, properly handle [new upload configuration](http://docs.ckeditor.com/#!/api/CKEDITOR.config-cfg-uploadUrl) options, etc.
-    * [Upload Image](http://ckeditor.com/addon/uploadimage) widget was introduced to upload dropped images. A base class for the [upload widget](http://docs.ckeditor.com/#!/api/CKEDITOR.fileTools.uploadWidgetDefinition) was exposed, too, to make it simple to create new types of upload widgets which can handle any type of dropped file, show the upload progress and update the content when the process is done. It also handles editing and undo/redo operations when a file is being uploaded and integrates with the [notification aggregator](http://docs.ckeditor.com/#!/api/CKEDITOR.plugins.notificationAggregator) to show progress and success or error.
+    * [Upload Image](http://ckeditor.com/addon/uploadimage) widget was introduced to upload dropped images. A base class for the [upload widget](http://docs.ckeditor.com/#!/api/CKEDITOR.fileTools.uploadWidgetDefinition) was exposed, too, to make it simple to create new types of upload widgets which can handle any type of dropped systemFile, show the upload progress and update the content when the process is done. It also handles editing and undo/redo operations when a systemFile is being uploaded and integrates with the [notification aggregator](http://docs.ckeditor.com/#!/api/CKEDITOR.plugins.notificationAggregator) to show progress and success or error.
     * All drag and drop operations were integrated with the editor. All dropped content is passed through the [`editor#paste`](http://docs.ckeditor.com/#!/api/CKEDITOR.editor-event-paste) event and a set of new editor events was introduced &mdash; [`dragstart`](http://docs.ckeditor.com/#!/api/CKEDITOR.editor-event-dragstart), [`drop`](http://docs.ckeditor.com/#!/api/CKEDITOR.editor-event-drop), [`dragend`](http://docs.ckeditor.com/#!/api/CKEDITOR.editor-event-dragend).
     * The [Data Transfer](http://docs.ckeditor.com/#!/api/CKEDITOR.plugins.clipboard.dataTransfer) facade was introduced to unify access to data in various types and files. [Data Transfer](http://docs.ckeditor.com/#!/api/CKEDITOR.plugins.clipboard.dataTransfer) is now always available in the [`editor#paste`](http://docs.ckeditor.com/#!/api/CKEDITOR.editor-event-paste) event.
     * Switched from the pastebin to using the native clipboard access whenever possible. This solved many issues related to pastebin such as unnecessary scrolling or data loss. Additionally, on copy and cut from the editor the clipboard data is set. Therefore, on paste the editor has access to clean data, undisturbed by the browsers.
@@ -285,7 +285,7 @@ New Features:
     * [#12914](http://dev.ckeditor.com/ticket/12914): Fixed: Copy/Paste of table broken in `div`-based editor.
 
   * Browser support.<br>Browser support for related features varies significantly (see http://caniuse.com/clipboard).
-    * File APIs needed to operate and file upload is not supported in Internet Explorer 9 and below.
+    * File APIs needed to operate and systemFile upload is not supported in Internet Explorer 9 and below.
     * Only Chrome and Safari on Mac OS support setting custom data items in the clipboard, so currently it is possible to recognize the origin of the copied content in these browsers only. All drag and drop operations can be identified thanks to the new Data Transfer facade.
     * No Internet Explorer browser supports the standard clipboard API which results in small glitches like where only plain text can be dropped from outside the editor. Thanks to the new Data Transfer facade, internal and cross-editor drag and drop supports the full range of data.
     * Direct access to clipboard could only be implemented in Chrome, Safari on Mac OS, Opera and Firefox. In other browsers the pastebin must still be used.
@@ -740,7 +740,7 @@ Fixed Issues:
 * [#11198](http://dev.ckeditor.com/ticket/11198): Widgets: Drag handler is not fully visible when an inline widget is in a heading.
 * [#11132](http://dev.ckeditor.com/ticket/11132): [Firefox] Fixed: Caret is lost after drag and drop of an inline widget.
 * [#11182](http://dev.ckeditor.com/ticket/11182): [IE10-11] Fixed: Editor crashes (IE11) or works with minor issues (IE10) if a page is loaded in Quirks Mode. See [`env.quirks`](http://docs.ckeditor.com/#!/api/CKEDITOR.env-property-quirks) for more details.
-* [#11204](http://dev.ckeditor.com/ticket/11204): Added `figure` and `figcaption` styles to the `contents.css` file so [Enhanced Image](http://ckeditor.com/addon/image2) looks nicer.
+* [#11204](http://dev.ckeditor.com/ticket/11204): Added `figure` and `figcaption` styles to the `contents.css` systemFile so [Enhanced Image](http://ckeditor.com/addon/image2) looks nicer.
 * [#11202](http://dev.ckeditor.com/ticket/11202): Fixed: No newline in [BBCode](http://ckeditor.com/addon/bbcode) mode.
 * [#10890](http://dev.ckeditor.com/ticket/10890): Fixed: Error thrown when pressing the *Delete* key in a list item.
 * [#10055](http://dev.ckeditor.com/ticket/10055): [IE8-10] Fixed: *Delete* pressed on a selected image causes the browser to go back.
@@ -763,7 +763,7 @@ New Features:
 * [#10886](http://dev.ckeditor.com/ticket/10886): Widgets: Added tooltip to the drag handle.
 * [#10933](http://dev.ckeditor.com/ticket/10933): Widgets: Introduced drag and drop of block widgets with the [Line Utilities](http://ckeditor.com/addon/lineutils) plugin.
 * [#10936](http://dev.ckeditor.com/ticket/10936): Widget System changes for easier integration with other dialog systems.
-* [#10895](http://dev.ckeditor.com/ticket/10895): [Enhanced Image](http://ckeditor.com/addon/image2): Added file browser integration.
+* [#10895](http://dev.ckeditor.com/ticket/10895): [Enhanced Image](http://ckeditor.com/addon/image2): Added systemFile browser integration.
 * [#11002](http://dev.ckeditor.com/ticket/11002): Added the [`draggable`](http://docs.ckeditor.com/#!/api/CKEDITOR.plugins.widget.definition-property-draggable) option to disable drag and drop support for widgets.
 * [#10937](http://dev.ckeditor.com/ticket/10937): [Mathematical Formulas](http://ckeditor.com/addon/mathjax) widget improvements:
   * loading indicator ([#10948](http://dev.ckeditor.com/ticket/10948)),
@@ -838,7 +838,7 @@ New Features:
 
 Fixed Issues:
 
-* [#10994](http://dev.ckeditor.com/ticket/10994): Fixed: Loading external jQuery library when opening the [jQuery Adapter](http://docs.ckeditor.com/#!/guide/dev_jquery) sample directly from file.
+* [#10994](http://dev.ckeditor.com/ticket/10994): Fixed: Loading external jQuery library when opening the [jQuery Adapter](http://docs.ckeditor.com/#!/guide/dev_jquery) sample directly from systemFile.
 * [#10975](http://dev.ckeditor.com/ticket/10975): [IE] Fixed: Error thrown while opening the color palette.
 * [#9929](http://dev.ckeditor.com/ticket/9929): [Blink/WebKit] Fixed: A non-breaking space is created once a character is deleted and a regular space is typed.
 * [#10963](http://dev.ckeditor.com/ticket/10963): Fixed: JAWS issue with the keyboard shortcut for [Magic Line](http://ckeditor.com/addon/magicline).
@@ -852,7 +852,7 @@ Fixed Issues:
 * [#10308](http://dev.ckeditor.com/ticket/10308): [IE10] Fixed: Unspecified error when deleting a row.
 * [#10945](http://dev.ckeditor.com/ticket/10945): [Chrome] Fixed: Clicking with a mouse inside the editor does not show the caret.
 * [#10912](http://dev.ckeditor.com/ticket/10912): Prevent default action when content of a non-editable link is clicked.
-* [#10913](http://dev.ckeditor.com/ticket/10913): Fixed [`CKEDITOR.plugins.addExternal()`](http://docs.ckeditor.com/#!/api/CKEDITOR.resourceManager-method-addExternal) not handling paths including file name specified.
+* [#10913](http://dev.ckeditor.com/ticket/10913): Fixed [`CKEDITOR.plugins.addExternal()`](http://docs.ckeditor.com/#!/api/CKEDITOR.resourceManager-method-addExternal) not handling paths including systemFile name specified.
 * [#10666](http://dev.ckeditor.com/ticket/10666): Fixed [`CKEDITOR.tools.isArray()`](http://docs.ckeditor.com/#!/api/CKEDITOR.tools-method-isArray) not working cross frame.
 * [#10910](http://dev.ckeditor.com/ticket/10910): [IE9] Fixed JavaScript error thrown in Compatibility Mode when clicking and/or typing in the editing area.
 * [#10868](http://dev.ckeditor.com/ticket/10868): [IE8] Prevent the browser from crashing when applying the Inline Quotation style.
@@ -869,7 +869,7 @@ Fixed Issues:
 
 * [#10301](http://dev.ckeditor.com/ticket/10301): [IE9-10] Undo fails after 3+ consecutive paste actions with a JavaScript error.
 * [#10689](http://dev.ckeditor.com/ticket/10689): Save toolbar button saves only the first editor instance.
-* [#10368](http://dev.ckeditor.com/ticket/10368): Move language reading direction definition (`dir`) from main language file to core.
+* [#10368](http://dev.ckeditor.com/ticket/10368): Move language reading direction definition (`dir`) from main language systemFile to core.
 * [#9330](http://dev.ckeditor.com/ticket/9330): Fixed pasting anchors from MS Word.
 * [#8103](http://dev.ckeditor.com/ticket/8103): Fixed pasting nested lists from MS Word.
 * [#9958](http://dev.ckeditor.com/ticket/9958): [IE9] Pressing the "OK" button will trigger the `onbeforeunload` event in the popup dialog.

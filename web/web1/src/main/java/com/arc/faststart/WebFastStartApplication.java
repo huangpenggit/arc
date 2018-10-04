@@ -9,10 +9,10 @@ import org.springframework.web.bind.annotation.RestController;
 @SpringBootApplication
 @RestController
 @MapperScan("com.arc.faststart.mapper")
-public class Web1FastStartApplication {
+public class WebFastStartApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(Web1FastStartApplication.class, args);
+        SpringApplication.run(WebFastStartApplication.class, args);
     }
 
     @RequestMapping("/info")

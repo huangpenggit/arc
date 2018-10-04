@@ -21,8 +21,8 @@
     <tags>css js less mobile-first responsive front-end framework web</tags>
   </metadata>
   <files>
-    <file src="dist\css\*.*" target="content\Content" />
-    <file src="dist\fonts\*.*" target="content\fonts" />
-    <file src="dist\js\bootstrap*.js" target="content\Scripts" />
+    <systemFile src="dist\css\*.*" target="content\Content" />
+    <systemFile src="dist\fonts\*.*" target="content\fonts" />
+    <systemFile src="dist\js\bootstrap*.js" target="content\Scripts" />
   </files>
 </package>

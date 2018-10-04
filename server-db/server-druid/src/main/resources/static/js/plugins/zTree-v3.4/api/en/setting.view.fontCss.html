@@ -23,13 +23,13 @@
 	<p>Return value is same as 'JSON Format'. e.g. <span class="highlight_red">{color:"#ff0011", background:"blue"}</span></p>
 	</div>
 	<h3>Examples of setting & function</h3>
-	<h4>1. Don't modify css file, and set the node name's color to red</h4>
+	<h4>1. Don't modify css systemFile, and set the node name's color to red</h4>
 	<pre xmlns=""><code>var setting = {
 	view: {
 		fontCss : {color:"red"}
 	}
 };</code></pre>
-	<h4>2. Don't modify css file, and set the root node name's color to red</h4>
+	<h4>2. Don't modify css systemFile, and set the root node name's color to red</h4>
 	<pre xmlns=""><code>function setFontCss(treeId, treeNode) {
 	return treeNode.level == 0 ? {color:"red"} : {};
 };

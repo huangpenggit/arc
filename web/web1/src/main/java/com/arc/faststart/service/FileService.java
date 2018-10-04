@@ -1,6 +1,6 @@
 package com.arc.faststart.service;
 
-import com.arc.model.domain.common.File;
+import com.arc.model.domain.common.SystemFile;
 
 import java.util.List;
 
@@ -10,21 +10,21 @@ import java.util.List;
  */
 public interface FileService {
 
-    Long save(File file);
+    Long save(SystemFile systemFile);
 
     int delete(Long id);
 
-    int update(File file);
+    int update(SystemFile systemFile);
 
-    File get(Long id);
+    SystemFile get(Long id);
 
-    File getByFilePath(String filePath);
+    SystemFile getByFilePath(String filePath);
 
-    File getByUrl(String url);
+    SystemFile getByUrl(String url);
 
-    List<File> list();
+    List<SystemFile> list();
 
-    File getByFilename(String filename);
+    SystemFile getByFilename(String filename);
 
-    File getLatest();
+    SystemFile getLatest();
 }

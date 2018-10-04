@@ -3,9 +3,9 @@
         public static boolean writeFileToDisk (String path,byte[] bs){
 
 
-            File file = new File(path);
-            if (!file.exists()) {//如果文件夹不存在
-                boolean mkdir = file.mkdir();//创建文件夹
+            File systemFile = new File(path);
+            if (!systemFile.exists()) {//如果文件夹不存在
+                boolean mkdir = systemFile.mkdir();//创建文件夹
                 if (!mkdir) {
                     //创建文件夹失败
                     throw new RuntimeException("文件夹不存在，尝试创建失败，可能的原因是权限不够或者磁盘空间不足");
@@ -135,9 +135,9 @@
 
 
             ////
-            File file = new File(path);
-            if (!file.exists()) {//如果文件夹不存在
-                boolean mkdir = file.mkdir();//创建文件夹
+            File systemFile = new File(path);
+            if (!systemFile.exists()) {//如果文件夹不存在
+                boolean mkdir = systemFile.mkdir();//创建文件夹
                 if (!mkdir) {
                     //创建文件夹失败
                     throw new RuntimeException("文件夹不存在，尝试创建失败，可能的原因是权限不够或者磁盘空间不足");

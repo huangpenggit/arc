@@ -25,7 +25,7 @@ public class FileUtils {
     private static String getBrowserFileName(String userAgent, String fileName) throws Exception {
 
         if (fileName == null) {
-            throw new NullPointerException("File name cannot be null!");
+            throw new NullPointerException("SystemFile name cannot be null!");
         }
         fileName = fileName.replaceAll("[^\u4e00-\u9fa5a-zA-Z0-9]", "");
         log.debug("编码前fileName {}", fileName);

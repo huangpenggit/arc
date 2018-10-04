@@ -7,7 +7,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class Web1FastStartApplicationTests {
+public class WebFastStartApplicationTests {
 
     @Test
     public void contextLoads() {

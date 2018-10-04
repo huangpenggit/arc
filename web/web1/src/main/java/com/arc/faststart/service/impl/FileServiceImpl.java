@@ -1,8 +1,9 @@
 package com.arc.faststart.service.impl;
 
+
 import com.arc.faststart.mapper.FileMapper;
 import com.arc.faststart.service.FileService;
-import com.arc.model.domain.common.File;
+import com.arc.model.domain.common.SystemFile;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -17,28 +18,28 @@ public class FileServiceImpl implements FileService {
     private FileMapper mapper;
 
     @Override
-    public Long save(File file) {
-        mapper.save(file);
-        return file.getId();
+    public Long save(SystemFile systemFile) {
+        mapper.save(systemFile);
+        return systemFile.getId();
     }
 
     @Override
-    public File get(Long id) {
+    public SystemFile get(Long id) {
         return mapper.get(id);
     }
 
     @Override
-    public File getByFilePath(String filePath) {
+    public SystemFile getByFilePath(String filePath) {
         return mapper.getByFilePath(filePath);
     }
 
     @Override
-    public File getByUrl(String url) {
+    public SystemFile getByUrl(String url) {
         return mapper.getByUrl(url);
     }
 
     @Override
-    public List<File> list() {
+    public List<SystemFile> list() {
         return mapper.list();
     }
 
@@ -48,17 +49,17 @@ public class FileServiceImpl implements FileService {
     }
 
     @Override
-    public int update(File file) {
-        return mapper.update(file);
+    public int update(SystemFile systemFile) {
+        return mapper.update(systemFile);
     }
 
     @Override
-    public File getByFilename(String filename) {
+    public SystemFile getByFilename(String filename) {
         return mapper.getByFilename(filename);
     }
 
     @Override
-    public File getLatest() {
+    public SystemFile getLatest() {
         return mapper.getLatest();
     }
 }

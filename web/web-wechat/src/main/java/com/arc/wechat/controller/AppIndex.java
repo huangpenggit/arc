@@ -27,7 +27,7 @@ public class AppIndex {
             byte[] bdata = FileCopyUtils.copyToByteArray(cpr.getInputStream());
             data = new String(bdata, StandardCharsets.UTF_8);
             logger.debug("**************************************************************************************");
-            logger.debug("                                    File is got！");
+            logger.debug("                                    SystemFile is got！");
             logger.debug("**************************************************************************************");
         } catch (IOException e) {
             logger.debug("配置文件读取错误" + e.toString());

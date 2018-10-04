@@ -28,13 +28,13 @@ public class UploadUtil {
 //       // String ext = "." + FilenameUtils.getExtension(orgFileName);
 //        String fileName = uuid + ext;
 //        try {
-//            File targetFile = new File(basePath, fileName);
+//            SystemFile targetFile = new SystemFile(basePath, fileName);
 //            FileUtils.writeByteArrayToFile(targetFile, file.getBytes());
 //
 //            //图片压缩
 //            String smallImg = uuid + "_small" + ext;
-//            File smallTargetFile = new File(basePath, smallImg);
-//            // Thumbnails.of(new File[]{targetFile}).scale(0.4D).toFile(smallTargetFile);
+//            SystemFile smallTargetFile = new SystemFile(basePath, smallImg);
+//            // Thumbnails.of(new SystemFile[]{targetFile}).scale(0.4D).toFile(smallTargetFile);
 //            return "/upload/" + fileName;
 //
 //        } catch (IOException e) {

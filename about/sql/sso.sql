@@ -18,10 +18,10 @@ SET NAMES utf8mb4;
 SET FOREIGN_KEY_CHECKS = 0;
 
 -- ----------------------------
--- Table structure for file
+-- Table structure for systemFile
 -- ----------------------------
-DROP TABLE IF EXISTS `file`;
-CREATE TABLE `file`  (
+DROP TABLE IF EXISTS `systemFile`;
+CREATE TABLE `systemFile`  (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `url` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '图片地址',
   `path` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '图片本地地址',
@@ -33,9 +33,9 @@ CREATE TABLE `file`  (
 ) ENGINE = InnoDB AUTO_INCREMENT = 2 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
--- Records of file
+-- Records of systemFile
 -- ----------------------------
-INSERT INTO `file` VALUES (1, 'wwww.www', '/sss/1.jpg', 'ces ', '.jpg', NULL, '2018-09-10 19:27:18');
+INSERT INTO `systemFile` VALUES (1, 'wwww.www', '/sss/1.jpg', 'ces ', '.jpg', NULL, '2018-09-10 19:27:18');
 
 -- ----------------------------
 -- Table structure for log

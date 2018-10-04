@@ -1,6 +1,6 @@
 <?php
 
-// Include the random string file
+// Include the random string systemFile
 require 'rand.php';
 
 // Begin a new session

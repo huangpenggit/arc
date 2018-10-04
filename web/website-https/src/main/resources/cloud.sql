@@ -8,7 +8,7 @@ Source Database       : cloud
 
 Target Server Type    : MYSQL
 Target Server Version : 50720
-File Encoding         : 65001
+SystemFile Encoding         : 65001
 
 Date: 2018-04-19 17:32:42
 */
@@ -224,7 +224,7 @@ CREATE TABLE `tree` (
   `icon_open` varchar(100) DEFAULT NULL,
   `icon_close` varchar(100) DEFAULT NULL,
   `url` varchar(100) DEFAULT NULL,
-  `file` varchar(100) DEFAULT NULL,
+  `systemFile` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 

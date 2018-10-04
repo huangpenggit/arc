@@ -21,7 +21,7 @@
 					<input type="text" class="form-control sku-pro-val" value="${data.value}"/>
 				</td>
 				<td>
-					<input type="file"/>
+					<input type="systemFile"/>
 				</td>
 			</tr>
 		</#list>

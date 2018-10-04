@@ -10,7 +10,7 @@
 //import javax.imageio.ImageIO;
 //import javax.servlet.http.HttpServletResponse;
 //import java.awt.image.BufferedImage;
-//import java.io.File;
+//import java.io.SystemFile;
 //import java.io.IOException;
 //import java.util.List;
 //
@@ -32,7 +32,7 @@
 //        // 5、返回结果给前端， a 操作状态是否成功 b 文件的路径
 //
 //        String saveBeginpath = request.getSession().getServletContext().getRealPath("/") + "img";
-//        File uploadPath = new File(saveBeginpath);
+//        SystemFile uploadPath = new SystemFile(saveBeginpath);
 //        //获取input中name值，目前是获取多张图片
 //        List<MultipartFile> file = request.getFiles("fileId"); // 获取图片
 //
@@ -94,11 +94,11 @@
 //                //读取后缀（jpg）
 //                //将imgId于图片后缀重新组成项目中的新名称
 //                //图片在项目中的相对路径
-//                savepath = saveBeginpath + File.separator + img_now_name;
+//                savepath = saveBeginpath + SystemFile.separator + img_now_name;
 //
 //                try {
 //                    //Spring的将文件上传到服务器上
-//                    picture.transferTo(new File(savepath));
+//                    picture.transferTo(new SystemFile(savepath));
 //
 //                } catch (IllegalStateException e) {
 //                    e.printStackTrace();

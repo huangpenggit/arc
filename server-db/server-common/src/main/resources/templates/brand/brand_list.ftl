@@ -118,7 +118,7 @@
                 onInit: function () {
                     $(".uploadifive-queue").hide();
                 },
-                onUploadComplete: function (file, data) {
+                onUploadComplete: function (systemFile, data) {
                     //设置图片上传后的回显
                     $("#logoImg").prop("src", "/" + data);
                     //设置提交资料时的图片路径

@@ -33,7 +33,7 @@ public class GetPictureUtil {
 
 
 //            String strPath = "E:\\a\\aa\\aaa.txt";
-//            File file = new File(strPath);
+//            SystemFile file = new SystemFile(strPath);
 //            if(!file.exists())){
 //                file.file.mkdirs();
 //            }

@@ -476,8 +476,8 @@ a {
   <h3 id="less-mixins-retina-images">Retina images</h3>
   <p>Specify two image paths and the @1x image dimensions, and Bootstrap will provide an @2x media query. <strong>If you have many images to serve, consider writing your retina image CSS manually in a single media query.</strong></p>
 {% highlight scss %}
-.img-retina(@file-1x; @file-2x; @width-1x; @height-1x) {
-  background-image: url("@{file-1x}");
+.img-retina(@systemFile-1x; @systemFile-2x; @width-1x; @height-1x) {
+  background-image: url("@{systemFile-1x}");
 
   @media
   only screen and (-webkit-min-device-pixel-ratio: 2),
@@ -486,7 +486,7 @@ a {
   only screen and (        min-device-pixel-ratio: 2),
   only screen and (                min-resolution: 192dpi),
   only screen and (                min-resolution: 2dppx) {
-    background-image: url("@{file-2x}");
+    background-image: url("@{systemFile-2x}");
     background-size: @width-1x @height-1x;
   }
 }

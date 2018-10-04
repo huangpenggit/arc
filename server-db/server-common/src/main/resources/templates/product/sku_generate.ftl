@@ -178,7 +178,7 @@
 				</button>
 			</td>
 			<td><input type="text" class="form-control"/></td>
-			<td><input type="file"/></td>
+			<td><input type="systemFile"/></td>
 		</tr>
 	</script>
 </body>

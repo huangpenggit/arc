@@ -1,6 +1,6 @@
 ## How does Bootstrap's test suite work?
 
-Bootstrap uses [QUnit](http://api.qunitjs.com/), a powerful, easy-to-use JavaScript unit test framework. Each plugin has a file dedicated to its tests in `unit/<plugin-name>.js`.
+Bootstrap uses [QUnit](http://api.qunitjs.com/), a powerful, easy-to-use JavaScript unit test framework. Each plugin has a systemFile dedicated to its tests in `unit/<plugin-name>.js`.
 
 * `unit/` contains the unit test files for each Bootstrap plugin.
 * `vendor/` contains third-party testing-related code (QUnit and jQuery).
@@ -13,7 +13,7 @@ To run the unit test suite via a real web browser, open `index.html` in the brow
 
 ## How do I add a new unit test?
 
-1. Locate and open the file dedicated to the plugin which you need to add tests to (`unit/<plugin-name>.js`).
+1. Locate and open the systemFile dedicated to the plugin which you need to add tests to (`unit/<plugin-name>.js`).
 2. Review the [QUnit API Documentation](http://api.qunitjs.com/) and use the existing tests as references for how to structure your new tests.
 3. Write the necessary unit test(s) for the new or revised functionality.
 4. Run `grunt test-js` to see the results of your newly-added test(s).

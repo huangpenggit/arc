@@ -1,7 +1,7 @@
 package com.arc.faststart.controller;
 
 import com.arc.faststart.service.FileService;
-import com.arc.model.domain.common.File;
+import com.arc.model.domain.common.SystemFile;
 import com.arc.model.vo.ResponseVo;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -47,21 +47,21 @@ public class FileController {
      * 注意请求是POST方式的
      * 保存
      *
-     * @param file
+     * @param systemFile
      * @return
      */
     @RequestMapping(value = "", method = RequestMethod.POST)
     @ResponseBody  //用了这个注解返回的是json数据
-    public ResponseVo save(@RequestBody File file) {
-        if (file == null || file.getName() == null) {
+    public ResponseVo save(@RequestBody SystemFile systemFile) {
+        if (systemFile == null || systemFile.getName() == null) {
             return ResponseVo.failure(1000,"必要属性未传");
         }
-        log.debug("参数 {}", file);
-       return   ResponseVo.success(fileService.save(file));
+        log.debug("参数 {}", systemFile);
+       return   ResponseVo.success(fileService.save(systemFile));
     }
 
     /**
-     * http://localhost:80/files/delete/1
+     * http://localhost:80/files/delete//1
      * 表示删除id为1的数据
      * 删除
      *
@@ -82,16 +82,16 @@ public class FileController {
      *对于必要参数没有传则判断了一下会返回错误代码10000
      * 更新
      *
-     * @param file
+     * @param systemFile
      * @return
      */
     @RequestMapping(path = "/update", method = {RequestMethod.PUT, RequestMethod.POST})
     @ResponseBody
-    public Object update(@RequestBody File file) {
-        if (file == null || file.getId() == null) {
+    public Object update(@RequestBody SystemFile systemFile) {
+        if (systemFile == null || systemFile.getId() == null) {
             return ResponseVo.failure(1000,"必要属性未传");
         }
-        return ResponseVo.success(fileService.update(file));
+        return ResponseVo.success(fileService.update(systemFile));
     }
 
     /**
