@@ -29,7 +29,7 @@
         <module>server-mongo</module>
         <module>mybatis-tool</module>
         <module>server-system</module>
-        <!--<module>server-elasticsearch</module>-->
+        <module>server-elasticsearch</module>
     </modules>
 
     <dependencies>

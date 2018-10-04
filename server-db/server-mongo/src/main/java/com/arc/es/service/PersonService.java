@@ -1,4 +1,4 @@
-package com.arc.mongo.service;
+package com.arc.es.service;
 
 import com.arc.model.domain.common.Person;
 

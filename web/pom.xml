@@ -33,6 +33,8 @@
         <module>web-food</module>
         <module>web-post</module>
         <module>web-static</module>
+		<module>web1</module>
+		<module>web2</module>
     </modules>
 
 

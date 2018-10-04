@@ -1,4 +1,4 @@
-package com.arc.mongo.model;/*
+package com.arc.model;/*
 package com.del.test.model;
 
 import org.apache.commons.logging.Log;

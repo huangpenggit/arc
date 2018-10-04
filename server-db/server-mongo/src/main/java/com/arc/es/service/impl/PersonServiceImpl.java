@@ -1,8 +1,8 @@
-package com.arc.mongo.service.impl;
+package com.arc.es.service.impl;
 
 import com.arc.model.domain.common.Person;
 import com.arc.mongo.repository.PersonRepository;
-import com.arc.mongo.service.PersonService;
+import com.arc.es.service.PersonService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

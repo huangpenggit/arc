@@ -4,17 +4,19 @@
     <modelVersion>4.0.0</modelVersion>
     <!-- 继承本项目的父工程 -->
     <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.0.3.RELEASE</version>
-        <relativePath/>
+        <groupId>com.arc</groupId>
+        <artifactId>web</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath>
     </parent>
 
+
+
     <!-- 基本信息 -->
-    <name>web</name>
-    <description>web for Spring Boot</description>
+    <name>web1</name>
+    <description>web1 for Spring Boot</description>
     <groupId>com.arc</groupId>
-    <artifactId>web</artifactId>
+    <artifactId>web1</artifactId>
     <version>0.0.1</version>
     <packaging>jar</packaging>
 

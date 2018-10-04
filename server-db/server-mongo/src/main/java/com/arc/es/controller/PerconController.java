@@ -1,4 +1,4 @@
-package com.arc.mongo.controller;
+package com.arc.es.controller;
 
 import com.arc.model.domain.common.Person;
 import com.arc.mongo.repository.PersonRepository;
