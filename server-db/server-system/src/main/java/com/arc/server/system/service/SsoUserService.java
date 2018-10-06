@@ -22,7 +22,7 @@ public interface SsoUserService {
 
     SsoUser getByUsername(String username);
 
-    List<SsoUser> list();
-
     SsoUser getByNickname(String nickname);
+
+    List<SsoUser> list();
 }

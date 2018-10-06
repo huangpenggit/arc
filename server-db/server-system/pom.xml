@@ -11,10 +11,10 @@
     </parent>
 
     <!-- 基本信息 -->
-    <name>server-post</name>
-    <description>server-post for Spring Boot</description>
+    <name>server-system</name>
+    <description>server-system for Spring Boot</description>
     <groupId>com.arc</groupId>
-    <artifactId>server-post</artifactId>
+    <artifactId>server-system</artifactId>
     <version>0.0.1</version>
     <packaging>jar</packaging>
 
@@ -49,6 +49,12 @@
             <!--<version>2.6</version>-->
         </dependency>
 
+<!--
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-cache</artifactId>
+        </dependency>
+-->
 
 <!--
         <dependency>

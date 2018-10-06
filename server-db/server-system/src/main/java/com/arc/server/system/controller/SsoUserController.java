@@ -14,33 +14,63 @@ public class SsoUserController {
     @Autowired
     private SsoUserService ssoUserService;
 
-    //保存
+    /**
+     * 保存
+     *
+     * @param user
+     * @return
+     */
     @RequestMapping(value = "", method = RequestMethod.POST)
     public Object save(@RequestBody SsoUser user) {
-        //logger.debug("参数 {}",user);
+        log.debug("参数 {}", user);
         return ssoUserService.save(user);
     }
 
-    //删除
+    /**
+     * 删除
+     *
+     * @param id
+     * @return
+     */
     @RequestMapping(path = "/{id}", method = RequestMethod.DELETE)
-    public Object delet(@PathVariable("id") Long id) {
+    public Object delete(@PathVariable("id") Long id) {
+        log.debug("delete参数 id={}", id);
         return ssoUserService.delete(id);
     }
 
-    //更新
+    /**
+     * 更新
+     *
+     * @param id
+     * @param user
+     * @return
+     */
     @RequestMapping(path = "/{id}", method = {RequestMethod.PUT, RequestMethod.POST})
     public Object update(@PathVariable("id") Long id, @RequestBody SsoUser user) {
         user.setId(id);
+        log.debug("update参数 id={}，SsoUser={}", id,user.toString());
         return ssoUserService.update(user);
     }
 
-    //获取用通过ID
+    /**
+     * 获取数据通过ID
+     *
+     * @param id
+     * @return
+     */
     @RequestMapping(path = "/{id}", method = RequestMethod.GET)
     public Object get(@PathVariable(name = "id", required = true) Long id) {
-        return ssoUserService.get(id);
+        log.debug("get参数id={}", id);
+        SsoUser ssoUser = ssoUserService.get(id);
+        return ssoUser;
     }
 
-    //获取用通过username
+    /**
+     * 获取数据通过username
+     *
+     * @param username
+     * @return
+     */
     @RequestMapping(value = "/get/username", method = RequestMethod.GET)
     public Object getByUsername(@RequestParam(name = "username", required = true) String username) {
 //        return ssoUserService.getByUsername(username);
@@ -49,7 +79,12 @@ public class SsoUserController {
         return ssoUser;
     }
 
-    //获取用通过username
+    /**
+     * 获取数据通过nickname
+     *
+     * @param nickname
+     * @return
+     */
     @RequestMapping(value = "/get/nickname", method = RequestMethod.GET)
     public Object getByNickname(@RequestParam(name = "nickname", required = true) String nickname) {
 //        return ssoUserService.getByNickname(username);
