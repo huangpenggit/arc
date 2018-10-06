@@ -30,9 +30,16 @@ public class UserServiceImpl implements UserService {
 //        redisService.set(user.getId().toString(), JsonUtilByGson.toJson(user));
 
         //String key=null;//类名称+方法名称+方法参数，中间用冒号隔开
-        StringBuilder key = new StringBuilder();
-        key.append(":").append(this.getClass().getName()).append(":").append(Thread.currentThread().getStackTrace()[1].getMethodName()).append(user.getId());
 
+        String key = getKey(user.getId().toString());
+
+        log.debug("key={}", key);
+        System.out.println("##########");
+        System.out.println(key);
+        System.out.println("---------------------");
+        System.out.println(key.toString());
+        System.out.println(key.toString());
+        System.out.println("##########");
         redisTemplate.opsForValue().set(key.toString(), user);
         User cacheUser = (User) redisTemplate.opsForValue().get(key.toString());
         log.debug("cacheUser={}", cacheUser);
@@ -55,7 +62,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public User get(Long id) {
-        User user = (User) redisTemplate.opsForValue().get(id + "");
+        User user = (User) redisTemplate.opsForValue().get(getKey(id.toString()));
         if (user == null) {
             //实际应该查询数据库
             user = new User();
@@ -69,5 +76,24 @@ public class UserServiceImpl implements UserService {
         User user = new User();
         users.add(user);
         return users;
+    }
+
+    /**
+     * @param str
+     * @return
+     */
+    public static String getKey(String str) {
+        str = str == null ? "" : str;
+        StringBuilder key = new StringBuilder();
+        key.append(Thread.currentThread().getStackTrace()[2].getClassName()).append(":").append("@").append(str);
+        System.out.println("key=" + key);
+        return key.toString();
+    }
+
+    public static void main(String[] args) {
+        System.out.println("getClassName=" + Thread.currentThread().getStackTrace()[1].getClassName());
+        System.out.println("getMethodName=" + Thread.currentThread().getStackTrace()[1].getMethodName());
+        System.out.println("==========================");
+
     }
 }

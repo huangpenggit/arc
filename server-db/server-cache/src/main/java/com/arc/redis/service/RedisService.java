@@ -3,6 +3,8 @@ package com.arc.redis.service;
 import java.util.List;
 
 /**
+ * redis工具
+ *
  * @author: yechao
  * @date: 2018/10/6 21:47
  * @description:

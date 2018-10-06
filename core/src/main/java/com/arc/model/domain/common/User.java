@@ -10,6 +10,7 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import java.util.Date;
+import java.util.List;
 
 /*
  *
@@ -43,6 +44,9 @@ public class User extends BaseModel {
 
 	private Integer userType; // 用户类型
 
+    private Area area;
+
+    private List<Area> areas;
 
     //"message": "JSON parse error: Cannot deserialize value of type `java.util.Date` from String \"2018-09-10 23:15\": not a valid representation (error: Failed to parse Date value '2018-09-10 23:15': Cannot parse date \"2018-09-10 23:15\": while it seems to fit format 'yyyy-MM-dd'T'HH:mm:ss.SSSZ', parsing fails (leniency? null)); nested exception is com.fasterxml.jackson.databind.exc.InvalidFormatException: Cannot deserialize value of type `java.util.Date` from String \"2018-09-10 23:15\": not a valid representation (error: Failed to parse Date value '2018-09-10 23:15': Cannot parse date \"2018-09-10 23:15\": while it seems to fit format 'yyyy-MM-dd'T'HH:mm:ss.SSSZ', parsing fails (leniency? null))\n at [Source: (PushbackInputStream); line: 8, column: 13] (through reference chain: com.arc.model.domain.common.User[\"birthday\"])",
 }

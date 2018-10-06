@@ -15,7 +15,6 @@ import java.util.Date;
 public class TestUserInRedisController {
 
 
-
     @Autowired
     private UserService userService;
 
@@ -52,6 +51,24 @@ public class TestUserInRedisController {
         if (user == null || user.getNickname() == null) {
             return ResponseVo.failure(1000, "必要属性未传");
         }
+
+//        user = crateUser();
+//
+//        ArrayList<Area> list = new ArrayList<>();
+//        Area area = new Area();
+//        area.setAreaCode("32000");
+//        area.setAreaName("江苏省");
+//        list.add(area);
+//
+//        Area area1 = new Area();
+//        area1.setAreaCode("10000");
+//        area1.setAreaName("北京市");
+//        area.setParentCode("000000");
+//        list.add(area1);
+//
+//        user.setAreas(list);
+//        user.setId(7L);
+//        user.setArea(area1);
         log.debug("参数 {}", user);
         return ResponseVo.success(userService.save(user));
     }
@@ -101,7 +118,7 @@ public class TestUserInRedisController {
         return ResponseVo.success(userService.update(user));
     }
 
-    private  User crateUser(){
+    private User crateUser() {
         User user = new User();
         user.setAvatar("www.bing.com");
         user.setBirthday(new Date());
