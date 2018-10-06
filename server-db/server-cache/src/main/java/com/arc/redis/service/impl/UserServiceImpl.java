@@ -28,12 +28,15 @@ public class UserServiceImpl implements UserService {
     public Long save(User user) {
         //缓存，实际使用中应该是等数据入库成功后再缓存
 //        redisService.set(user.getId().toString(), JsonUtilByGson.toJson(user));
-        redisTemplate.opsForValue().set(user.getId()+"", user);
 
-        User cacheUser = (User) redisTemplate.opsForValue().get(user.getId()+"");
-        log.debug("cacheUser={}",cacheUser);
+        //String key=null;//类名称+方法名称+方法参数，中间用冒号隔开
+        StringBuilder key = new StringBuilder();
+        key.append(":").append(this.getClass().getName()).append(":").append(Thread.currentThread().getStackTrace()[1].getMethodName()).append(user.getId());
+
+        redisTemplate.opsForValue().set(key.toString(), user);
+        User cacheUser = (User) redisTemplate.opsForValue().get(key.toString());
+        log.debug("cacheUser={}", cacheUser);
         System.out.println(cacheUser);
-        System.out.println(cacheUser.getId());
         System.out.println(cacheUser.toString());
         return user.getId();
     }
@@ -52,7 +55,11 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public User get(Long id) {
-        User user = new User();
+        User user = (User) redisTemplate.opsForValue().get(id + "");
+        if (user == null) {
+            //实际应该查询数据库
+            user = new User();
+        }
         return user;
     }
 
