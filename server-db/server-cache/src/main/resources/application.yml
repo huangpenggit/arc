@@ -1,0 +1,26 @@
+server:
+  port: 9002
+
+spring:
+  application:
+    name: ms-post
+  profiles:
+    active: local
+
+
+---
+########################################################
+#          Environment for Localhost
+########################################################
+spring:
+  profiles: local
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    password:
+    database: 15
+  pool:
+    max-idle: 8
+    min-idle: 0
+    max-active: 8
+    max-wait: -1

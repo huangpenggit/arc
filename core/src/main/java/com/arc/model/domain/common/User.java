@@ -3,6 +3,7 @@ package com.arc.model.domain.common;
 import com.arc.model.vo.BaseModel;
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 import org.springframework.validation.annotation.Validated;
 
 import javax.persistence.Entity;
@@ -17,6 +18,7 @@ import java.util.Date;
  */
 @Getter
 @Setter
+@ToString
 @Validated
 @Entity
 @Table(name = "user")

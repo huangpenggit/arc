@@ -30,7 +30,7 @@
         <module>mybatis-tool</module>
         <module>server-system</module>
         <module>server-elasticsearch</module>
-        <module>server-post</module>
+        <module>server-cache</module>
     </modules>
 
     <dependencies>

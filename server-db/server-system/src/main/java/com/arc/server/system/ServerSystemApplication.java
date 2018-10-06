@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 
 //@EnableEurekaClient
+//@EnableTransactionManagement // 开启事务管理
 @EnableCaching
 @EnableAsync
 @RestController
